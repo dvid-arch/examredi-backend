@@ -1,0 +1,45 @@
+
+[
+  {
+    "id": "sg1",
+    "title": "Cellular Respiration",
+    "subject": "Biology",
+    "createdAt": "2024-05-20",
+    "content": "\n# Cellular Respiration: An Overview\n\nCellular respiration is the process by which organisms combine oxygen with foodstuff molecules, diverting the chemical energy in these substances into life-sustaining activities and discarding, as waste products, carbon dioxide and water.\n\n## Key Stages:\n\n1.  **Glycolysis:**\n    *   Occurs in the cytoplasm.\n    *   Breaks down one molecule of glucose into two molecules of pyruvate.\n    *   Net production of 2 ATP and 2 NADH.\n\n2.  **Pyruvate Oxidation:**\n    *   Takes place in the mitochondrial matrix.\n    *   Converts pyruvate into acetyl-CoA.\n    *   Produces CO2 and NADH.\n\n3.  **The Krebs Cycle (Citric Acid Cycle):**\n    *   Occurs in the mitochondrial matrix.\n    *   Completes the breakdown of glucose.\n    *   Generates ATP, NADH, and FADH2.\n    *   Releases CO2.\n\n4.  **Oxidative Phosphorylation:**\n    *   Involves the electron transport chain and chemiosmosis.\n    *   Occurs on the inner mitochondrial membrane.\n    *   NADH and FADH2 donate electrons to the chain, powering ATP synthesis.\n    *   Oxygen is the final electron acceptor, forming water.\n    *   Produces the majority of ATP (around 32-34 molecules).\n    "
+  },
+  {
+    "id": "sg2",
+    "title": "Figures of Speech",
+    "subject": "English Language",
+    "createdAt": "2024-05-18",
+    "content": "\n# Common Figures of Speech\n\nFigures of speech are words or phrases used in a non-literal sense for rhetorical or vivid effect.\n\n## Key Types:\n\n*   **Simile:** A comparison between two unlike things using \"like\" or \"as\".\n    *   *Example:* He is as brave **as** a lion.\n\n*   **Metaphor:** A direct comparison between two unlike things without using \"like\" or \"as\".\n    *   *Example:* The world is a stage.\n\n*   **Personification:** Giving human qualities or abilities to inanimate objects or abstract ideas.\n    *   *Example:* The wind whispered through the trees.\n\n*   **Hyperbole:** An extreme exaggeration used for emphasis or effect.\n    *   *Example:* I'm so hungry I could eat a horse.\n\n*   **Onomatopoeia:** A word that imitates the natural sound of a thing.\n    *   *Example:* The bees **buzzed** around the hive.\n    "
+  },
+  {
+    "id": "sg3",
+    "title": "Newton's Laws of Motion",
+    "subject": "Physics",
+    "createdAt": "2024-05-15",
+    "content": "\n# Newton's Laws of Motion\n\nThese three laws describe the relationship between a body and the forces acting upon it, and its motion in response to those forces.\n\n## The Three Laws:\n\n1.  **First Law (Law of Inertia):**\n    *   An object at rest stays at rest and an object in motion stays in motion with the same speed and in the same direction unless acted upon by an unbalanced force.\n    *   Inertia is the resistance to a change in motion.\n\n2.  **Second Law (Law of Acceleration):**\n    *   The acceleration of an object as produced by a net force is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass of the object.\n    *   Formula: **$F = ma$** (Force = mass × acceleration)\n\n3.  **Third Law (Law of Action-Reaction):**\n    *   For every action, there is an equal and opposite reaction.\n    *   This means that in every interaction, there is a pair of forces acting on the two interacting objects. The size of the forces on the first object equals the size of the force on the second object.\n    "
+  },
+  {
+    "id": "sg4",
+    "title": "Photosynthesis",
+    "subject": "Biology",
+    "createdAt": "2024-05-21",
+    "content": "\n# Photosynthesis Explained\nPhotosynthesis is the process used by plants, algae, and certain bacteria to harness energy from sunlight and turn it into chemical energy.\n## The Chemical Equation\n$6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{Light Energy} \\rightarrow \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$\n## Key Components\n- **Chloroplasts:** The site of photosynthesis.\n- **Chlorophyll:** The pigment that absorbs sunlight.\n- **Stomata:** Pores on the leaf surface for gas exchange.\n"
+  },
+  {
+    "id": "sg5",
+    "title": "Verb Tenses",
+    "subject": "English Language",
+    "createdAt": "2024-05-19",
+    "content": "\n# Understanding Verb Tenses\nVerb tenses indicate the time of an action or state of being.\n## Main Tenses\n- **Past:** Action that has already happened (e.g., \"I walked\").\n- **Present:** Action happening now or happens regularly (e.g., \"I walk\").\n- **Future:** Action that will happen (e.g., \"I will walk\").\nEach of these has perfect, progressive, and perfect progressive forms.\n"
+  },
+  {
+    "id": "sg6",
+    "title": "Ohm's Law",
+    "subject": "Physics",
+    "createdAt": "2024-05-16",
+    "content": "\n# Ohm's Law\nOhm's law states that the current through a conductor between two points is directly proportional to the voltage across the two points.\n## The Formula\n$V = IR$\n- **V:** Voltage (in Volts)\n- **I:** Current (in Amperes)\n- **R:** Resistance (in Ohms)\nThis is a fundamental principle in electronics and circuit analysis.\n"
+  }
+]

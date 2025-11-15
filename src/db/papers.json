@@ -1,0 +1,2112 @@
+[
+  {
+    "id": "jamb-english-2014",
+    "exam": "JAMB",
+    "subject": "English",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "eng1-14",
+        "question": "Choose the option that is nearest in meaning to the word \"ephemeral\".",
+        "options": {
+          "A": {
+            "text": "Everlasting"
+          },
+          "B": {
+            "text": "Short-lived"
+          },
+          "C": {
+            "text": "Beautiful"
+          },
+          "D": {
+            "text": "Powerful"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "eng2-14",
+        "question": "From the words lettered A to D, choose the word that best completes the sentence: The suspect was ____ of all charges.",
+        "options": {
+          "A": {
+            "text": "acquitted"
+          },
+          "B": {
+            "text": "convicted"
+          },
+          "C": {
+            "text": "accused"
+          },
+          "D": {
+            "text": "sentenced"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "eng3-14",
+        "question": "Which of the following sentences is grammatically correct?",
+        "options": {
+          "A": {
+            "text": "He have gone to the market."
+          },
+          "B": {
+            "text": "They is playing football now."
+          },
+          "C": {
+            "text": "The book is laying on the table."
+          },
+          "D": {
+            "text": "She has eaten her food."
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "eng4-14",
+        "question": "Identify the figure of speech in the sentence: \"The wind whispered through the trees.\"",
+        "options": {
+          "A": {
+            "text": "Metaphor"
+          },
+          "B": {
+            "text": "Simile"
+          },
+          "C": {
+            "text": "Personification"
+          },
+          "D": {
+            "text": "Hyperbole"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng5-14",
+        "question": "Choose the word opposite in meaning to \"candid\".",
+        "options": {
+          "A": {
+            "text": "Frank"
+          },
+          "B": {
+            "text": "Honest"
+          },
+          "C": {
+            "text": "Secretive"
+          },
+          "D": {
+            "text": "Open"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng6-14",
+        "question": "The story was so captivating. The word \"captivating\" means...",
+        "options": {
+          "A": {
+            "text": "Boring"
+          },
+          "B": {
+            "text": "Long"
+          },
+          "C": {
+            "text": "Interesting"
+          },
+          "D": {
+            "text": "Scary"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng7-14",
+        "question": "Select the correctly spelt word.",
+        "options": {
+          "A": {
+            "text": "Embarass"
+          },
+          "B": {
+            "text": "Embarrass"
+          },
+          "C": {
+            "text": "Embarasss"
+          },
+          "D": {
+            "text": "Embaras"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "eng8-14",
+        "question": "He is _________ to his studies.",
+        "options": {
+          "A": {
+            "text": "devoted"
+          },
+          "B": {
+            "text": "downcast"
+          },
+          "C": {
+            "text": "deported"
+          },
+          "D": {
+            "text": "declined"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "eng9-14",
+        "question": "The chairman’s speech was greeted with a _________ applause.",
+        "options": {
+          "A": {
+            "text": "tumultuous"
+          },
+          "B": {
+            "text": "quiet"
+          },
+          "C": {
+            "text": "sad"
+          },
+          "D": {
+            "text": "hostile"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "eng10-14",
+        "question": "Which of these is not a synonym for \"happy\"?",
+        "options": {
+          "A": {
+            "text": "Joyful"
+          },
+          "B": {
+            "text": "Cheerful"
+          },
+          "C": {
+            "text": "Sorrowful"
+          },
+          "D": {
+            "text": "Elated"
+          }
+        },
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "jamb-english-2015",
+    "exam": "JAMB",
+    "subject": "English",
+    "year": 2015,
+    "questions": [
+      {
+        "id": "eng1-15",
+        "question": "Choose the word that has the same vowel sound as in \"seat\".",
+        "options": {
+          "A": {
+            "text": "Sit"
+          },
+          "B": {
+            "text": "Set"
+          },
+          "C": {
+            "text": "Key"
+          },
+          "D": {
+            "text": "Sat"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng2-15",
+        "question": "My father is not only the breadwinner but also the ___ of the family.",
+        "options": {
+          "A": {
+            "text": "cook"
+          },
+          "B": {
+            "text": "chief"
+          },
+          "C": {
+            "text": "pillar"
+          },
+          "D": {
+            "text": "friend"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng3-15",
+        "question": "The opposite of \"bravery\" is?",
+        "options": {
+          "A": {
+            "text": "Courage"
+          },
+          "B": {
+            "text": "Boldness"
+          },
+          "C": {
+            "text": "Fear"
+          },
+          "D": {
+            "text": "Cowardice"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "eng4-15",
+        "question": "I prefer tea ___ coffee.",
+        "options": {
+          "A": {
+            "text": "than"
+          },
+          "B": {
+            "text": "to"
+          },
+          "C": {
+            "text": "for"
+          },
+          "D": {
+            "text": "from"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "eng5-15",
+        "question": "The manager was angry ___ the cashier.",
+        "options": {
+          "A": {
+            "text": "with"
+          },
+          "B": {
+            "text": "at"
+          },
+          "C": {
+            "text": "on"
+          },
+          "D": {
+            "text": "by"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "eng6-15",
+        "question": "\"To let the cat out of the bag\" means:",
+        "options": {
+          "A": {
+            "text": "To buy a cat"
+          },
+          "B": {
+            "text": "To reveal a secret"
+          },
+          "C": {
+            "text": "To free an animal"
+          },
+          "D": {
+            "text": "To sell a bag"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "eng7-15",
+        "question": "Which word is wrongly spelt?",
+        "options": {
+          "A": {
+            "text": "Occasion"
+          },
+          "B": {
+            "text": "Acomodate"
+          },
+          "C": {
+            "text": "Recommend"
+          },
+          "D": {
+            "text": "Necessary"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "eng8-15",
+        "question": "The boy who stole the book has been caught. This is a ___ sentence.",
+        "options": {
+          "A": {
+            "text": "Simple"
+          },
+          "B": {
+            "text": "Compound"
+          },
+          "C": {
+            "text": "Complex"
+          },
+          "D": {
+            "text": "Compound-Complex"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "eng9-15",
+        "question": "The adjective form of \"nation\" is:",
+        "options": {
+          "A": {
+            "text": "National"
+          },
+          "B": {
+            "text": "Nationality"
+          },
+          "C": {
+            "text": "Nationize"
+          },
+          "D": {
+            "text": "Nationalism"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "eng10-15",
+        "question": "He runs faster than ___.",
+        "options": {
+          "A": {
+            "text": "me"
+          },
+          "B": {
+            "text": "I"
+          },
+          "C": {
+            "text": "myself"
+          },
+          "D": {
+            "text": "mine"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "jamb-mathematics-2014",
+    "exam": "JAMB",
+    "subject": "Mathematics",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "math1-14",
+        "question": "If 2x + 5 = 15, what is the value of x?",
+        "options": {
+          "A": {
+            "text": "5"
+          },
+          "B": {
+            "text": "10"
+          },
+          "C": {
+            "text": "7.5"
+          },
+          "D": {
+            "text": "2.5"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "math2-14",
+        "question": "What is the area of a circle with a radius of 7cm? (Use $\\pi = 22/7$)",
+        "options": {
+          "A": {
+            "text": "$154 \\text{ cm}^2$"
+          },
+          "B": {
+            "text": "$44 \\text{ cm}^2$"
+          },
+          "C": {
+            "text": "$49 \\text{ cm}^2$"
+          },
+          "D": {
+            "text": "$144 \\text{ cm}^2$"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "math3-14",
+        "question": "Simplify the expression: 3a - 2b + 4a + 5b",
+        "options": {
+          "A": {
+            "text": "7a + 3b"
+          },
+          "B": {
+            "text": "a + 3b"
+          },
+          "C": {
+            "text": "7a - 3b"
+          },
+          "D": {
+            "text": "a - 3b"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "math4-14",
+        "question": "A bag contains 5 red balls and 3 blue balls. What is the probability of picking a blue ball?",
+        "options": {
+          "A": {
+            "text": "5/8"
+          },
+          "B": {
+            "text": "3/8"
+          },
+          "C": {
+            "text": "1/2"
+          },
+          "D": {
+            "text": "3/5"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "math5-14",
+        "question": "Find the next number in the sequence: 2, 5, 10, 17, ...",
+        "options": {
+          "A": {
+            "text": "24"
+          },
+          "B": {
+            "text": "25"
+          },
+          "C": {
+            "text": "26"
+          },
+          "D": {
+            "text": "27"
+          }
+        },
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "jamb-mathematics-2015",
+    "exam": "JAMB",
+    "subject": "Mathematics",
+    "year": 2015,
+    "questions": [
+      {
+        "id": "math1-15",
+        "question": "Express 0.00562 in standard form.",
+        "options": {
+          "A": {
+            "text": "$5.62 \\times 10^{-3}$"
+          },
+          "B": {
+            "text": "$5.62 \\times 10^{3}$"
+          },
+          "C": {
+            "text": "$5.62 \\times 10^{-2}$"
+          },
+          "D": {
+            "text": "$0.562 \\times 10^{-2}$"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "math2-15",
+        "question": "Calculate the simple interest on N5000 for 2 years at 5% per annum.",
+        "options": {
+          "A": {
+            "text": "N250"
+          },
+          "B": {
+            "text": "N500"
+          },
+          "C": {
+            "text": "N1000"
+          },
+          "D": {
+            "text": "N50"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "math3-15",
+        "question": "What is the sum of the angles in a pentagon?",
+        "options": {
+          "A": {
+            "text": "360°"
+          },
+          "B": {
+            "text": "180°"
+          },
+          "C": {
+            "text": "540°"
+          },
+          "D": {
+            "text": "720°"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "math4-15",
+        "question": "Factorize completely: $x^2 - 9$",
+        "options": {
+          "A": {
+            "text": "$(x-3)(x-3)$"
+          },
+          "B": {
+            "text": "$(x+3)(x+3)$"
+          },
+          "C": {
+            "text": "$(x-3)(x+3)$"
+          },
+          "D": {
+            "text": "$x(x-9)$"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "math5-15",
+        "question": "If $\\log_2 x = 3$, find x.",
+        "options": {
+          "A": {
+            "text": "6"
+          },
+          "B": {
+            "text": "8"
+          },
+          "C": {
+            "text": "9"
+          },
+          "D": {
+            "text": "5"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "jamb-biology-2014",
+    "exam": "JAMB",
+    "subject": "Biology",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "bio1-14",
+        "question": "The diagram below illustrates a biological process. What process is depicted?",
+        "questionDiagram": "https://placehold.co/600x300/E8F5E9/1E8449?text=Cell+Mitosis",
+        "options": {
+          "A": {
+            "text": "Meiosis"
+          },
+          "B": {
+            "text": "Mitosis"
+          },
+          "C": {
+            "text": "Photosynthesis"
+          },
+          "D": {
+            "text": "Transpiration"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "bio2-14",
+        "question": "Identify the part labelled \"X\" in the diagram of the human heart.",
+        "questionDiagram": "https://placehold.co/500x400/E3F2FD/1565C0?text=Human+Heart+Diagram",
+        "options": {
+          "A": {
+            "text": "Aorta"
+          },
+          "B": {
+            "text": "Vena Cava"
+          },
+          "C": {
+            "text": "Pulmonary Artery"
+          },
+          "D": {
+            "text": "Left Ventricle"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "bio3-14",
+        "question": "Which of the following diagrams represents a plant cell?",
+        "options": {
+          "A": {
+            "text": "Option A",
+            "diagram": "https://placehold.co/200x200/FCE4EC/000000?text=Animal+Cell"
+          },
+          "B": {
+            "text": "Option B",
+            "diagram": "https://placehold.co/200x200/E8F5E9/000000?text=Plant+Cell"
+          },
+          "C": {
+            "text": "Option C",
+            "diagram": "https://placehold.co/200x200/F3E5F5/000000?text=Bacterium"
+          },
+          "D": {
+            "text": "Option D",
+            "diagram": "https://placehold.co/200x200/FFFDE7/000000?text=Virus"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "waec-biology-2015",
+    "exam": "WAEC",
+    "subject": "Biology",
+    "year": 2015,
+    "questions": [
+      {
+        "id": "bio1",
+        "question": "Which of these is NOT a characteristic of living things?",
+        "options": {
+          "A": {
+            "text": "Respiration"
+          },
+          "B": {
+            "text": "Movement"
+          },
+          "C": {
+            "text": "Crystallization"
+          },
+          "D": {
+            "text": "Reproduction"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "bio2",
+        "question": "The part of the cell that controls all its activities is the?",
+        "options": {
+          "A": {
+            "text": "Mitochondrion"
+          },
+          "B": {
+            "text": "Nucleus"
+          },
+          "C": {
+            "text": "Cell wall"
+          },
+          "D": {
+            "text": "Cytoplasm"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "bio3",
+        "question": "Which of the following is a producer in an ecosystem?",
+        "options": {
+          "A": {
+            "text": "Lion"
+          },
+          "B": {
+            "text": "Goat"
+          },
+          "C": {
+            "text": "Grass"
+          },
+          "D": {
+            "text": "Mushroom"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "bio4",
+        "question": "The process by which plants lose water through their leaves is called?",
+        "options": {
+          "A": {
+            "text": "Photosynthesis"
+          },
+          "B": {
+            "text": "Respiration"
+          },
+          "C": {
+            "text": "Transpiration"
+          },
+          "D": {
+            "text": "Osmosis"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "bio5",
+        "question": "Which of these blood components is responsible for clotting?",
+        "options": {
+          "A": {
+            "text": "Red blood cells"
+          },
+          "B": {
+            "text": "White blood cells"
+          },
+          "C": {
+            "text": "Plasma"
+          },
+          "D": {
+            "text": "Platelets"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "bio6-15",
+        "question": "The process of photosynthesis in plants primarily produces what?",
+        "options": {
+          "A": {
+            "text": "Water"
+          },
+          "B": {
+            "text": "Glucose and Oxygen"
+          },
+          "C": {
+            "text": "Carbon Dioxide"
+          },
+          "D": {
+            "text": "Nitrogen"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "jamb-physics-2014",
+    "exam": "JAMB",
+    "subject": "Physics",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "phy1",
+        "question": "Which of the following is a vector quantity?",
+        "options": {
+          "A": {
+            "text": "Speed"
+          },
+          "B": {
+            "text": "Mass"
+          },
+          "C": {
+            "text": "Velocity"
+          },
+          "D": {
+            "text": "Temperature"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "phy2",
+        "question": "A car accelerates uniformly from rest to a speed of 20 m/s in 5 seconds. Calculate its acceleration.",
+        "options": {
+          "A": {
+            "text": "$2 \\text{ m/s}^2$"
+          },
+          "B": {
+            "text": "$4 \\text{ m/s}^2$"
+          },
+          "C": {
+            "text": "$5 \\text{ m/s}^2$"
+          },
+          "D": {
+            "text": "$10 \\text{ m/s}^2$"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "phy3",
+        "question": "The unit of electrical resistance is?",
+        "options": {
+          "A": {
+            "text": "Volt"
+          },
+          "B": {
+            "text": "Ampere"
+          },
+          "C": {
+            "text": "Watt"
+          },
+          "D": {
+            "text": "Ohm"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "phy4",
+        "question": "Which law states that for every action, there is an equal and opposite reaction?",
+        "options": {
+          "A": {
+            "text": "Newton's First Law"
+          },
+          "B": {
+            "text": "Newton's Second Law"
+          },
+          "C": {
+            "text": "Newton's Third Law"
+          },
+          "D": {
+            "text": "Ohm's Law"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "phy5",
+        "question": "Light travels fastest in which medium?",
+        "options": {
+          "A": {
+            "text": "Water"
+          },
+          "B": {
+            "text": "Glass"
+          },
+          "C": {
+            "text": "Air"
+          },
+          "D": {
+            "text": "Vacuum"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "phy6-14",
+        "question": "What fundamental force is responsible for keeping planets in orbit around the sun?",
+        "options": {
+          "A": {
+            "text": "Electromagnetism"
+          },
+          "B": {
+            "text": "Strong Nuclear Force"
+          },
+          "C": {
+            "text": "Weak Nuclear Force"
+          },
+          "D": {
+            "text": "Gravity"
+          }
+        },
+        "answer": "D"
+      }
+    ]
+  },
+  {
+    "id": "jamb-chemistry-2014",
+    "exam": "JAMB",
+    "subject": "Chemistry",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "chem1",
+        "question": "The chemical symbol for Gold is?",
+        "options": {
+          "A": {
+            "text": "Ag"
+          },
+          "B": {
+            "text": "Au"
+          },
+          "C": {
+            "text": "Go"
+          },
+          "D": {
+            "text": "Gd"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "chem2",
+        "question": "Which of the following is an acid?",
+        "options": {
+          "A": {
+            "text": "NaOH"
+          },
+          "B": {
+            "text": "H2O"
+          },
+          "C": {
+            "text": "NaCl"
+          },
+          "D": {
+            "text": "HCl"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "chem3",
+        "question": "The process of a solid turning directly into a gas is called?",
+        "options": {
+          "A": {
+            "text": "Melting"
+          },
+          "B": {
+            "text": "Evaporation"
+          },
+          "C": {
+            "text": "Sublimation"
+          },
+          "D": {
+            "text": "Condensation"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "chem4",
+        "question": "What is the atomic number of an element with 11 protons and 12 neutrons?",
+        "options": {
+          "A": {
+            "text": "11"
+          },
+          "B": {
+            "text": "12"
+          },
+          "C": {
+            "text": "23"
+          },
+          "D": {
+            "text": "1"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "chem5",
+        "question": "Which gas is most abundant in the Earth's atmosphere?",
+        "options": {
+          "A": {
+            "text": "Oxygen"
+          },
+          "B": {
+            "text": "Carbon Dioxide"
+          },
+          "C": {
+            "text": "Nitrogen"
+          },
+          "D": {
+            "text": "Argon"
+          }
+        },
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "jamb-government-2014",
+    "exam": "JAMB",
+    "subject": "Government",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "gov1-14",
+        "question": "A system of government where the head of state is also the head of government is called:",
+        "options": {
+          "A": {
+            "text": "Parliamentary"
+          },
+          "B": {
+            "text": "Presidential"
+          },
+          "C": {
+            "text": "Monarchy"
+          },
+          "D": {
+            "text": "Diarchy"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "gov2-14",
+        "question": "The upper house in the Nigerian legislature is called:",
+        "options": {
+          "A": {
+            "text": "House of Assembly"
+          },
+          "B": {
+            "text": "House of Lords"
+          },
+          "C": {
+            "text": "Senate"
+          },
+          "D": {
+            "text": "House of Representatives"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "gov3-14",
+        "question": "Which of these is not a feature of a democratic state?",
+        "options": {
+          "A": {
+            "text": "Free and fair elections"
+          },
+          "B": {
+            "text": "Rule of law"
+          },
+          "C": {
+            "text": "One-party system"
+          },
+          "D": {
+            "text": "Freedom of speech"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "gov4-14",
+        "question": "The principle of separation of powers is associated with:",
+        "options": {
+          "A": {
+            "text": "Karl Marx"
+          },
+          "B": {
+            "text": "Baron de Montesquieu"
+          },
+          "C": {
+            "text": "A.V. Dicey"
+          },
+          "D": {
+            "text": "John Locke"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "gov5-14",
+        "question": "Nigeria became a republic on:",
+        "options": {
+          "A": {
+            "text": "October 1, 1960"
+          },
+          "B": {
+            "text": "October 1, 1963"
+          },
+          "C": {
+            "text": "May 29, 1999"
+          },
+          "D": {
+            "text": "January 15, 1966"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "jamb-literature-2014",
+    "exam": "JAMB",
+    "subject": "Literature",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "lit1-14",
+        "question": "A long narrative poem celebrating the deeds of a hero is an:",
+        "options": {
+          "A": {
+            "text": "Ode"
+          },
+          "B": {
+            "text": "Epic"
+          },
+          "C": {
+            "text": "Elegy"
+          },
+          "D": {
+            "text": "Sonnet"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "lit2-14",
+        "question": "A play on words is known as a:",
+        "options": {
+          "A": {
+            "text": "Pun"
+          },
+          "B": {
+            "text": "Rhyme"
+          },
+          "C": {
+            "text": "Rhythm"
+          },
+          "D": {
+            "text": "Metre"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "lit3-14",
+        "question": "\"The angry storm\" is an example of:",
+        "options": {
+          "A": {
+            "text": "Simile"
+          },
+          "B": {
+            "text": "Metaphor"
+          },
+          "C": {
+            "text": "Personification"
+          },
+          "D": {
+            "text": "Alliteration"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "lit4-14",
+        "question": "The main character in a literary work is the:",
+        "options": {
+          "A": {
+            "text": "Antagonist"
+          },
+          "B": {
+            "text": "Protagonist"
+          },
+          "C": {
+            "text": "Narrator"
+          },
+          "D": {
+            "text": "Foil"
+          }
+        },
+        "answer": "B"
+      },
+      {
+        "id": "lit5-14",
+        "question": "A 14-line poem with a specific rhyme scheme is a:",
+        "options": {
+          "A": {
+            "text": "Ballad"
+          },
+          "B": {
+            "text": "Limerick"
+          },
+          "C": {
+            "text": "Haiku"
+          },
+          "D": {
+            "text": "Sonnet"
+          }
+        },
+        "answer": "D"
+      },
+      {
+        "id": "lit6-14",
+        "question": "The phrase \"as brave as a lion\" is an example of which figure of speech?",
+        "options": {
+          "A": {
+            "text": "Metaphor"
+          },
+          "B": {
+            "text": "Simile"
+          },
+          "C": {
+            "text": "Personification"
+          },
+          "D": {
+            "text": "Hyperbole"
+          }
+        },
+        "answer": "B"
+      }
+    ]
+  },
+  {
+    "id": "jamb-crs-2014",
+    "exam": "JAMB",
+    "subject": "CRS",
+    "year": 2014,
+    "questions": [
+      {
+        "id": "crs1-14",
+        "question": "According to Genesis, on which day did God create man?",
+        "options": {
+          "A": {
+            "text": "Third"
+          },
+          "B": {
+            "text": "Fifth"
+          },
+          "C": {
+            "text": "Sixth"
+          },
+          "D": {
+            "text": "Seventh"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "crs2-14",
+        "question": "Who was the first king of Israel?",
+        "options": {
+          "A": {
+            "text": "David"
+          },
+          "B": {
+            "text": "Solomon"
+          },
+          "C": {
+            "text": "Saul"
+          },
+          "D": {
+            "text": "Samuel"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "crs3-14",
+        "question": "How many disciples did Jesus have?",
+        "options": {
+          "A": {
+            "text": "10"
+          },
+          "B": {
+            "text": "11"
+          },
+          "C": {
+            "text": "12"
+          },
+          "D": {
+            "text": "13"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "crs4-14",
+        "question": "Where was Jesus born?",
+        "options": {
+          "A": {
+            "text": "Jerusalem"
+          },
+          "B": {
+            "text": "Nazareth"
+          },
+          "C": {
+            "text": "Bethlehem"
+          },
+          "D": {
+            "text": "Galilee"
+          }
+        },
+        "answer": "C"
+      },
+      {
+        "id": "crs5-14",
+        "question": "The book of Revelation was written by:",
+        "options": {
+          "A": {
+            "text": "Peter"
+          },
+          "B": {
+            "text": "Paul"
+          },
+          "C": {
+            "text": "John"
+          },
+          "D": {
+            "text": "Matthew"
+          }
+        },
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "id": "1762871046726-q-0",
+        "question": "Use the information below to answer the question that follows\n\nBalance sheet (Extract)\n\n| | ₦ |\n|---|---|\n| Creditors | 7940 |\n| Prepaid expenses | 290 |\n| Accrual expenses | 323 |\n| Stock | 4500 |\n| Cash balances | 4956 |\n| Debtors | 905 |\n\nThe value of the current assets will be",
+        "options": {
+          "A": {
+            "text": "₦10651"
+          },
+          "B": {
+            "text": "₦17848"
+          },
+          "C": {
+            "text": "₦17396"
+          },
+          "D": {
+            "text": "₦10361"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-1",
+        "question": "Use the information below to answer the question that follows\n\nBalance sheet (Extract)\n\n| | ₦ |\n|---|---|\n| Creditors | 7940 |\n| Prepaid expenses | 290 |\n| Accrual expenses | 323 |\n| Stock | 4500 |\n| Cash balances | 4956 |\n| Debtors | 905 |\n\nDetermine the current liabilities",
+        "options": {
+          "A": {
+            "text": "₦8 263"
+          },
+          "B": {
+            "text": "₦8 553"
+          },
+          "C": {
+            "text": "₦7 940"
+          },
+          "D": {
+            "text": "₦1 228"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-2",
+        "question": "The control account is used in facilitating",
+        "options": {
+          "A": {
+            "text": "the payment of debts and liabilities of the firm"
+          },
+          "B": {
+            "text": "the location of errors in the various accounts"
+          },
+          "C": {
+            "text": "assets distribution with respect to income"
+          },
+          "D": {
+            "text": "up-to-date bank transactions"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-3",
+        "question": "In government account, the method used which records on the basis of financial entity with self-balancing books instead of entity of proprietorship is",
+        "options": {
+          "A": {
+            "text": "virement"
+          },
+          "B": {
+            "text": "consolidation fund"
+          },
+          "C": {
+            "text": "fund accounting"
+          },
+          "D": {
+            "text": "financial regulation"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-4",
+        "question": "One of the differences between book keeping and account is that the former",
+        "options": {
+          "A": {
+            "text": "interprets data while the latter records it"
+          },
+          "B": {
+            "text": "summaries information while the latter communicates it"
+          },
+          "C": {
+            "text": "is regarded as the language of the business while the latter ascertains its strength"
+          },
+          "D": {
+            "text": "records data while the latter interprets it"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-5",
+        "question": "In a department account, where no basis appointment exist, apportionment is",
+        "options": {
+          "A": {
+            "text": "according to material available"
+          },
+          "B": {
+            "text": "according to employee decision"
+          },
+          "C": {
+            "text": "on equal basis"
+          },
+          "D": {
+            "text": "on profit basis"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-6",
+        "question": "If machine X cost ₦600 000 with anticipated life span of five years and estimated scrap value of ₦50 000, using straight line method, depreciation charged for two years will be",
+        "options": {
+          "A": {
+            "text": "₦202 000"
+          },
+          "B": {
+            "text": "₦240 000"
+          },
+          "C": {
+            "text": "₦700 000"
+          },
+          "D": {
+            "text": "₦220 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-7",
+        "question": "A cheque of ₦5,000 paid to Suleiman had been correctly entered in the cash book but had not been entered in Suleiman's account. To correct this error, debit Suleiman's account and credit",
+        "options": {
+          "A": {
+            "text": "bank account"
+          },
+          "B": {
+            "text": "purchase account"
+          },
+          "C": {
+            "text": "suspense account"
+          },
+          "D": {
+            "text": "cash account"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-8",
+        "question": "A ledger is classified into",
+        "options": {
+          "A": {
+            "text": "sales, purchases and general"
+          },
+          "B": {
+            "text": "personal, general and private"
+          },
+          "C": {
+            "text": "general, private and sales"
+          },
+          "D": {
+            "text": "private, sales and purchases"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-9",
+        "question": "The book of account in which information from the source documents are recorded consist of",
+        "options": {
+          "A": {
+            "text": "profit and loss and balance sheet"
+          },
+          "B": {
+            "text": "ledger and subsidiary books"
+          },
+          "C": {
+            "text": "prepayments and accruals"
+          },
+          "D": {
+            "text": "debit and credit notes"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-10",
+        "question": "The major advantage of an imprest system is that it",
+        "options": {
+          "A": {
+            "text": "ensures a proper accountability for every expenditure"
+          },
+          "B": {
+            "text": "trains the young accountants in the preparation for greater responsibility"
+          },
+          "C": {
+            "text": "serves as an analysis column for very expenses"
+          },
+          "D": {
+            "text": "relieves the chief cashier of the numerous petty cash payments"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-11",
+        "question": "In a department account, the expenses to be apportioned on the basis of turnover is",
+        "options": {
+          "A": {
+            "text": "discount received"
+          },
+          "B": {
+            "text": "carriage outwards"
+          },
+          "C": {
+            "text": "carriage inwards"
+          },
+          "D": {
+            "text": "returns outwards"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-12",
+        "question": "The profit of a branch is usually credited to the",
+        "options": {
+          "A": {
+            "text": "adjustment account"
+          },
+          "B": {
+            "text": "head office goods account"
+          },
+          "C": {
+            "text": "head office sales account"
+          },
+          "D": {
+            "text": "head office current account"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-13",
+        "question": "Use the information below to answer the question that follows\nIncome and Expenditure (Extract)\n\n| | ₦ | | ₦ |\n|---|---|---|---|\n| Bal. b/d | 390 | Expense on cleaning | 300 |\n| Sales of tickets | 4000 | New Tool | 510 |\n| Donations | 3000 | Repairs | 400 |\n| Subscriptions | 6500 | Electricity | 350 |\n\nWhat is the total income for the period?",
+        "options": {
+          "A": {
+            "text": "₦13800"
+          },
+          "B": {
+            "text": "₦10500"
+          },
+          "C": {
+            "text": "₦9500"
+          },
+          "D": {
+            "text": "₦13500"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-14",
+        "question": "Use the information below to answer the question that follows\nIncome and Expenditure (Extract)\n\n| | ₦ | | ₦ |\n|---|---|---|---|\n| Bal. b/d | 390 | Expense on cleaning | 300 |\n| Sales of tickets | 4000 | New Tool | 510 |\n| Donations | 3000 | Repairs | 400 |\n| Subscriptions | 6500 | Electricity | 350 |\n\nWhat is the balance carried down?",
+        "options": {
+          "A": {
+            "text": "₦13 430"
+          },
+          "B": {
+            "text": "₦12 330"
+          },
+          "C": {
+            "text": "₦11 680"
+          },
+          "D": {
+            "text": "₦11 930"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-15",
+        "question": "If goods are sent to branch at 25% on cost, what will be the cost of goods sent to the branch at a selling price of ₦100,000?",
+        "options": {
+          "A": {
+            "text": "₦130 000"
+          },
+          "B": {
+            "text": "₦80 000"
+          },
+          "C": {
+            "text": "₦75 000"
+          },
+          "D": {
+            "text": "₦125 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-16",
+        "question": "Use the information below to answer questions 23 and 24\n\n2/3 Purchase 900 books at ₦1,000 each\n4/3 Purchase 590 books at ₦950 each\n15/3 Sales 300 books at 900 each\n\nDetermine the cost of goods sold using FIFO",
+        "options": {
+          "A": {
+            "text": "₦600 000"
+          },
+          "B": {
+            "text": "₦570 000"
+          },
+          "C": {
+            "text": "₦300,000"
+          },
+          "D": {
+            "text": "₦285 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-17",
+        "question": "Use the information below to answer questions 23 and 24\n\n2/3 Purchase 900 books at ₦1,000 each\n4/3 Purchase 590 books at ₦950 each\n15/6 Sales 300 books at 900 each\n\nCalculate the closing stock using LIFO",
+        "options": {
+          "A": {
+            "text": "₦1,100,500"
+          },
+          "B": {
+            "text": "₦1,175,500"
+          },
+          "C": {
+            "text": "₦1,160,500"
+          },
+          "D": {
+            "text": "₦801 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-18",
+        "question": "The value of the sales ledger control account is derived from the summation of",
+        "options": {
+          "A": {
+            "text": "the total debtors' account"
+          },
+          "B": {
+            "text": "both the debtors and creditors' accounts"
+          },
+          "C": {
+            "text": "all day books"
+          },
+          "D": {
+            "text": "the total creditors' account"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-19",
+        "question": "Payment for shares in excess of amount offered gives rise to",
+        "options": {
+          "A": {
+            "text": "revenue reserves"
+          },
+          "B": {
+            "text": "capital reserves"
+          },
+          "C": {
+            "text": "subscription in advance"
+          },
+          "D": {
+            "text": "calls-in-advance"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-20",
+        "question": "A book of account that possesses the features of both day book and ledger is",
+        "options": {
+          "A": {
+            "text": "returns day book"
+          },
+          "B": {
+            "text": "sales day book"
+          },
+          "C": {
+            "text": "purchases day book"
+          },
+          "D": {
+            "text": "cash book"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-21",
+        "question": "Use the following below to answer the question that follows\nHussaina Enterprises sent goods worth ₦800000 at the cost plus mark-up of 25% to its branch.\n\nWhat is the cost of the goods only?",
+        "options": {
+          "A": {
+            "text": "₦640 000"
+          },
+          "B": {
+            "text": "₦700 000"
+          },
+          "C": {
+            "text": "₦600 000"
+          },
+          "D": {
+            "text": "₦620 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-22",
+        "question": "Use the following below to answer the question that follows\nHussaina Enterprises sent goods worth ₦800000 at the cost plus mark-up of 25% to its branch.\n\nDetermine the profit on the goods sent to the branch at profit margin of 25% mark-up.",
+        "options": {
+          "A": {
+            "text": "₦160 000"
+          },
+          "B": {
+            "text": "₦150 000"
+          },
+          "C": {
+            "text": "₦180 000"
+          },
+          "D": {
+            "text": "₦170 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-23",
+        "question": "Where partnership is converted into a limited company, current account balances of partners are transferred to a",
+        "options": {
+          "A": {
+            "text": "share capital account"
+          },
+          "B": {
+            "text": "savings account"
+          },
+          "C": {
+            "text": "realization account"
+          },
+          "D": {
+            "text": "capital account"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-24",
+        "question": "If goods were bought from Tanko at a cost price of ₦9 000 with a cash discount of 5%, how much will be paid assuming prompt payment was made?",
+        "options": {
+          "A": {
+            "text": "₦4 500"
+          },
+          "B": {
+            "text": "₦9 450"
+          },
+          "C": {
+            "text": "₦8 550"
+          },
+          "D": {
+            "text": "₦9 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-25",
+        "question": "Aduke Motors bought three Toyota Hilux vans on cash at the cost of ₦6,000,000. On debiting the vehicle account, the corresponding credit for the purchase will appear in the",
+        "options": {
+          "A": {
+            "text": "sales subsidiary book"
+          },
+          "B": {
+            "text": "purchases day book"
+          },
+          "C": {
+            "text": "cash book"
+          },
+          "D": {
+            "text": "sales day book"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-26",
+        "question": "Given:\nIf Emenike enterprises settles its suppliers for good purchased within 7 days, it can earn a cash discount of 12 1/2 %. Assuming ₦22 800 worth of goods were purchased and settled within 5 days, what will be the amount to be credited in the cash column of the company's cash book?",
+        "options": {
+          "A": {
+            "text": "₦25 650"
+          },
+          "B": {
+            "text": "₦18 240"
+          },
+          "C": {
+            "text": "₦19 950"
+          },
+          "D": {
+            "text": "₦22 800"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-27",
+        "question": "Which of the following affects the accuracy and authenticity of the trial balance?",
+        "options": {
+          "A": {
+            "text": "Error of commission"
+          },
+          "B": {
+            "text": "Error of omission"
+          },
+          "C": {
+            "text": "Error of original entry"
+          },
+          "D": {
+            "text": "Error of transposition"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-28",
+        "question": "A major way by which the headquarters guard against fraud in branches on cash remittance is through the introduction of",
+        "options": {
+          "A": {
+            "text": "separate accountant for the branch"
+          },
+          "B": {
+            "text": "imprest system only"
+          },
+          "C": {
+            "text": "direct purchase by branch"
+          },
+          "D": {
+            "text": "credit sales by only the headquarters"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-29",
+        "question": "I. Cash sales\nII. Cash purchased\nIII. Cash discount allowed\nIV. Cash payment\nV. Cash receipts\n\nWhich of the following are recorded on the debit side of the cash book?",
+        "options": {
+          "A": {
+            "text": "I and II"
+          },
+          "B": {
+            "text": "I and IV"
+          },
+          "C": {
+            "text": "I and V"
+          },
+          "D": {
+            "text": "I and III"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-30",
+        "question": "₦800 000 worth of ordinary shares of 50K were issued at ₦1 each, payable in full on application. The entry in the cash book would be to",
+        "options": {
+          "A": {
+            "text": "credit ₦1 600 000"
+          },
+          "B": {
+            "text": "credit ₦800 000"
+          },
+          "C": {
+            "text": "debit ₦800 000"
+          },
+          "D": {
+            "text": "debit ₦1 600 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-31",
+        "question": "The details of the share capital which a company is authorized to issue is contained in the",
+        "options": {
+          "A": {
+            "text": "Articles of Association"
+          },
+          "B": {
+            "text": "Share capital certificate"
+          },
+          "C": {
+            "text": "Companies and Allied Matters Act"
+          },
+          "D": {
+            "text": "Memorandum of Association"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-32",
+        "question": "Marina Merchants Trading and Profit and Loss Account (Extract)\n\n| | ₦ | | ₦ |\n|---|---|---|---|\n| Stock (1/1/2010) | 80000 | Sales | 300000 |\n| | | Less Returns Inwards | 30000 |\n| | | | 270000 |\n| Purchases | 90000 | | |\n| Cost of goods available for sale | 170000 | | |\n| Stock (31/12/2010) | ? | | |\n| Cost of goods sold | ? | | |\n| Gross profit | 150000 | | 270000 |\n\nDetermine the closing stock",
+        "options": {
+          "A": {
+            "text": "₦50 000"
+          },
+          "B": {
+            "text": "₦30 000"
+          },
+          "C": {
+            "text": "₦40 000"
+          },
+          "D": {
+            "text": "₦60 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-33",
+        "question": "The excess of sales over cost of goods sold is",
+        "options": {
+          "A": {
+            "text": "net sales"
+          },
+          "B": {
+            "text": "gross sales"
+          },
+          "C": {
+            "text": "gross profit"
+          },
+          "D": {
+            "text": "net profit"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-34",
+        "question": "Which subject are you doing?",
+        "options": {
+          "A": {
+            "text": "Principles of Accounts"
+          },
+          "B": {
+            "text": "Mathematics"
+          },
+          "C": {
+            "text": "English"
+          },
+          "D": {
+            "text": "Physics"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-35",
+        "question": "The expenses incurred in purchasing a vehicle is a",
+        "options": {
+          "A": {
+            "text": "recurrent expenditure"
+          },
+          "B": {
+            "text": "capital expenditure"
+          },
+          "C": {
+            "text": "revenue expenditure"
+          },
+          "D": {
+            "text": "concurrent expenditure"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-36",
+        "question": "Oil and Buns issued to the public 1 300 000 ordinary shares of 75K at a price of ₦1.50K. Application and allotment were received for 900 000 shares at 25K each.\n\nDetermine the amount received on the application and allotment.",
+        "options": {
+          "A": {
+            "text": "₦224 950"
+          },
+          "B": {
+            "text": "₦225 000"
+          },
+          "C": {
+            "text": "₦325 000"
+          },
+          "D": {
+            "text": "₦324 950"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-37",
+        "question": "Oil and Buns issued to the public 1 300 000 ordinary shares of 75K at a price of ₦1.50K. Application and allotment were received for 900 000 shares at 25K each.\n\nThe book value of issued capital is",
+        "options": {
+          "A": {
+            "text": "₦1 950 000"
+          },
+          "B": {
+            "text": "₦975 000"
+          },
+          "C": {
+            "text": "₦1 350 000"
+          },
+          "D": {
+            "text": "₦675 000"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-38",
+        "question": "The formula for calculating depreciation using the straight line method is",
+        "options": {
+          "A": {
+            "text": "Sales - Scrap Value\n---------------------\nUseful life"
+          },
+          "B": {
+            "text": "Scrap Value + Sales\n---------------------\nUseful life"
+          },
+          "C": {
+            "text": "Cost - Scrap Value\n---------------------\nUseful life"
+          },
+          "D": {
+            "text": "Purchase + Sales\n---------------------\nUseful life"
+          }
+        },
+        "answer": "A"
+      },
+      {
+        "id": "1762871046726-q-39",
+        "question": "Given:\n\n| | ₦ |\n|---|---|\n| Sales | 180000 |\n| Stock 1/1 | 25000 |\n| Purchases | 110000 |\n| Sales returns | 1000 |\n| Purchases returns | 1500 |\n| Gross profit | 58000 |\n\nDetermine the value of stock as at 31st December.",
+        "options": {
+          "A": {
+            "text": "₦9 500"
+          },
+          "B": {
+            "text": "₦8 000"
+          }
+        },
+        "answer": "A"
+      }
+    ],
+    "subject": "accounting",
+    "exam": "JAMB",
+    "year": 2025,
+    "id": "1762871046726"
+  }
+]

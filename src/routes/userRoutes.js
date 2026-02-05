@@ -1,3 +1,4 @@
+import express from 'express';
 import { updateProfile } from '../controllers/userController.js';
 import { getProgress, updateProgress } from '../controllers/progressController.js';
 import { protect } from '../middleware/authMiddleware.js';

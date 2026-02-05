@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/papers', getPapers);
 router.get('/guides', getGuides);
 router.get('/leaderboard', getLeaderboard);
+router.get('/literature', getLiterature);
 
 // Protected routes
 router.post('/leaderboard', protect, addLeaderboardScore);

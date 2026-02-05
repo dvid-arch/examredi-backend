@@ -10,6 +10,7 @@ const papersFilePath = path.join(dbPath, 'papers.json');
 const guidesFilePath = path.join(dbPath, 'guides.json');
 const leaderboardFilePath = path.join(dbPath, 'leaderboard.json');
 const performanceFilePath = path.join(dbPath, 'performance.json');
+const literatureFilePath = path.join(dbPath, 'literature.json');
 
 const readJsonFile = async (filePath) => {
     try {
@@ -60,10 +61,10 @@ export const getLeaderboard = async (req, res) => {
 export const addLeaderboardScore = async (req, res) => {
     const newScore = req.body;
     let leaderboard = await readJsonFile(leaderboardFilePath);
-    
+
     leaderboard.push(newScore);
     leaderboard.sort((a, b) => b.score - a.score);
-    
+
     if (leaderboard.length > 10) {
         leaderboard = leaderboard.slice(0, 10);
     }
@@ -86,15 +87,23 @@ export const getPerformance = async (req, res) => {
 export const addPerformanceResult = async (req, res) => {
     const userId = req.user?.id;
     const newResult = req.body;
-    
+
     const allResults = await readJsonFile(performanceFilePath);
-    
+
     if (!allResults[userId]) {
         allResults[userId] = [];
     }
-    
+
     allResults[userId].unshift(newResult);
-    
+
     await writeJsonFile(performanceFilePath, allResults);
     res.status(201).json(newResult);
 };
+
+// @desc    Get literature books
+// @route   GET /api/data/literature
+export const getLiterature = async (req, res) => {
+    const literature = await readJsonFile(literatureFilePath);
+    res.json(literature);
+};
+

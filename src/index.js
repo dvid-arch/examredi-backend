@@ -5,6 +5,8 @@ import authRoutes from './routes/authRoutes.js';
 import dataRoutes from './routes/dataRoutes.js';
 import aiRoutes from './routes/aiRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import flashcardRoutes from './routes/flashcardRoutes.js';
 
 dotenv.config();
 
@@ -26,14 +28,14 @@ app.use((req, res, next) => {
         console.log(`Body:`, req.body);
     }
     console.log(`================================\n`);
-    
+
     // Log response
     const originalSend = res.send;
-    res.send = function(data) {
+    res.send = function (data) {
         console.log(`[${timestamp}] Response Status: ${res.statusCode}`);
         return originalSend.call(this, data);
     };
-    
+
     next();
 });
 
@@ -45,6 +47,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/data', dataRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/flashcards', flashcardRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

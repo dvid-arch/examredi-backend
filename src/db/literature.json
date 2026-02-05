@@ -1,0 +1,39 @@
+[
+    {
+        "id": "lit-1",
+        "title": "The Lion and the Jewel",
+        "author": "Wole Soyinka",
+        "genre": "Drama",
+        "themes": [
+            "Tradition vs Modernity",
+            "Gender Roles",
+            "Pride"
+        ],
+        "summary": "A play that contrasts traditional Yoruba values with Westernized education in a Nigerian village."
+    },
+    {
+        "id": "lit-2",
+        "title": "Second Class Citizen",
+        "author": "Buchi Emecheta",
+        "genre": "Fiction",
+        "themes": [
+            "Race",
+            "Gender Inequality",
+            "Immigration",
+            "Resilience"
+        ],
+        "summary": "The story of Adah, a Nigerian woman who moves to London and struggles against overwhelming odds to become a writer."
+    },
+    {
+        "id": "lit-3",
+        "title": "Unexpected Joy at Dawn",
+        "author": "Alex Agyei-Agyiri",
+        "genre": "Fiction",
+        "themes": [
+            "Xenophobia",
+            "Identity",
+            "Family Bonds"
+        ],
+        "summary": "Explores the lived experience of West Africans during the era of mass deportations between Ghana and Nigeria."
+    }
+]

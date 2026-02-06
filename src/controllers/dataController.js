@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import Paper from '../models/Paper.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,18 +29,26 @@ const writeJsonFile = async (filePath, data) => {
 
 // @desc    Get past papers
 // @route   GET /api/data/papers
+// @desc    Get past papers
+// @route   GET /api/data/papers
 export const getPapers = async (req, res) => {
-    const { subject, year } = req.query;
-    let papers = await readJsonFile(papersFilePath);
+    try {
+        const { subject, year } = req.query;
+        let query = {};
 
-    if (subject) {
-        papers = papers.filter(p => p.subject.toLowerCase() === (subject).toLowerCase());
-    }
-    if (year) {
-        papers = papers.filter(p => p.year === Number(year));
-    }
+        if (subject) {
+            query.subject = new RegExp(`^${subject}$`, 'i'); // Case-insensitive
+        }
+        if (year) {
+            query.year = Number(year);
+        }
 
-    res.json(papers);
+        const papers = await Paper.find(query).select('-__v'); // Exclude version key
+        res.json(papers);
+    } catch (error) {
+        console.error('Error fetching papers:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
 };
 
 // @desc    Get study guides

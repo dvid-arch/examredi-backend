@@ -78,13 +78,15 @@ export const registerUser = async (req, res) => {
             `;
 
             try {
+                console.log('Sending verification email to:', user.email);
                 await sendEmail({
                     email: user.email,
                     subject: 'ExamRedi Email Verification',
                     html: message
                 });
+                console.log('Verification email sent successfully.');
             } catch (error) {
-                console.error("Email send failed:", error);
+                console.error("Email send failed:", error.message);
                 // Don't fail registration if email fails, just log it.
                 // User can request resend later.
                 user.verificationToken = undefined;

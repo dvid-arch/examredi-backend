@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
-    username: { type: String, required: true, unique: true },
+    name: { type: String, required: true }, // Changed from username to name to match frontend
     password: { type: String, required: true },
     email: { type: String, unique: true, sparse: true }, // Optional for now
     subscription: { type: String, enum: ['free', 'premium'], default: 'free' },

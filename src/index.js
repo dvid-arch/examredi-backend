@@ -11,8 +11,8 @@ import flashcardRoutes from './routes/flashcardRoutes.js';
 import connectDB from './db/connect.js';
 
 dotenv.config();
-app.set('trust proxy', 1);
 const app = express();
+app.set('trust proxy', 1);
 const port = process.env.PORT || 5000;
 
 // Connect to Database

@@ -1,34 +1,12 @@
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import User from '../models/User.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const dbPath = path.join(__dirname, '..', 'db');
-const usersFilePath = path.join(dbPath, 'users.json');
-
-const readUsers = async () => {
-    try {
-        const data = await fs.readFile(usersFilePath, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) {
-        // If the file doesn't exist, return an empty array
-        return [];
-    }
+// Helper: Generate Access Token (Short-lived)
+const generateAccessToken = (id) => {
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '15m' });
 };
 
-const writeUsers = async (users) => {
-    await fs.mkdir(dbPath, { recursive: true });
-    await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
-};
-
-const generateAccessToken = (id, email) => {
-    return jwt.sign({ id, email }, process.env.JWT_SECRET, { expiresIn: '15m' });
-};
-
+// Helper: Generate Refresh Token (Long-lived)
 const generateRefreshToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 };
@@ -38,87 +16,85 @@ const getTodayDateString = () => new Date().toISOString().split('T')[0];
 // @desc    Register a new user
 // @route   POST /api/auth/register
 export const registerUser = async (req, res) => {
-    const { name, email, password } = req.body;
+    try {
+        const { name, email, password } = req.body;
 
-    if (!name || !email || !password) {
-        return res.status(400).json({ message: 'Please add all fields' });
+        if (!name || !email || !password) {
+            return res.status(400).json({ message: 'Please add all fields' });
+        }
+
+        // Check if user exists
+        const userExists = await User.findOne({ email });
+
+        if (userExists) {
+            return res.status(400).json({ message: 'User already exists' });
+        }
+
+        // Create user (password hashing handled by pre-save hook in model)
+        const user = await User.create({
+            name,
+            email,
+            password,
+            subscription: 'free',
+            role: 'user',
+            studyPlan: { // Initialize with defaults
+                targetScore: 250,
+                weakSubjects: [],
+                dailyGoal: 10
+            }
+        });
+
+        if (user) {
+            const accessToken = generateAccessToken(user.id);
+            const refreshToken = generateRefreshToken(user.id);
+
+            res.status(201).json({
+                _id: user.id,
+                name: user.name,
+                email: user.email,
+                subscription: user.subscription,
+                role: user.role,
+                accessToken,
+                refreshToken,
+            });
+        } else {
+            res.status(400).json({ message: 'Invalid user data' });
+        }
+    } catch (error) {
+        console.error("Register Error:", error);
+        res.status(500).json({ message: 'Server error during registration' });
     }
-
-    const users = await readUsers();
-    const userExists = users.find(u => u.email === email);
-
-    if (userExists) {
-        return res.status(400).json({ message: 'User already exists' });
-    }
-
-    const salt = await bcrypt.genSalt(10);
-    const passwordHash = await bcrypt.hash(password, salt);
-
-    const newUser = {
-        id: new Date().getTime().toString(),
-        name,
-        email,
-        passwordHash,
-        subscription: 'free',
-        role: 'user',
-        aiCredits: 0,
-        dailyMessageCount: 0,
-        lastMessageDate: getTodayDateString(),
-        refreshToken: ''
-    };
-
-    const accessToken = generateAccessToken(newUser.id, newUser.email);
-    const refreshToken = generateRefreshToken(newUser.id);
-    newUser.refreshToken = refreshToken;
-
-    users.push(newUser);
-    await writeUsers(users);
-
-    res.status(201).json({
-        id: newUser.id,
-        name: newUser.name,
-        email: newUser.email,
-        subscription: newUser.subscription,
-        role: newUser.role,
-        accessToken,
-        refreshToken,
-    });
 };
 
 // @desc    Authenticate a user
 // @route   POST /api/auth/login
 export const loginUser = async (req, res) => {
-    const { email, password } = req.body;
-    const users = await readUsers();
-    const userIndex = users.findIndex(u => u.email === email.toLowerCase());
-    
-    if (userIndex === -1) {
-        return res.status(400).json({ message: 'Invalid credentials' });
-    }
-    
-    const user = users[userIndex];
+    try {
+        const { email, password } = req.body;
 
-    if (user && (await bcrypt.compare(password, user.passwordHash))) {
-        const accessToken = generateAccessToken(user.id, user.email);
-        const refreshToken = generateRefreshToken(user.id);
+        // Check for user email
+        const user = await User.findOne({ email });
 
-        users[userIndex].refreshToken = refreshToken;
-        await writeUsers(users);
+        if (user && (await user.matchPassword(password))) {
+            const accessToken = generateAccessToken(user.id);
+            const refreshToken = generateRefreshToken(user.id);
 
-        res.json({
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            subscription: user.subscription,
-            role: user.role,
-            aiCredits: user.aiCredits,
-            dailyMessageCount: user.dailyMessageCount,
-            lastMessageDate: user.lastMessageDate,
-            accessToken,
-            refreshToken
-        });
-    } else {
-        res.status(400).json({ message: 'Invalid credentials' });
+            res.json({
+                _id: user.id,
+                name: user.name,
+                email: user.email,
+                subscription: user.subscription,
+                role: user.role,
+                // Add AI credits or other logic here later if needed
+                accessToken,
+                refreshToken
+            });
+        } else {
+            res.status(400).json({ message: 'Invalid credentials' });
+        }
+    } catch (error) {
+        console.error("Login Error:", error);
+        res.status(500).json({ message: 'Server error during login' });
     }
 };
 
@@ -132,81 +108,51 @@ export const refreshAccessToken = async (req, res) => {
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        const users = await readUsers();
-        const userIndex = users.findIndex(u => u.id === decoded.id && u.refreshToken === token);
-        
-        if (userIndex === -1) {
-            return res.status(403).json({ message: 'Invalid or revoked refresh token' });
+
+        // Find user by ID just to verify existence
+        const user = await User.findById(decoded.id);
+
+        if (!user) {
+            return res.status(403).json({ message: 'Invalid token: User not found' });
         }
-        
-        const user = users[userIndex];
-        
-        // Token Rotation: Generate new access and refresh tokens
-        const newAccessToken = generateAccessToken(user.id, user.email);
-        const newRefreshToken = generateRefreshToken(user.id);
-        
-        users[userIndex].refreshToken = newRefreshToken;
-        await writeUsers(users);
+
+        const accessToken = generateAccessToken(user.id);
+        const refreshToken = generateRefreshToken(user.id); // Rotate refresh token for security
 
         res.json({
-            accessToken: newAccessToken,
-            refreshToken: newRefreshToken,
+            accessToken,
+            refreshToken
         });
 
     } catch (error) {
         console.error("Refresh token error:", error.message);
-        return res.status(403).json({ message: 'Invalid refresh token' });
+        return res.status(403).json({ message: 'Invalid or expired refresh token' });
     }
 };
 
 // @desc    Logout user
 // @route   POST /api/auth/logout
 export const logoutUser = async (req, res) => {
-    // This is a protected route, so req.user is available
-    try {
-        const users = await readUsers();
-        const userIndex = users.findIndex(u => u.id === req.user.id);
-        
-        if (userIndex !== -1) {
-            // Invalidate the refresh token
-            users[userIndex].refreshToken = '';
-            await writeUsers(users);
-        }
-        
-        res.status(204).send(); // Success, No Content
-    } catch (error) {
-        console.error("Logout error:", error);
-        res.status(500).json({ message: 'Server error during logout' });
-    }
+    // Stateless JWTs typically handled on client side by forgetting token.
+    // Ideally, add token to a blacklist or DB of revoked tokens.
+    // For now, simply return success.
+    res.status(204).send();
 };
 
 
 // @desc    Get user profile data
 // @route   GET /api/auth/profile
 export const getUserProfile = async (req, res) => {
-    const users = await readUsers();
-    const user = users.find(u => u.id === req.user?.id);
+    try {
+        const user = await User.findById(req.user.id).select('-password');
 
-    if (user) {
-         // Reset daily message count if the date has changed
-        const today = getTodayDateString();
-        if (user.lastMessageDate !== today) {
-            user.dailyMessageCount = 0;
-            user.lastMessageDate = today;
-            await writeUsers(users);
+        if (user) {
+            res.json(user);
+        } else {
+            res.status(404).json({ message: 'User not found' });
         }
-
-        res.json({
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            subscription: user.subscription,
-            role: user.role,
-            aiCredits: user.aiCredits,
-            dailyMessageCount: user.dailyMessageCount,
-            lastMessageDate: user.lastMessageDate
-        });
-    } else {
-        res.status(404).json({ message: 'User not found' });
+    } catch (error) {
+        console.error("Profile Error:", error);
+        res.status(500).json({ message: 'Server error fetching profile' });
     }
 };

@@ -1,5 +1,7 @@
 import jwt from 'jsonwebtoken';
+import crypto from 'crypto';
 import User from '../models/User.js';
+import sendEmail from '../utils/sendEmail.js';
 
 // Helper: Generate Access Token (Short-lived)
 const generateAccessToken = (id) => {
@@ -21,6 +23,21 @@ export const registerUser = async (req, res) => {
 
         if (!name || !email || !password) {
             return res.status(400).json({ message: 'Please add all fields' });
+        }
+
+        // Validate Password Strength
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+        // Adjusted regex: Min 8 chars, at least one letter, one number. Removed strict symbol requirement to avoid "bad UX" per user request, but kept length and mixed types.
+        // Actually, let's stick to the simpler rule approved: 8 chars, 1 number, 1 uppercase OR symbol.
+
+        const hasNumber = /\d/.test(password);
+        const hasUpperOrSymbol = /[A-Z@$!%*#?&]/.test(password);
+        const isLongEnough = password.length >= 8;
+
+        if (!hasNumber || !hasUpperOrSymbol || !isLongEnough) {
+            return res.status(400).json({
+                message: 'Password must be at least 8 characters long and contain at least one number and one uppercase letter or symbol.'
+            });
         }
 
         // Check if user exists
@@ -45,6 +62,35 @@ export const registerUser = async (req, res) => {
         });
 
         if (user) {
+            // Generate Verification Token
+            const verificationToken = user.getVerificationToken();
+            await user.save(); // Save the token to DB
+
+            // Create Verification URL
+            // Adjust the frontend URL based on environment if needed, for now assuming localhost or derived from origin
+            // The frontend should have a route like /verify-email/:token
+            const verifyUrl = `${req.protocol}://localhost:5173/verify-email/${verificationToken}`;
+
+            const message = `
+                <h1>Email Verification</h1>
+                <p>Please verify your email to unlock full features.</p>
+                <a href="${verifyUrl}" clicktracking=off>${verifyUrl}</a>
+            `;
+
+            try {
+                await sendEmail({
+                    email: user.email,
+                    subject: 'ExamRedi Email Verification',
+                    html: message
+                });
+            } catch (error) {
+                console.error("Email send failed:", error);
+                // Don't fail registration if email fails, just log it.
+                // User can request resend later.
+                user.verificationToken = undefined;
+                await user.save({ validateBeforeSave: false });
+            }
+
             const accessToken = generateAccessToken(user.id);
             const refreshToken = generateRefreshToken(user.id);
 
@@ -54,6 +100,7 @@ export const registerUser = async (req, res) => {
                 email: user.email,
                 subscription: user.subscription,
                 role: user.role,
+                isVerified: user.isVerified,
                 accessToken,
                 refreshToken,
             });
@@ -139,6 +186,116 @@ export const logoutUser = async (req, res) => {
     res.status(204).send();
 };
 
+
+// @desc    Verify User Email
+// @route   PUT /api/auth/verifyemail/:token
+export const verifyEmail = async (req, res) => {
+    try {
+        const verificationToken = crypto
+            .createHash('sha256')
+            .update(req.params.token)
+            .digest('hex');
+
+        const user = await User.findOne({
+            verificationToken,
+            // verification token usually doesn't expire, or we can set an expiry
+        });
+
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid or expired token' });
+        }
+
+        user.isVerified = true;
+        user.verificationToken = undefined;
+        await user.save();
+
+        res.status(200).json({ success: true, data: 'Email verified' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error verifying email' });
+    }
+};
+
+// @desc    Forgot Password
+// @route   POST /api/auth/forgotpassword
+export const forgotPassword = async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(404).json({ message: 'There is no user with that email' });
+        }
+
+        // Get Reset Token
+        const resetToken = user.getResetPasswordToken();
+
+        await user.save({ validateBeforeSave: false });
+
+        // Create reset url
+        // Frontend route: /reset-password/:token
+        const resetUrl = `${req.protocol}://localhost:5173/reset-password/${resetToken}`;
+
+        const message = `
+            You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request to: \n\n <a href="${resetUrl}">${resetUrl}</a>
+        `;
+
+        try {
+            await sendEmail({
+                email: user.email,
+                subject: 'Password Reset Token',
+                html: message
+            });
+
+            res.status(200).json({ success: true, data: 'Email sent' });
+        } catch (error) {
+            console.log(error);
+            user.resetPasswordToken = undefined;
+            user.resetPasswordExpire = undefined;
+
+            await user.save({ validateBeforeSave: false });
+
+            return res.status(500).json({ message: 'Email could not be sent' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+
+// @desc    Reset Password
+// @route   PUT /api/auth/resetpassword/:token
+export const resetPassword = async (req, res) => {
+    try {
+        // Get hashed token
+        const resetPasswordToken = crypto
+            .createHash('sha256')
+            .update(req.params.token)
+            .digest('hex');
+
+        const user = await User.findOne({
+            resetPasswordToken,
+            resetPasswordExpire: { $gt: Date.now() },
+        });
+
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid token' });
+        }
+
+        // Set new password
+        user.password = req.body.password;
+        user.resetPasswordToken = undefined;
+        user.resetPasswordExpire = undefined;
+
+        await user.save();
+
+        res.status(200).json({ success: true, data: 'Password updated' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
 
 // @desc    Get user profile data
 // @route   GET /api/auth/profile

@@ -8,10 +8,15 @@ import adminRoutes from './routes/adminRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import flashcardRoutes from './routes/flashcardRoutes.js';
 
+import connectDB from './db/connect.js';
+
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Connect to Database
+connectDB();
 
 app.use(cors());
 app.use(express.json());

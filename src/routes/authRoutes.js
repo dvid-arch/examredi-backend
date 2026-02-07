@@ -8,8 +8,6 @@ import {
     forgotPassword,
     resetPassword,
     verifyEmail,
-    resetPassword,
-    verifyEmail,
     resendVerification,
     handlePaymentWebhook
 } from '../controllers/authController.js';

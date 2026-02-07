@@ -133,7 +133,7 @@ export const loginUser = async (req, res) => {
                 email: user.email,
                 subscription: user.subscription,
                 role: user.role,
-                // Add AI credits or other logic here later if needed
+                isVerified: user.isVerified,
                 accessToken,
                 refreshToken
             });
@@ -214,6 +214,47 @@ export const verifyEmail = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server error verifying email' });
+    }
+};
+
+// @desc    Resend Verification Email
+// @route   POST /api/auth/resend-verification
+export const resendVerification = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        if (user.isVerified) {
+            return res.status(400).json({ message: 'User is already verified' });
+        }
+
+        // Generate Verification Token
+        const verificationToken = user.getVerificationToken();
+        await user.save();
+
+        // Create Verification URL
+        const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+        const verifyUrl = `${frontendUrl}/#/verify-email/${verificationToken}`;
+
+        const message = `
+            <h1>Email Verification</h1>
+            <p>Please verify your email to unlock full features.</p>
+            <a href="${verifyUrl}" clicktracking=off>${verifyUrl}</a>
+        `;
+
+        await sendEmail({
+            email: user.email,
+            subject: 'ExamRedi Email Verification',
+            html: message
+        });
+
+        res.status(200).json({ success: true, data: 'Verification email sent' });
+    } catch (error) {
+        console.error("Resend Verification Error:", error);
+        res.status(500).json({ message: 'Server error sending verification email' });
     }
 };
 

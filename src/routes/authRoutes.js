@@ -7,7 +7,8 @@ import {
     logoutUser,
     forgotPassword,
     resetPassword,
-    verifyEmail
+    verifyEmail,
+    resendVerification
 } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
 
@@ -23,6 +24,7 @@ router.get('/profile', protect, getUserProfile);
 router.post('/forgotpassword', forgotPassword);
 router.put('/resetpassword/:token', resetPassword);
 router.put('/verifyemail/:token', verifyEmail);
+router.post('/resend-verification', protect, resendVerification);
 
 router.get('/fix-db-index', async (req, res) => {
     try {

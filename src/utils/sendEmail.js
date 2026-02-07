@@ -1,8 +1,8 @@
 import { Resend } from 'resend';
 
 const sendEmail = async (options) => {
-    // Use environment variable, fallback to the provided key for immediate testing
-    const resend = new Resend(process.env.RESEND_API_KEY || 're_Q7MAkE2A_5R4vpqwreaaYaEZZKsA8WbLY');
+    // Use environment variable only
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const data = await resend.emails.send({

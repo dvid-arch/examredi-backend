@@ -29,21 +29,23 @@ const writeJsonFile = async (filePath, data) => {
 
 // @desc    Get past papers
 // @route   GET /api/data/papers
-// @desc    Get past papers
-// @route   GET /api/data/papers
 export const getPapers = async (req, res) => {
     try {
         const { subject, year } = req.query;
-        let query = {};
+        const allPapers = await readJsonFile(papersFilePath);
+
+        let papers = allPapers;
 
         if (subject) {
-            query.subject = new RegExp(`^${subject}$`, 'i'); // Case-insensitive
-        }
-        if (year) {
-            query.year = Number(year);
+            const subjectLower = subject.toLowerCase();
+            papers = papers.filter(p => p.subject.toLowerCase() === subjectLower);
         }
 
-        const papers = await Paper.find(query).select('-__v'); // Exclude version key
+        if (year) {
+            const yearNum = Number(year);
+            papers = papers.filter(p => p.year === yearNum);
+        }
+
         res.json(papers);
     } catch (error) {
         console.error('Error fetching papers:', error);

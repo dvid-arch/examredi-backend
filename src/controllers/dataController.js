@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import Paper from '../models/Paper.js';
 
@@ -49,6 +50,43 @@ export const getPapers = async (req, res) => {
         res.json(papers);
     } catch (error) {
         console.error('Error fetching papers:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+// @desc    Search past questions by keyword
+// @route   GET /api/data/search
+export const searchPapers = async (req, res) => {
+    try {
+        const { query } = req.query;
+        if (!query) {
+            return res.status(400).json({ message: 'Search query is required' });
+        }
+
+        const lowerQuery = query.toLowerCase();
+        const allPapers = await readJsonFile(papersFilePath);
+
+        const results = [];
+        allPapers.forEach(paper => {
+            paper.questions.forEach(q => {
+                const questionText = (q.question || '').toLowerCase();
+                const optionsText = q.options ? Object.values(q.options).map(o => (o.text || '').toLowerCase()).join(' ') : '';
+
+                if (questionText.includes(lowerQuery) || optionsText.includes(lowerQuery)) {
+                    results.push({
+                        ...q,
+                        subject: paper.subject,
+                        year: paper.year,
+                        exam: paper.exam
+                    });
+                }
+            });
+        });
+
+        // Limit results for performance
+        res.json(results.slice(0, 50));
+    } catch (error) {
+        console.error('Error searching papers:', error);
         res.status(500).json({ message: 'Server Error' });
     }
 };

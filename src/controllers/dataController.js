@@ -47,6 +47,17 @@ export const getPapers = async (req, res) => {
             papers = papers.filter(p => p.year === yearNum);
         }
 
+        // --- GUEST/FREE LIMITS ---
+        // If user is not pro, limit questions per paper to 10
+        const isPro = req.user && req.user.subscription === 'pro';
+        if (!isPro) {
+            papers = papers.map(paper => ({
+                ...paper,
+                questions: paper.questions.slice(0, 10),
+                isLimited: true // Hint to UI
+            }));
+        }
+
         res.json(papers);
     } catch (error) {
         console.error('Error fetching papers:', error);
@@ -108,14 +119,40 @@ export const getLeaderboard = async (req, res) => {
 // @desc    Add score to leaderboard
 // @route   POST /api/data/leaderboard
 export const addLeaderboardScore = async (req, res) => {
-    const newScore = req.body;
+    const { name, totalQuestions, answers, date, score: clientScore } = req.body;
     let leaderboard = await readJsonFile(leaderboardFilePath);
+
+    let finalScore = clientScore;
+
+    // --- SERVER-SIDE VERIFICATION ---
+    if (answers && typeof answers === 'object') {
+        const allPapers = await readJsonFile(papersFilePath);
+        const allQuestions = allPapers.flatMap(p => p.questions);
+
+        let verifiedScore = 0;
+        Object.keys(answers).forEach(qId => {
+            const question = allQuestions.find(q => q.id === qId);
+            if (question && question.answer === answers[qId]) {
+                verifiedScore++;
+            }
+        });
+
+        console.log(`Score Verification: Client=${clientScore}, Verified=${verifiedScore}`);
+        finalScore = verifiedScore;
+    }
+
+    const newScore = {
+        name,
+        score: finalScore,
+        totalQuestions: totalQuestions || 0,
+        date: date || Date.now()
+    };
 
     leaderboard.push(newScore);
     leaderboard.sort((a, b) => b.score - a.score);
 
-    if (leaderboard.length > 10) {
-        leaderboard = leaderboard.slice(0, 10);
+    if (leaderboard.length > 20) { // Keep top 20
+        leaderboard = leaderboard.slice(0, 20);
     }
 
     await writeJsonFile(leaderboardFilePath, leaderboard);
@@ -126,6 +163,12 @@ export const addLeaderboardScore = async (req, res) => {
 // @route   GET /api/data/performance
 export const getPerformance = async (req, res) => {
     const userId = req.user?.id;
+    const isPro = req.user?.subscription === 'pro';
+
+    if (!isPro) {
+        return res.status(403).json({ message: "Performance tracking is an ExamRedi Pro feature." });
+    }
+
     const allResults = await readJsonFile(performanceFilePath);
     const userResults = allResults[userId] || [];
     res.json(userResults);

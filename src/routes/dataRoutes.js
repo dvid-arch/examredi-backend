@@ -1,15 +1,15 @@
 import express from 'express';
 import { getPapers, getGuides, getLeaderboard, addLeaderboardScore, getPerformance, addPerformanceResult, getLiterature, searchPapers } from '../controllers/dataController.js';
-import { protect } from '../middleware/authMiddleware.js';
+import { protect, optionalProtect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// Public routes
-router.get('/papers', getPapers);
-router.get('/guides', getGuides);
-router.get('/leaderboard', getLeaderboard);
-router.get('/literature', getLiterature);
-router.get('/search', searchPapers);
+// Public routes with optional auth (for feature gating)
+router.get('/papers', optionalProtect, getPapers);
+router.get('/guides', optionalProtect, getGuides);
+router.get('/leaderboard', optionalProtect, getLeaderboard);
+router.get('/literature', optionalProtect, getLiterature);
+router.get('/search', optionalProtect, searchPapers);
 
 // Protected routes
 router.post('/leaderboard', protect, addLeaderboardScore);

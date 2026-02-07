@@ -27,3 +27,23 @@ export const protect = async (req, res, next) => {
         res.status(401).json({ message: 'Not authorized, no token' });
     }
 };
+
+export const optionalProtect = async (req, res, next) => {
+    let token;
+
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+        try {
+            token = req.headers.authorization.split(' ')[1];
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+            req.user = await User.findById(decoded.id).select('-password');
+            next();
+        } catch (error) {
+            // Even if token fails, allowed as optional
+            console.error('Optional Auth Error:', error);
+            next();
+        }
+    } else {
+        next();
+    }
+};

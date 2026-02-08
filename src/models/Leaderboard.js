@@ -2,9 +2,10 @@
 import mongoose from 'mongoose';
 
 const leaderboardSchema = new mongoose.Schema({
-    username: { type: String, required: true },
+    name: { type: String, required: true },
     score: { type: Number, required: true },
-    subject: { type: String, required: true }, // 'General' or specific subject
+    totalQuestions: { type: Number, required: true },
+    subject: { type: String, default: 'UTME Challenge' },
     date: { type: Date, default: Date.now }
 }, {
     timestamps: true

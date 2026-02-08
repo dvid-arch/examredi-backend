@@ -3,6 +3,8 @@ import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import Paper from '../models/Paper.js';
+import Leaderboard from '../models/Leaderboard.js';
+import Performance from '../models/Performance.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -113,54 +115,60 @@ export const getGuides = async (req, res) => {
 // @desc    Get leaderboard
 // @route   GET /api/data/leaderboard
 export const getLeaderboard = async (req, res) => {
-    const leaderboard = await readJsonFile(leaderboardFilePath);
-    res.json(leaderboard.sort((a, b) => b.score - a.score));
+    try {
+        const leaderboard = await Leaderboard.find().sort({ score: -1, date: -1 }).limit(20);
+        res.json(leaderboard);
+    } catch (error) {
+        console.error('Error fetching leaderboard:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
 };
 
 // @desc    Add score to leaderboard
 // @route   POST /api/data/leaderboard
 export const addLeaderboardScore = async (req, res) => {
-    const { name, totalQuestions, answers, date, score: clientScore } = req.body;
-    let leaderboard = await readJsonFile(leaderboardFilePath);
+    try {
+        const { name, totalQuestions, answers, date, score: clientScore } = req.body;
 
-    let finalScore = clientScore;
+        let finalScore = clientScore;
 
-    // --- SERVER-SIDE VERIFICATION ---
-    if (answers && typeof answers === 'object') {
-        const allPapers = await readJsonFile(papersFilePath);
-        const allQuestions = allPapers.flatMap(p => p.questions);
+        // --- SERVER-SIDE VERIFICATION ---
+        if (answers && typeof answers === 'object') {
+            const allPapers = await readJsonFile(papersFilePath);
+            const allQuestions = allPapers.flatMap(p => p.questions);
 
-        let verifiedScore = 0;
-        Object.keys(answers).forEach(qId => {
-            const question = allQuestions.find(q => q.id === qId);
-            if (question && question.answer === answers[qId]) {
-                verifiedScore++;
-            }
+            let verifiedScore = 0;
+            Object.keys(answers).forEach(qId => {
+                const question = allQuestions.find(q => q.id === qId);
+                if (question && question.answer === answers[qId]) {
+                    verifiedScore++;
+                }
+            });
+
+            console.log(`Score Verification: Client=${clientScore}, Verified=${verifiedScore}`);
+            finalScore = verifiedScore;
+        }
+
+        const newScore = new Leaderboard({
+            name,
+            score: finalScore,
+            totalQuestions: totalQuestions || 0,
+            date: date || Date.now()
         });
 
-        console.log(`Score Verification: Client=${clientScore}, Verified=${verifiedScore}`);
-        finalScore = verifiedScore;
+        await newScore.save();
+
+        // Return the updated top 20
+        const leaderboard = await Leaderboard.find().sort({ score: -1, date: -1 }).limit(20);
+        res.status(201).json(leaderboard);
+    } catch (error) {
+        console.error('Error adding leaderboard score:', error);
+        res.status(500).json({ message: 'Server Error' });
     }
-
-    const newScore = {
-        name,
-        score: finalScore,
-        totalQuestions: totalQuestions || 0,
-        date: date || Date.now()
-    };
-
-    leaderboard.push(newScore);
-    leaderboard.sort((a, b) => b.score - a.score);
-
-    if (leaderboard.length > 20) { // Keep top 20
-        leaderboard = leaderboard.slice(0, 20);
-    }
-
-    await writeJsonFile(leaderboardFilePath, leaderboard);
-    res.status(201).json(leaderboard);
 };
 
-import Performance from '../models/Performance.js';
+// Remove the scattered import later
+
 
 // @desc    Get user performance results
 // @route   GET /api/data/performance

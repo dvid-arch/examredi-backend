@@ -51,13 +51,6 @@ export const getPapers = async (req, res) => {
         // If user is not pro, limit questions per paper to 10
         const isPro = req.user && req.user.subscription === 'pro';
 
-        console.log(`[Diagnostic] User: ${req.user?.email}, Sub: ${req.user?.subscription}, isPro: ${isPro}`);
-        if (req.headers.authorization) {
-            console.log(`[Diagnostic] Auth Header exists: ${req.headers.authorization.substring(0, 20)}...`);
-        } else {
-            console.log(`[Diagnostic] No Auth Header`);
-        }
-
         if (!isPro) {
             papers = papers.map(paper => ({
                 ...paper,

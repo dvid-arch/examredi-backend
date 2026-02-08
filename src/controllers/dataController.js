@@ -160,37 +160,67 @@ export const addLeaderboardScore = async (req, res) => {
     res.status(201).json(leaderboard);
 };
 
+import Performance from '../models/Performance.js';
+
 // @desc    Get user performance results
 // @route   GET /api/data/performance
 export const getPerformance = async (req, res) => {
-    const userId = req.user?.id;
-    const isPro = req.user?.subscription === 'pro';
+    try {
+        const userId = req.user?.id;
+        const isPro = req.user?.subscription === 'pro';
 
-    if (!isPro) {
-        return res.status(403).json({ message: "Performance tracking is an ExamRedi Pro feature." });
+        if (!isPro) {
+            return res.status(403).json({ message: "Performance tracking is an ExamRedi Pro feature." });
+        }
+
+        const userResults = await Performance.find({ userId }).sort({ date: -1 });
+        res.json(userResults);
+    } catch (error) {
+        console.error('Error fetching performance:', error);
+        res.status(500).json({ message: 'Server Error' });
     }
-
-    const allResults = await readJsonFile(performanceFilePath);
-    const userResults = allResults[userId] || [];
-    res.json(userResults);
 };
 
 // @desc    Add a performance result
 // @route   POST /api/data/performance
 export const addPerformanceResult = async (req, res) => {
-    const userId = req.user?.id;
-    const newResult = req.body;
+    try {
+        const userId = req.user?.id;
+        const {
+            paperId,
+            exam,
+            subject,
+            year,
+            score,
+            totalQuestions,
+            type,
+            topicBreakdown,
+            incorrectQuestions,
+            completedAt
+        } = req.body;
 
-    const allResults = await readJsonFile(performanceFilePath);
+        const newResult = new Performance({
+            userId,
+            subject,
+            score,
+            totalQuestions,
+            type: type || 'practice',
+            topicBreakdown,
+            incorrectQuestions,
+            date: completedAt || Date.now(),
+            metadata: {
+                paperId,
+                exam,
+                year
+            }
+        });
 
-    if (!allResults[userId]) {
-        allResults[userId] = [];
+        await newResult.save();
+        res.status(201).json(newResult);
+    } catch (error) {
+        console.error('Error adding performance result:', error);
+        res.status(500).json({ message: 'Server Error' });
     }
-
-    allResults[userId].unshift(newResult);
-
-    await writeJsonFile(performanceFilePath, allResults);
-    res.status(201).json(newResult);
 };
 
 // @desc    Get literature books

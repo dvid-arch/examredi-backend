@@ -9,10 +9,24 @@ const userSchema = new mongoose.Schema({
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     studyPlan: {
-        targetScore: Number,
-        weakSubjects: [String],
-        dailyGoal: Number
+        targetScore: { type: Number, default: 250 },
+        weakSubjects: { type: [String], default: [] },
+        dailyGoal: { type: Number, default: 10 }
     },
+    streak: {
+        current: { type: Number, default: 0 },
+        longest: { type: Number, default: 0 },
+        lastDate: { type: Date },
+        history: [{ type: String }] // Array of 'YYYY-MM-DD' strings
+    },
+    recentActivity: [{
+        id: String,
+        type: { type: String, enum: ['quiz', 'guide', 'game'] },
+        title: String,
+        path: String,
+        state: mongoose.Schema.Types.Mixed,
+        timestamp: { type: Date, default: Date.now }
+    }],
     isVerified: { type: Boolean, default: false },
     verificationToken: String,
     resetPasswordToken: String,

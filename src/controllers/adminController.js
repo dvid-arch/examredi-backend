@@ -134,6 +134,70 @@ export const updateUserSubscription = async (req, res) => {
     }
 };
 
+// @desc    Add a new paper
+// @route   POST /api/admin/papers
+export const addPaper = async (req, res) => {
+    try {
+        const papers = await readJsonFile(papersFilePath);
+        const newPaper = { ...req.body, id: Date.now().toString() };
+        papers.push(newPaper);
+        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
+        res.status(201).json(newPaper);
+    } catch (error) {
+        res.status(500).json({ message: 'Error adding paper' });
+    }
+};
+
+// @desc    Edit a paper
+// @route   PUT /api/admin/papers/:id
+export const editPaper = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const papers = await readJsonFile(papersFilePath);
+        const paperIndex = papers.findIndex(p => p.id === id);
+        if (paperIndex === -1) {
+            return res.status(404).json({ message: 'Paper not found' });
+        }
+        papers[paperIndex] = { ...papers[paperIndex], ...req.body };
+        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
+        res.json(papers[paperIndex]);
+    } catch (error) {
+        res.status(500).json({ message: 'Error editing paper' });
+    }
+};
+
+// @desc    Add a new guide
+// @route   POST /api/admin/guides
+export const addGuide = async (req, res) => {
+    try {
+        const guides = await readJsonFile(guidesFilePath);
+        const newGuide = { ...req.body, id: Date.now().toString() };
+        guides.push(newGuide);
+        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+        res.status(201).json(newGuide);
+    } catch (error) {
+        res.status(500).json({ message: 'Error adding guide' });
+    }
+};
+
+// @desc    Edit a guide
+// @route   PUT /api/admin/guides/:id
+export const editGuide = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const guides = await readJsonFile(guidesFilePath);
+        const guideIndex = guides.findIndex(g => g.id === id);
+        if (guideIndex === -1) {
+            return res.status(404).json({ message: 'Guide not found' });
+        }
+        guides[guideIndex] = { ...guides[guideIndex], ...req.body };
+        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+        res.json(guides[guideIndex]);
+    } catch (error) {
+        res.status(500).json({ message: 'Error editing guide' });
+    }
+};
+
 // @desc    Get admin dashboard stats
 // @route   GET /api/admin/stats
 export const getAdminStats = async (req, res) => {

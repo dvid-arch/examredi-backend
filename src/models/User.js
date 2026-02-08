@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     name: { type: String, required: true }, // Changed from username to name to match frontend
     password: { type: String, required: true },
     email: { type: String, unique: true, sparse: true }, // Optional for now
-    subscription: { type: String, enum: ['free', 'premium'], default: 'free' },
+    subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     studyPlan: {
         targetScore: Number,

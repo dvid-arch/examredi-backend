@@ -118,6 +118,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '..', 'db');
+console.log(`[AdminController] Usage DB Path: ${dbPath}`);
 const usersFilePath = path.join(dbPath, 'users.json');
 const papersFilePath = path.join(dbPath, 'papers.json');
 const guidesFilePath = path.join(dbPath, 'guides.json');
@@ -126,7 +127,10 @@ const readUsers = async () => {
     try {
         const data = await fs.readFile(usersFilePath, 'utf-8');
         return JSON.parse(data);
-    } catch (error) { return []; }
+    } catch (error) {
+        console.error(`[Error] Failed to read users from ${usersFilePath}:`, error.message);
+        return [];
+    }
 };
 
 const writeUsers = async (users) => {
@@ -139,6 +143,7 @@ const readJsonFile = async (filePath) => {
         const data = await fs.readFile(filePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
+        console.error(`[Error] Failed to read file ${filePath}:`, error.message);
         return [];
     }
 };
@@ -168,16 +173,16 @@ export const updateUserSubscription = async (req, res) => {
     if (userIndex === -1) {
         return res.status(404).json({ message: 'User not found' });
     }
-    
+
     // Admins cannot have their subscription changed
-    if(users[userIndex].role === 'admin') {
-         return res.status(403).json({ message: 'Cannot change an admin\'s subscription' });
+    if (users[userIndex].role === 'admin') {
+        return res.status(403).json({ message: 'Cannot change an admin\'s subscription' });
     }
 
     users[userIndex].subscription = subscription;
-    
+
     // Give credits when upgrading to pro
-    if(subscription === 'pro') {
+    if (subscription === 'pro') {
         users[userIndex].aiCredits = 10;
     } else {
         users[userIndex].aiCredits = 0;

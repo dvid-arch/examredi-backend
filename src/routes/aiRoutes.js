@@ -1,5 +1,5 @@
 import express from 'express';
-import { handleAiChat, handleGenerateGuide, handleResearch } from '../controllers/aiController.js';
+import { handleAiChat, handleGenerateGuide, handleResearch, handleGetTopicKeywords } from '../controllers/aiController.js';
 import { protect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();

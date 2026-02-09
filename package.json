@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@getbrevo/brevo": "^3.0.1",
+    "@sendgrid/mail": "^8.1.4",
     "@google/genai": "^1.28.0",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

@@ -268,13 +268,16 @@ export const forgotPassword = async (req, res) => {
         const user = await User.findOne({ email });
 
         if (!user) {
+            console.log(`Forgot Password: No user found with email ${email}`);
             return res.status(404).json({ message: 'There is no user with that email' });
         }
 
+        console.log(`Forgot Password: User found, generating reset token for ${email}...`);
         // Get Reset Token
         const resetToken = user.getResetPasswordToken();
 
         await user.save({ validateBeforeSave: false });
+        console.log(`Forgot Password: Token saved to database for ${email}.`);
 
         // Create reset url
         // Frontend route: /reset-password/:token

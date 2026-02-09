@@ -1,22 +1,33 @@
-import { Resend } from 'resend';
+import * as brevo from '@getbrevo/brevo';
 
 const sendEmail = async (options) => {
-    // Use environment variable only
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const apiInstance = new brevo.TransactionalEmailsApi();
+
+    // Set API key from environment variable
+    const apiKey = process.env.BREVO_API_KEY || process.env.SENDINBLUE_API_KEY;
+    apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, apiKey);
+
+    const sendSmtpEmail = new brevo.SendSmtpEmail();
+
+    sendSmtpEmail.subject = options.subject;
+    sendSmtpEmail.htmlContent = options.html || options.message;
+    sendSmtpEmail.sender = {
+        name: "ExamRedi",
+        email: process.env.FROM_EMAIL || "support@examredi.com"
+    };
+    sendSmtpEmail.to = [{ email: options.email }];
+
+    // Optional: Add plain text version if needed
+    if (options.message) {
+        sendSmtpEmail.textContent = options.message;
+    }
 
     try {
-        const data = await resend.emails.send({
-            from: process.env.FROM_EMAIL || 'onboarding@resend.dev', // Use separate env or default Resend sender
-            to: options.email,
-            subject: options.subject,
-            html: options.html || options.message, // Ensure HTML content is used if available
-            text: options.message
-        });
-
-        console.log('Email sent successfully:', data);
+        const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
+        console.log('Email sent successfully via Brevo:', data);
         return data;
     } catch (error) {
-        console.error('Error sending email with Resend:', error);
+        console.error('Error sending email with Brevo:', error.response ? error.response.body : error);
         throw error;
     }
 };

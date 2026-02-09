@@ -1,34 +1,23 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-// Create the transporter using Gmail
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS?.replace(/\s/g, '') // Ensure no spaces
-    }
-});
-
-// Reusable function to send email
-// Supporting both {to} and {email} for backward compatibility
-const sendEmail = async ({ to, email, subject, text, html }) => {
-    console.log('sendEmail() called');
-    const recipient = to || email;
+const sendEmail = async (options) => {
+    // Use environment variable only
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
-        const info = await transporter.sendMail({
-            from: `"ExamRedi Support" <${process.env.EMAIL_USER}>`,
-            to: recipient,
-            subject,
-            text,
-            html
+        const data = await resend.emails.send({
+            from: process.env.FROM_EMAIL || 'onboarding@resend.dev', // Use separate env or default Resend sender
+            to: options.email,
+            subject: options.subject,
+            html: options.html || options.message, // Ensure HTML content is used if available
+            text: options.message
         });
 
-        console.log('Email sent:', info.response);
-        return { success: true, info };
+        console.log('Email sent successfully:', data);
+        return data;
     } catch (error) {
-        console.error('Email send failed:', error);
-        return { success: false, error };
+        console.error('Error sending email with Resend:', error);
+        throw error;
     }
 };
 

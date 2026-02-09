@@ -1,22 +1,27 @@
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
 const sendEmail = async (options) => {
-    // Use environment variable only
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const transporter = nodemailer.createTransport({
+        service: process.env.EMAIL_SERVICE || 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        },
+    });
+
+    const mailOptions = {
+        from: `ExamRedi <${process.env.EMAIL_USER}>`,
+        to: options.email,
+        subject: options.subject,
+        html: options.html,
+    };
 
     try {
-        const data = await resend.emails.send({
-            from: process.env.FROM_EMAIL || 'onboarding@resend.dev', // Use separate env or default Resend sender
-            to: options.email,
-            subject: options.subject,
-            html: options.html || options.message, // Ensure HTML content is used if available
-            text: options.message
-        });
-
-        console.log('Email sent successfully:', data);
-        return data;
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully:', info.messageId);
+        return info;
     } catch (error) {
-        console.error('Error sending email with Resend:', error);
+        console.error('Error sending email with Nodemailer:', error);
         throw error;
     }
 };

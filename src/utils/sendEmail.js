@@ -5,6 +5,19 @@ const sendEmail = async (options) => {
 
     // Set API key from environment variable
     const apiKey = process.env.BREVO_API_KEY || process.env.SENDINBLUE_API_KEY;
+
+    // Validate API key exists
+    if (!apiKey) {
+        console.error('❌ BREVO_API_KEY is not set in environment variables!');
+        throw new Error('Email service not configured. Please contact support.');
+    }
+
+    console.log('📧 Attempting to send email via Brevo...');
+    console.log('   To:', options.email);
+    console.log('   Subject:', options.subject);
+    console.log('   From:', process.env.FROM_EMAIL || "support@examredi.com");
+    console.log('   API Key present:', apiKey ? `Yes (${apiKey.substring(0, 10)}...)` : 'No');
+
     apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, apiKey);
 
     const sendSmtpEmail = new brevo.SendSmtpEmail();
@@ -24,10 +37,13 @@ const sendEmail = async (options) => {
 
     try {
         const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
-        console.log('Email sent successfully via Brevo:', data);
+        console.log('✅ Email sent successfully via Brevo!');
+        console.log('   Message ID:', data.messageId);
         return data;
     } catch (error) {
-        console.error('Error sending email with Brevo:', error.response ? error.response.body : error);
+        console.error('❌ Error sending email with Brevo:');
+        console.error('   Error details:', error.response ? JSON.stringify(error.response.body, null, 2) : error.message);
+        console.error('   Full error:', error);
         throw error;
     }
 };

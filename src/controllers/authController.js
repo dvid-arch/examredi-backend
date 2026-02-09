@@ -124,7 +124,19 @@ export const loginUser = async (req, res) => {
         // Check for user email
         const user = await User.findOne({ email });
 
-        if (user && (await user.matchPassword(password))) {
+        // Check if user exists and has a password set (not an OAuth-only user)
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid credentials' });
+        }
+
+        if (!user.password) {
+            return res.status(400).json({
+                message: 'This account was created with Google Sign-In. Please use Google to log in.'
+            });
+        }
+
+        // Verify password
+        if (await user.matchPassword(password)) {
             const accessToken = generateAccessToken(user.id);
             const refreshToken = generateRefreshToken(user.id);
 

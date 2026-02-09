@@ -1,5 +1,5 @@
 import express from 'express';
-import { getPapers, getGuides, getLeaderboard, addLeaderboardScore, getPerformance, addPerformanceResult, getLiterature, searchPapers } from '../controllers/dataController.js';
+import { getPapers, getGuides, getLeaderboard, addLeaderboardScore, getPerformance, addPerformanceResult, getLiterature, searchPapers, searchByKeywords } from '../controllers/dataController.js';
 import { protect, optionalProtect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();

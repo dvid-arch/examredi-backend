@@ -3,19 +3,19 @@ import nodemailer from 'nodemailer';
 const sendEmail = async (options) => {
     console.log('Initializing email transporter...');
 
-    // Using explicit host/port settings for better reliability in production
+    // Port 587 (STARTTLS) is often more compatible with cloud provider networks
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // use SSL
+        port: 587,
+        secure: false, // true for 465, false for other ports
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS?.replace(/\s/g, ''), // Ensure no spaces
         },
-        // Wait at most 10 seconds for connection
-        connectionTimeout: 10000,
-        greetingTimeout: 10000,
-        socketTimeout: 10000,
+        // Wait at most 15 seconds for connection
+        connectionTimeout: 15000,
+        greetingTimeout: 15000,
+        socketTimeout: 15000,
     });
 
     const mailOptions = {

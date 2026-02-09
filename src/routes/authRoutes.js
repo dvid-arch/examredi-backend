@@ -11,8 +11,7 @@ import {
     resendVerification,
     handlePaymentWebhook,
     generateAccessToken,
-    generateRefreshToken,
-    testEmail
+    generateRefreshToken
 } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { loginLimiter, registerLimiter } from '../middleware/rateLimiter.js';
@@ -45,7 +44,6 @@ router.post('/forgotpassword', forgotPassword);
 router.put('/resetpassword/:token', resetPassword);
 router.put('/verifyemail/:token', verifyEmail);
 router.post('/resend-verification', protect, resendVerification);
-router.post('/test-email', testEmail); // Test endpoint for email configuration
 router.post('/webhook', handlePaymentWebhook);
 
 router.get('/fix-db-index', async (req, res) => {

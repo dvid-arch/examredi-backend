@@ -49,11 +49,11 @@ export const getPapers = async (req, res) => {
             papers = papers.filter(p => p.year === yearNum);
         }
 
-        // --- GUEST/FREE LIMITS ---
-        // If user is not pro, limit questions per paper to 10
-        const isPro = req.user && req.user.subscription === 'pro';
+        // --- GUEST LIMITS ---
+        // If user is not logged in, limit questions per paper to 10
+        const isAuthenticated = !!req.user;
 
-        if (!isPro) {
+        if (!isAuthenticated) {
             papers = papers.map(paper => ({
                 ...paper,
                 questions: paper.questions.slice(0, 10),
@@ -101,6 +101,47 @@ export const searchPapers = async (req, res) => {
         res.json(results.slice(0, 50));
     } catch (error) {
         console.error('Error searching papers:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+// @desc    Search past questions by multiple keywords
+// @route   POST /api/data/search-batch
+export const searchByKeywords = async (req, res) => {
+    try {
+        const { keywords, subject } = req.body;
+        if (!keywords || !Array.isArray(keywords)) {
+            return res.status(400).json({ message: 'Keywords array is required' });
+        }
+
+        const lowerKeywords = keywords.map(k => k.toLowerCase());
+        const allPapers = await readJsonFile(papersFilePath);
+
+        const results = [];
+        allPapers.forEach(paper => {
+            if (subject && paper.subject.toLowerCase() !== subject.toLowerCase()) return;
+
+            paper.questions.forEach(q => {
+                const questionText = (q.question || '').toLowerCase();
+                const optionsText = q.options ? Object.values(q.options).map(o => (o.text || '').toLowerCase()).join(' ') : '';
+
+                const isMatch = lowerKeywords.some(k => questionText.includes(k) || optionsText.includes(k));
+
+                if (isMatch) {
+                    results.push({
+                        ...q,
+                        subject: paper.subject,
+                        year: paper.year,
+                        exam: paper.exam
+                    });
+                }
+            });
+        });
+
+        // Limit results for performance
+        res.json(results.slice(0, 100));
+    } catch (error) {
+        console.error('Error batch searching papers:', error);
         res.status(500).json({ message: 'Server Error' });
     }
 };

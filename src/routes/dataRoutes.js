@@ -10,6 +10,7 @@ router.get('/guides', optionalProtect, getGuides);
 router.get('/leaderboard', optionalProtect, getLeaderboard);
 router.get('/literature', optionalProtect, getLiterature);
 router.get('/search', optionalProtect, searchPapers);
+router.post('/search-batch', optionalProtect, searchByKeywords);
 
 // Protected routes
 router.post('/leaderboard', protect, addLeaderboardScore);

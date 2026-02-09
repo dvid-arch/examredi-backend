@@ -4,14 +4,15 @@ import User from '../models/User.js';
 import sendEmail from '../utils/sendEmail.js';
 
 // Helper: Generate Access Token (Short-lived)
-const generateAccessToken = (id) => {
+export const generateAccessToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '15m' });
 };
 
 // Helper: Generate Refresh Token (Long-lived)
-const generateRefreshToken = (id) => {
+export const generateRefreshToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 };
+
 
 const getTodayDateString = () => new Date().toISOString().split('T')[0];
 

@@ -9,9 +9,16 @@ import userRoutes from './routes/userRoutes.js';
 import flashcardRoutes from './routes/flashcardRoutes.js';
 
 import connectDB from './db/connect.js';
+import passport from 'passport';
+import configurePassport from './config/passport.js';
 
 dotenv.config();
 const app = express();
+
+// Passport Initialiation
+configurePassport(passport);
+app.use(passport.initialize());
+
 app.set('trust proxy', 1);
 const port = process.env.PORT || 5000;
 

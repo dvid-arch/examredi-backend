@@ -8,5 +8,6 @@ const router = express.Router();
 router.post('/chat', protect, handleAiChat);
 router.post('/generate-guide', protect, handleGenerateGuide);
 router.post('/research', protect, handleResearch);
+router.post('/topic-keywords', protect, handleGetTopicKeywords);
 
 export default router;

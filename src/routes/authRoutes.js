@@ -9,13 +9,31 @@ import {
     resetPassword,
     verifyEmail,
     resendVerification,
-    handlePaymentWebhook
+    handlePaymentWebhook,
+    generateAccessToken,
+    generateRefreshToken
 } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
-
 import { loginLimiter, registerLimiter } from '../middleware/rateLimiter.js';
+import passport from 'passport';
 
 const router = express.Router();
+
+// Google OAuth Routes
+router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+router.get('/google/callback', passport.authenticate('google', { session: false }), (req, res) => {
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+
+    if (!req.user) {
+        return res.redirect(`${frontendUrl}/#/login?error=auth_failed`);
+    }
+
+    const accessToken = generateAccessToken(req.user.id);
+    const refreshToken = generateRefreshToken(req.user.id);
+
+    res.redirect(`${frontendUrl}/#/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`);
+});
+
 
 router.post('/register', registerLimiter, registerUser);
 router.post('/login', loginLimiter, loginUser);

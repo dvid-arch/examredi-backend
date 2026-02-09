@@ -4,10 +4,12 @@ import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true }, // Changed from username to name to match frontend
-    password: { type: String, required: true },
+    password: { type: String, required: false }, // Optional for OAuth users
     email: { type: String, unique: true, sparse: true }, // Optional for now
+    googleId: { type: String, unique: true, sparse: true },
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
+
     studyPlan: {
         targetScore: { type: Number, default: 250 },
         weakSubjects: { type: [String], default: [] },
@@ -42,10 +44,11 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
 };
 
 // Pre-save hook to hash password
-userSchema.pre('save', async function () {
-    if (!this.isModified('password')) {
-        return;
+userSchema.pre('save', async function (next) {
+    if (!this.isModified('password') || !this.password) {
+        return next();
     }
+
     const salt = await bcrypt.genSalt(10);
     this.password = await bcrypt.hash(this.password, salt);
 });

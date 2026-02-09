@@ -2,6 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import TopicCache from '../models/TopicCache.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,12 +11,12 @@ const dbPath = path.join(__dirname, '..', 'db');
 const usersFilePath = path.join(dbPath, 'users.json');
 
 const getAiInstance = () => {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
-    console.error("API_KEY environment variable not set.");
-    return null;
-  }
-  return new GoogleGenAI({ apiKey });
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+        console.error("API_KEY environment variable not set.");
+        return null;
+    }
+    return new GoogleGenAI({ apiKey });
 };
 
 const readUsers = async () => {
@@ -61,12 +62,12 @@ export const handleAiChat = async (req, res) => {
             user.lastMessageDate = today;
         }
         if (user.dailyMessageCount >= FREE_TIER_MESSAGES) {
-            return res.status(403).json({ message: "You have reached your daily message limit."});
+            return res.status(403).json({ message: "You have reached your daily message limit." });
         }
         user.dailyMessageCount += 1;
         await writeUsers(users);
     }
-    
+
     try {
         const chat = ai.chats.create({
             model: 'gemini-2.5-flash',
@@ -154,5 +155,53 @@ export const handleResearch = async (req, res) => {
     } catch (error) {
         console.error("Gemini Research Error:", error);
         res.status(500).json({ message: "Error researching topic." });
+    }
+};
+
+// @desc    Get semantic keywords for a topic
+// @route   POST /api/ai/topic-keywords
+export const handleGetTopicKeywords = async (req, res) => {
+    const { topic, subject } = req.body;
+    if (!topic || !subject) return res.status(400).json({ message: "Topic and subject are required." });
+
+    try {
+        // 1. Check cache first
+        const cacheEntry = await TopicCache.findOne({
+            topic: topic.toLowerCase(),
+            subject: subject.toLowerCase()
+        });
+
+        if (cacheEntry) {
+            console.log(`Cache Hit for topic: ${topic}`);
+            return res.json({ keywords: cacheEntry.keywords });
+        }
+
+        // 2. Generate if not in cache
+        const ai = getAiInstance();
+        if (!ai) return res.status(500).json(missingApiKeyError);
+
+        const response = await ai.models.generateContent({
+            model: 'gemini-1.5-flash',
+            contents: `For the student subject "${subject}", provide a JSON array of 8-12 diverse keywords or short phrases that are highly relevant to the specific topic "${topic}". Include synonyms, related sub-concepts, and key terms typically found in past questions. Output ONLY the JSON array. Example: ["Chlorophyll", "Mitochondria", ...]`,
+        });
+
+        const text = response.text;
+        const jsonMatch = text.match(/\[.*\]/s);
+        const keywords = jsonMatch ? JSON.parse(jsonMatch[0]) : [];
+
+        // 3. Save to cache
+        if (keywords.length > 0) {
+            await TopicCache.create({
+                topic: topic.toLowerCase(),
+                subject: subject.toLowerCase(),
+                keywords
+            });
+            console.log(`Cache Miss - Saved new keywords for topic: ${topic}`);
+        }
+
+        res.json({ keywords });
+    } catch (error) {
+        console.error("Gemini/Cache Keywords Error:", error);
+        res.json({ keywords: [topic] }); // Fallback to the topic itself
     }
 };

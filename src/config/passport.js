@@ -5,13 +5,14 @@ const configurePassport = (passport) => {
     passport.use(
         new GoogleStrategy(
             {
-                clientID: process.env.GOOGLE_CLIENT_ID,
-                clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+                clientID: process.env.GOOGLE_CLIENT_ID || process.env.CLIENT_ID,
+                clientSecret: process.env.GOOGLE_CLIENT_SECRET || process.env.CLIENT_SECRET,
                 callbackURL: process.env.BACKEND_URL
                     ? `${process.env.BACKEND_URL}/api/auth/google/callback`
                     : '/api/auth/google/callback',
                 proxy: true,
             },
+
 
             async (accessToken, refreshToken, profile, done) => {
                 try {

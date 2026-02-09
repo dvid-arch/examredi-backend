@@ -77,20 +77,18 @@ export const registerUser = async (req, res) => {
                 <a href="${verifyUrl}" clicktracking=off>${verifyUrl}</a>
             `;
 
-            try {
-                console.log('Sending verification email to:', user.email);
-                await sendEmail({
-                    email: user.email,
-                    subject: 'ExamRedi Email Verification',
-                    html: message
-                });
-                console.log('Verification email sent successfully.');
-            } catch (error) {
-                console.error("Email send failed:", error.message);
-                // Don't fail registration if email fails, just log it.
-                // User can request resend later.
+            const emailResult = await sendEmail({
+                email: user.email,
+                subject: 'ExamRedi Email Verification',
+                html: message
+            });
+
+            if (!emailResult.success) {
+                console.error("Email send failed:", emailResult.error?.message);
                 user.verificationToken = undefined;
                 await user.save({ validateBeforeSave: false });
+            } else {
+                console.log('Verification email sent successfully.');
             }
 
             const accessToken = generateAccessToken(user.id);
@@ -246,11 +244,15 @@ export const resendVerification = async (req, res) => {
             <a href="${verifyUrl}" clicktracking=off>${verifyUrl}</a>
         `;
 
-        await sendEmail({
+        const emailResult = await sendEmail({
             email: user.email,
             subject: 'ExamRedi Email Verification',
             html: message
         });
+
+        if (!emailResult.success) {
+            return res.status(500).json({ message: 'Server error sending verification email' });
+        }
 
         res.status(200).json({ success: true, data: 'Verification email sent' });
     } catch (error) {
@@ -288,16 +290,16 @@ export const forgotPassword = async (req, res) => {
             You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request to: \n\n <a href="${resetUrl}">${resetUrl}</a>
         `;
 
-        try {
-            await sendEmail({
-                email: user.email,
-                subject: 'Password Reset Token',
-                html: message
-            });
+        const emailResult = await sendEmail({
+            email: user.email,
+            subject: 'Password Reset Token',
+            html: message
+        });
 
+        if (emailResult.success) {
             res.status(200).json({ success: true, data: 'Email sent' });
-        } catch (error) {
-            console.log(error);
+        } else {
+            console.log(emailResult.error);
             user.resetPasswordToken = undefined;
             user.resetPasswordExpire = undefined;
 

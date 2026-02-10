@@ -232,3 +232,30 @@ export const trackEngagement = async (req, res) => {
         res.status(500).json({ message: 'Error tracking engagement' });
     }
 };
+// @desc    Restore a dismissed activity
+// @route   PUT /api/user/progress/activity/:activityId/restore
+export const restoreActivity = async (req, res) => {
+    try {
+        const { activityId } = req.params;
+        const user = await User.findById(req.user.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const activity = user.recentActivity.find(a => a.id === activityId);
+        if (activity) {
+            activity.dismissedAt = undefined;
+        }
+
+        await user.save();
+
+        res.json({
+            message: 'Activity restored',
+            recentActivity: user.recentActivity
+        });
+    } catch (error) {
+        console.error("Restore Activity Error:", error);
+        res.status(500).json({ message: 'Error restoring activity' });
+    }
+};

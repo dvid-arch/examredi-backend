@@ -27,7 +27,14 @@ const userSchema = new mongoose.Schema({
         title: String,
         path: String,
         state: mongoose.Schema.Types.Mixed,
-        timestamp: { type: Date, default: Date.now }
+        timestamp: { type: Date, default: Date.now },
+        // Smart filtering and management fields
+        status: { type: String, enum: ['completed', 'in_progress', 'abandoned'], default: 'in_progress' },
+        score: Number,  // For quizzes
+        progress: Number,  // For guides/games (0-100)
+        dismissedAt: Date,
+        engagementCount: { type: Number, default: 0 },
+        lastEngaged: Date
     }],
     isVerified: { type: Boolean, default: false },
     verificationToken: String,

@@ -35,5 +35,41 @@
             "Family Bonds"
         ],
         "summary": "Explores the lived experience of West Africans during the era of mass deportations between Ghana and Nigeria."
+    },
+    {
+        "id": "lit-4",
+        "title": "Purple Hibiscus",
+        "author": "Chimamanda Ngozi Adichie",
+        "genre": "Fiction",
+        "themes": [
+            "Religion",
+            "Family",
+            "Political Turmoil"
+        ],
+        "summary": "The story of Kambili and her brother Jaja, growing up in a wealthy but oppressive household in Nigeria."
+    },
+    {
+        "id": "lit-5",
+        "title": "The Old Man and the Sea",
+        "author": "Ernest Hemingway",
+        "genre": "Novella",
+        "themes": [
+            "Perseverance",
+            "Man vs Nature",
+            "Honor"
+        ],
+        "summary": "The struggle between an aging fisherman and a giant marlin out in the Gulf Stream."
+    },
+    {
+        "id": "lit-6",
+        "title": "Women of Owu",
+        "author": "Femi Osofisan",
+        "genre": "Drama",
+        "themes": [
+            "War",
+            "Resilience",
+            "Justice"
+        ],
+        "summary": "A retelling of Euripides' The Trojan Women, set in the aftermath of the 1821 Owu war in Yorubaland."
     }
 ]

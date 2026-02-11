@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema({
         title: String,
         path: String,
         state: mongoose.Schema.Types.Mixed,
+        score: Number,
+        maxScore: Number,
+        progress: Number,
+        subtitle: String,
         timestamp: { type: Date, default: Date.now }
     }],
     isVerified: { type: Boolean, default: false },

@@ -82,7 +82,7 @@ export const updateProgress = async (req, res) => {
                     }
                 });
 
-                user.recentActivity = existingActivity.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 20); // Keep last 20
+                user.recentActivity = existingActivity.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 50); // Keep last 50
             }
 
             await user.save();

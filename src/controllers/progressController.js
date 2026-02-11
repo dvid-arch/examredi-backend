@@ -75,14 +75,23 @@ export const updateProgress = async (req, res) => {
 
                 recentActivity.forEach(newAct => {
                     const index = existingActivity.findIndex(a => a.id === newAct.id);
+                    const processedAct = { ...newAct };
+                    if (processedAct.dismissedAt && typeof processedAct.dismissedAt === 'number') {
+                        processedAct.dismissedAt = new Date(processedAct.dismissedAt);
+                    }
+
                     if (index !== -1) {
-                        existingActivity[index] = { ...existingActivity[index].toObject ? existingActivity[index].toObject() : existingActivity[index], ...newAct, timestamp: now };
+                        existingActivity[index] = {
+                            ...existingActivity[index].toObject ? existingActivity[index].toObject() : existingActivity[index],
+                            ...processedAct,
+                            timestamp: now
+                        };
                     } else {
-                        existingActivity.unshift({ ...newAct, timestamp: now });
+                        existingActivity.unshift({ ...processedAct, timestamp: now });
                     }
                 });
 
-                user.recentActivity = existingActivity.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 20); // Keep last 20
+                user.recentActivity = existingActivity.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 30); // Increased limit slightly to account for dismissed items
             }
 
             await user.save();

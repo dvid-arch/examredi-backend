@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema({
         title: String,
         path: String,
         state: mongoose.Schema.Types.Mixed,
+        status: { type: String, enum: ['completed', 'in_progress', 'abandoned'] },
+        score: String,
+        progress: Number,
+        dismissedAt: Date,
         timestamp: { type: Date, default: Date.now }
     }],
     isVerified: { type: Boolean, default: false },

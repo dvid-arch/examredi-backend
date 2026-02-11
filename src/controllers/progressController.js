@@ -1,91 +1,16 @@
 import User from '../models/User.js';
 
-// Smart filtering helper functions
-const calculateRelevanceScore = (activity, now) => {
-    let score = 0;
-    const age = now - new Date(activity.timestamp);
-    const ONE_HOUR = 60 * 60 * 1000;
-
-    // Recency boost (max 50 points)
-    if (age < ONE_HOUR) score += 50;
-    else if (age < 24 * ONE_HOUR) score += 30;
-    else if (age < 7 * 24 * ONE_HOUR) score += 10;
-
-    // Status boost (max 30 points)
-    if (activity.status === 'in_progress') score += 30;
-    else if (activity.status === 'abandoned') score += 15;
-
-    // Engagement boost (max 20 points)
-    score += Math.min((activity.engagementCount || 0) * 5, 20);
-
-    return score;
-};
-
-const applyDiversityFilter = (scoredActivities, maxItems) => {
-    const result = [];
-    const typeCounts = { quiz: 0, guide: 0, game: 0 };
-
-    for (const item of scoredActivities) {
-        const type = item.activity.type;
-        if (typeCounts[type] < 2 && result.length < maxItems) {
-            result.push(item);
-            typeCounts[type]++;
-        }
-        if (result.length >= maxItems) break;
-    }
-
-    return result;
-};
-
-const getSmartFilteredActivities = (activities, maxItems = 20) => {
-    const now = new Date();
-    const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
-
-    // Filter out dismissed and old activities
-    const relevant = activities.filter(a =>
-        !a.dismissedAt &&
-        (now - new Date(a.timestamp)) < THIRTY_DAYS
-    );
-
-    // Score each activity
-    const scored = relevant.map(activity => ({
-        activity,
-        score: calculateRelevanceScore(activity, now)
-    }));
-
-    // Sort by score
-    scored.sort((a, b) => b.score - a.score);
-
-    // Apply diversity filter if maxItems <= 10 (for display purposes)
-    if (maxItems <= 10) {
-        const diverse = applyDiversityFilter(scored, maxItems);
-        return diverse.map(s => s.activity);
-    }
-
-    // Otherwise just return top scored items
-    return scored.slice(0, maxItems).map(s => s.activity);
-};
-
-
 // @desc    Get user progress (streak and activity)
-// @route   GET /api/user/progress?maxItems=6
+// @route   GET /api/user/progress
 export const getProgress = async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('streak recentActivity');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-
-        // Support smart filtering with maxItems query param
-        const maxItems = req.query.maxItems ? parseInt(req.query.maxItems) : 20;
-        const activities = maxItems < 20
-            ? getSmartFilteredActivities(user.recentActivity || [], maxItems)
-            : user.recentActivity || [];
-
         res.json({
             streak: user.streak?.current || 0,
-            streakHistory: user.streak?.history || [],
-            recentActivity: activities
+            recentActivity: user.recentActivity || []
         });
     } catch (error) {
         res.status(500).json({ message: 'Error fetching progress' });
@@ -178,57 +103,5 @@ export const updateProgress = async (req, res) => {
             console.error("Update Progress Error:", error);
             return res.status(500).json({ message: 'Error updating progress' });
         }
-    }
-};
-
-// @desc    Dismiss an activity
-// @route   DELETE /api/user/progress/activity/:activityId
-export const dismissActivity = async (req, res) => {
-    try {
-        const { activityId } = req.params;
-        const user = await User.findById(req.user.id);
-
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-
-        const activity = user.recentActivity.find(a => a.id === activityId);
-        if (activity) {
-            activity.dismissedAt = new Date();
-            await user.save();
-        }
-
-        res.json({
-            message: 'Activity dismissed',
-            recentActivity: user.recentActivity
-        });
-    } catch (error) {
-        console.error("Dismiss Activity Error:", error);
-        res.status(500).json({ message: 'Error dismissing activity' });
-    }
-};
-
-// @desc    Track activity engagement
-// @route   POST /api/user/progress/activity/:activityId/engage
-export const trackEngagement = async (req, res) => {
-    try {
-        const { activityId } = req.params;
-        const user = await User.findById(req.user.id);
-
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-
-        const activity = user.recentActivity.find(a => a.id === activityId);
-        if (activity) {
-            activity.engagementCount = (activity.engagementCount || 0) + 1;
-            activity.lastEngaged = new Date();
-            await user.save();
-        }
-
-        res.json({ message: 'Engagement tracked' });
-    } catch (error) {
-        console.error("Track Engagement Error:", error);
-        res.status(500).json({ message: 'Error tracking engagement' });
     }
 };

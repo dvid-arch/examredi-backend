@@ -1,14 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import TopicCache from '../models/TopicCache.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const dbPath = path.join(__dirname, '..', 'db');
-const usersFilePath = path.join(dbPath, 'users.json');
+import User from '../models/User.js';
 
 const getAiInstance = () => {
     const apiKey = process.env.API_KEY;
@@ -17,18 +9,6 @@ const getAiInstance = () => {
         return null;
     }
     return new GoogleGenAI({ apiKey });
-};
-
-const readUsers = async () => {
-    try {
-        const data = await fs.readFile(usersFilePath, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) { return []; }
-};
-
-const writeUsers = async (users) => {
-    await fs.mkdir(dbPath, { recursive: true });
-    await fs.writeFile(usersFilePath, JSON.stringify(users, null, 2));
 };
 
 const missingApiKeyError = { message: "The AI service is not configured on the server." };
@@ -51,24 +31,23 @@ export const handleAiChat = async (req, res) => {
     const ai = getAiInstance();
     if (!ai) return res.status(500).json(missingApiKeyError);
 
-    const users = await readUsers();
-    const user = users.find(u => u.id === userId);
-    if (!user) return res.status(404).json({ message: 'User not found' });
-
-    if (user.subscription === 'free') {
-        const today = getTodayDateString();
-        if (user.lastMessageDate !== today) {
-            user.dailyMessageCount = 0;
-            user.lastMessageDate = today;
-        }
-        if (user.dailyMessageCount >= FREE_TIER_MESSAGES) {
-            return res.status(403).json({ message: "You have reached your daily message limit." });
-        }
-        user.dailyMessageCount += 1;
-        await writeUsers(users);
-    }
-
     try {
+        const user = await User.findById(userId);
+        if (!user) return res.status(404).json({ message: 'User not found' });
+
+        if (user.subscription === 'free') {
+            const today = getTodayDateString();
+            if (user.lastMessageDate !== today) {
+                user.dailyMessageCount = 0;
+                user.lastMessageDate = today;
+            }
+            if (user.dailyMessageCount >= FREE_TIER_MESSAGES) {
+                return res.status(403).json({ message: "You have reached your daily message limit." });
+            }
+            user.dailyMessageCount += 1;
+            await user.save();
+        }
+
         const chat = ai.chats.create({
             model: 'gemini-2.5-flash',
             history: buildHistory(history || []),
@@ -85,20 +64,24 @@ export const handleAiChat = async (req, res) => {
 };
 
 const handleCreditUsage = async (userId, cost) => {
-    const users = await readUsers();
-    const user = users.find(u => u.id === userId);
-    if (!user) return { success: false, message: "User not found" };
+    try {
+        const user = await User.findById(userId);
+        if (!user) return { success: false, message: "User not found" };
 
-    if (user.subscription === 'free') {
-        return { success: false, message: "This feature is for Pro users only." };
-    }
-    if (user.aiCredits < cost) {
-        return { success: false, message: "Insufficient AI credits." };
-    }
+        if (user.subscription === 'free') {
+            return { success: false, message: "This feature is for Pro users only." };
+        }
+        if (user.aiCredits < cost) {
+            return { success: false, message: "Insufficient AI credits." };
+        }
 
-    user.aiCredits -= cost;
-    await writeUsers(users);
-    return { success: true };
+        user.aiCredits -= cost;
+        await user.save();
+        return { success: true };
+    } catch (error) {
+        console.error("Credit Usage Error:", error);
+        return { success: false, message: "Server error checking credits." };
+    }
 };
 
 // @desc    Generate a study guide

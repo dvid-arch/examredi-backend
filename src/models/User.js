@@ -10,6 +10,11 @@ const userSchema = new mongoose.Schema({
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
 
+    // AI & Subscription
+    aiCredits: { type: Number, default: 0 },
+    dailyMessageCount: { type: Number, default: 0 },
+    lastMessageDate: { type: String }, // Format: YYYY-MM-DD
+
     studyPlan: {
         targetScore: { type: Number, default: 250 },
         weakSubjects: { type: [String], default: [] },

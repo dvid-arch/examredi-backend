@@ -172,7 +172,7 @@ export const handleGetTopicKeywords = async (req, res) => {
         const jsonMatch = text.match(/\[.*\]/s);
         const keywords = jsonMatch ? JSON.parse(jsonMatch[0]) : [];
 
-        // 3. Save to cache
+        // 3. Save to cache ONLY if we have valid keywords
         if (keywords.length > 0) {
             await TopicCache.create({
                 topic: topic.toLowerCase(),
@@ -180,6 +180,9 @@ export const handleGetTopicKeywords = async (req, res) => {
                 keywords
             });
             console.log(`Cache Miss - Saved new keywords for topic: ${topic}`);
+        } else {
+            // Fallback if AI returns empty array or partial nonsense
+            keywords.push(topic);
         }
 
         res.json({ keywords });

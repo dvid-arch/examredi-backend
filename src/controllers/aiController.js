@@ -185,7 +185,25 @@ export const handleGetTopicKeywords = async (req, res) => {
 
         const response = await ai.models.generateContent({
             model: 'gemini-1.5-flash',
-            contents: `For the student subject "${subject}", provide a JSON array of 8-12 diverse keywords or short phrases that are highly relevant to the specific topic "${topic}". Include synonyms, related sub-concepts, and key terms typically found in past questions. Output ONLY the JSON array. Example: ["Chlorophyll", "Mitochondria", ...]`,
+            contents: `You are helping students find relevant past exam questions for the topic "${topic}" in ${subject}.
+
+Generate a JSON array of 15-20 search terms that would appear in exam questions about this topic. Include:
+1. The topic name itself and common variations/abbreviations
+2. Key concepts and processes (use broad, general terms)
+3. Specific terminology and technical terms
+4. Related subtopics and practical applications
+5. Common question phrases (e.g., "process by which", "function of", "used to")
+
+Guidelines:
+- Mix broad terms (high recall) with specific terms (high precision)
+- Include partial words that might appear in compound terms
+- Use lowercase for better matching
+- Avoid overly technical jargon that rarely appears in questions
+
+Example for "Photosynthesis":
+["photosynthesis", "photosynth", "light energy", "chlorophyll", "chloroplast", "glucose production", "carbon dioxide", "oxygen", "light reaction", "dark reaction", "calvin cycle", "process by which plants", "conversion of light", "green plants", "autotroph", "food production", "sunlight", "leaves"]
+
+Output ONLY the JSON array with NO explanation.`,
         });
 
         const text = response.text;

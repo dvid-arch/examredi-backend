@@ -138,8 +138,39 @@ export const searchByKeywords = async (req, res) => {
             });
         });
 
-        // Limit results for performance
-        res.json(results.slice(0, 100));
+        // If we have good results, return them
+        if (results.length >= 5) {
+            console.log(`Found ${results.length} questions matching keywords`);
+            return res.json(results.slice(0, 100));
+        }
+
+        // FALLBACK: If fewer than 5 results, get random subject questions
+        console.log(`Only ${results.length} keyword matches found. Using fallback search for subject: ${subject}`);
+
+        const subjectQuestions = [];
+        allPapers.forEach(paper => {
+            if (subject && paper.subject.toLowerCase() === subject.toLowerCase()) {
+                paper.questions.forEach(q => {
+                    subjectQuestions.push({
+                        ...q,
+                        subject: paper.subject,
+                        year: paper.year,
+                        exam: paper.exam
+                    });
+                });
+            }
+        });
+
+        // Shuffle and combine with keyword results
+        const shuffled = subjectQuestions.sort(() => Math.random() - 0.5);
+        const fallbackResults = shuffled.slice(0, 30);
+
+        // Combine: keyword matches first, then fallback
+        const combined = [...results, ...fallbackResults];
+        const unique = Array.from(new Map(combined.map(q => [q.id, q])).values());
+
+        console.log(`Returning ${unique.length} questions (${results.length} keyword matches + ${unique.length - results.length} fallback)`);
+        res.json(unique.slice(0, 100));
     } catch (error) {
         console.error('Error batch searching papers:', error);
         res.status(500).json({ message: 'Server Error' });

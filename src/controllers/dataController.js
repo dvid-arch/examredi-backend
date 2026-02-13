@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import Paper from '../models/Paper.js';
 import Leaderboard from '../models/Leaderboard.js';
 import Performance from '../models/Performance.js';
+import StudyGuide from '../models/StudyGuide.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -251,8 +252,30 @@ export const searchByKeywords = async (req, res) => {
 // @desc    Get study guides
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
-    const guides = await readJsonFile(guidesFilePath);
-    res.json(guides);
+    try {
+        let guides = await StudyGuide.find({}).sort({ createdAt: -1 });
+
+        // Migration logic: If DB is empty, sync from JSON
+        if (guides.length === 0) {
+            console.log("StudyGuide collection empty. Migrating from guides.json...");
+            const jsonGuides = await readJsonFile(guidesFilePath);
+            if (jsonGuides.length > 0) {
+                // Ensure IDs are strings and clean up for Mongoose
+                const sanitized = jsonGuides.map(g => ({
+                    ...g,
+                    id: g.id?.toString() || new mongoose.Types.ObjectId().toString()
+                }));
+                await StudyGuide.insertMany(sanitized);
+                guides = await StudyGuide.find({}).sort({ createdAt: -1 });
+            }
+        }
+        res.json(guides);
+    } catch (error) {
+        console.error('Error fetching guides from DB:', error);
+        // Fallback to JSON if DB fails during migration
+        const fallback = await readJsonFile(guidesFilePath);
+        res.json(fallback);
+    }
 };
 
 // @desc    Get leaderboard

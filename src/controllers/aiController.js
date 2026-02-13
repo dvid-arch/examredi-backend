@@ -6,7 +6,7 @@ import { getNormalizedSubjectName } from '../utils/subjects.js';
 import mongoose from 'mongoose';
 
 const getAiInstance = () => {
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.API_KEY;
     if (!apiKey) {
         console.error("API_KEY environment variable not set.");
         return null;

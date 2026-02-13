@@ -23,7 +23,7 @@ export const getProgress = async (req, res) => {
 // @route   PUT /api/user/progress
 export const updateProgress = async (req, res) => {
     let attempts = 0;
-    const maxAttempts = 3;
+    const maxAttempts = 5;
 
     while (attempts < maxAttempts) {
         try {
@@ -120,8 +120,10 @@ export const updateProgress = async (req, res) => {
             if ((error.name === 'VersionError' || error.code === 79) && attempts < maxAttempts - 1) {
                 attempts++;
                 console.warn(`VersionError encountered on attempt ${attempts}. Retrying progress update for user ${req.user.id}...`);
-                // Short delay before retry to let other processes finish
-                await new Promise(resolve => setTimeout(resolve, 50 * attempts));
+
+                // Exponential backoff with jitter: 100ms, 200ms, 400ms...
+                const delay = Math.min(1000, (Math.pow(2, attempts) * 100) + Math.random() * 50);
+                await new Promise(resolve => setTimeout(resolve, delay));
                 continue;
             }
             console.error("Update Progress Error:", error);

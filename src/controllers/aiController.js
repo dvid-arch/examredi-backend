@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import TopicCache from '../models/TopicCache.js';
 import User from '../models/User.js';
+import ChatHistory from '../models/ChatHistory.js';
 
 const getAiInstance = () => {
     const apiKey = process.env.API_KEY;
@@ -26,7 +27,7 @@ const FREE_TIER_MESSAGES = 5;
 // @desc    Handle AI chat messages
 // @route   POST /api/ai/chat
 export const handleAiChat = async (req, res) => {
-    const { message, history } = req.body;
+    const { message, conversationId } = req.body;
     const userId = req.user.id;
     const ai = getAiInstance();
     if (!ai) return res.status(500).json(missingApiKeyError);
@@ -48,15 +49,34 @@ export const handleAiChat = async (req, res) => {
             await user.save();
         }
 
+        // Load conversation history from database if conversationId provided
+        let conversation = null;
+        let history = [];
+
+        if (conversationId) {
+            conversation = await ChatHistory.findOne({ conversationId, userId });
+            if (conversation) {
+                history = conversation.messages;
+            }
+        }
+
         const chat = ai.chats.create({
             model: 'gemini-2.5-flash',
-            history: buildHistory(history || []),
+            history: buildHistory(history),
             config: {
                 systemInstruction: `You are Ai-buddy, a friendly and encouraging AI tutor for ExamRedi. Your goal is to help students understand complex topics and prepare for their exams. Keep your tone positive and supportive. Format responses using markdown.`,
             },
         });
         const result = await chat.sendMessage({ message });
-        res.json({ reply: result.text });
+
+        // Save conversation to database
+        if (conversation) {
+            conversation.addMessage('user', message);
+            conversation.addMessage('model', result.text);
+            await conversation.save();
+        }
+
+        res.json({ reply: result.text, conversationId: conversationId || null });
     } catch (error) {
         console.error("Gemini Chat Error:", error);
         res.status(500).json({ message: "Error communicating with AI service." });
@@ -189,5 +209,97 @@ export const handleGetTopicKeywords = async (req, res) => {
     } catch (error) {
         console.error("Gemini/Cache Keywords Error:", error);
         res.json({ keywords: [topic] }); // Fallback to the topic itself
+    }
+};
+
+// @desc    Create a new conversation
+// @route   POST /api/ai/conversations/new
+export const createConversation = async (req, res) => {
+    const userId = req.user.id;
+
+    try {
+        const { v4: uuidv4 } = await import('uuid');
+        const conversationId = uuidv4();
+        const conversation = await ChatHistory.create({
+            userId,
+            conversationId,
+            messages: []
+        });
+
+        res.status(201).json({ conversationId: conversation.conversationId });
+    } catch (error) {
+        console.error("Create Conversation Error:", error);
+        res.status(500).json({ message: "Error creating conversation." });
+    }
+};
+
+// @desc    Get all user conversations (metadata only)
+// @route   GET /api/ai/conversations
+export const getConversations = async (req, res) => {
+    const userId = req.user.id;
+
+    try {
+        const conversations = await ChatHistory.find({ userId })
+            .sort({ lastAccessedAt: -1 })
+            .select('conversationId messages lastAccessedAt createdAt')
+            .limit(50);
+
+        const conversationList = conversations.map(conv =>
+            ChatHistory.getConversationPreview(conv)
+        );
+
+        res.json({ conversations: conversationList });
+    } catch (error) {
+        console.error("Get Conversations Error:", error);
+        res.status(500).json({ message: "Error retrieving conversations." });
+    }
+};
+
+// @desc    Get a specific conversation
+// @route   GET /api/ai/conversations/:conversationId
+export const getConversation = async (req, res) => {
+    const userId = req.user.id;
+    const { conversationId } = req.params;
+
+    try {
+        const conversation = await ChatHistory.findOne({ conversationId, userId });
+
+        if (!conversation) {
+            return res.status(404).json({ message: "Conversation not found." });
+        }
+
+        // Update last accessed time
+        conversation.lastAccessedAt = new Date();
+        await conversation.save();
+
+        res.json({
+            conversationId: conversation.conversationId,
+            messages: conversation.messages,
+            createdAt: conversation.createdAt,
+            updatedAt: conversation.updatedAt
+        });
+    } catch (error) {
+        console.error("Get Conversation Error:", error);
+        res.status(500).json({ message: "Error retrieving conversation." });
+    }
+};
+
+// @desc    Delete a conversation
+// @route   DELETE /api/ai/conversations/:conversationId
+export const deleteConversation = async (req, res) => {
+    const userId = req.user.id;
+    const { conversationId } = req.params;
+
+    try {
+        const result = await ChatHistory.deleteOne({ conversationId, userId });
+
+        if (result.deletedCount === 0) {
+            return res.status(404).json({ message: "Conversation not found." });
+        }
+
+        res.json({ success: true, message: "Conversation deleted successfully." });
+    } catch (error) {
+        console.error("Delete Conversation Error:", error);
+        res.status(500).json({ message: "Error deleting conversation." });
     }
 };

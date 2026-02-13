@@ -39,6 +39,10 @@ const userSchema = new mongoose.Schema({
         mastered: { type: Boolean, default: false },
         timestamp: { type: Date, default: Date.now }
     }],
+    engagement: {
+        dismissedNudges: { type: [String], default: [] },
+        unlockedNudges: { type: [String], default: [] }
+    },
     isVerified: { type: Boolean, default: false },
     verificationToken: String,
     resetPasswordToken: String,

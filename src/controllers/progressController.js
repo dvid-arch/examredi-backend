@@ -11,7 +11,8 @@ export const getProgress = async (req, res) => {
         }
         res.json({
             streak: user.streak?.current || 0,
-            recentActivity: user.recentActivity || []
+            recentActivity: user.recentActivity || [],
+            engagement: user.engagement || { dismissedNudges: [], unlockedNudges: [] }
         });
     } catch (error) {
         res.status(500).json({ message: 'Error fetching progress' });
@@ -88,6 +89,23 @@ export const updateProgress = async (req, res) => {
                 });
 
                 user.recentActivity = existingActivity.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).slice(0, 50); // Keep last 50
+
+                // --- SERVER-SIDE NUDGE TRIGGERS ---
+                if (!user.engagement) user.engagement = { dismissedNudges: [], unlockedNudges: [] };
+
+                // Example: Unlock 100k Challenge nudge for high performers
+                recentActivity.forEach(act => {
+                    if (act.score && act.maxScore && (act.score / act.maxScore) >= 0.85) {
+                        if (!user.engagement.unlockedNudges.includes('utme-challenge-100k')) {
+                            user.engagement.unlockedNudges.push('utme-challenge-100k');
+                        }
+                    }
+                });
+
+                // Universal: Unlock Pro Nudge for all free users after activity
+                if (user.subscription === 'free' && !user.engagement.unlockedNudges.includes('pro-success-stat')) {
+                    user.engagement.unlockedNudges.push('pro-success-stat');
+                }
             }
 
             await user.save();
@@ -95,7 +113,8 @@ export const updateProgress = async (req, res) => {
             return res.json({
                 streak: user.streak.current,
                 streakHistory: user.streak.history,
-                recentActivity: user.recentActivity
+                recentActivity: user.recentActivity,
+                engagement: user.engagement
             });
         } catch (error) {
             if ((error.name === 'VersionError' || error.code === 79) && attempts < maxAttempts - 1) {
@@ -108,5 +127,31 @@ export const updateProgress = async (req, res) => {
             console.error("Update Progress Error:", error);
             return res.status(500).json({ message: 'Error updating progress' });
         }
+    }
+};
+
+// @desc    Dismiss an engagement nudge
+// @route   POST /api/user/progress/engagement/dismiss
+export const dismissNudge = async (req, res) => {
+    try {
+        const { nudgeId } = req.body;
+        const user = await User.findById(req.user.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        if (!user.engagement) {
+            user.engagement = { dismissedNudges: [], unlockedNudges: [] };
+        }
+
+        if (!user.engagement.dismissedNudges.includes(nudgeId)) {
+            user.engagement.dismissedNudges.push(nudgeId);
+            await user.save();
+        }
+
+        res.json({ success: true, engagement: user.engagement });
+    } catch (error) {
+        res.status(500).json({ message: 'Error dismissing nudge' });
     }
 };

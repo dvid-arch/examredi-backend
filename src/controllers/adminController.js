@@ -1,5 +1,4 @@
 import User from '../models/User.js';
-import StudyGuide from '../models/StudyGuide.js';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -171,13 +170,12 @@ export const editPaper = async (req, res) => {
 // @route   POST /api/admin/guides
 export const addGuide = async (req, res) => {
     try {
-        const newGuide = await StudyGuide.create({
-            ...req.body,
-            id: req.body.id || Date.now().toString()
-        });
+        const guides = await readJsonFile(guidesFilePath);
+        const newGuide = { ...req.body, id: Date.now().toString() };
+        guides.push(newGuide);
+        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
         res.status(201).json(newGuide);
     } catch (error) {
-        console.error('Error adding guide to DB:', error);
         res.status(500).json({ message: 'Error adding guide' });
     }
 };
@@ -187,13 +185,15 @@ export const addGuide = async (req, res) => {
 export const editGuide = async (req, res) => {
     try {
         const { id } = req.params;
-        const guide = await StudyGuide.findOneAndUpdate({ id }, req.body, { new: true });
-        if (!guide) {
+        const guides = await readJsonFile(guidesFilePath);
+        const guideIndex = guides.findIndex(g => g.id === id);
+        if (guideIndex === -1) {
             return res.status(404).json({ message: 'Guide not found' });
         }
-        res.json(guide);
+        guides[guideIndex] = { ...guides[guideIndex], ...req.body };
+        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+        res.json(guides[guideIndex]);
     } catch (error) {
-        console.error('Error editing guide in DB:', error);
         res.status(500).json({ message: 'Error editing guide' });
     }
 };
@@ -204,7 +204,7 @@ export const getAdminStats = async (req, res) => {
     try {
         const userCount = await User.countDocuments();
         const papers = await readJsonFile(papersFilePath);
-        const guidesCount = await StudyGuide.countDocuments();
+        const guides = await readJsonFile(guidesFilePath);
 
         const totalQuestions = papers.reduce((acc, paper) => acc + (paper.questions?.length || 0), 0);
 
@@ -212,7 +212,7 @@ export const getAdminStats = async (req, res) => {
             users: userCount,
             papers: papers.length,
             questions: totalQuestions,
-            guides: guidesCount
+            guides: guides.length
         });
     } catch (error) {
         res.status(500).json({ message: 'Failed to retrieve stats' });
@@ -243,14 +243,17 @@ export const deletePaper = async (req, res) => {
 // @route   DELETE /api/admin/guides/:id
 export const deleteGuide = async (req, res) => {
     const { id } = req.params;
+    const guides = await readJsonFile(guidesFilePath);
+    const updatedGuides = guides.filter(g => g.id !== id);
+
+    if (guides.length === updatedGuides.length) {
+        return res.status(404).json({ message: 'Guide not found' });
+    }
+
     try {
-        const result = await StudyGuide.deleteOne({ id });
-        if (result.deletedCount === 0) {
-            return res.status(404).json({ message: 'Guide not found' });
-        }
+        await fs.writeFile(guidesFilePath, JSON.stringify(updatedGuides, null, 2));
         res.status(200).json({ message: 'Guide deleted successfully' });
     } catch (error) {
-        console.error('Error deleting guide from DB:', error);
-        res.status(500).json({ message: 'Error deleting guide' });
+        res.status(500).json({ message: 'Error writing to database' });
     }
 };

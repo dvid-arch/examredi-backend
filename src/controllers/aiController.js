@@ -3,7 +3,6 @@ import TopicCache from '../models/TopicCache.js';
 import User from '../models/User.js';
 import ChatHistory from '../models/ChatHistory.js';
 import { getNormalizedSubjectName } from '../utils/subjects.js';
-import mongoose from 'mongoose';
 
 const getAiInstance = () => {
     const apiKey = process.env.API_KEY;

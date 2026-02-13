@@ -6,6 +6,7 @@ import Paper from '../models/Paper.js';
 import Leaderboard from '../models/Leaderboard.js';
 import Performance from '../models/Performance.js';
 import StudyGuide from '../models/StudyGuide.js';
+import mongoose from 'mongoose';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

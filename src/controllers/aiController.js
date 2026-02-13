@@ -2,6 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import TopicCache from '../models/TopicCache.js';
 import User from '../models/User.js';
 import ChatHistory from '../models/ChatHistory.js';
+import { getNormalizedSubjectName } from '../utils/subjects.js';
 
 const getAiInstance = () => {
     const apiKey = process.env.API_KEY;
@@ -107,7 +108,8 @@ const handleCreditUsage = async (userId, cost) => {
 // @desc    Generate a study guide
 // @route   POST /api/ai/generate-guide
 export const handleGenerateGuide = async (req, res) => {
-    const { subject, topic } = req.body;
+    const { subject: rawSubject, topic } = req.body;
+    const subject = getNormalizedSubjectName(rawSubject);
     const creditCheck = await handleCreditUsage(req.user.id, 1);
     if (!creditCheck.success) return res.status(403).json({ message: creditCheck.message });
 
@@ -164,8 +166,10 @@ export const handleResearch = async (req, res) => {
 // @desc    Get semantic keywords for a topic
 // @route   POST /api/ai/topic-keywords
 export const handleGetTopicKeywords = async (req, res) => {
-    const { topic, subject } = req.body;
-    if (!topic || !subject) return res.status(400).json({ message: "Topic and subject are required." });
+    const { topic, subject: rawSubject } = req.body;
+    if (!topic || !rawSubject) return res.status(400).json({ message: "Topic and subject are required." });
+
+    const subject = getNormalizedSubjectName(rawSubject);
 
     try {
         // 1. Check cache first

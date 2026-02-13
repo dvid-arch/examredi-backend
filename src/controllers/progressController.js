@@ -1,4 +1,5 @@
 import User from '../models/User.js';
+import { normalizeSubjects } from '../utils/subjects.js';
 
 // @desc    Get user progress (streak and activity)
 // @route   GET /api/user/progress
@@ -75,10 +76,14 @@ export const updateProgress = async (req, res) => {
 
                 recentActivity.forEach(newAct => {
                     const index = existingActivity.findIndex(a => a.id === newAct.id);
+                    // Normalize the subject name(s)
+                    const normalizedSubject = normalizeSubjects(newAct.subject);
+                    const activityWithNormalizedSubject = { ...newAct, subject: normalizedSubject };
+
                     if (index !== -1) {
-                        existingActivity[index] = { ...existingActivity[index].toObject ? existingActivity[index].toObject() : existingActivity[index], ...newAct, timestamp: now };
+                        existingActivity[index] = { ...existingActivity[index].toObject ? existingActivity[index].toObject() : existingActivity[index], ...activityWithNormalizedSubject, timestamp: now };
                     } else {
-                        existingActivity.unshift({ ...newAct, timestamp: now });
+                        existingActivity.unshift({ ...activityWithNormalizedSubject, timestamp: now });
                     }
                 });
 

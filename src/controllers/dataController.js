@@ -117,62 +117,133 @@ export const searchByKeywords = async (req, res) => {
         const lowerKeywords = keywords.map(k => k.toLowerCase());
         const allPapers = await readJsonFile(papersFilePath);
 
-        const results = [];
+        const scoredResults = [];
+
+        // Helper: Escape regex special characters
+        const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+        // Helper: Simple fuzzy matching (Levenshtein distance)
+        const levenshteinDistance = (a, b) => {
+            const matrix = [];
+            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+            return matrix[b.length][a.length];
+        };
+
+        const hasFuzzyMatch = (text, keyword, maxDistance = 2) => {
+            const words = text.split(/\s+/);
+            return words.some(word => {
+                if (Math.abs(word.length - keyword.length) > maxDistance) return false;
+                return levenshteinDistance(word, keyword) <= maxDistance;
+            });
+        };
+
         allPapers.forEach(paper => {
             if (subject && paper.subject.toLowerCase() !== subject.toLowerCase()) return;
 
             paper.questions.forEach(q => {
                 const questionText = (q.question || '').toLowerCase();
                 const optionsText = q.options ? Object.values(q.options).map(o => (o.text || '').toLowerCase()).join(' ') : '';
+                const fullText = questionText + ' ' + optionsText;
 
-                const isMatch = lowerKeywords.some(k => questionText.includes(k) || optionsText.includes(k));
+                // Calculate relevance score
+                let score = 0;
+                let matchedKeywords = [];
 
-                if (isMatch) {
-                    results.push({
+                lowerKeywords.forEach(keyword => {
+                    // Exact match (highest score) - use word boundaries for accuracy
+                    const exactRegex = new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i');
+                    if (exactRegex.test(fullText)) {
+                        score += 15;
+                        matchedKeywords.push(keyword);
+                    }
+                    // Substring match
+                    else if (fullText.includes(keyword)) {
+                        score += 5;
+                        matchedKeywords.push(keyword + ' (partial)');
+                    }
+                    // Fuzzy match (edit distance) - only for longer more specific keywords
+                    else if (keyword.length > 4 && hasFuzzyMatch(fullText, keyword)) {
+                        score += 3;
+                        matchedKeywords.push(keyword + ' (fuzzy)');
+                    }
+                });
+
+                if (score > 0) {
+                    scoredResults.push({
                         ...q,
                         subject: paper.subject,
                         year: paper.year,
-                        exam: paper.exam
+                        exam: paper.exam,
+                        _relevanceScore: score,
+                        _matchedKeywords: matchedKeywords
                     });
                 }
             });
         });
 
-        // If we have good results, return them
-        if (results.length >= 5) {
-            console.log(`Found ${results.length} questions matching keywords`);
-            return res.json(results.slice(0, 100));
+        // Sort by relevance score (highest first)
+        scoredResults.sort((a, b) => b._relevanceScore - a._relevanceScore);
+
+        // Strategy: Use top matches first. If we have enough good matches (score >= 10), returning them is enough.
+        const strongMatches = scoredResults.filter(r => r._relevanceScore >= 10);
+
+        if (strongMatches.length >= 20) {
+            console.log(`Found ${strongMatches.length} strong matches for ${subject}. Returning top 100.`);
+            return res.json(scoredResults.slice(0, 100));
         }
 
-        // FALLBACK: If fewer than 5 results, get random subject questions
-        console.log(`Only ${results.length} keyword matches found. Using fallback search for subject: ${subject}`);
+        // If we have few strong matches, supplement with random subject questions to ensure a good test size
+        console.log(`Only ${strongMatches.length} strong matches found. Supplementing...`);
 
-        const subjectQuestions = [];
-        allPapers.forEach(paper => {
-            if (subject && paper.subject.toLowerCase() === subject.toLowerCase()) {
-                paper.questions.forEach(q => {
-                    subjectQuestions.push({
-                        ...q,
-                        subject: paper.subject,
-                        year: paper.year,
-                        exam: paper.exam
+        const fallbackCount = Math.max(0, 30 - scoredResults.length);
+        if (fallbackCount > 0) {
+            const subjectQuestions = [];
+            allPapers.forEach(paper => {
+                if (subject && paper.subject.toLowerCase() === subject.toLowerCase()) {
+                    paper.questions.forEach(q => {
+                        // Avoid duplicates
+                        if (!scoredResults.find(r => r.id === q.id)) {
+                            subjectQuestions.push({
+                                ...q,
+                                subject: paper.subject,
+                                year: paper.year,
+                                exam: paper.exam,
+                                _relevanceScore: 0
+                            });
+                        }
                     });
-                });
-            }
-        });
+                }
+            });
 
-        // Shuffle and combine with keyword results
-        const shuffled = subjectQuestions.sort(() => Math.random() - 0.5);
-        const fallbackResults = shuffled.slice(0, 30);
+            const shuffled = subjectQuestions.sort(() => Math.random() - 0.5);
+            const fallbackResults = shuffled.slice(0, fallbackCount);
 
-        // Combine: keyword matches first, then fallback
-        const combined = [...results, ...fallbackResults];
-        const unique = Array.from(new Map(combined.map(q => [q.id, q])).values());
+            // Combine scored results first, then fallback
+            const finalResults = [...scoredResults, ...fallbackResults];
+            // Deduplicate
+            const unique = Array.from(new Map(finalResults.map(q => [q.id, q])).values());
 
-        console.log(`Returning ${unique.length} questions (${results.length} keyword matches + ${unique.length - results.length} fallback)`);
-        res.json(unique.slice(0, 100));
+            console.log(`Returning ${unique.length} questions (${scoredResults.length} scored + ${unique.length - scoredResults.length} fallback)`);
+            return res.json(unique.slice(0, 100));
+        }
+
+        res.json(scoredResults.slice(0, 100));
     } catch (error) {
-        console.error('Error batch searching papers:', error);
+        console.error('Error enhanced searching papers:', error);
         res.status(500).json({ message: 'Server Error' });
     }
 };

@@ -36,6 +36,7 @@ const userSchema = new mongoose.Schema({
         maxScore: Number,
         progress: Number,
         subtitle: String,
+        mastered: { type: Boolean, default: false },
         timestamp: { type: Date, default: Date.now }
     }],
     isVerified: { type: Boolean, default: false },

@@ -9,6 +9,7 @@ import userRoutes from './routes/userRoutes.js';
 import flashcardRoutes from './routes/flashcardRoutes.js';
 
 import connectDB from './db/connect.js';
+import { autoSeedPapers } from './scripts/seedPapers.js';
 import passport from 'passport';
 import configurePassport from './config/passport.js';
 
@@ -22,8 +23,10 @@ app.use(passport.initialize());
 app.set('trust proxy', 1);
 const port = process.env.PORT || 5000;
 
-// Connect to Database
-connectDB();
+// Connect to Database and Seed
+connectDB().then(() => {
+    autoSeedPapers();
+});
 
 app.use(cors());
 app.use(express.json());

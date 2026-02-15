@@ -1,15 +1,22 @@
 
 import mongoose from 'mongoose';
 
+const optionSchema = new mongoose.Schema({
+    text: { type: String, required: false },
+    diagram: { type: String, default: null }
+}, { _id: false });
+
 const questionSchema = new mongoose.Schema({
-    id: { type: Number, required: true },
-    text: { type: String, required: true },
-    option_a: { type: String, required: false },
-    option_b: { type: String, required: false }, // Relaxed validation for migration
-    option_c: { type: String, required: false },
-    option_d: { type: String, required: false },
-    correct_option: { type: String, required: true }, // 'A', 'B', 'C', or 'D'
-    image: { type: String, default: null }, // URL or path
+    id: { type: String, required: true },
+    question: { type: String, required: true },
+    options: {
+        A: optionSchema,
+        B: optionSchema,
+        C: optionSchema,
+        D: optionSchema
+    },
+    answer: { type: String, required: true }, // 'A', 'B', 'C', or 'D'
+    questionDiagram: { type: String, default: null }, // URL or path
     explanation: { type: String, default: "" }
 }, { _id: false }); // Disable auto-ID for subdocuments if we want to preserve original IDs or just keep it simple
 

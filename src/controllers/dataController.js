@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import Paper from '../models/Paper.js';
 import Leaderboard from '../models/Leaderboard.js';
 import Performance from '../models/Performance.js';
+import Guide from '../models/Guide.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -297,8 +298,13 @@ export const searchByKeywords = async (req, res) => {
 // @desc    Get study guides
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
-    const guides = await readJsonFile(guidesFilePath);
-    res.json(guides);
+    try {
+        const guides = await Guide.find().sort({ subject: 1 });
+        res.json(guides);
+    } catch (error) {
+        console.error('Error fetching guides:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
 };
 
 // @desc    Get leaderboard

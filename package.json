@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "seed": "node src/scripts/seed_db.js"
+    "seed": "node src/scripts/seed_db.js",
+    "seed:guides": "node src/scripts/seed_guides.js"
   },
   "keywords": [],
   "author": "",

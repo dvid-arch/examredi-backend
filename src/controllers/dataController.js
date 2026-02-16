@@ -109,15 +109,61 @@ export const searchPapers = async (req, res) => {
 // @route   POST /api/data/search-batch
 export const searchByKeywords = async (req, res) => {
     try {
-        const { keywords, subject } = req.body;
+        const { keywords, subject, topic } = req.body;
+
+        const allPapers = await readJsonFile(papersFilePath);
+        const scoredResults = [];
+
+        // Strategy 1: Direct Topic Match (if topic provided)
+        if (topic) {
+            allPapers.forEach(paper => {
+                if (subject && paper.subject.toLowerCase() !== subject.toLowerCase()) return;
+
+                paper.questions.forEach(q => {
+                    // Check if question has this topic tag (Partial match allowed)
+                    if (q.topics && q.topics.some(t => {
+                        const tLower = t.toLowerCase();
+                        const topicLower = topic.toLowerCase();
+
+                        // Exact match
+                        if (tLower === topicLower) return true;
+
+                        // Partial match: if the tag contains the search topic OR search topic contains the tag
+                        // e.g. "Computer Basics" matches "Computer"
+                        if (tLower.includes(topicLower) || topicLower.includes(tLower)) return true;
+
+                        return false;
+                    })) {
+                        scoredResults.push({
+                            ...q,
+                            subject: paper.subject,
+                            year: paper.year,
+                            exam: paper.exam,
+                            _relevanceScore: 100, // High score for direct topic match
+                            _matchedKeywords: [`Topic: ${topic}`]
+                        });
+                    }
+                });
+            });
+
+            // If we found enough questions by direct topic match, return them
+            if (scoredResults.length >= 10) {
+                const unique = Array.from(new Map(scoredResults.map(q => [q.id, q])).values());
+                // Shuffle for variety
+                const shuffled = unique.sort(() => Math.random() - 0.5);
+                console.log(`Found ${unique.length} questions by direct topic tag: ${topic}`);
+                return res.json(shuffled.slice(0, 50));
+            }
+        }
+
+        // Strategy 2: Keyword Search (fallback or supplementary)
         if (!keywords || !Array.isArray(keywords)) {
-            return res.status(400).json({ message: 'Keywords array is required' });
+            // If no keywords and no topic found (or provided), return partial results if any
+            if (scoredResults.length > 0) return res.json(scoredResults);
+            return res.status(400).json({ message: 'Keywords array or topic is required' });
         }
 
         const lowerKeywords = keywords.map(k => k.toLowerCase());
-        const allPapers = await readJsonFile(papersFilePath);
-
-        const scoredResults = [];
 
         // Helper: Escape regex special characters
         const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

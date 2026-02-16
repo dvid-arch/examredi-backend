@@ -17,7 +17,8 @@ const questionSchema = new mongoose.Schema({
     },
     answer: { type: String, required: true }, // 'A', 'B', 'C', or 'D'
     questionDiagram: { type: String, default: null }, // URL or path
-    explanation: { type: String, default: "" }
+    explanation: { type: String, default: "" },
+    topics: { type: [String], index: true }
 }, { _id: false }); // Disable auto-ID for subdocuments if we want to preserve original IDs or just keep it simple
 
 const paperSchema = new mongoose.Schema({

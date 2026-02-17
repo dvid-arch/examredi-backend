@@ -299,7 +299,14 @@ export const searchByKeywords = async (req, res) => {
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
     try {
-        const guides = await Guide.find().sort({ subject: 1 });
+        let guides = await Guide.find().sort({ subject: 1 });
+
+        // Fallback to JSON file if MongoDB is empty (consistency with papers)
+        if (!guides || guides.length === 0) {
+            console.log('No guides in MongoDB, falling back to guides.json');
+            guides = await readJsonFile(guidesFilePath);
+        }
+
         res.json(guides);
     } catch (error) {
         console.error('Error fetching guides:', error);

@@ -28,7 +28,8 @@
               "IASB",
               "users of accounting information",
               "accounting bases"
-            ]
+            ],
+            "content": "## Introduction to Accounting\nAccounting is the process of identifying, measuring, and communicating economic information to permit informed judgments and decisions by users of the information. It is often referred to as the \"language of business.\"\n\n### History of Accounting\nAccounting has evolved over centuries. Notable milestones include:\n- **Ancient Civilizations:** Record-keeping in Mesopotamia, Egypt, and Babylon.\n- **Double-Entry System:** Formally documented by **Luca Pacioli** (the \"Father of Accounting\") in 1494.\n- **Industrial Revolution:** Led to the need for more complex financial reporting and the rise of the auditing profession.\n\n### Users of Accounting Information\n1. **Internal Users:**\n   - Management (to plan and control business operations).\n   - Employees (to assess job security and profitability).\n2. **External Users:**\n   - Investors (to decide whether to buy or sell shares).\n   - Lenders/Creditors (to assess creditworthiness).\n   - Government and Regulatory bodies (for taxation and compliance).\n   - Customers and the Public.\n\n### Accounting Concepts and Conventions\nTo ensure consistency, accountants follow certain rules:\n- **Going Concern:** Assuming the business will continue to operate for the foreseeable future.\n- **Accrual Concept:** Recording transactions when they occur, not just when cash changes hands.\n- **Consistency:** Using the same methods from one period to the next.\n- **Prudence (Conservatism):** Not overstating assets or income, and not understating liabilities or expenses.\n- **Materiality:** Focusing on information significant enough to influence decisions."
           },
           {
             "id": "bookkeeping",
@@ -43,7 +44,8 @@
               "subsidiary books",
               "contra entry",
               "three column cash book"
-            ]
+            ],
+            "content": "## The Art of Bookkeeping\nBookkeeping is the systematic recording of financial transactions in the books of account. It is the foundation upon which accounting is built.\n\n### The Double-Entry Principle\nThe core of modern bookkeeping is the double-entry system, which states that for every debit entry, there must be a corresponding credit entry.\n- **Debit (Dr):** Left side of an account. Represents increases in assets/expenses or decreases in liabilities/income.\n- **Credit (Cr):** Right side of an account. Represents increases in liabilities/income or decreases in assets/expenses.\n\n### Subsidiary Books (Books of Original Entry)\nTransactions are first recorded in these books before being posted to the ledger:\n1. **Sales Journal:** For credit sales of goods.\n2. **Purchases Journal:** For credit purchases of goods.\n3. **Return Inwards Journal:** For goods returned by customers.\n4. **Return Outwards Journal:** For goods returned to suppliers.\n5. **Cash Book:** For all cash and bank transactions (Single, Double, or Three-column).\n6. **General Journal:** For unusual transactions like opening entries or purchase of fixed assets.\n\n### The Ledger\nThe ledger is the principal book of accounts where individual accounts are maintained.\n- **Personal Accounts:** Accounts for people or businesses (e.g., Debtors, Creditors).\n- **Impersonal Accounts:** \n  - **Real Accounts:** Tangible assets (e.g., Land, Machinery, Cash).\n  - **Nominal Accounts:** Income, expenses, gains, and losses (e.g., Rent, Salaries, Sales)."
           },
           {
             "id": "trial-balance",
@@ -58,7 +60,8 @@
               "error of original entry",
               "compensating error",
               "complete reversal"
-            ]
+            ],
+            "content": "## The Trial Balance\nA Trial Balance is a list of all general ledger accounts (both revenue and capital) contained in the ledger of a business. This list will contain the name of each nominal ledger account and the value of that nominal ledger balance. \n\n### Purpose of a Trial Balance\n1. To check the arithmetical accuracy of the double-entry bookkeeping.\n2. To provide a starting point for preparing financial statements.\n3. To summarize all the balances in one place.\n\n### Errors in the Trial Balance\nWhile a balanced Trial Balance suggests accurate double-entry, certain errors may still exist:\n1. **Error of Omission:** A transaction is completely left out.\n2. **Error of Commission:** Posting to the wrong person's account (e.g., Debtors A instead of Debtors B).\n3. **Error of Principle:** Posting to the wrong class of account (e.g., Motor vehicle repairs posted to Motor vehicle asset account).\n4. **Error of Original Entry:** The initial amount was recorded incorrectly (e.g., 500 instead of 50).\n5. **Compensating Errors:** Two or more errors cancel each other out.\n6. **Complete Reversal of Entry:** Debit and credit were swapped.\n\n### The Suspense Account\nIf the Trial Balance doesn't balance, the difference is temporarily placed in a **Suspense Account** until the errors are found and corrected using Journal Entries."
           }
         ]
       },
@@ -98,7 +101,8 @@
               "SAP",
               "mark-up",
               "margin"
-            ]
+            ],
+            "content": "## Accounting Adjustments\nAt the end of an accounting period, adjustments are necessary to ensure the financial statements accurately reflect the business's position. This follows the **Accrual** and **Matching** concepts.\n\n### 1. Accruals and Prepayments\n- **Accrued Expenses:** Expenses incurred but not yet paid (Liability).\n- **Prepaid Expenses:** Expenses paid in advance but not yet consumed (Asset).\n- **Accrued Income:** Income earned but not yet received (Asset).\n- **Prepaid Income:** Income received in advance but not yet earned (Liability).\n\n### 2. Depreciation\nDepreciation is the systematic allocation of the cost of a tangible asset over its useful life.\n- **Methods:**\n  - **Straight Line:** (Cost - Residual Value) / Useful Life.\n  - **Reducing Balance:** A fixed percentage applied to the book value each year.\n- **Accounting Entry:** \n  - Dr. Profit and Loss Account\n  - Cr. Provision for Depreciation Account\n\n### 3. Bad Debts and Provisions\n- **Bad Debts:** Debts that are definitely uncollectible and are written off.\n- **Provision for Doubtful Debts:** An estimate of potential future bad debts, reducing the value of Trade Debtors in the Balance Sheet."
           }
         ]
       },
@@ -124,7 +128,8 @@
               "dissolution",
               "realization account",
               "sleeping partner"
-            ]
+            ],
+            "content": "## Partnership Accounts\nA partnership is an association between two or more persons (usually up to 20) carrying on a business with a view to profit.\n\n### The Partnership Deed\nA formal agreement (oral or written) that outlines:\n- Profit-sharing ratios.\n- Interest on capital.\n- Interest on drawings.\n- Partners' salaries.\n- Procedure for admitting or retiring partners.\n\n### Financial Statements in Partnership\n1. **Trading, Profit and Loss Account:** Same as a sole trader.\n2. **Appropriation Account:** Shows how the net profit is shared among partners after salaries, interest on capital, and interest on drawings.\n3. **Partners' Capital and Current Accounts:** \n   - **Fixed Capital Method:** Capital remains fixed; all adjustments go into a Current Account.\n   - **Fluctuating Capital Method:** All adjustments go directly into the Capital Account.\n\n### Admissions and Dissolution\nWhen a new partner joins or the partnership ends, assets may need to be **Revalued**. The difference is recorded in a **Revaluation Account**. **Goodwill** (the reputation/brand value) might also be recognized."
           },
           {
             "id": "company-accounts",
@@ -184,7 +189,8 @@
               "standing order",
               "dishonoured cheques",
               "direct credit"
-            ]
+            ],
+            "content": "## Bank Reconciliation\nA Bank Reconciliation Statement is prepared to explain the difference between the balance in the company's Cash Book (bank column) and the balance shown on the Bank Statement.\n\n### Reasons for Differences\n1. **Timing Differences:**\n   - **Unpresented Cheques:** Issued by the business but not yet presented at the bank by the recipient.\n   - **Uncredited Lodgments:** Deposited at the bank but not yet reflected on the statement.\n2. **Items on Bank Statement but not in Cash Book:**\n   - Bank charges and interest.\n   - Direct credits (e.g., dividends).\n   - Standing orders or Direct debits.\n   - Dishonoured cheques.\n3. **Errors:** Made by either the business or the bank.\n\n### Steps to Reconcile\n1. Update the Cash Book with known items (Bank charges, direct credits).\n2. Start the Reconciliation Statement with the **Adjusted Cash Book Balance** or the **Balance as per Bank Statement**.\n3. Add Unpresented Cheques.\n4. Deduct Uncredited Lodgments.\n5. Ensure the final balance matches the other record."
           },
           {
             "id": "departmental-and-branch-accounts",
@@ -650,7 +656,8 @@
               "glucose",
               "oxygen",
               "carbon dioxide"
-            ]
+            ],
+            "content": "## Respiration\nRespiration is the metabolic process by which cells break down food to release energy (in the form of ATP).\n\n### Types of Respiration\n1. **Aerobic Respiration:** Occurs in the presence of oxygen.\n   - $C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + Energy$\n2. **Anaerobic Respiration:** Occurs without oxygen (e.g., fermentation in yeast or lactic acid production in muscles).\n\n### Respiratory Organs\n- Gills (Fish)\n- Lungs (Mammals, Reptiles, Birds)\n- Trachea (Insects)\n- Skin (Earthworms, Amphibians)\n- Stomata (Plants)"
           },
           {
             "id": "excretion",
@@ -965,7 +972,8 @@
               "hydrogen bond",
               "allotropy",
               "oxidation number"
-            ]
+            ],
+            "content": "## Atomic Structure and Chemical Bonding\nMatter is composed of tiny particles called atoms.\n\n### The Atom\nAtoms consist of three sub-atomic particles:\n- **Protons ($p^+$):** Positively charged, found in the nucleus.\n- **Neutrons ($n^0$):** Neutral, found in the nucleus.\n- **Electrons ($e^-$):** Negatively charged, orbit the nucleus in shells.\n\n### Isotopes\nAtoms of the same element with the same number of protons but different number of neutrons (e.g., $Carbon-12$ and $Carbon-14$).\n\n### Chemical Bonding\n1. **Ionic (Electrovalent) Bond:** Transfer of electrons from a metal to a non-metal (e.g., $NaCl$).\n2. **Covalent Bond:** Sharing of electrons between non-metals (e.g., $H_2O, CO_2$).\n3. **Metallic Bond:** Attraction between positive metal ions and a \"sea\" of delocalized electrons.\n4. **Hydrogen Bond:** A weak attraction between a hydrogen atom and a highly electronegative atom ($F, O, N$)."
           },
           {
             "id": "separation-of-mixtures",
@@ -981,7 +989,8 @@
               "chromatography",
               "decantation",
               "evaporation"
-            ]
+            ],
+            "content": "## Separation of Mixtures\nA mixture consists of two or more substances that are physically combined. Pure substances have fixed boiling and melting points, while mixtures do not.\n\n### Techniques for Separation\n1. **Filtration:** Separating an insoluble solid from a liquid (e.g., sand from water).\n2. **Evaporation:** Recovering a soluble solid from a liquid by heating the liquid until it evaporates.\n3. **Crystallization:** Obtaining pure crystals from a saturated solution.\n4. **Distillation:** Separating a liquid from a solution by boiling and condensation.\n   - **Fractional Distillation:** Separating miscible liquids with different boiling points (e.g., crude oil).\n5. **Chromatography:** Separating components of a mixture based on their different rates of movement through a medium (e.g., dyes/inks).\n6. **Sublimation:** Separating a substance that changes directly from solid to gas (e.g., iodine, ammonium chloride)."
           }
         ]
       },
@@ -1005,7 +1014,8 @@
               "STP",
               "vapour density",
               "molecular mass"
-            ]
+            ],
+            "content": "## States of Matter and Gas Laws\nMatter exists in three main states: Solid, Liquid, and Gas.\n\n### Kinetic Theory of Matter\n- Matter is composed of tiny particles in constant motion.\n- Temperature is a measure of the average kinetic energy of the particles.\n- Solid (low energy, fixed shape), Liquid (moderate energy, flows), Gas (high energy, expands).\n\n### Gas Laws\n1. **Boyle's Law:** Volume is inversely proportional to pressure ($P_1V_1 = P_2V_2$).\n2. **Charles' Law:** Volume is directly proportional to absolute temperature ($\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$).\n3. **Graham's Law of Diffusion:** The rate of diffusion of a gas is inversely proportional to the square root of its density."
           },
           {
             "id": "acids-bases-salts",
@@ -1027,7 +1037,8 @@
               "solubility",
               "solubility product",
               "Ksp"
-            ]
+            ],
+            "content": "## Acids, Bases, and Salts\nThese are fundamental classes of chemical compounds.\n\n### 1. Acids\n- **Definitions:** Donate protons ($H^+$) or produce $H_3O^+$ in water.\n- **Types:** Organic (e.g., Citric) and Inorganic (e.g., $HCl, H_2SO_4$).\n- **Properties:** Sour taste, turn blue litmus red.\n\n### 2. Bases and Alkalis\n- **Definitions:** Accept protons or produce $OH^-$ in water. Soluble bases are called **alkalis**.\n- **Properties:** Bitter taste, soapy feel, turn red litmus blue.\n\n### 3. pH Scale\nMeasures acidity or alkalinity (0-14). \n- pH < 7: Acidic\n- pH = 7: Neutral\n- pH > 7: Basic\n\n### 4. Salts\nFormed by the neutralization reaction: $Acid + Base \\rightarrow Salt + Water$."
           },
           {
             "id": "energy-and-kinetics",
@@ -1298,7 +1309,8 @@
               "software",
               "virus",
               "web browser"
-            ]
+            ],
+            "content": "## Transport and Communication in Commerce\nTransport and communication are vital \"Aids to Trade\" that bridge the gap between producers and consumers.\n\n### 1. Transport\nTransport involves the physical movement of goods and people.\n- **Land:** Road (flexible, door-to-door) and Rail (suitable for heavy/bulky goods over long distances).\n- **Water:** Inland (rivers/lakes) and Sea (Ocean liners for scheduled routes, Tramps for unscheduled).\n- **Air:** Fastest but most expensive; used for perishables and high-value items.\n- **Pipeline:** For liquids (oil/water) and gases.\n\n### 2. Communication\nCommunication is the exchange of information between buyers and sellers.\n- **Postal Services:** Letters, parcels, and express mail.\n- **Telecommunication:** Telephone (GSM), Internet, and Email.\n- **Importance:** Facilitates quick decision-making, reduces travel costs, and expands market reach."
           },
           {
             "id": "banking",
@@ -1336,7 +1348,8 @@
               "bulls",
               "bears",
               "stags"
-            ]
+            ],
+            "content": "## Banking and Finance\nBanks are financial institutions that accept deposits and provide credit to individuals and businesses.\n\n### 1. Commercial Banks\n- **Functions:** Accepting deposits (current, savings, fixed), lending money, providing safe custody for valuables, and facilitating payments.\n- **Credit Creation:** Commercial banks expand the money supply through lending.\n\n### 2. Central Bank\nThe apex financial institution in a country (e.g., Central Bank of Nigeria - CBN).\n- **Functions:** Issuing currency, banker to the government, banker to commercial banks, and controlling monetary policy to ensure price stability.\n\n### 3. Specialized Banks\n- **Development Banks:** Provide long-term loans for agriculture or industry.\n- **Microfinance Banks:** Provide small loans and financial services to low-income earners."
           },
           {
             "id": "insurance",
@@ -1658,7 +1671,8 @@
               "debentures",
               "dividends",
               "voting rights"
-            ]
+            ],
+            "content": "## Business Organizations\nDifferent forms of business units that operate in an economy.\n\n### 1. Sole Proprietorship\nOwned and managed by one person. Unlimited liability but easy to form and quick decision-making.\n\n### 2. Partnership\nOwned by 2 to 20 people. Pooled capital and shared risks.\n\n### 3. Limited Liability Companies (Private/Public)\nLegal entities separate from their owners. Liability is limited to the amount invested. Public companies can sell shares on the stock exchange.\n\n### 4. Public Corporations\nOwned and funded by the government to provide essential services (e.g., utility companies)."
           }
         ]
       },
@@ -1682,7 +1696,8 @@
               "per capita income",
               "standard of living",
               "circular flow of income"
-            ]
+            ],
+            "content": "## National Income\nNational income is the total value of all final goods and services produced in a country in a year.\n\n### Key Concepts\n- **GDP (Gross Domestic Product):** Total output produced *within* a country's borders.\n- **GNP (Gross National Product):** Total output produced by a country's *citizens* (regardless of location).\n- **Real vs. Nominal:** Real income is adjusted for inflation (constant prices), while nominal income uses current prices.\n\n### Methods of Measurement\n1. **Income Method:** Summing all incomes (wages, rent, interest, profit).\n2. **Output Method:** Summing the value-added at each stage of production.\n3. **Expenditure Method:** Summing consumption, investment, government spending, and net exports (C + I + G + [X - M])."
           },
           {
             "id": "money-and-banking",
@@ -1915,7 +1930,8 @@
               "computer virus",
               "data processing",
               "information"
-            ]
+            ],
+            "content": "## Introduction to Computers\nA computer is an electronic device that accepts data as input, processes it, and gives out information as output.\n\n### Components of a Computer\n1. **Hardware:** Physical parts (CPU, monitor, keyboard, mouse).\n   - **Input Devices:** Mouse, Keyboard, Scanner.\n   - **Output Devices:** Monitor, Printer, Speaker.\n   - **Storage:** Hard Disk, SSD, Flash Drive.\n2. **Software:** Programs that tell the hardware what to do.\n   - **System Software:** Operating Systems (Windows, macOS, Linux).\n   - **Application Software:** Word processors, Browsers, Games.\n\n### Computer Generations\n- **1st:** Vacuum Tubes (Huge, hot).\n- **2nd:** Transistors (Smaller, faster).\n- **3rd:** Integrated Circuits (ICs).\n- **4th:** Microprocessors (VLSIC).\n- **5th:** Artificial Intelligence (AI) and Robotics."
           },
           {
             "id": "information-processing",
@@ -1933,7 +1949,8 @@
               "file access",
               "sequential access",
               "direct access"
-            ]
+            ],
+            "content": "## Information Processing and Security\nInformation processing is the transformation of data into a usable form.\n\n### The Data Processing Cycle\n1. **Input:** Collecting raw data.\n2. **Processing:** Manipulating data (calculating, sorting).\n3. **Storage:** Keeping data for future use.\n4. **Output:** Displaying the results.\n\n### Data Security\nProtecting data from unauthorized access, alteration, or destruction.\n- **Threats:** Viruses, Hacking, Cracking, and Hardware failure.\n- **Prevention:** Antivirus software, Firewalls, Encryption (scrambling data), and regular Backups.\n- **Ethics:** Avoiding plagiarism, respecting privacy, and obeying cyber laws."
           }
         ]
       },
@@ -2069,7 +2086,8 @@
               "ascension",
               "Jarius",
               "centurion"
-            ]
+            ],
+            "content": "## The Ministry of Jesus Christ\nJesus Christ is the central figure of Christianity. His ministry is recorded in the four Gospels.\n\n### Key Events\n1. **Baptism:** By John the Baptist in River Jordan, marking the start of his public ministry.\n2. **Temptation:** Overcoming trials in the wilderness for 40 days.\n3. **Call of the Disciples:** Choosing twelve men to follow him and spread the Gospel.\n4. **Miracles:** Signs of God's power (e.g., turning water to wine, healing the sick, raising Lazarus).\n5. **Parables:** Stories using earthly examples to teach heavenly truths (e.g., The Prodigal Son, The Good Samaritan).\n\n### The Passion\nThe suffering, death, and resurrection of Jesus, which Christians believe provided salvation for humanity."
           },
           {
             "id": "the-early-church",
@@ -2133,7 +2151,8 @@
               "Peter",
               "John",
               "Jude"
-            ]
+            ],
+            "content": "## Christian Living and Ethics\nThis section explores the practical application of Christian faith in daily life, as taught in the Epistles.\n\n### 1. Justification by Faith\nBased on Paul's letter to the Romans, justification is the act of God declaring a sinner righteous through faith in Jesus Christ, not by works of the law.\n\n### 2. Spiritual Gifts and the Fruit of the Spirit\n- **Spiritual Gifts:** Abilities given by the Holy Spirit for the building of the Church (e.g., prophecy, healing, wisdom).\n- **Fruit of the Spirit:** The character traits produced by the Spirit (Love, Joy, Peace, Patience, Kindness, Goodness, Faithfulness, Gentleness, and Self-control).\n\n### 3. Love (Agāpē)\nAs described in 1 Corinthians 13, love is the greatest virtue. It is patient, kind, does not envy, and never fails."
           }
         ]
       }
@@ -2352,7 +2371,8 @@
               "liaison",
               "sons",
               "phonetics"
-            ]
+            ],
+            "content": "## Grammaire Française (French Grammar)\nFrench grammar follows specific rules for gender, number, and conjugation.\n\n### 1. Nouns and Gender\nEvery noun in French is either **Masculine** (*le/un*) or **Feminine** (*la/une*). Adjectives must agree in gender and number with the nouns they describe.\n\n### 2. Articles\n- **Definite:** *Le, La, L', Les* (The).\n- **Indefinite:** *Un, Une, Des* (A/Some).\n\n### 3. Verbs and Conjugation\nVerbs are grouped into three categories based on their endings: *-er, -ir, -re*.\n- **Present Tense:** *Je parle* (I speak), *Je finis* (I finish), *Je vends* (I sell).\n- **Common Tenses:** *Passé Composé* (Past), *Futur Simple* (Future), *Imparfait* (Continuous past)."
           },
           {
             "id": "vocabulary",
@@ -2548,7 +2568,8 @@
               "soil structure",
               "soil fertility",
               "soil conservation"
-            ]
+            ],
+            "content": "## Climate and Vegetation\nClimate is the average atmospheric condition of a place over a long period (usually 35 years).\n\n### Elements of Weather and Climate\n- **Temperature:** Measured with a thermometer.\n- **Rainfall:** Measured with a rain gauge.\n- **Pressure:** Measured with a barometer.\n- **Wind Speed:** Measured with an anemometer.\n- **Humidity:** Measured with a hygrometer.\n\n### Major Climate Types\n1. **Equatorial:** Hot and wet all year (e.g., Amazon Basin).\n2. **Tropical Continental (Savanna):** Distinct wet and dry seasons.\n3. **Desert:** Very hot days, cold nights, very low rainfall.\n4. **Mediterranean:** Hot, dry summers and mild, wet winters.\n\n### Vegetation Zones\n- **Rainforest:** Tall trees, evergreen, multiple layers.\n- **Savanna:** Grasslands with scattered trees.\n- **Desert Vegetation:** Succulent plants (cacti) and thorny shrubs."
           }
         ]
       },
@@ -2829,7 +2850,8 @@
               "separation of powers",
               "checks and balances",
               "fundamental human rights"
-            ]
+            ],
+            "content": "## Basic Concepts of Government\nGovernment is the agency of the state through which its will is expressed and carried out.\n\n### Key Concepts\n1. **The State:** A politically organized body of people occupying a definite territory with a sovereign government.\n2. **Sovereignty:** The supreme power of the state to make and enforce laws without external interference.\n3. **Power:** The ability to influence the behavior of others, often backed by force.\n4. **Authority:** The legal right to command and be obeyed.\n5. **Legitimacy:** The popular acceptance of a government's right to rule.\n6. **Rule of Law:** The principle that everyone, including the government, is subject to the law.\n7. **Separation of Powers:** Dividing government powers among the Executive, Legislature, and Judiciary to prevent tyranny."
           },
           {
             "id": "forms-of-government",
@@ -2858,7 +2880,8 @@
               "capitalism",
               "fascism",
               "communalism"
-            ]
+            ],
+            "content": "## Forms and Systems of Government\nDifferent nations adopt different structures based on their history and needs.\n\n### 1. Democracy\nGovernment by the people, for the people.\n- **Direct Democracy:** People participate directly in decision-making.\n- **Representative Democracy:** People elect officials to represent them.\n\n### 2. Unitary vs. Federal Systems\n- **Unitary:** All power is concentrated in the central government (e.g., UK, France).\n- **Federal:** Power is shared between the central and regional governments (e.g., Nigeria, USA).\n\n### 3. Presidential vs. Parliamentary\n- **Presidential:** The President is both Head of State and Head of Government (Separation of powers).\n- **Parliamentary:** The Prime Minister is the Head of Government, while a Monarch or President is the Head of State (Fusion of powers)."
           },
           {
             "id": "principles",
@@ -3221,7 +3244,8 @@
               "lafazi (pronunciation)",
               "dafi (prefix/suffix)",
               "hausa dialects"
-            ]
+            ],
+            "content": "## Nahawun Hausa (Hausa Grammar)\nHausa is one of the most widely spoken languages in Africa, belonging to the Chadic branch.\n\n### 1. Alphabet and Vowels\n- **Alphabet:** Uses both Arabic (Ajami) and Latin (Boko) scripts.\n- **Vowels (Wasula):** Five short vowels (a, e, i, o, u) and five long counterparts.\n\n### 2. Nouns and Gender\nUnlike English, Hausa distinguishes gender for both living and non-living things.\n- **Suna (Noun):** Can be *Namiji* (Male) or *Mace* (Female).\n\n### 3. Sentence Structure\nA typical Hausa sentence follows the **Subject-People-Verb** pattern, where the \"person pronoun\" indicates the tense."
           },
           {
             "id": "literature",
@@ -3352,7 +3376,8 @@
               "diplomacy",
               "Kano Chronicle",
               "Tarikh as-Sudan"
-            ]
+            ],
+            "content": "## Pre-Colonial Nigeria\nBefore European arrival, Nigeria consisted of various independent states and kingdoms with sophisticated political and social systems.\n\n### 1. The Hausa/Fulani (North)\nThe Hausa city-states (Kano, Katsina, Zaria) were centers of trade. After the 1804 Jihad led by **Usman dan Fodio**, they were centralized into the **Sokoto Caliphate** with an Emirate system.\n\n### 2. The Yoruba (West)\nThe **Old Oyo Empire** was a powerful military state with a system of checks and balances (Alaafin and the Oyomesi council).\n\n### 3. The Igbo (East)\nKnown for their **segmentary (stateless)** societies. Political decisions were made through village assemblies (Oha-na-eze) and elders' councils."
           },
           {
             "id": "colonial",
@@ -3640,7 +3665,8 @@
               "vitamin K",
               "chlorophyll",
               "food groups"
-            ]
+            ],
+            "content": "## Food and Nutrition: Nutrients\nNutrients are chemical substances in food that the body needs for growth, energy, and health.\n\n### The Six Classes of Nutrients\n1. **Carbohydrates:** Primary source of energy (e.g., Yam, Rice, Bread).\n2. **Proteins:** For growth and repair of body tissues (e.g., Meat, Fish, Beans).\n3. **Fats and Oils:** Concentrated energy source and insulation (e.g., Butter, Vegetable oil).\n4. **Vitamins:** Protect the body from diseases (e.g., Fruits, Vegetables).\n5. **Minerals:** For strong bones, teeth, and blood (e.g., Calcium, Iron).\n6. **Water:** Vital for all body processes and temperature regulation.\n\n### Balanced Diet\nA diet that contains all the six classes of nutrients in the right proportions for the body's needs."
           },
           {
             "id": "cooking",
@@ -3931,7 +3957,8 @@
               "Qadr",
               "predestination",
               "free will"
-            ]
+            ],
+            "content": "## Articles of Faith (Iman)\nIn Islam, faith consists of six fundamental beliefs that every Muslim must hold.\n\n### The Six Articles\n1. **Belief in Allah (Tawhid):** The Oneness of God. He has no partners or equals.\n2. **Belief in Angels (Mala'ikah):** Created from light to serve Allah (e.g., Jibril for revelation, Mikail for sustenance).\n3. **Belief in Holy Books:** The Qur'an (final), Tawrah (Musa), Zabur (Dawud), and Injil (Isa).\n4. **Belief in Prophets (Rusul):** Starting from Adam to Muhammad (SAW), the final prophet.\n5. **Belief in the Last Day (Yawm al-Qiyamah):** The Day of Judgment and life after death.\n6. **Belief in Divine Decree (Qadr):** Everything happens by the will and knowledge of Allah."
           },
           {
             "id": "pillars-of-islam",
@@ -4286,7 +4313,8 @@
               "tragic flaw",
               "hubris",
               "spectacle"
-            ]
+            ],
+            "content": "## Introduction to Drama\nDrama is a genre of literature meant to be performed on stage. It relies on dialogue and action.\n\n### Key Elements\n1. **Plot:** The sequence of events in a play.\n2. **Characterization:** The development of characters (Protagonist, Antagonist).\n3. **Dialogue:** Conversation between characters.\n4. **Stage Directions:** Instructions for actors and directors.\n\n### Types of Drama\n- **Tragedy:** Ends in the downfall or death of the protagonist (e.g., Shakespeare's *Hamlet*).\n- **Comedy:** Ends happily, often with a wedding or celebration.\n- **Tragicomedy:** Contains elements of both tragedy and comedy.\n- **Farce:** A comedy characterized by exaggerated and improbable situations."
           },
           {
             "id": "poetry",
@@ -4353,7 +4381,8 @@
               "onomatopoeia",
               "repetition",
               "refrain"
-            ]
+            ],
+            "content": "## Understanding Poetry\nPoetry is a form of literature that uses aesthetic and rhythmic qualities of language.\n\n### Literary Devices in Poetry\n1. **Simile:** Comparison using \"like\" or \"as\" (e.g., *As brave as a lion*).\n2. **Metaphor:** Direct comparison (e.g., *Life is a journey*).\n3. **Personification:** Giving human qualities to non-human things.\n4. **Alliteration:** Repetition of initial consonant sounds.\n5. **Onomatopoeia:** Words that imitate sounds (e.g., *buzz, hiss*).\n\n### Forms of Poetry\n- **Sonnet:** A 14-line poem with a specific rhyme scheme.\n- **Ode:** A poem of praise.\n- **Elegy:** A poem mourning the dead.\n- **Epic:** A long narrative poem about heroic deeds."
           },
           {
             "id": "prose",
@@ -4694,7 +4723,8 @@
               "voice leading",
               "chord progression",
               "figured bass"
-            ]
+            ],
+            "content": "## Rudiments of Music\nMusical rudiments are the basic building blocks of music theory, notation, and performance.\n\n### 1. Notation and the Staff\nMusic is written on a **staff** (or stave) consisting of five lines and four spaces.\n- **Clefs:** Assign names to the lines and spaces (Treble Clef for high notes, Bass Clef for low notes).\n- **Notes and Rests:** Represent the duration of sounds and silences (e.g., Semibreve, Minim, Crotchet).\n\n### 2. Time Signatures\nDetermine the number of beats in a measure.\n- **Common Time (4/4):** Four crotchet beats per bar.\n- **Triple Time (3/4):** Three crotchet beats per bar.\n\n### 3. Scales and Intervals\n- **Scale:** A series of notes in ascending or descending order (e.g., Major and Minor scales).\n- **Interval:** The distance between two musical notes."
           },
           {
             "id": "forms",
@@ -5392,7 +5422,8 @@
               "significant figures",
               "standard form",
               "scientific notation"
-            ]
+            ],
+            "content": "## Measurements and Units\nPhysics is a science of measurement. Everything we study is expressed in terms of physical quantities.\n\n### Fundamental and Derived Quantities\n1. **Fundamental Quantities:** These are basic quantities that do not depend on other quantities.\n   - Length (Metre, m)\n   - Mass (Kilogram, kg)\n   - Time (Second, s)\n   - Temperature (Kelvin, K)\n   - Electric Current (Ampere, A)\n2. **Derived Quantities:** These are obtained by combining fundamental ones.\n   - Area ($m^2$)\n   - Volume ($m^3$)\n   - Speed ($m/s^1$)\n   - Force (Newton, $kg\\cdot m/s^2$)\n\n### Dimensions\nDimensions show the relationship between a physical quantity and the fundamental quantities ($L, M, T$).\n- Velocity: $[LT^{-1}]$\n- Acceleration: $[LT^{-2}]$\n- Force: $[MLT^{-2}]$"
           },
           {
             "id": "forces",
@@ -5469,7 +5500,8 @@
               "simple harmonic motion (SHM)",
               "spring",
               "pendulum"
-            ]
+            ],
+            "content": "## Linear and Projectile Motion\nMotion is a change in position with time.\n\n### Equations of Linear Motion\nFor constant acceleration ($a$):\n1. $v = u + at$\n2. $s = ut + \\frac{1}{2}at^2$\n3. $v^2 = u^2 + 2as$\n\n### Types of Motion\n- **Random:** Irregular path (e.g., smoke particles).\n- **Translational:** Moving from one point to another.\n- **Rotational:** Moving around an axis.\n- **Oscillatory:** To-and-fro movement (e.g., pendulum).\n\n### Projectile Motion\nMotion of an object thrown into the air, subject only to gravity.\n- **Range ($R$):** The horizontal distance covered.\n- **Maximum Height ($H$):** The vertical distance at the peak.\n- **Time of Flight ($T$):** Total time in the air."
           }
         ]
       },
@@ -5746,7 +5778,8 @@
               "alternating current (AC)",
               "direct current (DC)",
               "frequency of AC"
-            ]
+            ],
+            "content": "## Electricity and Magnetism\nCurrent electricity is the flow of electric charge (electrons) through a conductor.\n\n### Ohm's Law\nThe current ($I$) through a conductor is directly proportional to the potential difference ($V$) across it, provided physical conditions (like temperature) remain constant.\n- **$V = IR$**\n\n### Circuits\n- **Series:** Current is the same everywhere ($R_{total} = R_1 + R_2 + \\dots$).\n- **Parallel:** Voltage is the same across branches ($\\frac{1}{R_{total}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots$).\n\n### Electrical Power\n- $P = IV = I^2R = \\frac{V^2}{R}$."
           },
           {
             "id": "magnetism",
@@ -5908,6 +5941,170 @@
               "truth tables",
               "boolean algebra"
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mathematics",
+    "subject": "Mathematics",
+    "lastUpdated": "2026-02-17",
+    "topics": [
+      {
+        "id": "number-and-numeration",
+        "title": "Number and Numeration",
+        "subTopics": [
+          {
+            "id": "number-bases",
+            "title": "Number Bases",
+            "keywords": [
+              "binary",
+              "decimal",
+              "hexadecimal"
+            ],
+            "content": "## Number Bases\nNumber bases (radix) determine the number of unique digits used to represent numbers.\n\n### Common Bases\n- **Base 10 (Decimal):** Uses digits 0-9. Our standard counting system.\n- **Base 2 (Binary):** Uses digits 0 and 1. Used in computing.\n- **Base 8 (Octal):** Uses digits 0-7.\n- **Base 16 (Hexadecimal):** Uses 0-9 and A-F.\n\n### Conversions\n1. **From Any Base to Base 10:** Multiply each digit by the base raised to its position power (e.g., $101_2 = 1\\times 2^2 + 0\\times 2^1 + 1\\times 2^0 = 5_{10}$).\n2. **From Base 10 to Any Base:** Use successive division by the target base and record the remainders in reverse order.\n\n### Operations\nAddition, subtraction, and multiplication in other bases follow the same logic as decimal, but you \"carry\" or \"borrow\" based on the base value (e.g., in base 2, $1+1 = 10_2$, carry the 1)."
+          },
+          {
+            "id": "fractions-decimals-approximations",
+            "title": "Fractions, Decimals, Approximations",
+            "keywords": [
+              "rounding",
+              "significant figures"
+            ],
+            "content": "## Basic Arithmetic Operations\nThis section covers foundational concepts for numerical accuracy and business mathematics.\n\n### Approximations and Errors\n- **Significant Figures:** The number of important digits in a value (starting from the first non-zero digit).\n- **Decimal Places:** The number of digits after the decimal point.\n- **Percentage Error:** $\\frac{|Approximate - Exact|}{Exact} \\times 100\\%$.\n\n### Business Mathematics\n- **Simple Interest:** $I = \\frac{P \\times R \\times T}{100}$.\n- **Profit and Loss:** \n  - Profit % = $\\frac{SP - CP}{CP} \\times 100\\%$.\n  - Loss % = $\\frac{CP - SP}{CP} \\times 100\\%$.\n- **Ratio and Proportion:** Comparing two or more quantities.\n- **VAT (Value Added Tax):** A consumption tax added to the price of goods."
+          },
+          {
+            "id": "indices-logarithms-surds",
+            "title": "Indices, Logarithms, Surds",
+            "keywords": [
+              "logs",
+              "indices",
+              "roots"
+            ],
+            "content": "## Indices, Logarithms, and Surds\nThese are essential tools for simplifying complex algebraic expressions.\n\n### Laws of Indices\n1. $a^m \\times a^n = a^{m+n}$\n2. $a^m / a^n = a^{m-n}$\n3. $(a^m)^n = a^{mn}$\n4. $a^0 = 1$\n5. $a^{-n} = \\frac{1}{a^n}$\n\n### Logarithms\nLogarithms are the inverse of indices. If $y = a^x$, then $\\log_a y = x$.\n- **Product Law:** $\\log a + \\log b = \\log(ab)$\n- **Division Law:** $\\log a - \\log b = \\log(a/b)$\n- **Power Law:** $\\log a^n = n\\log a$\n\n### Surds\nSurds are irrational numbers expressed with a square root symbol ($\\sqrt{n}$).\n- **Simplification:** $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$.\n- **Rationalization:** Removing the surd from the denominator (e.g., multiply top and bottom by $\\sqrt{n}$)."
+          }
+        ]
+      },
+      {
+        "id": "algebra",
+        "title": "Algebra",
+        "subTopics": [
+          {
+            "id": "polynomials",
+            "title": "Polynomials",
+            "keywords": [
+              "equations",
+              "factors"
+            ],
+            "content": "## Polynomials\nA polynomial is an expression consisting of variables and coefficients.\n\n### Remainder and Factor Theorems\n- **Remainder Theorem:** If a polynomial $f(x)$ is divided by $(x - a)$, the remainder is $f(a)$.\n- **Factor Theorem:** If $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$.\n\n### Quadratic Functions\nGeneral form: $ax^2 + bx + c = 0$.\n- **Solving:** Factorization, completing the square, or the quadratic formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.\n- **Discriminant ($D = b^2 - 4ac$):**\n  - $D > 0$: Two real, distinct roots.\n  - $D = 0$: Two real, equal roots.\n  - $D < 0$: No real roots (complex)."
+          },
+          {
+            "id": "variation",
+            "title": "Variation",
+            "keywords": [
+              "direct",
+              "inverse"
+            ],
+            "content": "## Theory of Variation\nVariation describes how one quantity changes in relation to another.\n\n### Types of Variation\n1. **Direct Variation:** $y \\propto x$ (or $y = kx$). As $x$ increases, $y$ increases.\n2. **Inverse Variation:** $y \\propto \\frac{1}{x}$ (or $y = \\frac{k}{x}$). As $x$ increases, $y$ decreases.\n3. **Joint Variation:** $y$ varies directly with two or more variables (e.g., $y = kxz$).\n4. **Partial Variation:** $y$ is a sum of two parts (e.g., $y = a + kx$)."
+          }
+        ]
+      },
+      {
+        "id": "calculus",
+        "title": "Calculus",
+        "subTopics": [
+          {
+            "id": "differentiation",
+            "title": "Differentiation",
+            "keywords": [
+              "derivative",
+              "rate of change"
+            ],
+            "content": "## Calculus: Differentiation\nDifferentiation measures the \"rate of change\" of a function.\n\n### Basic Rules\n- **Power Rule:** If $y = x^n$, then $\\frac{dy}{dx} = nx^{n-1}$.\n- **Constant Rule:** If $y = c$, then $\\frac{dy}{dx} = 0$.\n- **Sum Rule:** $\\frac{d}{dx}(u + v) = \\frac{du}{dx} + \\frac{dv}{dx}$.\n\n### Applications\n- **Gradient:** The derivative $\\frac{dy}{dx}$ gives the slope (gradient) of the tangent to the curve at a point.\n- **Turning Points:** At maximum or minimum points, $\\frac{dy}{dx} = 0$.\n- **Velocity and Acceleration:** If $s$ is displacement, $v = \\frac{ds}{dt}$ and $a = \\frac{dv}{dt}$."
+          },
+          {
+            "id": "integration",
+            "title": "Integration",
+            "keywords": [
+              "integral",
+              "area under curve"
+            ],
+            "content": "## Calculus: Integration\nIntegration is the reverse process of differentiation (anti-derivative).\n\n### Basic Rules\n- **Power Rule:** $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$ (where $n \\neq -1$).\n- **Sum Rule:** $\\int (u + v) dx = \\int u dx + \\int v dx$.\n\n### Definite Integration\nA definite integral has limits: $\\int_{a}^{b} f(x) dx = [F(x)]_{a}^{b} = F(b) - F(a)$.\n- **Application:** Used to find the **area under a curve** between two points on the x-axis."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "english-language",
+    "subject": "English Language",
+    "lastUpdated": "2026-02-17",
+    "topics": [
+      {
+        "id": "lexis-and-structure",
+        "title": "Lexis and Structure",
+        "subTopics": [
+          {
+            "id": "vocabulary",
+            "title": "Vocabulary",
+            "keywords": [
+              "synonyms",
+              "antonyms",
+              "idioms"
+            ],
+            "content": "## Lexis and Vocabulary\nVocabulary development is essential for understanding and expressing complex ideas in English.\n\n### Word Formation\n1. **Prefixes:** Letters added to the beginning of a word to change its meaning (e.g., *un-* in *unhappy*, *re-* in *rewrite*).\n2. **Suffixes:** Letters added to the end of a word (e.g., *-ness* in *happiness*, *-ly* in *quickly*).\n3. **Compound Words:** Two or more words joined to create a new meaning (e.g., *notebook*, *blackboard*).\n\n### Meanings and Relationships\n- **Synonyms:** Words with similar meanings (e.g., *big/large*).\n- **Antonyms:** Words with opposite meanings (e.g., *hot/cold*).\n- **Homonyms:** Words with the same spelling/sound but different meanings (e.g., *bank* of a river vs. *bank* for money).\n- **Idioms:** Expressions whose meaning is not literal (e.g., *kick the bucket*, *it's raining cats and dogs*).\n\n### Registers\nRegisters are sets of vocabulary associated with specific fields:\n- **Agriculture:** *irrigation, pest, harvest, fertilization*.\n- **Medicine:** *diagnosis, therapy, surgery, prescription*.\n- **Law:** *litigation, plaintiff, defendant, verdict*."
+          },
+          {
+            "id": "grammar",
+            "title": "Grammar",
+            "keywords": [
+              "noun",
+              "verb",
+              "concord"
+            ],
+            "content": "## English Grammar: Structure and Concord\nGrammar is the system of rules that defines how words are combined into meaningful sentences.\n\n### Word Classes (Parts of Speech)\n1. **Nouns:** Names of people, places, or things.\n2. **Verbs:** Action or state words (e.g., *run, be*).\n3. **Adjectives:** Describe nouns (e.g., *beautiful*).\n4. **Adverbs:** Describe verbs, adjectives, or other adverbs (e.g., *loudly*).\n5. **Pronouns:** Replace nouns (e.g., *he, she, it*).\n6. **Prepositions:** Show relationships (e.g., *in, on, at*).\n7. **Conjunctions:** Join words/sentences (e.g., *and, but*).\n\n### Concord (Subject-Verb Agreement)\nThe fundamental rule is that a singular subject takes a singular verb, and a plural subject takes a plural verb.\n- **Rule of \"Each/Every\":** Subjects starting with \"each\" or \"every\" are singular (e.g., *Every student has a book*).\n- **Fraction/Percentage:** The verb agrees with the noun following \"of\" (e.g., *Half of the cake is gone* vs. *Half of the cakes are gone*).\n\n### Tenses\n- **Present:** *I talk*.\n- **Past:** *I talked*.\n- **Future:** *I will talk*.\n- **Perfect:** *I have talked*."
+          },
+          {
+            "id": "sentence-structure",
+            "title": "Sentence Structure",
+            "keywords": [
+              "clause",
+              "phrase",
+              "punctuation"
+            ],
+            "content": "## Sentence Structure and Mechanics\nA sentence is a group of words that expresses a complete thought.\n\n### Types of Sentences\n1. **Simple:** One independent clause (*She smiled*).\n2. **Compound:** Two independent clauses joined by a conjunction (*She smiled, and he laughed*).\n3. **Complex:** One independent and one or more dependent clauses (*When she smiled, he laughed*).\n\n### Clauses and Phrases\n- **Phrase:** A group of words without a subject-verb unit (e.g., *in the morning*).\n- **Clause:** A group of words with a subject and a verb.\n\n### Punctuation\n- **Full Stop (.):** Ends a statement.\n- **Comma (,):** Indicates a brief pause or separates items in a list.\n- **Question Mark (?):** Ends a question.\n- **Apostrophe ('):** Shows possession (*John's*) or contraction (*don't*)."
+          }
+        ]
+      },
+      {
+        "id": "comprehension-and-summary",
+        "title": "Comprehension and Summary",
+        "subTopics": [
+          {
+            "id": "reading-comprehension",
+            "title": "Reading Comprehension",
+            "keywords": [
+              "inference",
+              "main idea"
+            ],
+            "content": "## Reading Comprehension\nComprehension involves understanding, interpreting, and drawing conclusions from written text.\n\n### Key Skills\n1. **Identifying Main Ideas:** What is the paragraph primarily about?\n2. **Finding Supporting Details:** Facts or examples that explain the main idea.\n3. **Inference:** Understanding what is implied but not explicitly stated.\n4. **Vocabulary in Context:** Figuring out the meaning of a word based on the surrounding sentences.\n\n### Author's Tone and Attitude\n- **Objective:** Factual and neutral.\n- **Subjective:** Emotional and biased.\n- **Sarcastic:** Using irony to mock or convey contempt.\n- **Enthusiastic:** Showing great interest and excitement."
+          }
+        ]
+      },
+      {
+        "id": "oral-forms",
+        "title": "Oral Forms (Oral English)",
+        "subTopics": [
+          {
+            "id": "vowels-and-consonants",
+            "title": "Vowels and Consonants",
+            "keywords": [
+              "phonology",
+              "stress",
+              "intonation"
+            ],
+            "content": "## Oral English: Phonology\nOral English focuses on the sounds of the English language.\n\n### English Sounds\nThere are 44 sounds in English, divided into Vowels and Consonants.\n- **Vowels (20 sounds):**\n  - **Monophthongs:** Pure vowel sounds (e.g., /i:/ as in *sheep*).\n  - **Diphthongs:** Gliding sounds (e.g., /ei/ as in *day*).\n- **Consonants (24 sounds):** Voiced vs. Voiceless (e.g., /p/ is voiceless, /b/ is voiced).\n\n### Stress and Intonation\n- **Word Stress:** The emphasis placed on a specific syllable in a word (e.g., *PRE-sent* vs. *pre-SENT*).\n- **Sentence Stress:** Emphasis on key words in a sentence to convey meaning.\n- **Intonation:** The rise and fall of the voice in speaking (Falling for statements, Rising for yes/no questions)."
           }
         ]
       }

@@ -55,7 +55,8 @@ const userSchema = new mongoose.Schema({
             lastReviewed: { type: Date, default: Date.now }
         },
         default: {}
-    }
+    },
+    estimatedScore: { type: Number, default: 150 }
 }, {
     timestamps: true
 });

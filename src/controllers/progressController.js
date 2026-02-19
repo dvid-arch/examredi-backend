@@ -12,7 +12,8 @@ export const getProgress = async (req, res) => {
         res.json({
             streak: user.streak?.current || 0,
             recentActivity: user.recentActivity || [],
-            engagement: user.engagement || { dismissedNudges: [], unlockedNudges: [] }
+            engagement: user.engagement || { dismissedNudges: [], unlockedNudges: [] },
+            estimatedScore: user.estimatedScore || 150
         });
     } catch (error) {
         res.status(500).json({ message: 'Error fetching progress' });
@@ -108,13 +109,19 @@ export const updateProgress = async (req, res) => {
                 }
             }
 
+            // Update estimated score if provided
+            if (req.body.estimatedScore) {
+                user.estimatedScore = req.body.estimatedScore;
+            }
+
             await user.save();
 
             return res.json({
                 streak: user.streak.current,
                 streakHistory: user.streak.history,
                 recentActivity: user.recentActivity,
-                engagement: user.engagement
+                engagement: user.engagement,
+                estimatedScore: user.estimatedScore
             });
         } catch (error) {
             if ((error.name === 'VersionError' || error.code === 79) && attempts < maxAttempts - 1) {

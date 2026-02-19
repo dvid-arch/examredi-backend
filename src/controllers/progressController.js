@@ -155,3 +155,39 @@ export const dismissNudge = async (req, res) => {
         res.status(500).json({ message: 'Error dismissing nudge' });
     }
 };
+
+// @desc    Update subtopic confidence score
+// @route   POST /api/user/progress/confidence
+export const updateSubTopicConfidence = async (req, res) => {
+    try {
+        const { subTopicId, confidence } = req.body;
+
+        if (!['lost', 'shaky', 'confident'].includes(confidence)) {
+            return res.status(400).json({ message: 'Invalid confidence level' });
+        }
+
+        const user = await User.findById(req.user.id);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        if (!user.studyProgress) {
+            user.studyProgress = new Map();
+        }
+
+        user.studyProgress.set(subTopicId, {
+            confidence,
+            lastReviewed: new Date()
+        });
+
+        await user.save();
+
+        res.json({
+            success: true,
+            studyProgress: Object.fromEntries(user.studyProgress)
+        });
+    } catch (error) {
+        console.error("Update Confidence Error:", error);
+        res.status(500).json({ message: 'Error updating confidence' });
+    }
+};

@@ -5963,7 +5963,31 @@
               "decimal",
               "hexadecimal"
             ],
-            "content": "## Number Bases\nNumber bases (radix) determine the number of unique digits used to represent numbers.\n\n### Common Bases\n- **Base 10 (Decimal):** Uses digits 0-9. Our standard counting system.\n- **Base 2 (Binary):** Uses digits 0 and 1. Used in computing.\n- **Base 8 (Octal):** Uses digits 0-7.\n- **Base 16 (Hexadecimal):** Uses 0-9 and A-F.\n\n### Conversions\n1. **From Any Base to Base 10:** Multiply each digit by the base raised to its position power (e.g., $101_2 = 1\\times 2^2 + 0\\times 2^1 + 1\\times 2^0 = 5_{10}$).\n2. **From Base 10 to Any Base:** Use successive division by the target base and record the remainders in reverse order.\n\n### Operations\nAddition, subtraction, and multiplication in other bases follow the same logic as decimal, but you \"carry\" or \"borrow\" based on the base value (e.g., in base 2, $1+1 = 10_2$, carry the 1)."
+            "content": "## Number Bases\nNumber bases (radix) determine the number of unique digits used to represent numbers.\n\n### Common Bases\n- **Base 10 (Decimal):** Uses digits 0-9. Our standard counting system.\n- **Base 2 (Binary):** Uses digits 0 and 1. Used in computing.\n- **Base 8 (Octal):** Uses digits 0-7.\n- **Base 16 (Hexadecimal):** Uses 0-9 and A-F.\n\n### Conversions\n1. **From Any Base to Base 10:** Multiply each digit by the base raised to its position power (e.g., $101_2 = 1\\times 2^2 + 0\\times 2^1 + 1\\times 2^0 = 5_{10}$).\n2. **From Base 10 to Any Base:** Use successive division by the target base and record the remainders in reverse order.\n\n### Operations\nAddition, subtraction, and multiplication in other bases follow the same logic as decimal, but you \"carry\" or \"borrow\" based on the base value (e.g., in base 2, $1+1 = 10_2$, carry the 1).",
+            "videos": [
+              {
+                "id": "base-conv-1",
+                "title": "Base Conversion Trick",
+                "youtubeId": "placeholder1",
+                "type": "study-hack",
+                "duration": "2:15"
+              }
+            ],
+            "inlineQuestions": [
+              {
+                "id": "base-q1",
+                "triggerHeader": "Common Bases",
+                "question": "Which of the following bases is used in standard digital computing?",
+                "options": [
+                  "Octal",
+                  "Decimal",
+                  "Hexadecimal",
+                  "Binary"
+                ],
+                "answer": "D",
+                "explanation": "Binary (Base 2) is the fundamental language of computers, as it represents state using 0 and 1."
+              }
+            ]
           },
           {
             "id": "fractions-decimals-approximations",
@@ -5997,7 +6021,16 @@
               "equations",
               "factors"
             ],
-            "content": "## Polynomials\nA polynomial is an expression consisting of variables and coefficients.\n\n### Remainder and Factor Theorems\n- **Remainder Theorem:** If a polynomial $f(x)$ is divided by $(x - a)$, the remainder is $f(a)$.\n- **Factor Theorem:** If $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$.\n\n### Quadratic Functions\nGeneral form: $ax^2 + bx + c = 0$.\n- **Solving:** Factorization, completing the square, or the quadratic formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.\n- **Discriminant ($D = b^2 - 4ac$):**\n  - $D > 0$: Two real, distinct roots.\n  - $D = 0$: Two real, equal roots.\n  - $D < 0$: No real roots (complex)."
+            "content": "## Polynomials\nA polynomial is an expression consisting of variables and coefficients.\n\n### Remainder and Factor Theorems\n- **Remainder Theorem:** If a polynomial $f(x)$ is divided by $(x - a)$, the remainder is $f(a)$.\n- **Factor Theorem:** If $f(a) = 0$, then $(x - a)$ is a factor of $f(x)$.\n\n### Quadratic Functions\nGeneral form: $ax^2 + bx + c = 0$.\n- **Solving:** Factorization, completing the square, or the quadratic formula: $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.\n- **Discriminant ($D = b^2 - 4ac$):**\n  - $D > 0$: Two real, distinct roots.\n  - $D = 0$: Two real, equal roots.\n  - $D < 0$: No real roots (complex).",
+            "videos": [
+              {
+                "id": "quad-trick-1",
+                "title": "Quadratic Formula Fast Solve",
+                "youtubeId": "placeholder2",
+                "type": "study-hack",
+                "duration": "1:50"
+              }
+            ]
           },
           {
             "id": "variation",

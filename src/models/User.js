@@ -47,7 +47,14 @@ const userSchema = new mongoose.Schema({
     verificationToken: String,
     resetPasswordToken: String,
     resetPasswordExpire: Date,
-    // We can store performance summary here or in a separate collection
+    studyProgress: {
+        type: Map,
+        of: {
+            confidence: { type: String, enum: ['lost', 'shaky', 'confident'] },
+            lastReviewed: { type: Date, default: Date.now }
+        },
+        default: {}
+    }
 }, {
     timestamps: true
 });

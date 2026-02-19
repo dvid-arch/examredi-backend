@@ -18,7 +18,8 @@ const userSchema = new mongoose.Schema({
     studyPlan: {
         targetScore: { type: Number, default: 250 },
         weakSubjects: { type: [String], default: [] },
-        dailyGoal: { type: Number, default: 10 }
+        dailyGoal: { type: Number, default: 10 },
+        examDate: { type: Date }
     },
     streak: {
         current: { type: Number, default: 0 },

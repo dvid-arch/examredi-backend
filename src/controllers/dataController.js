@@ -11,11 +11,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '..', 'db');
-const papersFilePath = path.join(dbPath, 'papers.json');
+const papersFilePath = path.join(dbPath, 'all_papers.json');
 const guidesFilePath = path.join(dbPath, 'guides.json');
 const leaderboardFilePath = path.join(dbPath, 'leaderboard.json');
 const performanceFilePath = path.join(dbPath, 'performance.json');
 const literatureFilePath = path.join(dbPath, 'literature.json');
+
+const SUBJECT_MAPPING = {
+    'Accounting': 'Accounts - Principles of Accounts',
+    'Agriculture': 'Agricultural Science',
+    'Fine Art': 'Fine Arts',
+    'Physical and Health Education (PHE)': 'Physical and Health Education' // Assuming check
+};
 
 const readJsonFile = async (filePath) => {
     try {
@@ -41,7 +48,9 @@ export const getPapers = async (req, res) => {
         let papers = allPapers;
 
         if (subject) {
-            const subjectLower = subject.toLowerCase();
+            // Normalize header subject to database subject
+            const dbSubject = SUBJECT_MAPPING[subject] || subject;
+            const subjectLower = dbSubject.toLowerCase();
             papers = papers.filter(p => p.subject.toLowerCase() === subjectLower);
         }
 
@@ -118,7 +127,8 @@ export const searchByKeywords = async (req, res) => {
         // Strategy 1: Direct Topic Match (if topic provided)
         if (topic) {
             allPapers.forEach(paper => {
-                if (subject && paper.subject.toLowerCase() !== subject.toLowerCase()) return;
+                const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
+                if (dbSubject && paper.subject.toLowerCase() !== dbSubject.toLowerCase()) return;
 
                 paper.questions.forEach(q => {
                     // Check if question has this topic tag (Partial match allowed)
@@ -199,7 +209,8 @@ export const searchByKeywords = async (req, res) => {
         };
 
         allPapers.forEach(paper => {
-            if (subject && paper.subject.toLowerCase() !== subject.toLowerCase()) return;
+            const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
+            if (dbSubject && paper.subject.toLowerCase() !== dbSubject.toLowerCase()) return;
 
             paper.questions.forEach(q => {
                 const questionText = (q.question || '').toLowerCase();
@@ -260,7 +271,8 @@ export const searchByKeywords = async (req, res) => {
         if (fallbackCount > 0) {
             const subjectQuestions = [];
             allPapers.forEach(paper => {
-                if (subject && paper.subject.toLowerCase() === subject.toLowerCase()) {
+                const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
+                if (dbSubject && paper.subject.toLowerCase() === dbSubject.toLowerCase()) {
                     paper.questions.forEach(q => {
                         // Avoid duplicates
                         if (!scoredResults.find(r => r.id === q.id)) {

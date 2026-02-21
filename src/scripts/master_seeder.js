@@ -31,7 +31,7 @@ async function connectDB() {
 }
 
 export async function seedGuides() {
-    const guidesFilePath = path.join(__dirname, '../db/guides.json');
+    const guidesFilePath = path.join(__dirname, '../db/guide.json');
     console.log(`Seeding Guides from ${guidesFilePath}...`);
 
     const data = await fs.readFile(guidesFilePath, 'utf8');

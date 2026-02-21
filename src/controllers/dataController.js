@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '..', 'db');
 const papersFilePath = path.join(dbPath, 'all_papers.json');
-const guidesFilePath = path.join(dbPath, 'guides.json');
+const guidesFilePath = path.join(dbPath, 'guide.json');
 const topicsFilePath = path.join(dbPath, 'topics.json');
 const leaderboardFilePath = path.join(dbPath, 'leaderboard.json');
 const performanceFilePath = path.join(dbPath, 'performance.json');
@@ -90,6 +90,22 @@ export const getPapers = async (req, res) => {
                 questions: paper.questions.slice(0, 10),
                 isLimited: true
             }));
+        }
+
+        // Fallback to JSON file if DB is empty
+        if (papers.length === 0) {
+            console.log('[Fallback] DB empty, loading papers from JSON file');
+            const filePapers = await readJsonFile(papersFilePath);
+            // Apply similar logic if needed, or just return them
+            papers = filePapers;
+
+            if (!isAuthenticated) {
+                papers = papers.map(paper => ({
+                    ...paper,
+                    questions: (paper.questions || []).slice(0, 10),
+                    isLimited: true
+                }));
+            }
         }
 
         res.json(papers);
@@ -188,7 +204,14 @@ export const searchByKeywords = async (req, res) => {
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
     try {
-        const guides = await Guide.find().sort({ subject: 1 });
+        let guides = await Guide.find().sort({ subject: 1 });
+
+        // Fallback to JSON file if DB is empty
+        if (guides.length === 0) {
+            console.log('[Fallback] DB empty, loading guides from JSON file');
+            guides = await readJsonFile(guidesFilePath);
+        }
+
         res.json(guides);
     } catch (error) {
         console.error('Error fetching guides:', error);

@@ -10,7 +10,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const guidesFilePath = path.join(__dirname, '..', 'db', 'guides.json');
+const guidesFilePath = path.join(__dirname, '..', 'db', 'guide.json');
 
 const seedGuides = async () => {
     try {

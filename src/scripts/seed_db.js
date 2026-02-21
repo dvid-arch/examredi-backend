@@ -11,7 +11,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const papersFilePath = path.join(__dirname, '..', 'db', 'papers.json');
+const papersFilePath = path.join(__dirname, '..', 'db', 'all_papers.json');
 
 const seedDatabase = async () => {
     try {

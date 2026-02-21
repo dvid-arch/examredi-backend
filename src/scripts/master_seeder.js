@@ -11,22 +11,20 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Fallback to local MongoDB if Atlas connection string fails or is missing
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/examredi';
+// Use Atlas connection string from environment variables
+const MONGO_URI = process.env.MONGO_URI;
 
 async function connectDB() {
+    if (!MONGO_URI) {
+        throw new Error('MONGO_URI is not defined in environment variables');
+    }
     try {
-        console.log(`Connecting to MongoDB at ${MONGO_URI.split('@').pop()}...`);
+        console.log(`Connecting to MongoDB...`);
         await mongoose.connect(MONGO_URI);
         console.log('MongoDB Connected');
     } catch (error) {
-        if (MONGO_URI !== 'mongodb://localhost:27017/examredi') {
-            console.warn('Atlas connection failed. Falling back to local MongoDB...');
-            await mongoose.connect('mongodb://localhost:27017/examredi');
-            console.log('Local MongoDB Connected');
-        } else {
-            throw error;
-        }
+        console.error('Connection failed:', error.message);
+        throw error;
     }
 }
 

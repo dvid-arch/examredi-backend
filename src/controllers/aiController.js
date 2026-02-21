@@ -234,6 +234,43 @@ Output ONLY the JSON array with NO explanation.`,
     }
 };
 
+// @desc    Suggest topics for a question based on a list of available topics
+// @route   POST /api/ai/suggest-question-topics
+export const handleSuggestQuestionTopics = async (req, res) => {
+    const { questionText, availableTopics, subject } = req.body;
+
+    if (!questionText || !availableTopics || !subject) {
+        return res.status(400).json({ message: "Question text, available topics, and subject are required." });
+    }
+
+    const ai = getAiInstance();
+    if (!ai) return res.status(500).json(missingApiKeyError);
+
+    try {
+        const response = await ai.models.generateContent({
+            model: 'gemini-1.5-flash',
+            contents: `You are an expert at categorizing exam questions.
+Subject: ${subject}
+Question: "${questionText}"
+
+Available Topics for ${subject}:
+${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\n')}
+
+Select the most relevant topics (minimum 1, maximum 3) from the list above that best describe this question.
+Output ONLY a JSON array of the slugs for the chosen topics. Do not include any explanation or other text.`,
+        });
+
+        const text = response.text;
+        const jsonMatch = text.match(/\[.*\]/s);
+        const suggestedSlugs = jsonMatch ? JSON.parse(jsonMatch[0]) : [];
+
+        res.json({ suggestedTopics: suggestedSlugs });
+    } catch (error) {
+        console.error("Gemini Suggest Topics Error:", error);
+        res.status(500).json({ message: "Error suggesting topics." });
+    }
+};
+
 // @desc    Create a new conversation
 // @route   POST /api/ai/conversations/new
 export const createConversation = async (req, res) => {

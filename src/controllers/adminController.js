@@ -11,7 +11,8 @@ const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '..', 'db');
 const papersFilePath = path.join(dbPath, 'all_papers.json');
-const guidesFilePath = path.join(dbPath, 'guides.json');
+const guidesFilePath = path.join(dbPath, 'guide.json');
+const topicsFilePath = path.join(dbPath, 'topics.json');
 
 // Helper to sync JSON backups (keeping user's request for parity)
 const syncBackups = async () => {
@@ -278,5 +279,50 @@ export const deleteGuide = async (req, res) => {
         res.status(200).json({ message: 'Guide deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message || 'Error deleting guide' });
+    }
+};
+// @desc    Get all topics
+// @route   GET /api/admin/topics
+export const getTopics = async (req, res) => {
+    try {
+        const data = await fs.readFile(topicsFilePath, 'utf-8');
+        res.json(JSON.parse(data));
+    } catch (error) {
+        console.error('Error reading topics:', error);
+        res.status(500).json({ message: 'Error reading topics' });
+    }
+};
+
+// @desc    Update question tags (topics)
+// @route   PUT /api/admin/papers/:paperId/questions/:questionId/tags
+export const updateQuestionTags = async (req, res) => {
+    try {
+        const { paperId, questionId } = req.params;
+        const { topics } = req.body;
+
+        if (!Array.isArray(topics)) {
+            return res.status(400).json({ message: 'Topics must be an array' });
+        }
+
+        const paper = await Paper.findOne({ $or: [{ _id: mongoose.isValidObjectId(paperId) ? paperId : null }, { id: paperId }] });
+        if (!paper) {
+            return res.status(404).json({ message: 'Paper not found' });
+        }
+
+        const questionIndex = paper.questions.findIndex(q => q.id === questionId);
+        if (questionIndex === -1) {
+            return res.status(404).json({ message: 'Question not found' });
+        }
+
+        paper.questions[questionIndex].topics = topics;
+        await paper.save();
+
+        // Sync to JSON backup
+        await syncBackups();
+
+        res.json(paper.questions[questionIndex]);
+    } catch (error) {
+        console.error('Error updating question tags:', error);
+        res.status(500).json({ message: error.message || 'Error updating tags' });
     }
 };

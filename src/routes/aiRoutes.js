@@ -1,6 +1,7 @@
 import express from 'express';
-import { handleAiChat, handleGenerateGuide, handleResearch, handleGetTopicKeywords, createConversation, getConversations, getConversation, deleteConversation } from '../controllers/aiController.js';
+import { handleAiChat, handleGenerateGuide, handleResearch, handleGetTopicKeywords, createConversation, getConversations, getConversation, deleteConversation, handleSuggestQuestionTopics } from '../controllers/aiController.js';
 import { protect } from '../middleware/authMiddleware.js';
+import { admin } from '../middleware/adminMiddleware.js';
 
 const router = express.Router();
 
@@ -9,6 +10,7 @@ router.post('/chat', protect, handleAiChat);
 router.post('/generate-guide', protect, handleGenerateGuide);
 router.post('/research', protect, handleResearch);
 router.post('/topic-keywords', protect, handleGetTopicKeywords);
+router.post('/suggest-question-topics', protect, admin, handleSuggestQuestionTopics);
 
 // Conversation management routes
 router.post('/conversations/new', protect, createConversation);

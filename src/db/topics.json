@@ -614,7 +614,7 @@
       },
       {
         "slug": "relative-atomic-mass-based-on-12c-12",
-        "label": "Relative atomic mass based on 12C-12"
+        "label": "Relative atomic mass based on\u00a012C-12"
       },
       {
         "slug": "the-mole-concept-and-avogadros-number",
@@ -858,7 +858,7 @@
       },
       {
         "slug": "electrolysis-of-dilute-h2so4-aqueous-cuso4-cucl2-solution-dilute-and-concentrated-nacl-solutions-and",
-        "label": "Electrolysis of dilute H2SO4, aqueous CuSO4, CuCl2 solution, dilute and concentrated NaCl solutions and fused NaCl"
+        "label": "Electrolysis of dilute H2SO4, aqueous CuSO4, CuCl2\u00a0solution, dilute and concentrated NaCl solutions and fused NaCl"
       },
       {
         "slug": "factors-affecting-discharge-of-ions-at-the-electrodes",
@@ -922,7 +922,7 @@
       },
       {
         "slug": "arrhenius-law-and-collision-theory",
-        "label": "Arrhenius’ law and Collision theory"
+        "label": "Arrhenius\u2019 law and Collision theory"
       },
       {
         "slug": "reaction-rate-curves",
@@ -946,7 +946,7 @@
       },
       {
         "slug": "le-chateliers-principle",
-        "label": "Le Chatelier’s principle"
+        "label": "Le Chatelier\u2019s principle"
       },
       {
         "slug": "equilibrium-constant",
@@ -1414,7 +1414,196 @@
   },
   "geography": {
     "label": "Geography",
-    "topics": []
+    "topics": [
+      {
+        "slug": "scale-and-measurement",
+        "label": "Scale and Measurement"
+      },
+      {
+        "slug": "map-reading-and-interpretation",
+        "label": "Map Reading and Interpretation"
+      },
+      {
+        "slug": "interpretation-of-statistical-data",
+        "label": "Interpretation of Statistical Data"
+      },
+      {
+        "slug": "elementary-surveying",
+        "label": "Elementary Surveying"
+      },
+      {
+        "slug": "geographic-information-system",
+        "label": "Geographic Information System (GIS)"
+      },
+      {
+        "slug": "structure-of-the-earth",
+        "label": "Structure of the Earth"
+      },
+      {
+        "slug": "rocks-and-minerals",
+        "label": "Rocks and Minerals"
+      },
+      {
+        "slug": "earth-movements",
+        "label": "Earth Movements"
+      },
+      {
+        "slug": "volcanicity",
+        "label": "Volcanicity"
+      },
+      {
+        "slug": "earthquakes",
+        "label": "Earthquakes"
+      },
+      {
+        "slug": "weathering",
+        "label": "Weathering"
+      },
+      {
+        "slug": "mass-movement",
+        "label": "Mass Movement"
+      },
+      {
+        "slug": "erosion-transportation-and-deposition",
+        "label": "Erosion, Transportation and Deposition"
+      },
+      {
+        "slug": "landforms",
+        "label": "Landforms"
+      },
+      {
+        "slug": "river-processes-and-landforms",
+        "label": "River Processes and Landforms"
+      },
+      {
+        "slug": "marine-processes-and-coastal-landforms",
+        "label": "Marine Processes and Coastal Landforms"
+      },
+      {
+        "slug": "wind-action-and-desert-landforms",
+        "label": "Wind Action and Desert Landforms"
+      },
+      {
+        "slug": "glaciation-and-glacial-landforms",
+        "label": "Glaciation and Glacial Landforms"
+      },
+      {
+        "slug": "karst-topography",
+        "label": "Karst Topography"
+      },
+      {
+        "slug": "drainage-and-water-bodies",
+        "label": "Drainage and Water Bodies"
+      },
+      {
+        "slug": "atmosphere-and-insolation",
+        "label": "Atmosphere and Insolation"
+      },
+      {
+        "slug": "temperature",
+        "label": "Temperature"
+      },
+      {
+        "slug": "pressure-and-winds",
+        "label": "Pressure and Winds"
+      },
+      {
+        "slug": "humidity-and-precipitation",
+        "label": "Humidity and Precipitation"
+      },
+      {
+        "slug": "world-climatic-types",
+        "label": "World Climatic Types"
+      },
+      {
+        "slug": "weather-and-its-measurement",
+        "label": "Weather and Its Measurement"
+      },
+      {
+        "slug": "soils",
+        "label": "Soils"
+      },
+      {
+        "slug": "natural-vegetation",
+        "label": "Natural Vegetation"
+      },
+      {
+        "slug": "population",
+        "label": "Population"
+      },
+      {
+        "slug": "settlement",
+        "label": "Settlement"
+      },
+      {
+        "slug": "agriculture",
+        "label": "Agriculture"
+      },
+      {
+        "slug": "mining-and-quarrying",
+        "label": "Mining and Quarrying"
+      },
+      {
+        "slug": "manufacturing-industries",
+        "label": "Manufacturing Industries"
+      },
+      {
+        "slug": "transportation-and-communication",
+        "label": "Transportation and Communication"
+      },
+      {
+        "slug": "trade-and-commerce-in-geography",
+        "label": "Trade and Commerce"
+      },
+      {
+        "slug": "energy-resources",
+        "label": "Energy Resources"
+      },
+      {
+        "slug": "environmental-issues",
+        "label": "Environmental Issues"
+      },
+      {
+        "slug": "nigeria-geographical-regions",
+        "label": "Nigeria: Geographical Regions"
+      },
+      {
+        "slug": "nigeria-economic-activities",
+        "label": "Nigeria: Economic Activities"
+      },
+      {
+        "slug": "nigeria-human-geography",
+        "label": "Nigeria: Human Geography"
+      },
+      {
+        "slug": "west-africa-physical-setting",
+        "label": "West Africa: Physical Setting"
+      },
+      {
+        "slug": "west-africa-human-and-economic-geography",
+        "label": "West Africa: Human and Economic Geography"
+      },
+      {
+        "slug": "ecowas",
+        "label": "ECOWAS"
+      },
+      {
+        "slug": "africa-physical-geography",
+        "label": "Africa: Physical Geography"
+      },
+      {
+        "slug": "africa-human-and-economic-geography",
+        "label": "Africa: Human and Economic Geography"
+      },
+      {
+        "slug": "world-major-climatic-zones",
+        "label": "World: Major Climatic Zones"
+      },
+      {
+        "slug": "world-natural-resources-and-economic-activities",
+        "label": "World: Natural Resources and Economic Activities"
+      }
+    ]
   },
   "literature-in-english": {
     "label": "Literature in English",
@@ -1665,39 +1854,39 @@
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-20-21",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 20 & 21"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 20 & 21"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-22-23",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 22 & 23"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 22 & 23"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-24-25",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 24 & 25"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 24 & 25"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-26-27",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 26 & 27"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 26 & 27"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-28-29",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 28 & 29"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 28 & 29"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-chapters-30-31",
-        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 30 & 31"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 30 & 31"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-themes",
-        "label": "Harper Lee’s To Kill a Mockingbird - Themes"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Themes"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-characters-characterisation",
-        "label": "Harper Lee’s To Kill a Mockingbird - Characters & Characterisation"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Characters & Characterisation"
       },
       {
         "slug": "harper-lees-to-kill-a-mockingbird-language-style",
-        "label": "Harper Lee’s To Kill a Mockingbird - Language & Style"
+        "label": "Harper Lee\u2019s To Kill a Mockingbird - Language & Style"
       },
       {
         "slug": "non-african-prose-susanne-bellefeuilles-path-of-lucas-the-journey-he-endured",
@@ -1971,7 +2160,160 @@
   },
   "economics": {
     "label": "Economics",
-    "topics": []
+    "topics": [
+      {
+        "slug": "basic-concepts-of-economics",
+        "label": "Basic Concepts of Economics"
+      },
+      {
+        "slug": "scope-of-economics",
+        "label": "Scope of Economics"
+      },
+      {
+        "slug": "fundamental-economic-problems",
+        "label": "Fundamental Economic Problems"
+      },
+      {
+        "slug": "economic-systems",
+        "label": "Economic Systems"
+      },
+      {
+        "slug": "production-possibility-curve",
+        "label": "Production Possibility Curve"
+      },
+      {
+        "slug": "demand",
+        "label": "Demand"
+      },
+      {
+        "slug": "supply",
+        "label": "Supply"
+      },
+      {
+        "slug": "price-determination",
+        "label": "Price Determination"
+      },
+      {
+        "slug": "elasticity-of-demand-and-supply",
+        "label": "Elasticity of Demand and Supply"
+      },
+      {
+        "slug": "theory-of-consumer-behaviour",
+        "label": "Theory of Consumer Behaviour"
+      },
+      {
+        "slug": "theory-of-production",
+        "label": "Theory of Production"
+      },
+      {
+        "slug": "costs-of-production",
+        "label": "Costs of Production"
+      },
+      {
+        "slug": "revenue",
+        "label": "Revenue"
+      },
+      {
+        "slug": "perfect-competition",
+        "label": "Perfect Competition"
+      },
+      {
+        "slug": "monopoly",
+        "label": "Monopoly"
+      },
+      {
+        "slug": "monopolistic-competition-and-oligopoly",
+        "label": "Monopolistic Competition and Oligopoly"
+      },
+      {
+        "slug": "factor-market-labour",
+        "label": "Factor Market: Labour"
+      },
+      {
+        "slug": "factor-market-land-and-rent",
+        "label": "Factor Market: Land and Rent"
+      },
+      {
+        "slug": "factor-market-capital-and-interest",
+        "label": "Factor Market: Capital and Interest"
+      },
+      {
+        "slug": "factor-market-profit",
+        "label": "Factor Market: Profit"
+      },
+      {
+        "slug": "national-income",
+        "label": "National Income"
+      },
+      {
+        "slug": "money-and-banking",
+        "label": "Money and Banking"
+      },
+      {
+        "slug": "financial-institutions",
+        "label": "Financial Institutions"
+      },
+      {
+        "slug": "public-finance",
+        "label": "Public Finance"
+      },
+      {
+        "slug": "taxation",
+        "label": "Taxation"
+      },
+      {
+        "slug": "inflation-and-deflation",
+        "label": "Inflation and Deflation"
+      },
+      {
+        "slug": "unemployment-economics",
+        "label": "Unemployment"
+      },
+      {
+        "slug": "economic-development-and-growth",
+        "label": "Economic Development and Growth"
+      },
+      {
+        "slug": "agriculture-in-the-economy",
+        "label": "Agriculture in the Economy"
+      },
+      {
+        "slug": "industrialisation",
+        "label": "Industrialisation"
+      },
+      {
+        "slug": "international-trade",
+        "label": "International Trade"
+      },
+      {
+        "slug": "balance-of-payments",
+        "label": "Balance of Payments"
+      },
+      {
+        "slug": "foreign-exchange-market",
+        "label": "Foreign Exchange Market"
+      },
+      {
+        "slug": "economic-planning-and-development",
+        "label": "Economic Planning and Development"
+      },
+      {
+        "slug": "population-economics",
+        "label": "Population"
+      },
+      {
+        "slug": "poverty-and-income-distribution",
+        "label": "Poverty and Income Distribution"
+      },
+      {
+        "slug": "roles-of-government-in-an-economy",
+        "label": "Roles of Government in an Economy"
+      },
+      {
+        "slug": "international-economic-organisations",
+        "label": "International Economic Organisations"
+      }
+    ]
   },
   "commerce": {
     "label": "Commerce",
@@ -2098,7 +2440,7 @@
       },
       {
         "slug": "employers-consumers-and-manufacturers-associations",
-        "label": "Employers’, Consumers’ and Manufacturers’ associations"
+        "label": "Employers\u2019, Consumers\u2019 and Manufacturers\u2019 associations"
       },
       {
         "slug": "economic-groups-ecowas-imf-ibrd-unctad-etc",
@@ -2134,7 +2476,7 @@
       },
       {
         "slug": "export-import-and-entrepot-procedures-and-documents",
-        "label": "Export, import and entrepôt procedures and documents"
+        "label": "Export, import and entrep\u00f4t procedures and documents"
       },
       {
         "slug": "barriers-to-international-trade",
@@ -2304,7 +2646,120 @@
   },
   "accounts-principles-of-accounts": {
     "label": "Accounts - Principles of Accounts",
-    "topics": []
+    "topics": [
+      {
+        "slug": "accounting-concepts-and-conventions",
+        "label": "Accounting Concepts and Conventions"
+      },
+      {
+        "slug": "source-documents",
+        "label": "Source Documents"
+      },
+      {
+        "slug": "subsidiary-books-of-accounts",
+        "label": "Subsidiary Books of Accounts"
+      },
+      {
+        "slug": "the-ledger",
+        "label": "The Ledger"
+      },
+      {
+        "slug": "trial-balance",
+        "label": "Trial Balance"
+      },
+      {
+        "slug": "bank-reconciliation-statement",
+        "label": "Bank Reconciliation Statement"
+      },
+      {
+        "slug": "errors-and-their-correction",
+        "label": "Errors and Their Correction"
+      },
+      {
+        "slug": "control-accounts",
+        "label": "Control Accounts"
+      },
+      {
+        "slug": "final-accounts-of-a-sole-trader",
+        "label": "Final Accounts of a Sole Trader"
+      },
+      {
+        "slug": "depreciation-of-fixed-assets",
+        "label": "Depreciation of Fixed Assets"
+      },
+      {
+        "slug": "bad-debts-and-provision-for-doubtful-debts",
+        "label": "Bad Debts and Provision for Doubtful Debts"
+      },
+      {
+        "slug": "accounts-of-non-profit-making-organisations",
+        "label": "Accounts of Non-Profit Making Organisations"
+      },
+      {
+        "slug": "partnership-accounts",
+        "label": "Partnership Accounts"
+      },
+      {
+        "slug": "limited-liability-company-accounts",
+        "label": "Limited Liability Company Accounts"
+      },
+      {
+        "slug": "manufacturing-accounts",
+        "label": "Manufacturing Accounts"
+      },
+      {
+        "slug": "departmental-accounts",
+        "label": "Departmental Accounts"
+      },
+      {
+        "slug": "branch-accounts",
+        "label": "Branch Accounts"
+      },
+      {
+        "slug": "hire-purchase-accounts",
+        "label": "Hire Purchase Accounts"
+      },
+      {
+        "slug": "consignment-accounts",
+        "label": "Consignment Accounts"
+      },
+      {
+        "slug": "joint-venture-accounts",
+        "label": "Joint Venture Accounts"
+      },
+      {
+        "slug": "bills-of-exchange",
+        "label": "Bills of Exchange"
+      },
+      {
+        "slug": "single-entry-and-incomplete-records",
+        "label": "Single Entry and Incomplete Records"
+      },
+      {
+        "slug": "accounts-from-incomplete-records",
+        "label": "Accounts from Incomplete Records"
+      },
+      {
+        "slug": "receipts-and-payments-account",
+        "label": "Receipts and Payments Account"
+      },
+      {
+        "slug": "income-and-expenditure-account",
+        "label": "Income and Expenditure Account"
+      },
+      {
+        "slug": "financial-statement-analysis",
+        "label": "Financial Statement Analysis (Ratios)"
+      },
+      {
+        "slug": "public-sector-accounting",
+        "label": "Public Sector Accounting"
+      },
+      {
+        "slug": "ict-applications-in-accounting",
+        "label": "ICT Applications in Accounting"
+      }
+    ]
   },
   "government": {
     "label": "Government",
@@ -3122,15 +3577,458 @@
   },
   "agricultural-science": {
     "label": "Agricultural Science",
-    "topics": []
+    "topics": [
+      {
+        "slug": "meaning-and-importance-of-agriculture",
+        "label": "Meaning and Importance of Agriculture"
+      },
+      {
+        "slug": "branches-of-agriculture",
+        "label": "Branches of Agriculture"
+      },
+      {
+        "slug": "land-tenure-systems",
+        "label": "Land Tenure Systems"
+      },
+      {
+        "slug": "land-clearing-and-preparation",
+        "label": "Land Clearing and Preparation"
+      },
+      {
+        "slug": "soil-composition-and-types",
+        "label": "Soil Composition and Types"
+      },
+      {
+        "slug": "soil-properties",
+        "label": "Soil Properties"
+      },
+      {
+        "slug": "soil-water-and-drainage",
+        "label": "Soil Water and Drainage"
+      },
+      {
+        "slug": "soil-fertility-and-management",
+        "label": "Soil Fertility and Management"
+      },
+      {
+        "slug": "fertilisers-and-manures",
+        "label": "Fertilisers and Manures"
+      },
+      {
+        "slug": "soil-conservation",
+        "label": "Soil Conservation"
+      },
+      {
+        "slug": "crop-classification",
+        "label": "Crop Classification"
+      },
+      {
+        "slug": "crop-ecology-and-climatic-factors",
+        "label": "Crop Ecology and Climatic Factors"
+      },
+      {
+        "slug": "crop-production-field-crops",
+        "label": "Crop Production: Field Crops"
+      },
+      {
+        "slug": "crop-production-horticultural-crops",
+        "label": "Crop Production: Horticultural Crops"
+      },
+      {
+        "slug": "crop-improvement",
+        "label": "Crop Improvement"
+      },
+      {
+        "slug": "plant-nutrition-and-deficiencies",
+        "label": "Plant Nutrition and Deficiencies"
+      },
+      {
+        "slug": "crop-pests-and-their-control",
+        "label": "Crop Pests and Their Control"
+      },
+      {
+        "slug": "crop-diseases-and-their-control",
+        "label": "Crop Diseases and Their Control"
+      },
+      {
+        "slug": "weeds-and-weed-control",
+        "label": "Weeds and Weed Control"
+      },
+      {
+        "slug": "harvesting-storage-and-processing",
+        "label": "Harvesting, Storage and Processing"
+      },
+      {
+        "slug": "irrigation-and-drainage",
+        "label": "Irrigation and Drainage"
+      },
+      {
+        "slug": "farm-power-and-machinery",
+        "label": "Farm Power and Machinery"
+      },
+      {
+        "slug": "classification-of-farm-animals",
+        "label": "Classification of Farm Animals"
+      },
+      {
+        "slug": "animal-nutrition",
+        "label": "Animal Nutrition"
+      },
+      {
+        "slug": "animal-husbandry-practices",
+        "label": "Animal Husbandry Practices"
+      },
+      {
+        "slug": "animal-health-and-disease-control",
+        "label": "Animal Health and Disease Control"
+      },
+      {
+        "slug": "livestock-production-cattle",
+        "label": "Livestock Production: Cattle"
+      },
+      {
+        "slug": "livestock-production-sheep-and-goat",
+        "label": "Livestock Production: Sheep and Goat"
+      },
+      {
+        "slug": "poultry-production",
+        "label": "Poultry Production"
+      },
+      {
+        "slug": "pig-production",
+        "label": "Pig Production"
+      },
+      {
+        "slug": "fish-farming-aquaculture",
+        "label": "Fish Farming and Aquaculture"
+      },
+      {
+        "slug": "rabbit-production",
+        "label": "Rabbit Production"
+      },
+      {
+        "slug": "snail-and-grass-cutter-farming",
+        "label": "Snail and Grass-Cutter Farming"
+      },
+      {
+        "slug": "bee-keeping-apiculture",
+        "label": "Bee Keeping (Apiculture)"
+      },
+      {
+        "slug": "animal-improvement",
+        "label": "Animal Improvement"
+      },
+      {
+        "slug": "agricultural-economics-and-management",
+        "label": "Agricultural Economics and Management"
+      },
+      {
+        "slug": "farm-planning-and-record-keeping",
+        "label": "Farm Planning and Record Keeping"
+      },
+      {
+        "slug": "agricultural-finance-and-credit",
+        "label": "Agricultural Finance and Credit"
+      },
+      {
+        "slug": "marketing-of-agricultural-produce",
+        "label": "Marketing of Agricultural Produce"
+      },
+      {
+        "slug": "cooperative-farming",
+        "label": "Cooperative Farming"
+      },
+      {
+        "slug": "agricultural-extension-services",
+        "label": "Agricultural Extension Services"
+      },
+      {
+        "slug": "forestry-and-forest-products",
+        "label": "Forestry and Forest Products"
+      },
+      {
+        "slug": "wildlife-management",
+        "label": "Wildlife Management"
+      }
+    ]
   },
   "islamic-religious-knowledge-irk": {
     "label": "Islamic Religious Knowledge (IRK)",
-    "topics": []
+    "topics": [
+      {
+        "slug": "tawhid-islamic-monotheism",
+        "label": "Tawhid (Islamic Monotheism)"
+      },
+      {
+        "slug": "the-quran-its-compilation-and-authority",
+        "label": "The Qur'an: Its Compilation and Authority"
+      },
+      {
+        "slug": "selected-surahs",
+        "label": "Selected Surahs"
+      },
+      {
+        "slug": "hadith-and-sunnah",
+        "label": "Hadith and Sunnah"
+      },
+      {
+        "slug": "pillars-of-islam",
+        "label": "Pillars of Islam"
+      },
+      {
+        "slug": "shahadah",
+        "label": "Shahadah (Declaration of Faith)"
+      },
+      {
+        "slug": "salat-prayer",
+        "label": "Salat (Prayer)"
+      },
+      {
+        "slug": "zakat-almsgiving",
+        "label": "Zakat (Almsgiving)"
+      },
+      {
+        "slug": "sawm-fasting",
+        "label": "Sawm (Fasting)"
+      },
+      {
+        "slug": "hajj",
+        "label": "Hajj (Pilgrimage)"
+      },
+      {
+        "slug": "articles-of-faith",
+        "label": "Articles of Faith (Arkan al-Iman)"
+      },
+      {
+        "slug": "belief-in-allah",
+        "label": "Belief in Allah"
+      },
+      {
+        "slug": "belief-in-angels",
+        "label": "Belief in Angels"
+      },
+      {
+        "slug": "belief-in-revealed-books",
+        "label": "Belief in Revealed Books"
+      },
+      {
+        "slug": "belief-in-prophets-and-messengers",
+        "label": "Belief in Prophets and Messengers"
+      },
+      {
+        "slug": "belief-in-the-last-day",
+        "label": "Belief in the Last Day"
+      },
+      {
+        "slug": "belief-in-al-qadar",
+        "label": "Belief in Al-Qadar (Divine Decree)"
+      },
+      {
+        "slug": "life-of-prophet-muhammad-saw",
+        "label": "Life of Prophet Muhammad (SAW)"
+      },
+      {
+        "slug": "the-rightly-guided-caliphs",
+        "label": "The Rightly Guided Caliphs"
+      },
+      {
+        "slug": "umayyad-caliphate",
+        "label": "Umayyad Caliphate"
+      },
+      {
+        "slug": "abbasid-caliphate",
+        "label": "Abbasid Caliphate"
+      },
+      {
+        "slug": "islam-in-west-africa",
+        "label": "Islam in West Africa"
+      },
+      {
+        "slug": "islam-in-nigeria",
+        "label": "Islam in Nigeria"
+      },
+      {
+        "slug": "the-jihad-movements-in-west-africa",
+        "label": "The Jihad Movements in West Africa"
+      },
+      {
+        "slug": "islamic-jurisprudence-fiqh",
+        "label": "Islamic Jurisprudence (Fiqh)"
+      },
+      {
+        "slug": "islamic-moral-values-and-social-conduct",
+        "label": "Islamic Moral Values and Social Conduct"
+      },
+      {
+        "slug": "family-life-in-islam",
+        "label": "Family Life in Islam"
+      },
+      {
+        "slug": "islamic-law-on-commercial-transactions",
+        "label": "Islamic Law on Commercial Transactions"
+      },
+      {
+        "slug": "jihad",
+        "label": "Jihad"
+      },
+      {
+        "slug": "science-and-scholarship-in-islam",
+        "label": "Science and Scholarship in Islam"
+      },
+      {
+        "slug": "challenges-facing-islam-in-contemporary-society",
+        "label": "Challenges Facing Islam in Contemporary Society"
+      }
+    ]
   },
   "history": {
     "label": "History",
-    "topics": []
+    "topics": [
+      {
+        "slug": "meaning-and-methods-of-history",
+        "label": "Meaning and Methods of History"
+      },
+      {
+        "slug": "sources-of-historical-knowledge",
+        "label": "Sources of Historical Knowledge"
+      },
+      {
+        "slug": "pre-colonial-nigeria-peoples-and-cultures",
+        "label": "Pre-Colonial Nigeria: Peoples and Cultures"
+      },
+      {
+        "slug": "the-nok-culture",
+        "label": "The Nok Culture"
+      },
+      {
+        "slug": "yoruba-states-and-kingdoms",
+        "label": "Yoruba States and Kingdoms"
+      },
+      {
+        "slug": "the-benin-kingdom",
+        "label": "The Benin Kingdom"
+      },
+      {
+        "slug": "igbo-political-organisation",
+        "label": "Igbo Political Organisation"
+      },
+      {
+        "slug": "the-hausa-states",
+        "label": "The Hausa States"
+      },
+      {
+        "slug": "the-kanem-bornu-empire",
+        "label": "The Kanem-Bornu Empire"
+      },
+      {
+        "slug": "the-sokoto-caliphate",
+        "label": "The Sokoto Caliphate"
+      },
+      {
+        "slug": "other-nigerian-peoples",
+        "label": "Other Nigerian Peoples (Efik, Nupe, Tiv, etc.)"
+      },
+      {
+        "slug": "trans-saharan-trade",
+        "label": "Trans-Saharan Trade"
+      },
+      {
+        "slug": "the-slave-trade",
+        "label": "The Slave Trade"
+      },
+      {
+        "slug": "legitimate-trade-and-european-contacts",
+        "label": "Legitimate Trade and European Contacts"
+      },
+      {
+        "slug": "british-colonisation-of-nigeria",
+        "label": "British Colonisation of Nigeria"
+      },
+      {
+        "slug": "colonial-administration-and-indirect-rule",
+        "label": "Colonial Administration and Indirect Rule"
+      },
+      {
+        "slug": "the-economy-under-colonial-rule",
+        "label": "The Economy Under Colonial Rule"
+      },
+      {
+        "slug": "social-changes-under-colonialism",
+        "label": "Social Changes Under Colonialism"
+      },
+      {
+        "slug": "resistance-to-colonial-rule",
+        "label": "Resistance to Colonial Rule"
+      },
+      {
+        "slug": "the-rise-of-nigerian-nationalism",
+        "label": "The Rise of Nigerian Nationalism"
+      },
+      {
+        "slug": "constitutional-developments-to-independence",
+        "label": "Constitutional Developments to Independence"
+      },
+      {
+        "slug": "the-first-republic-1960-1966",
+        "label": "The First Republic (1960\u20131966)"
+      },
+      {
+        "slug": "military-rule-in-nigeria",
+        "label": "Military Rule in Nigeria"
+      },
+      {
+        "slug": "the-nigerian-civil-war",
+        "label": "The Nigerian Civil War (1967\u20131970)"
+      },
+      {
+        "slug": "post-civil-war-nigeria",
+        "label": "Post-Civil War Nigeria and Return to Democracy"
+      },
+      {
+        "slug": "west-africa-before-colonialism",
+        "label": "West Africa Before Colonialism"
+      },
+      {
+        "slug": "colonialism-in-west-africa",
+        "label": "Colonialism in West Africa"
+      },
+      {
+        "slug": "nationalism-and-independence-in-west-africa",
+        "label": "Nationalism and Independence in West Africa"
+      },
+      {
+        "slug": "the-scramble-and-partition-of-africa",
+        "label": "The Scramble and Partition of Africa"
+      },
+      {
+        "slug": "decolonisation-of-africa",
+        "label": "Decolonisation of Africa"
+      },
+      {
+        "slug": "world-war-i-and-its-effects-on-africa",
+        "label": "World War I and Its Effects on Africa"
+      },
+      {
+        "slug": "world-war-ii-and-its-effects-on-africa",
+        "label": "World War II and Its Effects on Africa"
+      },
+      {
+        "slug": "the-cold-war",
+        "label": "The Cold War"
+      },
+      {
+        "slug": "the-united-nations-organisation",
+        "label": "The United Nations Organisation"
+      },
+      {
+        "slug": "the-organisation-of-african-unity-and-african-union",
+        "label": "The OAU and African Union"
+      },
+      {
+        "slug": "ecowas-history",
+        "label": "ECOWAS"
+      }
+    ]
   },
   "fine-arts": {
     "label": "Fine Arts",
@@ -3579,11 +4477,205 @@
   },
   "music": {
     "label": "Music",
-    "topics": []
+    "topics": [
+      {
+        "slug": "rudiments-of-music",
+        "label": "Rudiments of Music"
+      },
+      {
+        "slug": "musical-notation-and-symbols",
+        "label": "Musical Notation and Symbols"
+      },
+      {
+        "slug": "time-signatures-and-metre",
+        "label": "Time Signatures and Metre"
+      },
+      {
+        "slug": "scales-and-modes",
+        "label": "Scales and Modes"
+      },
+      {
+        "slug": "intervals",
+        "label": "Intervals"
+      },
+      {
+        "slug": "keys-and-key-signatures",
+        "label": "Keys and Key Signatures"
+      },
+      {
+        "slug": "chords-and-harmony",
+        "label": "Chords and Harmony"
+      },
+      {
+        "slug": "melody-and-melodic-construction",
+        "label": "Melody and Melodic Construction"
+      },
+      {
+        "slug": "rhythm-and-rhythmic-patterns",
+        "label": "Rhythm and Rhythmic Patterns"
+      },
+      {
+        "slug": "musical-forms-and-structures",
+        "label": "Musical Forms and Structures"
+      },
+      {
+        "slug": "musical-texture",
+        "label": "Musical Texture"
+      },
+      {
+        "slug": "musical-instruments-classification",
+        "label": "Classification of Musical Instruments"
+      },
+      {
+        "slug": "orchestral-instruments",
+        "label": "Orchestral Instruments"
+      },
+      {
+        "slug": "african-musical-instruments",
+        "label": "African Musical Instruments"
+      },
+      {
+        "slug": "nigerian-traditional-music",
+        "label": "Nigerian Traditional Music"
+      },
+      {
+        "slug": "african-traditional-music",
+        "label": "African Traditional Music"
+      },
+      {
+        "slug": "history-of-western-music-middle-ages-to-baroque",
+        "label": "History of Western Music: Middle Ages to Baroque"
+      },
+      {
+        "slug": "classical-and-romantic-periods",
+        "label": "Classical and Romantic Periods"
+      },
+      {
+        "slug": "20th-century-and-contemporary-music",
+        "label": "20th Century and Contemporary Music"
+      },
+      {
+        "slug": "popular-music-jazz-blues-highlife-afrobeat",
+        "label": "Popular Music: Jazz, Blues, Highlife, Afrobeat"
+      },
+      {
+        "slug": "church-and-choral-music",
+        "label": "Church and Choral Music"
+      },
+      {
+        "slug": "music-in-nigerian-society-and-culture",
+        "label": "Music in Nigerian Society and Culture"
+      },
+      {
+        "slug": "music-composition-and-arrangement",
+        "label": "Music Composition and Arrangement"
+      },
+      {
+        "slug": "music-performance-and-voice-training",
+        "label": "Music Performance and Voice Training"
+      },
+      {
+        "slug": "music-education-and-musicology",
+        "label": "Music Education and Musicology"
+      }
+    ]
   },
   "french": {
     "label": "French",
-    "topics": []
+    "topics": [
+      {
+        "slug": "french-phonetics-and-pronunciation",
+        "label": "French Phonetics and Pronunciation"
+      },
+      {
+        "slug": "nouns-and-articles-in-french",
+        "label": "Nouns and Articles"
+      },
+      {
+        "slug": "adjectives-in-french",
+        "label": "Adjectives"
+      },
+      {
+        "slug": "pronouns-in-french",
+        "label": "Pronouns"
+      },
+      {
+        "slug": "adverbs-in-french",
+        "label": "Adverbs"
+      },
+      {
+        "slug": "verbs-and-verb-groups",
+        "label": "Verbs and Verb Groups"
+      },
+      {
+        "slug": "present-tense",
+        "label": "Present Tense (Pr\u00e9sent)"
+      },
+      {
+        "slug": "passe-compose-and-imparfait",
+        "label": "Pass\u00e9 Compos\u00e9 and Imparfait"
+      },
+      {
+        "slug": "futur-simple-and-conditionnel",
+        "label": "Futur Simple and Conditionnel"
+      },
+      {
+        "slug": "subjonctif",
+        "label": "Subjonctif (Subjunctive)"
+      },
+      {
+        "slug": "passive-voice-in-french",
+        "label": "Passive Voice (Voix Passive)"
+      },
+      {
+        "slug": "prepositions-and-conjunctions-in-french",
+        "label": "Prepositions and Conjunctions"
+      },
+      {
+        "slug": "sentence-structure-and-syntax",
+        "label": "Sentence Structure and Syntax"
+      },
+      {
+        "slug": "question-forms-in-french",
+        "label": "Question Forms"
+      },
+      {
+        "slug": "negation-in-french",
+        "label": "Negation"
+      },
+      {
+        "slug": "direct-and-indirect-speech",
+        "label": "Direct and Indirect Speech"
+      },
+      {
+        "slug": "french-comprehension-passages",
+        "label": "Comprehension Passages"
+      },
+      {
+        "slug": "vocabulary-and-lexis",
+        "label": "Vocabulary and Lexis"
+      },
+      {
+        "slug": "essay-writing-in-french",
+        "label": "Essay Writing (R\u00e9daction)"
+      },
+      {
+        "slug": "letter-writing-in-french",
+        "label": "Letter Writing"
+      },
+      {
+        "slug": "oral-french-and-conversation",
+        "label": "Oral French and Conversation"
+      },
+      {
+        "slug": "culture-and-civilisation-of-francophone-countries",
+        "label": "Culture and Civilisation of Francophone Countries"
+      },
+      {
+        "slug": "translation-french-english",
+        "label": "Translation (French\u2013English / English\u2013French)"
+      }
+    ]
   },
   "animal-husbandry": {
     "label": "Animal Husbandry",
@@ -3595,7 +4687,112 @@
   },
   "civic-education": {
     "label": "Civic Education",
-    "topics": []
+    "topics": [
+      {
+        "slug": "citizenship-and-civic-rights",
+        "label": "Citizenship and Civic Rights"
+      },
+      {
+        "slug": "types-and-modes-of-citizenship",
+        "label": "Types and Modes of Citizenship"
+      },
+      {
+        "slug": "rights-and-obligations-of-citizens",
+        "label": "Rights and Obligations of Citizens"
+      },
+      {
+        "slug": "fundamental-human-rights-in-nigeria",
+        "label": "Fundamental Human Rights in Nigeria"
+      },
+      {
+        "slug": "democracy-and-good-governance",
+        "label": "Democracy and Good Governance"
+      },
+      {
+        "slug": "constitutionalism-and-the-rule-of-law",
+        "label": "Constitutionalism and the Rule of Law"
+      },
+      {
+        "slug": "separation-of-powers-and-checks-and-balances",
+        "label": "Separation of Powers and Checks and Balances"
+      },
+      {
+        "slug": "the-legislature",
+        "label": "The Legislature"
+      },
+      {
+        "slug": "the-executive",
+        "label": "The Executive"
+      },
+      {
+        "slug": "the-judiciary",
+        "label": "The Judiciary"
+      },
+      {
+        "slug": "federalism-in-nigeria",
+        "label": "Federalism in Nigeria"
+      },
+      {
+        "slug": "local-government-civic",
+        "label": "Local Government"
+      },
+      {
+        "slug": "elections-and-the-electoral-process",
+        "label": "Elections and the Electoral Process"
+      },
+      {
+        "slug": "political-parties-and-party-system",
+        "label": "Political Parties and Party System"
+      },
+      {
+        "slug": "civil-society-organisations",
+        "label": "Civil Society Organisations"
+      },
+      {
+        "slug": "national-values-and-national-consciousness",
+        "label": "National Values and National Consciousness"
+      },
+      {
+        "slug": "national-symbols",
+        "label": "National Symbols"
+      },
+      {
+        "slug": "national-unity-and-integration",
+        "label": "National Unity and Integration"
+      },
+      {
+        "slug": "values-integrity-and-transparency",
+        "label": "Values: Integrity and Transparency"
+      },
+      {
+        "slug": "corruption-and-anticorruption-agencies",
+        "label": "Corruption and Anti-Corruption Agencies"
+      },
+      {
+        "slug": "drug-abuse-and-trafficking",
+        "label": "Drug Abuse and Trafficking"
+      },
+      {
+        "slug": "human-trafficking",
+        "label": "Human Trafficking"
+      },
+      {
+        "slug": "traffic-laws-and-road-safety",
+        "label": "Traffic Laws and Road Safety"
+      },
+      {
+        "slug": "international-organisations-and-nigerias-role",
+        "label": "International Organisations and Nigeria's Role"
+      },
+      {
+        "slug": "globalisation-and-civic-responsibility",
+        "label": "Globalisation and Civic Responsibility"
+      },
+      {
+        "slug": "sustainable-development-and-the-environment",
+        "label": "Sustainable Development and the Environment"
+      }
+    ]
   },
   "further-mathematics": {
     "label": "Further Mathematics",
@@ -3603,23 +4800,420 @@
   },
   "yoruba": {
     "label": "Yoruba",
-    "topics": []
+    "topics": [
+      {
+        "slug": "yoruba-phonology-vowels-consonants-tones",
+        "label": "Yoruba Phonology: Vowels, Consonants and Tones"
+      },
+      {
+        "slug": "yoruba-morphology",
+        "label": "Yoruba Morphology"
+      },
+      {
+        "slug": "yoruba-syntax-and-sentence-structure",
+        "label": "Yoruba Syntax and Sentence Structure"
+      },
+      {
+        "slug": "parts-of-speech-in-yoruba",
+        "label": "Parts of Speech in Yoruba"
+      },
+      {
+        "slug": "tenses-and-aspect-in-yoruba",
+        "label": "Tenses and Aspect in Yoruba"
+      },
+      {
+        "slug": "vocabulary-and-semantics-yoruba",
+        "label": "Vocabulary and Semantics"
+      },
+      {
+        "slug": "proverbs-and-their-meanings-yoruba",
+        "label": "Proverbs and Their Meanings (Owe)"
+      },
+      {
+        "slug": "idiomatic-expressions-yoruba",
+        "label": "Idiomatic Expressions"
+      },
+      {
+        "slug": "oriki-praise-poetry",
+        "label": "Oriki (Praise Poetry)"
+      },
+      {
+        "slug": "itan-narrative-prose",
+        "label": "Itan (Narrative Prose and Folktales)"
+      },
+      {
+        "slug": "rara-funeral-songs",
+        "label": "Rara (Funeral Songs)"
+      },
+      {
+        "slug": "ijala-hunters-poetry",
+        "label": "Ijala (Hunters' Poetry)"
+      },
+      {
+        "slug": "ewi-modern-yoruba-poetry",
+        "label": "Ewi (Modern Yoruba Poetry)"
+      },
+      {
+        "slug": "yoruba-drama",
+        "label": "Yoruba Drama"
+      },
+      {
+        "slug": "yoruba-prose-fiction",
+        "label": "Yoruba Prose Fiction"
+      },
+      {
+        "slug": "yoruba-comprehension",
+        "label": "Yoruba Comprehension (Agbero Oye)"
+      },
+      {
+        "slug": "yoruba-essay-composition",
+        "label": "Yoruba Essay and Composition (Akosile)"
+      },
+      {
+        "slug": "letter-writing-in-yoruba",
+        "label": "Letter Writing in Yoruba"
+      },
+      {
+        "slug": "yoruba-culture-festivals-and-traditions",
+        "label": "Yoruba Culture: Festivals and Traditions"
+      },
+      {
+        "slug": "yoruba-history-and-civilisation",
+        "label": "Yoruba History and Civilisation"
+      },
+      {
+        "slug": "prescribed-texts-yoruba",
+        "label": "Prescribed Texts in Yoruba"
+      }
+    ]
   },
   "igbo": {
     "label": "Igbo",
-    "topics": []
+    "topics": [
+      {
+        "slug": "igbo-phonology-vowels-consonants-tones",
+        "label": "Igbo Phonology: Vowels, Consonants and Tones"
+      },
+      {
+        "slug": "igbo-morphology",
+        "label": "Igbo Morphology"
+      },
+      {
+        "slug": "igbo-syntax-and-sentence-structure",
+        "label": "Igbo Syntax and Sentence Structure"
+      },
+      {
+        "slug": "parts-of-speech-in-igbo",
+        "label": "Parts of Speech in Igbo"
+      },
+      {
+        "slug": "tense-and-aspect-in-igbo",
+        "label": "Tense and Aspect in Igbo"
+      },
+      {
+        "slug": "vocabulary-and-semantics-igbo",
+        "label": "Vocabulary and Semantics"
+      },
+      {
+        "slug": "proverbs-in-igbo-ilu",
+        "label": "Proverbs in Igbo (Ilu)"
+      },
+      {
+        "slug": "idiomatic-expressions-igbo",
+        "label": "Idiomatic Expressions"
+      },
+      {
+        "slug": "igbo-oral-poetry-and-songs",
+        "label": "Igbo Oral Poetry and Songs"
+      },
+      {
+        "slug": "igbo-folktales-ifo",
+        "label": "Igbo Folktales (Ifo)"
+      },
+      {
+        "slug": "igbo-drama",
+        "label": "Igbo Drama"
+      },
+      {
+        "slug": "igbo-prose-fiction",
+        "label": "Igbo Prose Fiction"
+      },
+      {
+        "slug": "igbo-comprehension",
+        "label": "Igbo Comprehension"
+      },
+      {
+        "slug": "igbo-essay-composition",
+        "label": "Igbo Essay and Composition"
+      },
+      {
+        "slug": "letter-writing-in-igbo",
+        "label": "Letter Writing in Igbo"
+      },
+      {
+        "slug": "igbo-culture-festivals-and-traditions",
+        "label": "Igbo Culture: Festivals and Traditions"
+      },
+      {
+        "slug": "igbo-history-and-civilisation",
+        "label": "Igbo History and Civilisation"
+      },
+      {
+        "slug": "prescribed-texts-igbo",
+        "label": "Prescribed Texts in Igbo"
+      }
+    ]
   },
   "arabic": {
     "label": "Arabic",
-    "topics": []
+    "topics": [
+      {
+        "slug": "arabic-script-and-phonology",
+        "label": "Arabic Script and Phonology"
+      },
+      {
+        "slug": "arabic-grammar-nahw-nouns-and-pronouns",
+        "label": "Arabic Grammar (Nahw): Nouns and Pronouns"
+      },
+      {
+        "slug": "arabic-grammar-nahw-verbs",
+        "label": "Arabic Grammar (Nahw): Verbs"
+      },
+      {
+        "slug": "arabic-grammar-nahw-sentence-patterns",
+        "label": "Arabic Grammar (Nahw): Sentence Patterns"
+      },
+      {
+        "slug": "arabic-morphology-sarf",
+        "label": "Arabic Morphology (Sarf)"
+      },
+      {
+        "slug": "word-derivation-in-arabic",
+        "label": "Word Derivation in Arabic"
+      },
+      {
+        "slug": "arabic-vocabulary-and-lexis",
+        "label": "Arabic Vocabulary and Lexis"
+      },
+      {
+        "slug": "arabic-comprehension-passages",
+        "label": "Arabic Comprehension Passages"
+      },
+      {
+        "slug": "translation-arabic-to-english-and-vice-versa",
+        "label": "Translation: Arabic\u2013English and Vice Versa"
+      },
+      {
+        "slug": "arabic-essay-writing",
+        "label": "Arabic Essay Writing"
+      },
+      {
+        "slug": "arabic-letter-writing",
+        "label": "Arabic Letter Writing"
+      },
+      {
+        "slug": "arabic-oral-and-conversation",
+        "label": "Arabic Oral and Conversation"
+      },
+      {
+        "slug": "pre-islamic-poetry-al-jahiliyyah",
+        "label": "Pre-Islamic Poetry (Al-Jahiliyyah)"
+      },
+      {
+        "slug": "early-islamic-literature",
+        "label": "Early Islamic Literature"
+      },
+      {
+        "slug": "abbasid-literary-era",
+        "label": "Abbasid Literary Era"
+      },
+      {
+        "slug": "modern-arabic-literature",
+        "label": "Modern Arabic Literature"
+      },
+      {
+        "slug": "the-quran-as-literary-text",
+        "label": "The Qur'an as Literary Text"
+      },
+      {
+        "slug": "arabic-culture-and-islamic-civilisation",
+        "label": "Arabic Culture and Islamic Civilisation"
+      }
+    ]
   },
   "home-economics": {
     "label": "Home Economics",
-    "topics": []
+    "topics": [
+      {
+        "slug": "meaning-and-scope-of-home-economics",
+        "label": "Meaning and Scope of Home Economics"
+      },
+      {
+        "slug": "food-nutrients-and-their-functions",
+        "label": "Food Nutrients and Their Functions"
+      },
+      {
+        "slug": "food-groups-and-balanced-diet",
+        "label": "Food Groups and Balanced Diet"
+      },
+      {
+        "slug": "meal-planning-and-preparation",
+        "label": "Meal Planning and Preparation"
+      },
+      {
+        "slug": "cookery-methods",
+        "label": "Cookery Methods"
+      },
+      {
+        "slug": "food-preservation-and-storage",
+        "label": "Food Preservation and Storage"
+      },
+      {
+        "slug": "food-hygiene-and-safety",
+        "label": "Food Hygiene and Safety"
+      },
+      {
+        "slug": "kitchen-management-and-equipment",
+        "label": "Kitchen Management and Equipment"
+      },
+      {
+        "slug": "special-diets-and-nutrition",
+        "label": "Special Diets and Nutrition"
+      },
+      {
+        "slug": "fibres-and-fabrics",
+        "label": "Fibres and Fabrics"
+      },
+      {
+        "slug": "clothing-construction-and-sewing",
+        "label": "Clothing Construction and Sewing"
+      },
+      {
+        "slug": "clothing-care-and-laundry",
+        "label": "Clothing Care and Laundry"
+      },
+      {
+        "slug": "textile-design-and-decoration",
+        "label": "Textile Design and Decoration"
+      },
+      {
+        "slug": "family-and-types-of-family",
+        "label": "Family and Types of Family"
+      },
+      {
+        "slug": "family-relationships-and-dynamics",
+        "label": "Family Relationships and Dynamics"
+      },
+      {
+        "slug": "child-development-growth-and-care",
+        "label": "Child Development: Growth and Care"
+      },
+      {
+        "slug": "family-health-and-sanitation",
+        "label": "Family Health and Sanitation"
+      },
+      {
+        "slug": "housing-and-home-management",
+        "label": "Housing and Home Management"
+      },
+      {
+        "slug": "interior-decoration-and-furnishing",
+        "label": "Interior Decoration and Furnishing"
+      },
+      {
+        "slug": "consumer-education-budgeting-and-spending",
+        "label": "Consumer Education: Budgeting and Spending"
+      },
+      {
+        "slug": "entrepreneurship-in-home-economics",
+        "label": "Entrepreneurship in Home Economics"
+      },
+      {
+        "slug": "ict-applications-in-home-economics",
+        "label": "ICT Applications in Home Economics"
+      }
+    ]
   },
   "hausa": {
     "label": "Hausa",
-    "topics": []
+    "topics": [
+      {
+        "slug": "hausa-phonology-vowels-consonants-tones",
+        "label": "Hausa Phonology: Vowels, Consonants and Tones"
+      },
+      {
+        "slug": "hausa-morphology",
+        "label": "Hausa Morphology"
+      },
+      {
+        "slug": "hausa-syntax-and-sentence-structure",
+        "label": "Hausa Syntax and Sentence Structure"
+      },
+      {
+        "slug": "parts-of-speech-in-hausa",
+        "label": "Parts of Speech in Hausa"
+      },
+      {
+        "slug": "tense-and-aspect-in-hausa",
+        "label": "Tense and Aspect in Hausa"
+      },
+      {
+        "slug": "vocabulary-and-semantics-hausa",
+        "label": "Vocabulary and Semantics"
+      },
+      {
+        "slug": "proverbs-in-hausa",
+        "label": "Proverbs in Hausa (Karin Magana)"
+      },
+      {
+        "slug": "idiomatic-expressions-hausa",
+        "label": "Idiomatic Expressions"
+      },
+      {
+        "slug": "hausa-poetry-waka",
+        "label": "Hausa Poetry (Waka)"
+      },
+      {
+        "slug": "hausa-praise-song-kirari",
+        "label": "Hausa Praise Song (Kirari)"
+      },
+      {
+        "slug": "hausa-folktales-tatsuniya",
+        "label": "Hausa Folktales (Tatsuniya)"
+      },
+      {
+        "slug": "hausa-drama",
+        "label": "Hausa Drama"
+      },
+      {
+        "slug": "hausa-prose-fiction",
+        "label": "Hausa Prose Fiction"
+      },
+      {
+        "slug": "hausa-comprehension",
+        "label": "Hausa Comprehension"
+      },
+      {
+        "slug": "hausa-essay-composition",
+        "label": "Hausa Essay and Composition"
+      },
+      {
+        "slug": "letter-writing-in-hausa",
+        "label": "Letter Writing in Hausa"
+      },
+      {
+        "slug": "hausa-culture-festivals-and-traditions",
+        "label": "Hausa Culture: Festivals and Traditions"
+      },
+      {
+        "slug": "hausa-history-and-civilisation",
+        "label": "Hausa History and Civilisation"
+      },
+      {
+        "slug": "prescribed-texts-hausa",
+        "label": "Prescribed Texts in Hausa"
+      }
+    ]
   },
   "book-keeping": {
     "label": "Book Keeping",
@@ -3635,7 +5229,96 @@
   },
   "computer-studies": {
     "label": "Computer Studies",
-    "topics": []
+    "topics": [
+      {
+        "slug": "history-and-generations-of-computers",
+        "label": "History and Generations of Computers"
+      },
+      {
+        "slug": "types-and-classification-of-computers",
+        "label": "Types and Classification of Computers"
+      },
+      {
+        "slug": "computer-hardware-input-output-storage",
+        "label": "Computer Hardware: Input, Output and Storage Devices"
+      },
+      {
+        "slug": "the-central-processing-unit",
+        "label": "The Central Processing Unit (CPU)"
+      },
+      {
+        "slug": "computer-memory-ram-and-rom",
+        "label": "Computer Memory: RAM and ROM"
+      },
+      {
+        "slug": "computer-software-types-and-functions",
+        "label": "Computer Software: Types and Functions"
+      },
+      {
+        "slug": "operating-systems",
+        "label": "Operating Systems"
+      },
+      {
+        "slug": "application-packages",
+        "label": "Application Packages"
+      },
+      {
+        "slug": "word-processing-spreadsheets-databases",
+        "label": "Word Processing, Spreadsheets and Databases"
+      },
+      {
+        "slug": "number-systems-binary-octal-hexadecimal",
+        "label": "Number Systems (Binary, Octal, Hexadecimal)"
+      },
+      {
+        "slug": "data-representation",
+        "label": "Data Representation"
+      },
+      {
+        "slug": "programming-concepts-and-languages",
+        "label": "Programming Concepts and Languages"
+      },
+      {
+        "slug": "algorithms-flowcharts-and-pseudocode",
+        "label": "Algorithms, Flowcharts and Pseudocode"
+      },
+      {
+        "slug": "data-processing-and-database-management",
+        "label": "Data Processing and Database Management"
+      },
+      {
+        "slug": "computer-networks-types-and-topologies",
+        "label": "Computer Networks: Types and Topologies"
+      },
+      {
+        "slug": "internet-and-world-wide-web",
+        "label": "Internet and World Wide Web"
+      },
+      {
+        "slug": "e-commerce-e-banking-and-e-learning",
+        "label": "E-Commerce, E-Banking and E-Learning"
+      },
+      {
+        "slug": "computer-security-viruses-and-cybercrime",
+        "label": "Computer Security: Viruses and Cybercrime"
+      },
+      {
+        "slug": "information-and-communication-technology-ict",
+        "label": "Information and Communication Technology (ICT)"
+      },
+      {
+        "slug": "ict-in-education-health-and-business",
+        "label": "ICT in Education, Health and Business"
+      },
+      {
+        "slug": "artificial-intelligence-and-emerging-technologies",
+        "label": "Artificial Intelligence and Emerging Technologies"
+      },
+      {
+        "slug": "computer-maintenance-and-troubleshooting",
+        "label": "Computer Maintenance and Troubleshooting"
+      }
+    ]
   },
   "marketing": {
     "label": "Marketing",
@@ -3643,22 +5326,123 @@
   },
   "physical-education": {
     "label": "Physical Education",
-    "topics": []
+    "topics": [
+      {
+        "slug": "meaning-and-history-of-physical-education",
+        "label": "Meaning and History of Physical Education"
+      },
+      {
+        "slug": "aims-and-objectives-of-physical-education",
+        "label": "Aims and Objectives of Physical Education"
+      },
+      {
+        "slug": "skeletal-system",
+        "label": "Skeletal System"
+      },
+      {
+        "slug": "muscular-system",
+        "label": "Muscular System"
+      },
+      {
+        "slug": "circulatory-and-respiratory-systems",
+        "label": "Circulatory and Respiratory Systems"
+      },
+      {
+        "slug": "nervous-system-and-sensory-organs",
+        "label": "Nervous System and Sensory Organs"
+      },
+      {
+        "slug": "physical-fitness-components",
+        "label": "Physical Fitness: Components"
+      },
+      {
+        "slug": "health-related-fitness",
+        "label": "Health-Related Fitness"
+      },
+      {
+        "slug": "skill-related-fitness",
+        "label": "Skill-Related Fitness"
+      },
+      {
+        "slug": "exercise-physiology",
+        "label": "Exercise Physiology"
+      },
+      {
+        "slug": "principles-of-training",
+        "label": "Principles of Training"
+      },
+      {
+        "slug": "nutrition-and-dietary-requirements-for-sport",
+        "label": "Nutrition and Dietary Requirements for Sport"
+      },
+      {
+        "slug": "first-aid-and-sports-safety",
+        "label": "First Aid and Sports Safety"
+      },
+      {
+        "slug": "sports-injuries-prevention-and-treatment",
+        "label": "Sports Injuries: Prevention and Treatment"
+      },
+      {
+        "slug": "drug-abuse-and-doping-in-sport",
+        "label": "Drug Abuse and Doping in Sport"
+      },
+      {
+        "slug": "track-and-field-athletics",
+        "label": "Track and Field Athletics"
+      },
+      {
+        "slug": "gymnastics",
+        "label": "Gymnastics"
+      },
+      {
+        "slug": "swimming",
+        "label": "Swimming"
+      },
+      {
+        "slug": "ball-games-football-basketball-volleyball",
+        "label": "Ball Games: Football, Basketball, Volleyball"
+      },
+      {
+        "slug": "racket-sports",
+        "label": "Racket Sports"
+      },
+      {
+        "slug": "combat-sports",
+        "label": "Combat Sports"
+      },
+      {
+        "slug": "indigenous-games-and-sports-in-nigeria",
+        "label": "Indigenous Games and Sports in Nigeria"
+      },
+      {
+        "slug": "sports-psychology",
+        "label": "Sports Psychology"
+      },
+      {
+        "slug": "sports-sociology",
+        "label": "Sports Sociology"
+      },
+      {
+        "slug": "sports-administration-and-management",
+        "label": "Sports Administration and Management"
+      },
+      {
+        "slug": "national-and-international-sports-bodies",
+        "label": "National and International Sports Bodies"
+      },
+      {
+        "slug": "physical-education-for-special-needs",
+        "label": "Physical Education for Special Needs"
+      },
+      {
+        "slug": "recreation-and-leisure",
+        "label": "Recreation and Leisure"
+      },
+      {
+        "slug": "ecology-and-environmental-health",
+        "label": "Ecology and Environmental Health"
+      }
+    ]
   },
-  "office-practice": {
-    "label": "Office Practice",
-    "topics": []
-  },
-  "technical-drawing": {
-    "label": "Technical Drawing",
-    "topics": []
-  },
-  "food-and-nutrition": {
-    "label": "Food and Nutrition",
-    "topics": []
-  },
-  "home-management": {
-    "label": "Home Management",
-    "topics": []
-  }
 }

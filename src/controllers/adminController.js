@@ -1,4 +1,7 @@
 import User from '../models/User.js';
+import Paper from '../models/Paper.js';
+import Guide from '../models/Guide.js';
+import mongoose from 'mongoose';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,6 +12,18 @@ const __dirname = path.dirname(__filename);
 const dbPath = path.join(__dirname, '..', 'db');
 const papersFilePath = path.join(dbPath, 'all_papers.json');
 const guidesFilePath = path.join(dbPath, 'guides.json');
+
+// Helper to sync JSON backups (keeping user's request for parity)
+const syncBackups = async () => {
+    try {
+        const papers = await Paper.find({}).lean();
+        const guides = await Guide.find({}).lean();
+        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
+        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+    } catch (error) {
+        console.error('[Backup Sync Error]:', error.message);
+    }
+};
 
 const readJsonFile = async (filePath) => {
     try {
@@ -138,13 +153,12 @@ export const updateUserSubscription = async (req, res) => {
 // @route   POST /api/admin/papers
 export const addPaper = async (req, res) => {
     try {
-        const papers = await readJsonFile(papersFilePath);
-        const newPaper = { ...req.body, id: Date.now().toString() };
-        papers.push(newPaper);
-        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
-        res.status(201).json(newPaper);
+        const paper = await Paper.create(req.body);
+        await syncBackups();
+        res.status(201).json(paper);
     } catch (error) {
-        res.status(500).json({ message: 'Error adding paper' });
+        console.error('Error adding paper:', error);
+        res.status(500).json({ message: error.message || 'Error adding paper' });
     }
 };
 
@@ -153,16 +167,24 @@ export const addPaper = async (req, res) => {
 export const editPaper = async (req, res) => {
     try {
         const { id } = req.params;
-        const papers = await readJsonFile(papersFilePath);
-        const paperIndex = papers.findIndex(p => p.id === id);
-        if (paperIndex === -1) {
+        // Use subject/year or ID if available. React app uses Paper.id usually?
+        // Actually, the frontend passed p.id which we just populated with Date.now().toString() in previous version.
+        // Mongoose uses _id but these papers have an 'id' field too.
+        const paper = await Paper.findOneAndUpdate(
+            { $or: [{ _id: mongoose.isValidObjectId(id) ? id : null }, { id: id }] },
+            req.body,
+            { new: true }
+        );
+
+        if (!paper) {
             return res.status(404).json({ message: 'Paper not found' });
         }
-        papers[paperIndex] = { ...papers[paperIndex], ...req.body };
-        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
-        res.json(papers[paperIndex]);
+
+        await syncBackups();
+        res.json(paper);
     } catch (error) {
-        res.status(500).json({ message: 'Error editing paper' });
+        console.error('Error editing paper:', error);
+        res.status(500).json({ message: error.message || 'Error editing paper' });
     }
 };
 
@@ -170,13 +192,11 @@ export const editPaper = async (req, res) => {
 // @route   POST /api/admin/guides
 export const addGuide = async (req, res) => {
     try {
-        const guides = await readJsonFile(guidesFilePath);
-        const newGuide = { ...req.body, id: Date.now().toString() };
-        guides.push(newGuide);
-        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
-        res.status(201).json(newGuide);
+        const guide = await Guide.create(req.body);
+        await syncBackups();
+        res.status(201).json(guide);
     } catch (error) {
-        res.status(500).json({ message: 'Error adding guide' });
+        res.status(500).json({ message: error.message || 'Error adding guide' });
     }
 };
 
@@ -185,16 +205,14 @@ export const addGuide = async (req, res) => {
 export const editGuide = async (req, res) => {
     try {
         const { id } = req.params;
-        const guides = await readJsonFile(guidesFilePath);
-        const guideIndex = guides.findIndex(g => g.id === id);
-        if (guideIndex === -1) {
+        const guide = await Guide.findOneAndUpdate({ id }, req.body, { new: true });
+        if (!guide) {
             return res.status(404).json({ message: 'Guide not found' });
         }
-        guides[guideIndex] = { ...guides[guideIndex], ...req.body };
-        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
-        res.json(guides[guideIndex]);
+        await syncBackups();
+        res.json(guide);
     } catch (error) {
-        res.status(500).json({ message: 'Error editing guide' });
+        res.status(500).json({ message: error.message || 'Error editing guide' });
     }
 };
 
@@ -203,18 +221,25 @@ export const editGuide = async (req, res) => {
 export const getAdminStats = async (req, res) => {
     try {
         const userCount = await User.countDocuments();
-        const papers = await readJsonFile(papersFilePath);
-        const guides = await readJsonFile(guidesFilePath);
+        const paperCount = await Paper.countDocuments();
+        const guideCount = await Guide.countDocuments();
 
-        const totalQuestions = papers.reduce((acc, paper) => acc + (paper.questions?.length || 0), 0);
+        // Calculate total questions across all papers
+        const stats = await Paper.aggregate([
+            { $project: { questionCount: { $size: "$questions" } } },
+            { $group: { _id: null, totalQuestions: { $sum: "$questionCount" } } }
+        ]);
+
+        const totalQuestions = stats.length > 0 ? stats[0].totalQuestions : 0;
 
         res.json({
             users: userCount,
-            papers: papers.length,
+            papers: paperCount,
             questions: totalQuestions,
-            guides: guides.length
+            guides: guideCount
         });
     } catch (error) {
+        console.error('Error fetching admin stats:', error);
         res.status(500).json({ message: 'Failed to retrieve stats' });
     }
 };
@@ -223,37 +248,35 @@ export const getAdminStats = async (req, res) => {
 // @desc    Delete a past paper
 // @route   DELETE /api/admin/papers/:id
 export const deletePaper = async (req, res) => {
-    const { id } = req.params;
-    const papers = await readJsonFile(papersFilePath);
-    const updatedPapers = papers.filter(p => p.id !== id);
-
-    if (papers.length === updatedPapers.length) {
-        return res.status(404).json({ message: 'Paper not found' });
-    }
-
     try {
-        await fs.writeFile(papersFilePath, JSON.stringify(updatedPapers, null, 2));
+        const { id } = req.params;
+        const paper = await Paper.findOneAndDelete({ $or: [{ _id: mongoose.isValidObjectId(id) ? id : null }, { id: id }] });
+
+        if (!paper) {
+            return res.status(404).json({ message: 'Paper not found' });
+        }
+
+        await syncBackups();
         res.status(200).json({ message: 'Paper deleted successfully' });
     } catch (error) {
-        res.status(500).json({ message: 'Error writing to database' });
+        res.status(500).json({ message: error.message || 'Error deleting paper' });
     }
 };
 
 // @desc    Delete a study guide
 // @route   DELETE /api/admin/guides/:id
 export const deleteGuide = async (req, res) => {
-    const { id } = req.params;
-    const guides = await readJsonFile(guidesFilePath);
-    const updatedGuides = guides.filter(g => g.id !== id);
-
-    if (guides.length === updatedGuides.length) {
-        return res.status(404).json({ message: 'Guide not found' });
-    }
-
     try {
-        await fs.writeFile(guidesFilePath, JSON.stringify(updatedGuides, null, 2));
+        const { id } = req.params;
+        const guide = await Guide.findOneAndDelete({ id });
+
+        if (!guide) {
+            return res.status(404).json({ message: 'Guide not found' });
+        }
+
+        await syncBackups();
         res.status(200).json({ message: 'Guide deleted successfully' });
     } catch (error) {
-        res.status(500).json({ message: 'Error writing to database' });
+        res.status(500).json({ message: error.message || 'Error deleting guide' });
     }
 };

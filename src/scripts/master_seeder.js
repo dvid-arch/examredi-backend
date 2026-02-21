@@ -57,7 +57,10 @@ export async function seedPapers(customPath = null) {
         if (!p.subject || !Array.isArray(p.questions)) return null;
 
         // Filter out questions with missing required fields
-        const validQuestions = p.questions.filter(q => q.question && q.answer);
+        const validQuestions = p.questions.filter(q => q.question && q.answer).map(q => ({
+            ...q,
+            topics: (q.topics || []).map(t => t.toLowerCase())
+        }));
 
         if (validQuestions.length === 0) return null;
 

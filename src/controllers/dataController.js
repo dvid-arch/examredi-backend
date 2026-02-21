@@ -13,6 +13,7 @@ const __dirname = path.dirname(__filename);
 const dbPath = path.join(__dirname, '..', 'db');
 const papersFilePath = path.join(dbPath, 'all_papers.json');
 const guidesFilePath = path.join(dbPath, 'guides.json');
+const topicsFilePath = path.join(dbPath, 'topics.json');
 const leaderboardFilePath = path.join(dbPath, 'leaderboard.json');
 const performanceFilePath = path.join(dbPath, 'performance.json');
 const literatureFilePath = path.join(dbPath, 'literature.json');
@@ -21,7 +22,7 @@ const SUBJECT_MAPPING = {
     'Accounting': 'Accounts - Principles of Accounts',
     'Agriculture': 'Agricultural Science',
     'Fine Art': 'Fine Arts',
-    'Physical and Health Education (PHE)': 'Physical and Health Education' // Assuming check
+    'Physical and Health Education (PHE)': 'Physical and Health Education'
 };
 
 const readJsonFile = async (filePath) => {
@@ -43,31 +44,24 @@ const writeJsonFile = async (filePath, data) => {
 export const getPapers = async (req, res) => {
     try {
         const { subject, year } = req.query;
-        const allPapers = await readJsonFile(papersFilePath);
 
-        let papers = allPapers;
-
+        const filter = {};
         if (subject) {
-            // Normalize header subject to database subject
-            const dbSubject = SUBJECT_MAPPING[subject] || subject;
-            const subjectLower = dbSubject.toLowerCase();
-            papers = papers.filter(p => p.subject.toLowerCase() === subjectLower);
+            filter.subject = SUBJECT_MAPPING[subject] || subject;
         }
-
         if (year) {
-            const yearNum = Number(year);
-            papers = papers.filter(p => p.year === yearNum);
+            filter.year = Number(year);
         }
 
-        // --- GUEST LIMITS ---
-        // If user is not logged in, limit questions per paper to 10
+        let papers = await Paper.find(filter).lean();
+
         const isAuthenticated = !!req.user;
 
         if (!isAuthenticated) {
             papers = papers.map(paper => ({
                 ...paper,
                 questions: paper.questions.slice(0, 10),
-                isLimited: true // Hint to UI
+                isLimited: true
             }));
         }
 
@@ -87,16 +81,21 @@ export const searchPapers = async (req, res) => {
             return res.status(400).json({ message: 'Search query is required' });
         }
 
-        const lowerQuery = query.toLowerCase();
-        const allPapers = await readJsonFile(papersFilePath);
+        // Database search using regex (case-insensitive)
+        const papers = await Paper.find({
+            $or: [
+                { 'questions.question': { $regex: query, $options: 'i' } },
+                { 'questions.options.A.text': { $regex: query, $options: 'i' } },
+                { 'questions.options.B.text': { $regex: query, $options: 'i' } },
+                { 'questions.options.C.text': { $regex: query, $options: 'i' } },
+                { 'questions.options.D.text': { $regex: query, $options: 'i' } }
+            ]
+        }).limit(20).lean();
 
         const results = [];
-        allPapers.forEach(paper => {
+        papers.forEach(paper => {
             paper.questions.forEach(q => {
-                const questionText = (q.question || '').toLowerCase();
-                const optionsText = q.options ? Object.values(q.options).map(o => (o.text || '').toLowerCase()).join(' ') : '';
-
-                if (questionText.includes(lowerQuery) || optionsText.includes(lowerQuery)) {
+                if (q.question.toLowerCase().includes(query.toLowerCase())) {
                     results.push({
                         ...q,
                         subject: paper.subject,
@@ -107,7 +106,6 @@ export const searchPapers = async (req, res) => {
             });
         });
 
-        // Limit results for performance
         res.json(results.slice(0, 50));
     } catch (error) {
         console.error('Error searching papers:', error);
@@ -115,194 +113,46 @@ export const searchPapers = async (req, res) => {
     }
 };
 
-// @desc    Search past questions by multiple keywords
+// @desc    Search past questions by topics
 // @route   POST /api/data/search-batch
 export const searchByKeywords = async (req, res) => {
     try {
-        const { keywords, subject, topic } = req.body;
+        const { subject, topic, subTopic } = req.body;
 
-        const allPapers = await readJsonFile(papersFilePath);
-        const scoredResults = [];
-
-        // Strategy 1: Direct Topic Match (if topic provided)
-        if (topic) {
-            allPapers.forEach(paper => {
-                const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
-                if (dbSubject && paper.subject.toLowerCase() !== dbSubject.toLowerCase()) return;
-
-                paper.questions.forEach(q => {
-                    // Check if question has this topic tag (Partial match allowed)
-                    if (q.topics && q.topics.some(t => {
-                        const tLower = t.toLowerCase();
-                        const topicLower = topic.toLowerCase();
-
-                        // Exact match
-                        if (tLower === topicLower) return true;
-
-                        // Partial match: if the tag contains the search topic OR search topic contains the tag
-                        // e.g. "Computer Basics" matches "Computer"
-                        if (tLower.includes(topicLower) || topicLower.includes(tLower)) return true;
-
-                        return false;
-                    })) {
-                        scoredResults.push({
-                            ...q,
-                            subject: paper.subject,
-                            year: paper.year,
-                            exam: paper.exam,
-                            _relevanceScore: 100, // High score for direct topic match
-                            _matchedKeywords: [`Topic: ${topic}`]
-                        });
-                    }
-                });
-            });
-
-            // If we found enough questions by direct topic match, return them
-            if (scoredResults.length >= 10) {
-                const unique = Array.from(new Map(scoredResults.map(q => [q.id, q])).values());
-                // Shuffle for variety
-                const shuffled = unique.sort(() => Math.random() - 0.5);
-                console.log(`Found ${unique.length} questions by direct topic tag: ${topic}`);
-                return res.json(shuffled.slice(0, 50));
-            }
+        if (!topic && !subTopic) {
+            return res.status(400).json({ message: 'Topic or subTopic is required' });
         }
 
-        // Strategy 2: Keyword Search (fallback or supplementary)
-        if (!keywords || !Array.isArray(keywords)) {
-            // If no keywords and no topic found (or provided), return partial results if any
-            if (scoredResults.length > 0) return res.json(scoredResults);
-            return res.status(400).json({ message: 'Keywords array or topic is required' });
+        const targetSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
+        const targetQuery = subTopic || topic;
+
+        const filter = {
+            'questions.topics': { $in: [targetQuery.toLowerCase()] }
+        };
+        if (targetSubject) {
+            filter.subject = targetSubject;
         }
 
-        const lowerKeywords = keywords.map(k => k.toLowerCase());
+        const papers = await Paper.find(filter).lean();
+        const results = [];
 
-        // Helper: Escape regex special characters
-        const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-        // Helper: Simple fuzzy matching (Levenshtein distance)
-        const levenshteinDistance = (a, b) => {
-            const matrix = [];
-            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
-            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
-            for (let i = 1; i <= b.length; i++) {
-                for (let j = 1; j <= a.length; j++) {
-                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
-                        matrix[i][j] = matrix[i - 1][j - 1];
-                    } else {
-                        matrix[i][j] = Math.min(
-                            matrix[i - 1][j - 1] + 1,
-                            matrix[i][j - 1] + 1,
-                            matrix[i - 1][j] + 1
-                        );
-                    }
-                }
-            }
-            return matrix[b.length][a.length];
-        };
-
-        const hasFuzzyMatch = (text, keyword, maxDistance = 2) => {
-            const words = text.split(/\s+/);
-            return words.some(word => {
-                if (Math.abs(word.length - keyword.length) > maxDistance) return false;
-                return levenshteinDistance(word, keyword) <= maxDistance;
-            });
-        };
-
-        allPapers.forEach(paper => {
-            const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
-            if (dbSubject && paper.subject.toLowerCase() !== dbSubject.toLowerCase()) return;
-
+        papers.forEach(paper => {
             paper.questions.forEach(q => {
-                const questionText = (q.question || '').toLowerCase();
-                const optionsText = q.options ? Object.values(q.options).map(o => (o.text || '').toLowerCase()).join(' ') : '';
-                const fullText = questionText + ' ' + optionsText;
-
-                // Calculate relevance score
-                let score = 0;
-                let matchedKeywords = [];
-
-                lowerKeywords.forEach(keyword => {
-                    // Exact match (highest score) - use word boundaries for accuracy
-                    const exactRegex = new RegExp(`\\b${escapeRegex(keyword)}\\b`, 'i');
-                    if (exactRegex.test(fullText)) {
-                        score += 15;
-                        matchedKeywords.push(keyword);
-                    }
-                    // Substring match
-                    else if (fullText.includes(keyword)) {
-                        score += 5;
-                        matchedKeywords.push(keyword + ' (partial)');
-                    }
-                    // Fuzzy match (edit distance) - only for longer more specific keywords
-                    else if (keyword.length > 4 && hasFuzzyMatch(fullText, keyword)) {
-                        score += 3;
-                        matchedKeywords.push(keyword + ' (fuzzy)');
-                    }
-                });
-
-                if (score > 0) {
-                    scoredResults.push({
+                const questionTopics = (q.topics || []).map(t => t.toLowerCase());
+                if (questionTopics.includes(targetQuery.toLowerCase())) {
+                    results.push({
                         ...q,
                         subject: paper.subject,
                         year: paper.year,
-                        exam: paper.exam,
-                        _relevanceScore: score,
-                        _matchedKeywords: matchedKeywords
+                        exam: paper.exam
                     });
                 }
             });
         });
 
-        // Sort by relevance score (highest first)
-        scoredResults.sort((a, b) => b._relevanceScore - a._relevanceScore);
-
-        // Strategy: Use top matches first. If we have enough good matches (score >= 10), returning them is enough.
-        const strongMatches = scoredResults.filter(r => r._relevanceScore >= 10);
-
-        if (strongMatches.length >= 20) {
-            console.log(`Found ${strongMatches.length} strong matches for ${subject}. Returning top 100.`);
-            return res.json(scoredResults.slice(0, 100));
-        }
-
-        // If we have few strong matches, supplement with random subject questions to ensure a good test size
-        console.log(`Only ${strongMatches.length} strong matches found. Supplementing...`);
-
-        const fallbackCount = Math.max(0, 30 - scoredResults.length);
-        if (fallbackCount > 0) {
-            const subjectQuestions = [];
-            allPapers.forEach(paper => {
-                const dbSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
-                if (dbSubject && paper.subject.toLowerCase() === dbSubject.toLowerCase()) {
-                    paper.questions.forEach(q => {
-                        // Avoid duplicates
-                        if (!scoredResults.find(r => r.id === q.id)) {
-                            subjectQuestions.push({
-                                ...q,
-                                subject: paper.subject,
-                                year: paper.year,
-                                exam: paper.exam,
-                                _relevanceScore: 0
-                            });
-                        }
-                    });
-                }
-            });
-
-            const shuffled = subjectQuestions.sort(() => Math.random() - 0.5);
-            const fallbackResults = shuffled.slice(0, fallbackCount);
-
-            // Combine scored results first, then fallback
-            const finalResults = [...scoredResults, ...fallbackResults];
-            // Deduplicate
-            const unique = Array.from(new Map(finalResults.map(q => [q.id, q])).values());
-
-            console.log(`Returning ${unique.length} questions (${scoredResults.length} scored + ${unique.length - scoredResults.length} fallback)`);
-            return res.json(unique.slice(0, 100));
-        }
-
-        res.json(scoredResults.slice(0, 100));
+        res.json(results.slice(0, 100));
     } catch (error) {
-        console.error('Error enhanced searching papers:', error);
+        console.error('Error matching questions:', error);
         res.status(500).json({ message: 'Server Error' });
     }
 };
@@ -311,14 +161,7 @@ export const searchByKeywords = async (req, res) => {
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
     try {
-        let guides = await Guide.find().sort({ subject: 1 });
-
-        // Fallback to JSON file if MongoDB is empty (consistency with papers)
-        if (!guides || guides.length === 0) {
-            console.log('No guides in MongoDB, falling back to guides.json');
-            guides = await readJsonFile(guidesFilePath);
-        }
-
+        const guides = await Guide.find().sort({ subject: 1 });
         res.json(guides);
     } catch (error) {
         console.error('Error fetching guides:', error);
@@ -343,16 +186,16 @@ export const getLeaderboard = async (req, res) => {
 export const addLeaderboardScore = async (req, res) => {
     try {
         const { name, totalQuestions, answers, date, score: clientScore } = req.body;
-
         let finalScore = clientScore;
 
-        // --- SERVER-SIDE VERIFICATION ---
         if (answers && typeof answers === 'object') {
-            const allPapers = await readJsonFile(papersFilePath);
-            const allQuestions = allPapers.flatMap(p => p.questions);
+            const questionIds = Object.keys(answers);
+            // Dynamic query to find papers containing these questions
+            const papers = await Paper.find({ 'questions.id': { $in: questionIds } }).lean();
+            const allQuestions = papers.flatMap(p => p.questions);
 
             let verifiedScore = 0;
-            Object.keys(answers).forEach(qId => {
+            questionIds.forEach(qId => {
                 const question = allQuestions.find(q => q.id === qId);
                 if (question && question.answer === answers[qId]) {
                     verifiedScore++;
@@ -371,8 +214,6 @@ export const addLeaderboardScore = async (req, res) => {
         });
 
         await newScore.save();
-
-        // Return the updated top 20
         const leaderboard = await Leaderboard.find().sort({ score: -1, date: -1 }).limit(20);
         res.status(201).json(leaderboard);
     } catch (error) {
@@ -380,9 +221,6 @@ export const addLeaderboardScore = async (req, res) => {
         res.status(500).json({ message: 'Server Error' });
     }
 };
-
-// Remove the scattered import later
-
 
 // @desc    Get user performance results
 // @route   GET /api/data/performance
@@ -452,3 +290,22 @@ export const getLiterature = async (req, res) => {
     res.json(literature);
 };
 
+// @desc    Get JAMB syllabus topics
+// @route   GET /api/data/topics
+export const getTopics = async (req, res) => {
+    try {
+        const raw = await readJsonFile(topicsFilePath);
+        const asArray = Object.entries(raw).map(([slug, data]) => ({
+            slug,
+            label: data.label,
+            topics: (data.topics || []).map(t => ({
+                slug: t.slug,
+                label: t.label
+            }))
+        }));
+        res.json(asArray);
+    } catch (error) {
+        console.error('Error fetching topics:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};

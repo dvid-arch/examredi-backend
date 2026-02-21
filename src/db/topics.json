@@ -1,0 +1,3664 @@
+{
+  "mathematics": {
+    "label": "Mathematics",
+    "topics": [
+      {
+        "slug": "algebra",
+        "label": "Algebra"
+      },
+      {
+        "slug": "geometry-and-trigonometry",
+        "label": "Geometry and Trigonometry"
+      },
+      {
+        "slug": "number-bases",
+        "label": "Number Bases"
+      },
+      {
+        "slug": "indices",
+        "label": "Indices"
+      },
+      {
+        "slug": "logarithms",
+        "label": "Logarithms"
+      },
+      {
+        "slug": "surds",
+        "label": "Surds"
+      },
+      {
+        "slug": "number-and-numeration",
+        "label": "Number and Numeration"
+      },
+      {
+        "slug": "fractions-decimals-percentages-and-approximation",
+        "label": "Fractions, Decimals, Percentages and Approximation"
+      },
+      {
+        "slug": "sets",
+        "label": "Sets"
+      },
+      {
+        "slug": "logic",
+        "label": "Logic"
+      },
+      {
+        "slug": "modular-arithmetic",
+        "label": "Modular Arithmetic"
+      },
+      {
+        "slug": "positive-and-negative-integers",
+        "label": "Positive and Negative Integers"
+      },
+      {
+        "slug": "rational-numbers",
+        "label": "Rational Numbers"
+      },
+      {
+        "slug": "matrices-and-determinants",
+        "label": "Matrices and Determinants"
+      },
+      {
+        "slug": "ratios-proportions-and-rates",
+        "label": "Ratios, Proportions and Rates"
+      },
+      {
+        "slug": "financial-arithmetic",
+        "label": "Financial Arithmetic"
+      },
+      {
+        "slug": "variations",
+        "label": "Variations"
+      },
+      {
+        "slug": "simple-operations-on-algebraic-expression",
+        "label": "Simple Operations On Algebraic Expression"
+      },
+      {
+        "slug": "solution-of-linear-equations",
+        "label": "Solution Of Linear Equations"
+      },
+      {
+        "slug": "change-of-subject-of-formula",
+        "label": "Change Of Subject Of Formula"
+      },
+      {
+        "slug": "quadratic-equations",
+        "label": "Quadratic Equations"
+      },
+      {
+        "slug": "graph-of-linear-and-quadratic-functions",
+        "label": "Graph Of Linear and Quadratic Functions"
+      },
+      {
+        "slug": "linear-inequalities",
+        "label": "Linear Inequalities"
+      },
+      {
+        "slug": "algebraic-fractions",
+        "label": "Algebraic Fractions"
+      },
+      {
+        "slug": "functions-and-relations",
+        "label": "Functions and Relations"
+      },
+      {
+        "slug": "polynomials",
+        "label": "Polynomials"
+      },
+      {
+        "slug": "progressions",
+        "label": "Progressions"
+      },
+      {
+        "slug": "binary-operations",
+        "label": "Binary Operations"
+      },
+      {
+        "slug": "mensuration",
+        "label": "Mensuration"
+      },
+      {
+        "slug": "lengths-and-perimeters",
+        "label": "Lengths and Perimeters"
+      },
+      {
+        "slug": "areas",
+        "label": "Areas"
+      },
+      {
+        "slug": "volumes",
+        "label": "Volumes"
+      },
+      {
+        "slug": "angles-and-intercepts-on-parallel-lines",
+        "label": "Angles and Intercepts on Parallel Lines"
+      },
+      {
+        "slug": "triangles-and-polygons",
+        "label": "Triangles and Polygons"
+      },
+      {
+        "slug": "circles",
+        "label": "Circles"
+      },
+      {
+        "slug": "construction",
+        "label": "Construction"
+      },
+      {
+        "slug": "coordinate-geometry-of-straight-lines",
+        "label": "Coordinate Geometry of Straight Lines"
+      },
+      {
+        "slug": "trigonometric-ratios",
+        "label": "Trigonometric Ratios"
+      },
+      {
+        "slug": "angles-of-elevation-and-depression",
+        "label": "Angles of  Elevation and Depression"
+      },
+      {
+        "slug": "bearings-and-distances",
+        "label": "Bearings and Distances"
+      },
+      {
+        "slug": "calculus",
+        "label": "Calculus"
+      },
+      {
+        "slug": "differentiation",
+        "label": "Differentiation"
+      },
+      {
+        "slug": "application-of-differentiation",
+        "label": "Application of differentiation"
+      },
+      {
+        "slug": "integration",
+        "label": "Integration"
+      },
+      {
+        "slug": "statistics",
+        "label": "Statistics"
+      },
+      {
+        "slug": "representation-of-data",
+        "label": "Representation of data"
+      },
+      {
+        "slug": "measures-of-location",
+        "label": "Measures of Location"
+      },
+      {
+        "slug": "measures-of-dispersion",
+        "label": "Measures of Dispersion"
+      },
+      {
+        "slug": "permutation-and-combination",
+        "label": "Permutation and Combination"
+      },
+      {
+        "slug": "probability",
+        "label": "Probability"
+      },
+      {
+        "slug": "application-of-integration",
+        "label": "Application of Integration"
+      }
+    ]
+  },
+  "english-language": {
+    "label": "English Language",
+    "topics": [
+      {
+        "slug": "english-grammar",
+        "label": "English Grammar"
+      },
+      {
+        "slug": "word-classes",
+        "label": "Word Classes"
+      },
+      {
+        "slug": "phrasal-verb",
+        "label": "Phrasal Verb"
+      },
+      {
+        "slug": "sentence-classification",
+        "label": "Sentence Classification"
+      },
+      {
+        "slug": "tense-and-aspect",
+        "label": "Tense and Aspect"
+      },
+      {
+        "slug": "concord",
+        "label": "Concord"
+      },
+      {
+        "slug": "question-tag",
+        "label": "Question Tag"
+      },
+      {
+        "slug": "language-registers",
+        "label": "Language Registers"
+      },
+      {
+        "slug": "reported-speech",
+        "label": "Reported Speech"
+      },
+      {
+        "slug": "punctuation",
+        "label": "Punctuation"
+      },
+      {
+        "slug": "idiomatic-expression",
+        "label": "Idiomatic Expression"
+      },
+      {
+        "slug": "oral-english",
+        "label": "Oral English"
+      },
+      {
+        "slug": "the-sound-system",
+        "label": "The Sound System"
+      },
+      {
+        "slug": "vowels",
+        "label": "Vowels"
+      },
+      {
+        "slug": "consonants",
+        "label": "Consonants"
+      },
+      {
+        "slug": "syllable",
+        "label": "Syllable"
+      },
+      {
+        "slug": "stress",
+        "label": "Stress"
+      },
+      {
+        "slug": "intonation",
+        "label": "Intonation"
+      },
+      {
+        "slug": "comprehension",
+        "label": "Comprehension"
+      },
+      {
+        "slug": "concept-of-comprehension",
+        "label": "Concept of Comprehension"
+      },
+      {
+        "slug": "topic-sentence",
+        "label": "Topic Sentence"
+      },
+      {
+        "slug": "sentence-interpretation",
+        "label": "Sentence Interpretation"
+      },
+      {
+        "slug": "summary-writing",
+        "label": "Summary Writing"
+      },
+      {
+        "slug": "grammatical-applications",
+        "label": "Grammatical Applications"
+      },
+      {
+        "slug": "writing",
+        "label": "Writing"
+      },
+      {
+        "slug": "the-writing-process",
+        "label": "The Writing Process"
+      },
+      {
+        "slug": "infinitives-gerunds-and-participles",
+        "label": "Infinitives, Gerunds and Participles."
+      },
+      {
+        "slug": "sentence-building-444827",
+        "label": "Sentence Building"
+      },
+      {
+        "slug": "clauses",
+        "label": "Clauses"
+      },
+      {
+        "slug": "phrases",
+        "label": "Phrases"
+      },
+      {
+        "slug": "morphemes-and-words",
+        "label": "Morphemes and Words"
+      },
+      {
+        "slug": "the-concept-of-a-sentence",
+        "label": "The concept of a Sentence"
+      },
+      {
+        "slug": "elements-of-sentence-structure",
+        "label": "Elements of sentence structure"
+      },
+      {
+        "slug": "the-spelling-rules",
+        "label": "The Spelling Rules"
+      },
+      {
+        "slug": "antonyms-synonyms-homonyms",
+        "label": "Antonyms, Synonyms & Homonyms"
+      },
+      {
+        "slug": "essay-writing-descriptive-essay",
+        "label": "Essay Writing: Descriptive Essay"
+      },
+      {
+        "slug": "essay-writing-narrative-essay",
+        "label": "Essay Writing: Narrative Essay"
+      },
+      {
+        "slug": "essay-writing-argumentative-essay",
+        "label": "Essay Writing: Argumentative Essay"
+      },
+      {
+        "slug": "essay-writing-expository-essay",
+        "label": "Essay Writing: Expository Essay"
+      },
+      {
+        "slug": "informal-letter-writing",
+        "label": "Informal Letter Writing"
+      },
+      {
+        "slug": "formal-letter-writing",
+        "label": "Formal Letter Writing"
+      },
+      {
+        "slug": "the-vowel-sound-monophthongs-pure-vowels",
+        "label": "The Vowel Sound: Monophthongs (Pure Vowels)"
+      },
+      {
+        "slug": "the-vowel-sound-diphthongs",
+        "label": "The Vowel Sound: Diphthongs"
+      },
+      {
+        "slug": "the-short-vowel-sounds",
+        "label": "The Short Vowel Sounds"
+      },
+      {
+        "slug": "the-long-vowel-sounds",
+        "label": "The Long Vowel Sounds"
+      },
+      {
+        "slug": "consonant-sounds-plosives",
+        "label": "Consonant Sounds: Plosives"
+      },
+      {
+        "slug": "consonant-sounds-liquid-and-semi-vowel",
+        "label": "Consonant Sounds: Liquid and Semi-Vowel"
+      },
+      {
+        "slug": "consonant-sounds-fricatives",
+        "label": "Consonant Sounds: Fricatives"
+      },
+      {
+        "slug": "consonant-sounds-affricates-and-nasals",
+        "label": "Consonant Sounds: Affricates and Nasals"
+      }
+    ]
+  },
+  "chemistry": {
+    "label": "Chemistry",
+    "topics": [
+      {
+        "slug": "matter-and-separation-techniques",
+        "label": "Matter and Separation Techniques"
+      },
+      {
+        "slug": "particulate-nature-of-matter",
+        "label": "Particulate Nature of Matter"
+      },
+      {
+        "slug": "basic-chemistry",
+        "label": "BASIC CHEMISTRY"
+      },
+      {
+        "slug": "chemical-combinations",
+        "label": "Chemical Combinations"
+      },
+      {
+        "slug": "properties-of-gases-gas-laws",
+        "label": "Properties of Gases ( Gas Laws )"
+      },
+      {
+        "slug": "properties-of-solids-and-liquids",
+        "label": "Properties of Solids and Liquids"
+      },
+      {
+        "slug": "acids-bases-and-salts",
+        "label": "Acids, Bases and Salts"
+      },
+      {
+        "slug": "periodic-table",
+        "label": "Periodic Table"
+      },
+      {
+        "slug": "air-and-air-pollution",
+        "label": "Air and Air Pollution"
+      },
+      {
+        "slug": "water-and-solubility-concept",
+        "label": "Water and Solubility Concept"
+      },
+      {
+        "slug": "mass-volume-concepts",
+        "label": "Mass-Volume Concepts"
+      },
+      {
+        "slug": "quantitative-and-qualitative-analyses",
+        "label": "Quantitative and Qualitative Analyses"
+      },
+      {
+        "slug": "electrodes-electrochemical-series-and-electrolysis",
+        "label": "Electrodes, Electrochemical Series and Electrolysis"
+      },
+      {
+        "slug": "types-of-reactions",
+        "label": "Types of Reactions"
+      },
+      {
+        "slug": "energy-and-chemical-reactions",
+        "label": "Energy and Chemical Reactions"
+      },
+      {
+        "slug": "reactions-rates-and-chemical-equilibria",
+        "label": "Reactions' Rates and Chemical Equilibria"
+      },
+      {
+        "slug": "shapes-of-molecules-and-solids",
+        "label": "Shapes of Molecules and Solids"
+      },
+      {
+        "slug": "radioactivity-nuclear-chemistry",
+        "label": "Radioactivity ( Nuclear Chemistry )"
+      },
+      {
+        "slug": "inorganic-chemistry",
+        "label": "INORGANIC CHEMISTRY"
+      },
+      {
+        "slug": "hydrogen-hydrides",
+        "label": "Hydrogen ( Hydrides )"
+      },
+      {
+        "slug": "oxygen-oxides-ozone",
+        "label": "Oxygen ( Oxides - Ozone )"
+      },
+      {
+        "slug": "carbon-carbon-compounds",
+        "label": "Carbon - Carbon Compounds"
+      },
+      {
+        "slug": "nitrogen-nitrogen-compounds",
+        "label": "Nitrogen - Nitrogen Compounds"
+      },
+      {
+        "slug": "phosphorus-phosphorus-compounds",
+        "label": "Phosphorus - Phosphorus Compounds"
+      },
+      {
+        "slug": "sulphur-sulphur-compounds",
+        "label": "Sulphur - Sulphur Compounds"
+      },
+      {
+        "slug": "halogen-family",
+        "label": "Halogen Family"
+      },
+      {
+        "slug": "silicon-and-its-compounds",
+        "label": "Silicon and its Compounds"
+      },
+      {
+        "slug": "metals-and-their-compounds-1",
+        "label": "Metals and their Compounds 1"
+      },
+      {
+        "slug": "transition-metals-and-their-compounds",
+        "label": "Transition Metals and their Compounds"
+      },
+      {
+        "slug": "organic-chemistry",
+        "label": "ORGANIC CHEMISTRY"
+      },
+      {
+        "slug": "hydrocarbons",
+        "label": "Hydrocarbons"
+      },
+      {
+        "slug": "crude-oil",
+        "label": "Crude Oil"
+      },
+      {
+        "slug": "basic-concepts-of-organic-chemistry",
+        "label": "Basic Concepts of Organic Chemistry"
+      },
+      {
+        "slug": "organic-chemistry-2",
+        "label": "Organic Chemistry 2"
+      },
+      {
+        "slug": "applied-chemistry",
+        "label": "Applied Chemistry"
+      },
+      {
+        "slug": "chemical-industry",
+        "label": "Chemical Industry"
+      },
+      {
+        "slug": "the-solar-system",
+        "label": "The Solar System"
+      },
+      {
+        "slug": "separation-of-mixtures-and-purification-of-chemical-substance",
+        "label": "Separation of mixtures and purification of chemical substance"
+      },
+      {
+        "slug": "definition-and-classification-of-matter",
+        "label": "Definition and classification of matter"
+      },
+      {
+        "slug": "elements-compounds-and-mixtures",
+        "label": "Elements, compounds and mixtures"
+      },
+      {
+        "slug": "physical-and-chemical-changes",
+        "label": "Physical and chemical changes"
+      },
+      {
+        "slug": "pure-and-impure-substances",
+        "label": "Pure and Impure substances"
+      },
+      {
+        "slug": "separation-techniques-processes",
+        "label": "Separation techniques/processes"
+      },
+      {
+        "slug": "chemical-combination",
+        "label": "Chemical Combination"
+      },
+      {
+        "slug": "stoichiometry",
+        "label": "Stoichiometry"
+      },
+      {
+        "slug": "laws-of-definite-and-multiple-proportions",
+        "label": "Laws of definite and multiple proportions"
+      },
+      {
+        "slug": "law-of-conservation-of-matter",
+        "label": "Law of conservation of matter"
+      },
+      {
+        "slug": "gay-lussacs-law-of-combining-volumes",
+        "label": "Gay Lussac's law of combining volumes"
+      },
+      {
+        "slug": "avogadros-law",
+        "label": "Avogadro's law"
+      },
+      {
+        "slug": "chemical-symbols-formulae-equations-and-their-uses",
+        "label": "chemical symbols, formulae, equations and their uses"
+      },
+      {
+        "slug": "relative-atomic-mass-based-on-12c-12",
+        "label": "Relative atomic mass based on 12C-12"
+      },
+      {
+        "slug": "the-mole-concept-and-avogadros-number",
+        "label": "The mole concept and Avogadro's number"
+      },
+      {
+        "slug": "kinetic-theory-of-matter-and-gas-laws",
+        "label": "Kinetic Theory of Matter and Gas Laws"
+      },
+      {
+        "slug": "states-of-matter",
+        "label": "States of matter"
+      },
+      {
+        "slug": "change-of-states-of-matter",
+        "label": "Change of States of matter"
+      },
+      {
+        "slug": "phenomena-supporting-kinetic-theory-diffusion-and-osmosis",
+        "label": "Phenomena Supporting Kinetic theory-Diffusion and Osmosis"
+      },
+      {
+        "slug": "assumptions-of-kinetic-theory-of-gases",
+        "label": "Assumptions of Kinetic theory of Gases"
+      },
+      {
+        "slug": "the-gas-laws-boyle-charles-graham-and-dalton-law-of-partial-pressure-combined-gas-law",
+        "label": "The Gas Laws: Boyle, Charles, Graham and Dalton (law of partial pressure), combined gas law"
+      },
+      {
+        "slug": "molar-volume-and-atomicity-of-gases",
+        "label": "Molar volume and atomicity of gases"
+      },
+      {
+        "slug": "the-ideal-gas-equation-pv-nrt",
+        "label": "The ideal gas equation (PV = nRT)"
+      },
+      {
+        "slug": "the-relationship-between-vapour-density-of-gases-and-the-relative-molecular-mass",
+        "label": "The relationship between vapour density of gases and the relative molecular mass."
+      },
+      {
+        "slug": "atomic-structure-and-bonding",
+        "label": "Atomic Structure and Bonding"
+      },
+      {
+        "slug": "the-concept-of-atoms-molecules-and-ions-the-works-of-dalton-millikan-rutherford-moseley-thompson-and",
+        "label": "The concept of atoms, molecules and ions, the works of Dalton, Millikan, Rutherford, Moseley, Thompson and Bohr"
+      },
+      {
+        "slug": "atomic-structure-electron-configuration-atomic-number-mass-number-and-isotopes",
+        "label": "Atomic structure, electron configuration, atomic number, mass number and isotopes."
+      },
+      {
+        "slug": "shapes-of-s-and-p-orbitals",
+        "label": "Shapes of S and P orbitals"
+      },
+      {
+        "slug": "the-periodic-table-and-periodicity-of-elements",
+        "label": "The Periodic table and periodicity of elements"
+      },
+      {
+        "slug": "the-variation-of-the-following-properties-ionization-energy-ionic-radii-electron-affinity-and-electr",
+        "label": "The variation of the following properties: ionization energy, ionic radii, electron affinity and electronegativity"
+      },
+      {
+        "slug": "chemical-bonding",
+        "label": "Chemical bonding"
+      },
+      {
+        "slug": "van-der-waals-forces",
+        "label": "Van der Waals' forces."
+      },
+      {
+        "slug": "shapes-of-simple-molecules",
+        "label": "Shapes of simple molecules"
+      },
+      {
+        "slug": "nuclear-chemistry",
+        "label": "Nuclear Chemistry"
+      },
+      {
+        "slug": "radioactivity-types-and-properties-of-radiations",
+        "label": "Radioactivity - Types and properties of radiations"
+      },
+      {
+        "slug": "nuclear-reactions-natural-and-artificial-radioactivity-uses-and-application",
+        "label": "Nuclear Reactions - Natural and Artificial Radioactivity, uses and Application."
+      },
+      {
+        "slug": "air",
+        "label": "Air"
+      },
+      {
+        "slug": "the-natural-gaseous-constituents-and-their-proportion-in-the-air",
+        "label": "The natural gaseous constituents and their proportion in the air"
+      },
+      {
+        "slug": "air-as-a-mixture-and-some-uses-of-the-noble-gas",
+        "label": "Air as a mixture and some uses of the noble gas"
+      },
+      {
+        "slug": "water",
+        "label": "Water"
+      },
+      {
+        "slug": "water-as-a-product-of-the-combustion-of-hydrogen-and-its-composition-by-volume",
+        "label": "Water as a product of the combustion of hydrogen and its composition by volume"
+      },
+      {
+        "slug": "water-as-a-solvent",
+        "label": "Water as a solvent"
+      },
+      {
+        "slug": "hardness-of-water",
+        "label": "Hardness of water"
+      },
+      {
+        "slug": "treatment-of-water-for-town-supply",
+        "label": "Treatment of water for town supply."
+      },
+      {
+        "slug": "water-of-crystallization-efflorescence-deliquescence-and-hygroscopy",
+        "label": "Water of crystallization, efflorescence, deliquescence and hygroscopy"
+      },
+      {
+        "slug": "solubility",
+        "label": "Solubility"
+      },
+      {
+        "slug": "unsaturated-saturated-and-supersaturated-solutions",
+        "label": "Unsaturated, saturated and supersaturated solutions"
+      },
+      {
+        "slug": "definition-of-solubility-and-solubility-curves-and-simple-deductions",
+        "label": "Definition of Solubility and Solubility curves and simple deductions"
+      },
+      {
+        "slug": "solvents-for-fats-oil-and-paints",
+        "label": "Solvents for fats, oil and paints"
+      },
+      {
+        "slug": "false-solution-suspensions-and-colloids",
+        "label": "False solution (Suspensions and colloids)"
+      },
+      {
+        "slug": "simple-calculations-on-solubility",
+        "label": "Simple calculations on Solubility"
+      },
+      {
+        "slug": "environmental-pollution",
+        "label": "Environmental pollution"
+      },
+      {
+        "slug": "sources-and-effects-of-pollutants",
+        "label": "Sources and effects of pollutants"
+      },
+      {
+        "slug": "air-pollution",
+        "label": "Air pollution"
+      },
+      {
+        "slug": "water-pollution",
+        "label": "Water pollution"
+      },
+      {
+        "slug": "soil-pollution",
+        "label": "Soil pollution"
+      },
+      {
+        "slug": "acids-bases-and-salts-764439",
+        "label": "Acids, Bases and Salts"
+      },
+      {
+        "slug": "definition-general-characteristics-types-and-properties-of-acids-bases-and-salts",
+        "label": "Definition, General characteristics, types and properties of acids, bases and salts"
+      },
+      {
+        "slug": "acids-base-indicators-basicity-of-acids-and-preparation-of-salts",
+        "label": "Acids/base indicators, basicity of acids and preparation of salts"
+      },
+      {
+        "slug": "oxides-and-trioxocarbonate-iv-salts",
+        "label": "Oxides and trioxocarbonate (IV) salts"
+      },
+      {
+        "slug": "qualitative-comparison-of-the-conductances-of-molar-solutions-of-strong-and-weak-acids-and-bases",
+        "label": "Qualitative comparison of the conductances of molar solutions of strong and weak acids and bases"
+      },
+      {
+        "slug": "relationship-between-conductance-and-amount-of-ions-present-and-buffer-solutions",
+        "label": "Relationship between conductance and amount of ions present, and Buffer solutions"
+      },
+      {
+        "slug": "ph-and-poh-scale-simple-calculations",
+        "label": "pH and pOH scale; Simple calculations"
+      },
+      {
+        "slug": "acid-base-titrations",
+        "label": "Acid/base titrations."
+      },
+      {
+        "slug": "hydrolysis-of-salts",
+        "label": "Hydrolysis of salts"
+      },
+      {
+        "slug": "oxidation-and-reduction-redox-reactions",
+        "label": "Oxidation and Reduction (REDOX) Reactions"
+      },
+      {
+        "slug": "oxidation-in-terms-of-the-addition-of-oxygen-or-removal-of-hydrogen",
+        "label": "Oxidation in terms of the addition of oxygen or removal of hydrogen."
+      },
+      {
+        "slug": "reduction-as-removal-of-oxygen-or-addition-of-hydrogen",
+        "label": "Reduction as removal of oxygen or addition of hydrogen."
+      },
+      {
+        "slug": "oxidation-and-reduction-in-terms-of-electron-transfer",
+        "label": "Oxidation and reduction in terms of electron transfer"
+      },
+      {
+        "slug": "use-of-oxidation-numbers-in-defining-redox-reactions-and-balancing-simple-equations",
+        "label": "Use of oxidation numbers in defining REDOX reactions and balancing simple equations."
+      },
+      {
+        "slug": "iupac-nomenclature-of-inorganic-compounds-using-oxidation-number",
+        "label": "IUPAC nomenclature of inorganic compounds using oxidation number"
+      },
+      {
+        "slug": "tests-for-oxidizing-and-reducing-agents",
+        "label": "Tests for oxidizing and reducing agents"
+      },
+      {
+        "slug": "electrolysis",
+        "label": "Electrolysis"
+      },
+      {
+        "slug": "electrolytes-and-non-electrolytes-and-faradays-laws-of-electrolysis",
+        "label": "Electrolytes and non-electrolytes, and Faraday's laws of electrolysis"
+      },
+      {
+        "slug": "electrolysis-of-dilute-h2so4-aqueous-cuso4-cucl2-solution-dilute-and-concentrated-nacl-solutions-and",
+        "label": "Electrolysis of dilute H2SO4, aqueous CuSO4, CuCl2 solution, dilute and concentrated NaCl solutions and fused NaCl"
+      },
+      {
+        "slug": "factors-affecting-discharge-of-ions-at-the-electrodes",
+        "label": "Factors affecting discharge of ions at the electrodes"
+      },
+      {
+        "slug": "uses-of-electrolysis",
+        "label": "Uses of electrolysis"
+      },
+      {
+        "slug": "electrochemical-cells-redox-series",
+        "label": "Electrochemical cells: Redox series"
+      },
+      {
+        "slug": "half-cell-reactions-and-electrode-potentials",
+        "label": "Half-cell reactions and electrode potentials"
+      },
+      {
+        "slug": "calculations-on-electrolysis",
+        "label": "Calculations on electrolysis"
+      },
+      {
+        "slug": "corrosion-as-an-electrolytic-process",
+        "label": "Corrosion as an electrolytic process"
+      },
+      {
+        "slug": "energy-changes",
+        "label": "Energy changes"
+      },
+      {
+        "slug": "energy-changes-accompanying-physical-and-chemical-changes",
+        "label": "Energy changes accompanying physical and chemical changes"
+      },
+      {
+        "slug": "endothermic-and-exothermic-reactions",
+        "label": "Endothermic and exothermic reactions."
+      },
+      {
+        "slug": "entropy-as-an-order-disorder-phenomenon",
+        "label": "Entropy as an order-disorder phenomenon"
+      },
+      {
+        "slug": "spontaneity-of-reactions",
+        "label": "Spontaneity of reactions"
+      },
+      {
+        "slug": "rates-of-chemical-reaction",
+        "label": "Rates of Chemical reaction"
+      },
+      {
+        "slug": "meaning-of-the-rate-of-a-chemical-reaction",
+        "label": "Meaning of the rate of a chemical reaction."
+      },
+      {
+        "slug": "ways-of-measuring-the-rate-of-chemical-reaction",
+        "label": "Ways of measuring the rate of chemical reaction"
+      },
+      {
+        "slug": "factors-affecting-rates-of-reaction",
+        "label": "Factors affecting rates of reaction"
+      },
+      {
+        "slug": "arrhenius-law-and-collision-theory",
+        "label": "Arrhenius’ law and Collision theory"
+      },
+      {
+        "slug": "reaction-rate-curves",
+        "label": "Reaction rate curves"
+      },
+      {
+        "slug": "chemical-equilibrium",
+        "label": "Chemical equilibrium"
+      },
+      {
+        "slug": "definition-of-the-following-terminologies-systems-reactions-and-dynamic-equilibrium",
+        "label": "Definition of the following terminologies: systems, reactions and dynamic equilibrium."
+      },
+      {
+        "slug": "properties-of-a-system-in-equilibrium",
+        "label": "Properties of a system in equilibrium"
+      },
+      {
+        "slug": "factors-governing-the-equilibrium-position",
+        "label": "Factors governing the equilibrium position"
+      },
+      {
+        "slug": "le-chateliers-principle",
+        "label": "Le Chatelier’s principle"
+      },
+      {
+        "slug": "equilibrium-constant",
+        "label": "Equilibrium constant"
+      },
+      {
+        "slug": "non-metals-and-their-compounds",
+        "label": "Non-metals and their compounds"
+      },
+      {
+        "slug": "hydrogen-and-hydrides",
+        "label": "Hydrogen and Hydrides"
+      },
+      {
+        "slug": "halogens-chlorine-as-a-representative-element-of-the-halogen",
+        "label": "Halogens: Chlorine as a representative element of the halogen"
+      },
+      {
+        "slug": "oxygen-and-oxides",
+        "label": "Oxygen and Oxides"
+      },
+      {
+        "slug": "sulphur-and-its-compound",
+        "label": "Sulphur and its compound"
+      },
+      {
+        "slug": "nitrogen-and-its-compounds",
+        "label": "Nitrogen and its compounds"
+      },
+      {
+        "slug": "carbon-allotropes-uses-and-properties",
+        "label": "Carbon: Allotropes, Uses and properties."
+      },
+      {
+        "slug": "metals-and-their-compounds-499107",
+        "label": "Metals and their compounds"
+      },
+      {
+        "slug": "general-properties-of-metals",
+        "label": "General properties of metals"
+      },
+      {
+        "slug": "alkali-metals-eg-sodium",
+        "label": "Alkali metals e.g. sodium"
+      },
+      {
+        "slug": "alkaline-earth-metals",
+        "label": "Alkaline-earth metals"
+      },
+      {
+        "slug": "aluminium-and-its-compound",
+        "label": "Aluminium and its compound"
+      },
+      {
+        "slug": "tin-extraction-from-its-ores",
+        "label": "Tin Extraction from its ores"
+      },
+      {
+        "slug": "metals-of-the-first-transition-series",
+        "label": "Metals of the first transition series"
+      },
+      {
+        "slug": "iron-extraction-from-sulphide-and-oxide-ores",
+        "label": "Iron Extraction from sulphide and oxide ores"
+      },
+      {
+        "slug": "copper-extraction-from-sulphide-and-oxide-ores",
+        "label": "Copper Extraction from sulphide and oxide ores"
+      },
+      {
+        "slug": "alloy",
+        "label": "Alloy"
+      },
+      {
+        "slug": "organic-compounds",
+        "label": "Organic Compounds"
+      },
+      {
+        "slug": "introduction-to-the-tetravalency-of-carbon",
+        "label": "Introduction to the tetravalency of carbon"
+      },
+      {
+        "slug": "alkanes-homologous-series-in-relation-to-physical-properties",
+        "label": "Alkanes: Homologous series in relation to physical properties"
+      },
+      {
+        "slug": "alkenes-isomerism-structural-and-geometric-isomerism",
+        "label": "Alkenes: Isomerism (structural and geometric isomerism)"
+      },
+      {
+        "slug": "alkynes-ethyne",
+        "label": "Alkynes: Ethyne"
+      },
+      {
+        "slug": "aromatic-hydrocarbons-eg-benzene-structure-properties-and-uses",
+        "label": "Aromatic hydrocarbons e.g. benzene - structure, properties and uses"
+      },
+      {
+        "slug": "alkanols-primary-secondary-tertiary",
+        "label": "Alkanols: Primary, secondary, tertiary"
+      },
+      {
+        "slug": "alkanals-and-alkanones",
+        "label": "Alkanals and alkanones"
+      },
+      {
+        "slug": "alkanoic-acids",
+        "label": "Alkanoic acids"
+      },
+      {
+        "slug": "alkanoates",
+        "label": "Alkanoates"
+      },
+      {
+        "slug": "amines-alkanamines-primary-secondary-and-tertiary",
+        "label": "Amines (Alkanamines): Primary, Secondary, and tertiary"
+      },
+      {
+        "slug": "carbohydrates",
+        "label": "Carbohydrates"
+      },
+      {
+        "slug": "proteins-primary-structures-hydrolysis-and-tests",
+        "label": "Proteins: Primary structures, hydrolysis and tests"
+      },
+      {
+        "slug": "enzymes-and-their-functions",
+        "label": "Enzymes and their functions"
+      },
+      {
+        "slug": "polymers-natural-and-synthetic-rubber",
+        "label": "Polymers: Natural and synthetic rubber"
+      },
+      {
+        "slug": "industrial-chemistry-265608",
+        "label": "Industrial Chemistry"
+      },
+      {
+        "slug": "chemical-industries-types-raw-materials-and-relevances",
+        "label": "Chemical industries: Types, raw materials and relevances"
+      },
+      {
+        "slug": "economics-of-industrial-process",
+        "label": "Economics of Industrial process"
+      },
+      {
+        "slug": "importance-of-industrial-chemistry-in-nigeria",
+        "label": "Importance of industrial chemistry in Nigeria"
+      }
+    ]
+  },
+  "physics": {
+    "label": "Physics",
+    "topics": [
+      {
+        "slug": "heat-energy",
+        "label": "Heat Energy"
+      },
+      {
+        "slug": "thermodynamics",
+        "label": "Thermodynamics"
+      },
+      {
+        "slug": "wave",
+        "label": "Wave"
+      },
+      {
+        "slug": "field",
+        "label": "Field"
+      },
+      {
+        "slug": "light-and-optics",
+        "label": "Light and Optics"
+      },
+      {
+        "slug": "atomic-physics",
+        "label": "Atomic physics"
+      },
+      {
+        "slug": "concept-of-field",
+        "label": "Concept of Field"
+      },
+      {
+        "slug": "mechanics-1",
+        "label": "Mechanics"
+      },
+      {
+        "slug": "astrophysics-811593",
+        "label": "Astrophysics"
+      },
+      {
+        "slug": "satellite-and-rocket-1",
+        "label": "Satellite and Rocket"
+      },
+      {
+        "slug": "motion-force-circular-motion",
+        "label": "motion/force/circular motion"
+      },
+      {
+        "slug": "work-energy-power",
+        "label": "Work/Energy/Power"
+      },
+      {
+        "slug": "simple-machine",
+        "label": "Simple Machine"
+      },
+      {
+        "slug": "linear-motion",
+        "label": "Linear Motion"
+      },
+      {
+        "slug": "equilibrium-of-forces-1",
+        "label": "Equilibrium of Forces"
+      },
+      {
+        "slug": "projectile-motion",
+        "label": "Projectile Motion"
+      },
+      {
+        "slug": "equation-of-motion-motion-under-gravity",
+        "label": "Equation of Motion/Motion Under Gravity"
+      },
+      {
+        "slug": "momentum-impulse-newtons-law-of-motion",
+        "label": "Momentum/Impulse/Newton's Law of Motion"
+      },
+      {
+        "slug": "simple-harmonic-motion-1",
+        "label": "Simple Harmonic Motion"
+      },
+      {
+        "slug": "friction",
+        "label": "Friction"
+      },
+      {
+        "slug": "simple-structure-of-matter",
+        "label": "Simple Structure of Matter"
+      },
+      {
+        "slug": "density-and-relative-density",
+        "label": "Density and Relative Density"
+      },
+      {
+        "slug": "deformation-of-solids",
+        "label": "Deformation of Solids"
+      },
+      {
+        "slug": "scalars-and-vectors",
+        "label": "Scalars and Vectors"
+      },
+      {
+        "slug": "heat-and-temperature",
+        "label": "Heat and Temperature"
+      },
+      {
+        "slug": "heat-transfer",
+        "label": "Heat Transfer"
+      },
+      {
+        "slug": "heat-energy-1",
+        "label": "Heat Energy"
+      },
+      {
+        "slug": "evaporation-and-boiling",
+        "label": "Evaporation and Boiling"
+      },
+      {
+        "slug": "description-of-field",
+        "label": "Description of Field"
+      },
+      {
+        "slug": "gravitational-field-1",
+        "label": "Gravitational Field"
+      },
+      {
+        "slug": "electric-field-1",
+        "label": "Electric Field 1"
+      },
+      {
+        "slug": "magnetic-field-1",
+        "label": "Magnetic Field"
+      },
+      {
+        "slug": "electromagnetic-field-1",
+        "label": "Electromagnetic Field"
+      },
+      {
+        "slug": "electric-field-2",
+        "label": "Electric Field 2"
+      },
+      {
+        "slug": "current-electricity-1",
+        "label": "Current Electricity"
+      },
+      {
+        "slug": "energy-and-power",
+        "label": "Energy and Power"
+      },
+      {
+        "slug": "simple-ac-circuit",
+        "label": "Simple A.C Circuit"
+      },
+      {
+        "slug": "structure-of-the-atom",
+        "label": "Structure of The Atom"
+      },
+      {
+        "slug": "laser",
+        "label": "Laser"
+      },
+      {
+        "slug": "semi-conductor",
+        "label": "Semi Conductor"
+      },
+      {
+        "slug": "structure-of-the-nucleus",
+        "label": "Structure of The Nucleus"
+      },
+      {
+        "slug": "wave-particle-paradox",
+        "label": "Wave Particle Paradox"
+      },
+      {
+        "slug": "reflection-of-light",
+        "label": "Reflection of Light"
+      },
+      {
+        "slug": "refraction-of-light",
+        "label": "Refraction of Light"
+      },
+      {
+        "slug": "waves-1",
+        "label": "Waves"
+      },
+      {
+        "slug": "sound-wave",
+        "label": "Sound Wave"
+      },
+      {
+        "slug": "vibration-in-springs-and-pipes",
+        "label": "Vibration in Springs and Pipes"
+      },
+      {
+        "slug": "application-of-lens",
+        "label": "Application of Lens"
+      },
+      {
+        "slug": "fundamental-and-derived-quantities-1",
+        "label": "Fundamental and Derived Quantities"
+      },
+      {
+        "slug": "measurement",
+        "label": "Measurement"
+      },
+      {
+        "slug": "electrical-conduction-through-liquids-and-gases-1",
+        "label": "Electrical  Conduction Through Liquids And Gases."
+      }
+    ]
+  },
+  "biology": {
+    "label": "Biology",
+    "topics": [
+      {
+        "slug": "science-of-living-things",
+        "label": "Science of Living Things"
+      },
+      {
+        "slug": "classification-or-organisation-of-life",
+        "label": "Classification or Organisation of Life"
+      },
+      {
+        "slug": "cell-1-living-unit-structure",
+        "label": "Cell 1 : Living Unit - Structure"
+      },
+      {
+        "slug": "cell-2-properties-and-functions",
+        "label": "Cell 2 : Properties and Functions"
+      },
+      {
+        "slug": "basic-ecological-concepts",
+        "label": "Basic Ecological Concepts"
+      },
+      {
+        "slug": "functioning-ecosystem",
+        "label": "Functioning Ecosystem"
+      },
+      {
+        "slug": "ecological-management",
+        "label": "Ecological Management"
+      },
+      {
+        "slug": "ecology-of-population",
+        "label": "Ecology of Population"
+      },
+      {
+        "slug": "aquatic-and-terrestrial-habitat",
+        "label": "Aquatic and Terrestrial Habitat"
+      },
+      {
+        "slug": "introduction-to-micro-organisms",
+        "label": "Introduction to Micro-Organisms"
+      },
+      {
+        "slug": "micro-organisms-and-health",
+        "label": "Micro-Organisms and Health"
+      },
+      {
+        "slug": "nutrition-photosynthesis-food-substances",
+        "label": "Nutrition / Photosynthesis / Food substances"
+      },
+      {
+        "slug": "feeding-mechanism-digestive-system",
+        "label": "Feeding Mechanism / Digestive System"
+      },
+      {
+        "slug": "transport-system-and-mechanism",
+        "label": "Transport System and Mechanism"
+      },
+      {
+        "slug": "gaseous-exchange-respiratory-system",
+        "label": "Gaseous Exchange / Respiratory System"
+      },
+      {
+        "slug": "sexual-reproduction-system-behaviours",
+        "label": "Sexual Reproduction: System / Behaviours"
+      },
+      {
+        "slug": "development-of-new-organisms-fruits",
+        "label": "Development of New Organisms / Fruits"
+      },
+      {
+        "slug": "regulation-of-the-internal-environment",
+        "label": "Regulation of the Internal Environment"
+      },
+      {
+        "slug": "nervous-coordination",
+        "label": "Nervous Coordination"
+      },
+      {
+        "slug": "sensory-receptors-and-organs",
+        "label": "Sensory Receptors and Organs"
+      },
+      {
+        "slug": "variations-adaptation-for-survival-evolution",
+        "label": "Variations / Adaptation for Survival / Evolution"
+      },
+      {
+        "slug": "genetics-the-science-of-heredity",
+        "label": "Genetics: The Science of Heredity"
+      },
+      {
+        "slug": "excretory-systems-and-mechanisms",
+        "label": "Excretory Systems and Mechanisms"
+      },
+      {
+        "slug": "supporting-systems-and-mechanisms",
+        "label": "Supporting systems and Mechanisms"
+      },
+      {
+        "slug": "cell-tissue-organ-system-living-organism",
+        "label": "cell/tissue/organ/system/living organism"
+      }
+    ]
+  },
+  "geography": {
+    "label": "Geography",
+    "topics": []
+  },
+  "literature-in-english": {
+    "label": "Literature in English",
+    "topics": [
+      {
+        "slug": "general-knowledge-of-literature",
+        "label": "General Knowledge of Literature"
+      },
+      {
+        "slug": "introduction-to-literature-definition-history-genres",
+        "label": "Introduction to Literature - Definition, History, Genres"
+      },
+      {
+        "slug": "introduction-to-prose-definition-characteristics-fiction-vs-non-fiction",
+        "label": "Introduction to Prose - Definition, Characteristics, Fiction vs. Non-Fiction"
+      },
+      {
+        "slug": "elements-of-prose-plot-settings-conflict-character-characterisation-etc",
+        "label": "Elements of Prose - Plot, Settings, Conflict, Character, Characterisation, etc."
+      },
+      {
+        "slug": "introduction-to-poetry-definition-characteristics-elements",
+        "label": "Introduction to Poetry - Definition, Characteristics, Elements"
+      },
+      {
+        "slug": "kinds-of-poetry-narrative-lyric-ode-epic-etc",
+        "label": "Kinds of Poetry - Narrative, Lyric, Ode, Epic, etc."
+      },
+      {
+        "slug": "introduction-to-drama-definition-characteristics-forms-comedy-tragedy-etc",
+        "label": "Introduction to Drama - Definition, Characteristics, Forms (Comedy, Tragedy, etc)"
+      },
+      {
+        "slug": "elements-of-drama-plot-settings-action-dialogue-themes-etc",
+        "label": "Elements of Drama - Plot, Settings, Action, Dialogue, Themes, etc."
+      },
+      {
+        "slug": "literary-terms-devices-i-figures-of-speech-simile-metaphor-personification-etc",
+        "label": "Literary Terms/ Devices I - Figures of Speech (Simile, Metaphor, Personification, etc.)"
+      },
+      {
+        "slug": "literary-terms-devices-ii-sound-devices-alliteration-assonance-etc",
+        "label": "Literary Terms/ Devices II - Sound Devices (Alliteration, Assonance, etc.)"
+      },
+      {
+        "slug": "literary-terms-devices-iii-allegory-fable-parable-etc",
+        "label": "Literary Terms/ Devices III - Allegory, Fable, Parable, etc."
+      },
+      {
+        "slug": "literary-appreciation-unseen-literature",
+        "label": "Literary Appreciation: Unseen Literature"
+      },
+      {
+        "slug": "how-to-answer-unseen-prose",
+        "label": "How to Answer Unseen Prose"
+      },
+      {
+        "slug": "how-to-answer-unseen-poetry",
+        "label": "How to Answer Unseen Poetry"
+      },
+      {
+        "slug": "shakespearean-drama",
+        "label": "Shakespearean Drama"
+      },
+      {
+        "slug": "introduction-to-shakespearean-drama-how-to-read-answer-shakespearean-drama-questions",
+        "label": "Introduction to Shakespearean Drama - How to Read & Answer Shakespearean Drama Questions"
+      },
+      {
+        "slug": "introduction-to-antony-cleopatra-background-plot-summary-act-one",
+        "label": "Introduction to Antony & Cleopatra - Background, Plot Summary, Act One"
+      },
+      {
+        "slug": "introduction-to-antony-cleopatra-acts-two-three",
+        "label": "Introduction to Antony & Cleopatra - Acts Two & Three"
+      },
+      {
+        "slug": "introduction-to-antony-cleopatra-acts-four-five",
+        "label": "Introduction to Antony & Cleopatra - Acts Four & Five"
+      },
+      {
+        "slug": "answering-antony-cleopatra-questions",
+        "label": "Answering Antony & Cleopatra Questions"
+      },
+      {
+        "slug": "african-prose-pede-hollists-so-the-path-does-not-die",
+        "label": "African Prose: Pede Hollist's So the Path Does Not Die"
+      },
+      {
+        "slug": "introduction-to-pede-hollists-so-the-path-does-not-die-background-plot-settings-the-prologue",
+        "label": "Introduction to Pede Hollist's So the Path Does Not Die - Background, Plot, Settings, The Prologue"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-1-2",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 1 & 2"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-3-4",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 3 & 4"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-5-6",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 5 & 6"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-7-8",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 7 & 8"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-9-10",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 9 & 10"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-11-12",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 11 & 12"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-13-14",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 13 & 14"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-15-16",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 15 & 16"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-17-18",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 17 & 18"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-19-20",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 19 & 20"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-21-22",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 21 & 22"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-chapters-23-24",
+        "label": "Pede Hollist's So the Path Does Not Die - Chapters 23 & 24"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-epilogue-themes",
+        "label": "Pede Hollist's So the Path Does Not Die - Epilogue & Themes"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-characters-characterisation",
+        "label": "Pede Hollist's So the Path Does Not Die - Characters & Characterisation"
+      },
+      {
+        "slug": "pede-hollists-so-the-path-does-not-die-language-style",
+        "label": "Pede Hollist's So the Path Does Not Die - Language & Style"
+      },
+      {
+        "slug": "african-prose-elma-shaws-redemption-road",
+        "label": "African Prose: Elma Shaw's Redemption Road"
+      },
+      {
+        "slug": "introduction-to-elma-shaws-redemption-road-background-plot-settings-chapter-1",
+        "label": "Introduction to Elma Shaw's Redemption Road - Background, Plot, Settings, Chapter 1"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-2-3",
+        "label": "Elma Shaw's Redemption Road - Chapters 2 & 3"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-4-5",
+        "label": "Elma Shaw's Redemption Road - Chapters 4 & 5"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-6-7",
+        "label": "Elma Shaw's Redemption Road - Chapters 6 & 7"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-8-9",
+        "label": "Elma Shaw's Redemption Road - Chapters 8 & 9"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-10-11",
+        "label": "Elma Shaw's Redemption Road - Chapters 10 & 11"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-12-13",
+        "label": "Elma Shaw's Redemption Road - Chapters 12 & 13"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-14-15",
+        "label": "Elma Shaw's Redemption Road - Chapters 14 & 15"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-16-17",
+        "label": "Elma Shaw's Redemption Road - Chapters 16 & 17"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-chapters-18-themes",
+        "label": "Elma Shaw's Redemption Road - Chapters 18 & Themes"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-characters-characterisation",
+        "label": "Elma Shaw's Redemption Road - Characters & Characterisation"
+      },
+      {
+        "slug": "elma-shaws-redemption-road-language-style",
+        "label": "Elma Shaw's Redemption Road - Language & Style"
+      },
+      {
+        "slug": "non-african-prose-harper-lees-to-kill-a-mockingbird",
+        "label": "Non-African Prose: Harper Lee's To Kill a Mockingbird"
+      },
+      {
+        "slug": "introduction-to-harper-lees-to-kill-a-mockingbird-background-plot-settings-chapter-1",
+        "label": "Introduction to Harper Lee's To Kill a Mockingbird - Background, Plot, Settings, Chapter 1"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-2-3",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 2 & 3"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-4-5",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 4 & 5"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-6-7",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 6 & 7"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-8-9",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 8 & 9"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-10-11",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 10 & 11"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-12-13",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 12 & 13"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-14-15",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 14 & 15"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-16-17",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 16 & 17"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-18-19",
+        "label": "Harper Lee's To Kill a Mockingbird - Chapters 18 & 19"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-20-21",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 20 & 21"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-22-23",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 22 & 23"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-24-25",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 24 & 25"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-26-27",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 26 & 27"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-28-29",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 28 & 29"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-chapters-30-31",
+        "label": "Harper Lee’s To Kill a Mockingbird - Chapters 30 & 31"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-themes",
+        "label": "Harper Lee’s To Kill a Mockingbird - Themes"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-characters-characterisation",
+        "label": "Harper Lee’s To Kill a Mockingbird - Characters & Characterisation"
+      },
+      {
+        "slug": "harper-lees-to-kill-a-mockingbird-language-style",
+        "label": "Harper Lee’s To Kill a Mockingbird - Language & Style"
+      },
+      {
+        "slug": "non-african-prose-susanne-bellefeuilles-path-of-lucas-the-journey-he-endured",
+        "label": "Non-African Prose: Susanne Bellefeuille's Path of Lucas: The Journey He Endured"
+      },
+      {
+        "slug": "introduction-to-susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-background-plot-settings-",
+        "label": "Introduction to Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Background, Plot, Settings, Chapter 1"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-2-3",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 2 & 3"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-4-5",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 4 & 5"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-6-7",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 6 & 7"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-8-9",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 8 & 9"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-10-11",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 10 & 11"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-12-13",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 12 & 13"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-14-15",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 14 & 15"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-16-17",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 16 & 17"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-18-19",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 18 & 19"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-20-21",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 20 & 21"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-22-23",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 22 & 23"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-24-25",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 24 & 25"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-26-27",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 26 & 27"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-28-29",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 28 & 29"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-30-31",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 30 & 31"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-32-33",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 32 & 33"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-chapters-34-35",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Chapters 34 & 35"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-themes",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Themes"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-themes-1",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Themes"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-characters-characterisation",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Characters & Characterisation"
+      },
+      {
+        "slug": "susanne-bellefeuilles-path-of-lucas-the-journey-he-endured-language-style",
+        "label": "Susanne Bellefeuille's Path of Lucas: The Journey He Endured - Language & Style"
+      },
+      {
+        "slug": "african-poetry",
+        "label": "African Poetry"
+      },
+      {
+        "slug": "gabriel-okaras-once-upon-a-time",
+        "label": "Gabriel Okara's \"Once Upon a Time\""
+      },
+      {
+        "slug": "elizabeth-kamaras-new-tongue",
+        "label": "Elizabeth Kamara's \"New Tongue\""
+      },
+      {
+        "slug": "wole-soyinkas-night",
+        "label": "Wole Soyinka's \"Night\""
+      },
+      {
+        "slug": "niyi-osundares-not-my-business",
+        "label": "Niyi Osundare's \"Not My Business\""
+      },
+      {
+        "slug": "soh-afriyie-vidzas-hearty-garlands",
+        "label": "S.O.H. Afriyie-Vidza's \"Hearty Garlands\""
+      },
+      {
+        "slug": "syl-cheney-cokers-the-breasts-of-the-sea",
+        "label": "Syl Cheney Coker's \"The Breasts of the Sea\""
+      },
+      {
+        "slug": "non-african-poetry",
+        "label": "Non-African Poetry"
+      },
+      {
+        "slug": "lord-byrons-she-walks-in-beauty",
+        "label": "Lord Byron's \"She Walks in Beauty\""
+      },
+      {
+        "slug": "wilfred-wilson-gipsons-the-stone",
+        "label": "Wilfred Wilson Gipson's \"The Stone\""
+      },
+      {
+        "slug": "geoffrey-chaucers-the-nuns-priests-tale",
+        "label": "Geoffrey Chaucer's \"The Nun's Priest's Tale\""
+      },
+      {
+        "slug": "seamus-heaneys-the-digging",
+        "label": "Seamus Heaney's \"The Digging\""
+      },
+      {
+        "slug": "maya-angelous-still-i-rise",
+        "label": "Maya Angelou's \"Still I Rise\""
+      },
+      {
+        "slug": "fleur-adcocks-the-telephone-call",
+        "label": "Fleur Adcock's \"The Telephone Call\""
+      },
+      {
+        "slug": "african-drama-bosede-ademilua-afolayans-once-upon-an-elephant",
+        "label": "African Drama: Bosede Ademilua-Afolayan's Once Upon an Elephant"
+      },
+      {
+        "slug": "introduction-to-bosede-ademilua-afolayans-once-upon-an-elephant-background-plot-settings-scene-1",
+        "label": "Introduction to Bosede Ademilua-Afolayan's Once Upon an Elephant - Background, Plot, Settings, Scene 1"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-2-3",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 2 & 3"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-4-5",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 4 & 5"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-6-7",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 6 & 7"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-8-9",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 8 & 9"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-10-11",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 10 & 11"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-scenes-12-13",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Scenes 12 & 13"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-characters-characterisation-1",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Characters & Characterisation"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-characters-characterisation",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Characters & Characterisation"
+      },
+      {
+        "slug": "bosede-ademilua-afolayans-once-upon-an-elephant-language-style",
+        "label": "Bosede Ademilua-Afolayan's Once Upon an Elephant - Language & Style"
+      },
+      {
+        "slug": "african-drama-efua-sutherlands-the-marriage-of-anansewa",
+        "label": "African Drama: Efua Sutherland's The Marriage of Anansewa"
+      },
+      {
+        "slug": "introduction-to-efua-sutherlands-the-marriage-of-anansewa-background-plot-settings-act-one",
+        "label": "Introduction to Efua Sutherland's The Marriage of Anansewa - Background, Plot, Settings, Act One"
+      },
+      {
+        "slug": "efua-sutherlands-the-marriage-of-anansewa-acts-two-three",
+        "label": "Efua Sutherland's The Marriage of Anansewa - Acts Two & Three"
+      },
+      {
+        "slug": "efua-sutherlands-the-marriage-of-anansewa-act-four-themes",
+        "label": "Efua Sutherland's The Marriage of Anansewa - Act Four & Themes"
+      },
+      {
+        "slug": "efua-sutherlands-the-marriage-of-anansewa-characters-characterisation",
+        "label": "Efua Sutherland's The Marriage of Anansewa - Characters & Characterisation"
+      },
+      {
+        "slug": "efua-sutherlands-the-marriage-of-anansewa-language-style",
+        "label": "Efua Sutherland's The Marriage of Anansewa - Language & Style"
+      },
+      {
+        "slug": "non-african-drama-jb-priestleys-an-inspector-calls",
+        "label": "Non-African Drama: J.B. Priestley's An Inspector Calls"
+      },
+      {
+        "slug": "introduction-to-jb-priestleys-an-inspector-calls-background-plot-settings-act-one",
+        "label": "Introduction to J.B. Priestley's An Inspector Calls - Background, Plot, Settings, Act One"
+      },
+      {
+        "slug": "jb-priestleys-an-inspector-calls-acts-two-three",
+        "label": "J.B. Priestley's An Inspector Calls - Acts Two & Three"
+      },
+      {
+        "slug": "jb-priestleys-an-inspector-calls-themes",
+        "label": "J.B. Priestley's An Inspector Calls - Themes"
+      },
+      {
+        "slug": "jb-priestleys-an-inspector-calls-characters-characterisation",
+        "label": "J.B. Priestley's An Inspector Calls - Characters & Characterisation"
+      },
+      {
+        "slug": "jb-priestleys-an-inspector-calls-language-style",
+        "label": "J.B. Priestley's An Inspector Calls - Language & Style"
+      },
+      {
+        "slug": "non-african-drama-robert-bolts-a-man-for-all-seasons",
+        "label": "Non-African Drama: Robert Bolt's A Man for all Seasons"
+      },
+      {
+        "slug": "introduction-to-robert-bolts-a-man-for-all-seasons-background-settings-plots-historical-relevance",
+        "label": "Introduction to Robert Bolt's A Man for all Seasons - Background, Settings, Plots, Historical Relevance"
+      },
+      {
+        "slug": "robert-bolts-a-man-for-all-seasons-act-one",
+        "label": "Robert Bolt's A Man for all Seasons - Act One"
+      },
+      {
+        "slug": "robert-bolts-a-man-for-all-seasons-act-two",
+        "label": "Robert Bolt's A Man for all Seasons - Act Two"
+      },
+      {
+        "slug": "robert-bolts-a-man-for-all-seasons-themes",
+        "label": "Robert Bolt's A Man for all Seasons - Themes"
+      },
+      {
+        "slug": "robert-bolts-a-man-for-all-seasons-characters-characterisation",
+        "label": "Robert Bolt's A Man for all Seasons - Characters & Characterisation"
+      },
+      {
+        "slug": "robert-bolts-a-man-for-all-seasons-language-style",
+        "label": "Robert Bolt's A Man for all Seasons - Language & Style"
+      }
+    ]
+  },
+  "economics": {
+    "label": "Economics",
+    "topics": []
+  },
+  "commerce": {
+    "label": "Commerce",
+    "topics": [
+      {
+        "slug": "introduction-to-commerce",
+        "label": "Introduction to Commerce"
+      },
+      {
+        "slug": "meaning-scope-characteristics-and-functions-of-commerce",
+        "label": "Meaning, scope, characteristics and functions of Commerce"
+      },
+      {
+        "slug": "history-of-commerce",
+        "label": "History of Commerce"
+      },
+      {
+        "slug": "relationship-of-commerce-with-other-areas-of-production",
+        "label": "Relationship of Commerce with other areas of production"
+      },
+      {
+        "slug": "importance-of-commerce-in-the-economy",
+        "label": "Importance of Commerce in the economy"
+      },
+      {
+        "slug": "occupations",
+        "label": "Occupations"
+      },
+      {
+        "slug": "meaning-and-importance",
+        "label": "Meaning and Importance"
+      },
+      {
+        "slug": "types-of-occupations-industrial-commercial-direct-and-indirect-services",
+        "label": "Types of occupations: Industrial, commercial, direct and indirect services"
+      },
+      {
+        "slug": "factors-influencing-choice-of-occupation",
+        "label": "Factors influencing choice of occupation"
+      },
+      {
+        "slug": "production",
+        "label": "Production"
+      },
+      {
+        "slug": "meaning-and-types-primary-secondary-tertiary",
+        "label": "Meaning and types: Primary, secondary, tertiary"
+      },
+      {
+        "slug": "factors-of-production-characteristics-rewards",
+        "label": "Factors of production, characteristics & rewards"
+      },
+      {
+        "slug": "division-of-labour-and-specialization",
+        "label": "Division of labour and specialization"
+      },
+      {
+        "slug": "inter-relationship-between-production-and-exchange",
+        "label": "Inter-relationship between production and exchange"
+      },
+      {
+        "slug": "business-units",
+        "label": "Business Units"
+      },
+      {
+        "slug": "meaning-and-objectives-of-business",
+        "label": "Meaning and objectives of business"
+      },
+      {
+        "slug": "forms-sole-proprietorship-partnership-limited-liability-companies-public-enterprises-cooperative-soc",
+        "label": "Forms: Sole proprietorship, Partnership, Limited liability companies, Public enterprises, Cooperative societies"
+      },
+      {
+        "slug": "characteristics-formation-advantages-and-disadvantages",
+        "label": "Characteristics, formation, advantages and disadvantages"
+      },
+      {
+        "slug": "business-mergers",
+        "label": "Business mergers"
+      },
+      {
+        "slug": "choice-of-business-units",
+        "label": "Choice of business units"
+      },
+      {
+        "slug": "dissolution-and-liquidation",
+        "label": "Dissolution and liquidation"
+      },
+      {
+        "slug": "business-capital-and-finance",
+        "label": "Business Capital and Finance"
+      },
+      {
+        "slug": "meaning-and-types-of-capital",
+        "label": "Meaning and types of capital"
+      },
+      {
+        "slug": "working-capital-profit-and-turnover-calculations",
+        "label": "Working capital, profit and turnover calculations"
+      },
+      {
+        "slug": "sources-of-finance",
+        "label": "Sources of finance"
+      },
+      {
+        "slug": "problems-of-sourcing-finance",
+        "label": "Problems of sourcing finance"
+      },
+      {
+        "slug": "role-of-bureau-de-change",
+        "label": "Role of Bureau de Change"
+      },
+      {
+        "slug": "trade-associations-and-economic-groups",
+        "label": "Trade Associations and Economic Groups"
+      },
+      {
+        "slug": "trade-and-manufacturer-associations",
+        "label": "Trade and manufacturer associations"
+      },
+      {
+        "slug": "chambers-of-commerce",
+        "label": "Chambers of Commerce"
+      },
+      {
+        "slug": "employers-consumers-and-manufacturers-associations",
+        "label": "Employers’, Consumers’ and Manufacturers’ associations"
+      },
+      {
+        "slug": "economic-groups-ecowas-imf-ibrd-unctad-etc",
+        "label": "Economic groups: ECOWAS, IMF, IBRD, UNCTAD, etc."
+      },
+      {
+        "slug": "trade-home-trade",
+        "label": "Trade - Home Trade"
+      },
+      {
+        "slug": "retail-trade-types-functions-advantages-and-disadvantages-trends",
+        "label": "Retail trade: Types, functions, advantages and disadvantages, trends"
+      },
+      {
+        "slug": "wholesale-trade-types-functions",
+        "label": "Wholesale trade: Types, functions"
+      },
+      {
+        "slug": "warehousing-types-functions",
+        "label": "Warehousing: Types, functions"
+      },
+      {
+        "slug": "channels-of-distribution",
+        "label": "Channels of distribution"
+      },
+      {
+        "slug": "trade-foreign-trade",
+        "label": "Trade - Foreign Trade"
+      },
+      {
+        "slug": "balance-of-trade-payment-terms-of-trade",
+        "label": "Balance of trade/payment, terms of trade"
+      },
+      {
+        "slug": "export-import-and-entrepot-procedures-and-documents",
+        "label": "Export, import and entrepôt procedures and documents"
+      },
+      {
+        "slug": "barriers-to-international-trade",
+        "label": "Barriers to international trade"
+      },
+      {
+        "slug": "roles-of-customs-excise-ports-authority",
+        "label": "Roles of Customs, Excise, Ports Authority"
+      },
+      {
+        "slug": "purchase-and-sale-of-goods",
+        "label": "Purchase and Sale of Goods"
+      },
+      {
+        "slug": "documents-enquiry-quotation-invoice-bill-of-lading-etc",
+        "label": "Documents: Enquiry, quotation, invoice, bill of lading, etc."
+      },
+      {
+        "slug": "terms-of-trade-discounts-cod-cif-fob",
+        "label": "Terms of trade: Discounts, C.O.D., C.I.F., F.O.B."
+      },
+      {
+        "slug": "means-and-terms-of-payment",
+        "label": "Means and terms of payment"
+      },
+      {
+        "slug": "aids-to-trade",
+        "label": "Aids to Trade"
+      },
+      {
+        "slug": "advertising",
+        "label": "Advertising"
+      },
+      {
+        "slug": "banking",
+        "label": "Banking"
+      },
+      {
+        "slug": "insurance",
+        "label": "Insurance"
+      },
+      {
+        "slug": "transportation",
+        "label": "Transportation"
+      },
+      {
+        "slug": "communication",
+        "label": "Communication"
+      },
+      {
+        "slug": "tourism",
+        "label": "Tourism"
+      },
+      {
+        "slug": "finance-and-financial-institutions",
+        "label": "Finance and Financial Institutions"
+      },
+      {
+        "slug": "money",
+        "label": "Money"
+      },
+      {
+        "slug": "credit",
+        "label": "Credit"
+      },
+      {
+        "slug": "credit-unions-and-thrift-societies",
+        "label": "Credit unions and thrift societies"
+      },
+      {
+        "slug": "stock-exchange",
+        "label": "Stock Exchange"
+      },
+      {
+        "slug": "marketing",
+        "label": "Marketing"
+      },
+      {
+        "slug": "meaning-importance-and-functions",
+        "label": "Meaning, importance and functions"
+      },
+      {
+        "slug": "marketing-concept-and-mix",
+        "label": "Marketing concept and mix"
+      },
+      {
+        "slug": "market-segmentation",
+        "label": "Market segmentation"
+      },
+      {
+        "slug": "public-relations-customer-service",
+        "label": "Public relations, customer service"
+      },
+      {
+        "slug": "sales-promotion",
+        "label": "Sales promotion"
+      },
+      {
+        "slug": "personal-selling",
+        "label": "Personal selling"
+      },
+      {
+        "slug": "legal-aspects-of-business",
+        "label": "Legal Aspects of Business"
+      },
+      {
+        "slug": "simple-contract",
+        "label": "Simple contract"
+      },
+      {
+        "slug": "agency-sale-of-goods-act-hire-purchase-act",
+        "label": "Agency, Sale of Goods Act, Hire Purchase Act"
+      },
+      {
+        "slug": "employer-employee-rights",
+        "label": "Employer/employee rights"
+      },
+      {
+        "slug": "government-regulations",
+        "label": "Government regulations"
+      },
+      {
+        "slug": "consumer-protection",
+        "label": "Consumer protection"
+      },
+      {
+        "slug": "ict-in-commerce",
+        "label": "ICT in Commerce"
+      },
+      {
+        "slug": "computer-applications",
+        "label": "Computer applications"
+      },
+      {
+        "slug": "ict-terms",
+        "label": "ICT terms"
+      },
+      {
+        "slug": "e-commerce-e-banking-e-business",
+        "label": "E-commerce, E-banking, E-business"
+      },
+      {
+        "slug": "business-environment-and-social-responsibility",
+        "label": "Business Environment and Social Responsibility"
+      },
+      {
+        "slug": "types-of-environment",
+        "label": "Types of environment"
+      },
+      {
+        "slug": "safe-products-and-pollution",
+        "label": "Safe products and pollution"
+      },
+      {
+        "slug": "corporate-social-responsibility",
+        "label": "Corporate social responsibility"
+      },
+      {
+        "slug": "nationalisation-indigenisation-and-divestiture",
+        "label": "Nationalisation, Indigenisation and Divestiture"
+      },
+      {
+        "slug": "meaning-aims-advantages-disadvantages",
+        "label": "Meaning, aims, advantages, disadvantages"
+      }
+    ]
+  },
+  "accounts-principles-of-accounts": {
+    "label": "Accounts - Principles of Accounts",
+    "topics": []
+  },
+  "government": {
+    "label": "Government",
+    "topics": [
+      {
+        "slug": "basic-elements-in-government-1",
+        "label": "Basic Elements in Government"
+      },
+      {
+        "slug": "introduction-to-government-basic-concepts",
+        "label": "Introduction to Government - Basic Concepts"
+      },
+      {
+        "slug": "forms-of-government",
+        "label": "Forms of Government"
+      },
+      {
+        "slug": "the-workings-of-government-i-organs-systems",
+        "label": "The Workings of Government I - Organs & Systems"
+      },
+      {
+        "slug": "the-workings-of-government-ii-unitary-federal-confederal-structures",
+        "label": "The Workings of Government II - Unitary, Federal & Confederal Structures"
+      },
+      {
+        "slug": "basic-principles-of-government",
+        "label": "Basic Principles of Government"
+      },
+      {
+        "slug": "political-ideologies",
+        "label": "Political Ideologies"
+      },
+      {
+        "slug": "constitution",
+        "label": "Constitution"
+      },
+      {
+        "slug": "principles-of-a-democratic-government",
+        "label": "Principles of a Democratic Government"
+      },
+      {
+        "slug": "processes-of-legislation",
+        "label": "Processes of Legislation"
+      },
+      {
+        "slug": "day-to-day-operation-and-public-administration",
+        "label": "Day-to-Day Operation and Public Administration"
+      },
+      {
+        "slug": "citizenship",
+        "label": "Citizenship"
+      },
+      {
+        "slug": "political-parties-party-systems",
+        "label": "Political Parties & Party Systems"
+      },
+      {
+        "slug": "franchise-elections-the-electoral-system",
+        "label": "Franchise, Elections & The Electoral System"
+      },
+      {
+        "slug": "public-opinion-the-mass-media",
+        "label": "Public Opinion & The Mass Media"
+      },
+      {
+        "slug": "pressure-groups",
+        "label": "Pressure Groups"
+      },
+      {
+        "slug": "the-civil-service",
+        "label": "The Civil Service"
+      },
+      {
+        "slug": "public-corporations",
+        "label": "Public Corporations"
+      },
+      {
+        "slug": "local-government",
+        "label": "Local Government"
+      },
+      {
+        "slug": "political-and-constitutional-development-in-nigeria",
+        "label": "Political and Constitutional Development in Nigeria"
+      },
+      {
+        "slug": "pre-colonial-administration-in-nigeria",
+        "label": "Pre-Colonial Administration in Nigeria"
+      },
+      {
+        "slug": "colonial-administration-i-british-colonial-administration-1",
+        "label": "Colonial Administration I - British Colonial Administration"
+      },
+      {
+        "slug": "colonial-administration-ii-french-colonial-administration",
+        "label": "Colonial Administration II - French Colonial Administration"
+      },
+      {
+        "slug": "colonial-administration-iii-putting-it-all-together",
+        "label": "Colonial Administration III - Putting it all together..."
+      },
+      {
+        "slug": "the-process-of-decolonisation-nationalism",
+        "label": "The Process of Decolonisation - Nationalism"
+      },
+      {
+        "slug": "constitutional-development-in-nigeria-i-pre-independence",
+        "label": "Constitutional Development in Nigeria I - Pre-Independence"
+      },
+      {
+        "slug": "constitutional-development-in-nigeria-ii-independence-post-independence",
+        "label": "Constitutional Development in Nigeria II - Independence & Post-Independence"
+      },
+      {
+        "slug": "military-rule-in-nigeria",
+        "label": "Military Rule in Nigeria"
+      },
+      {
+        "slug": "nigerian-federalism",
+        "label": "Nigerian Federalism"
+      },
+      {
+        "slug": "institutions-of-government-in-post-independence-nigeria-1",
+        "label": "Institutions of Government in Post-Independence Nigeria"
+      },
+      {
+        "slug": "political-parties-in-nigeria",
+        "label": "Political Parties in Nigeria"
+      },
+      {
+        "slug": "political-crises-in-nigeria",
+        "label": "Political Crises in Nigeria"
+      },
+      {
+        "slug": "local-government-administration-in-nigeria",
+        "label": "Local Government Administration in Nigeria"
+      },
+      {
+        "slug": "foreign-policy-and-nigerias-relationship-with-the-international-community",
+        "label": "Foreign Policy and Nigeria's Relationship with the International Community"
+      },
+      {
+        "slug": "nigerias-foreign-policy",
+        "label": "Nigeria's Foreign Policy"
+      },
+      {
+        "slug": "international-organisations-i-oau-au-ecowas-appo",
+        "label": "International Organisations I - OAU, AU, ECOWAS, APPO"
+      },
+      {
+        "slug": "international-organisations-ii-league-of-nations-uno-un-opec-the-commonwealth-of-nations",
+        "label": "International Organisations II- League of Nations, UNO/ UN, OPEC, The Commonwealth of Nations"
+      },
+      {
+        "slug": "social-dynamics-and-classical-political-thought",
+        "label": "Social Dynamics and Classical Political Thought"
+      },
+      {
+        "slug": "conflict-resolution-and-management",
+        "label": "Conflict Resolution and Management"
+      },
+      {
+        "slug": "peace-education",
+        "label": "Peace Education"
+      },
+      {
+        "slug": "leadership-and-followership",
+        "label": "Leadership and Followership"
+      },
+      {
+        "slug": "classical-political-thoughts",
+        "label": "Classical Political Thoughts"
+      }
+    ]
+  },
+  "christian-religious-knowledge-crk": {
+    "label": "Christian Religious Knowledge (CRK)",
+    "topics": [
+      {
+        "slug": "the-sovereignty-of-god",
+        "label": "The Sovereignty of God"
+      },
+      {
+        "slug": "god-as-the-creator",
+        "label": "God as the creator"
+      },
+      {
+        "slug": "god-as-the-controller-of-the-universe",
+        "label": "God as the controller of the universe"
+      },
+      {
+        "slug": "the-covenant",
+        "label": "The Covenant"
+      },
+      {
+        "slug": "the-flood-and-covenant-with-noah",
+        "label": "The Flood and covenant with Noah"
+      },
+      {
+        "slug": "covenant-with-abraham",
+        "label": "Covenant with Abraham"
+      },
+      {
+        "slug": "covenant-with-israel",
+        "label": "Covenant with Israel"
+      },
+      {
+        "slug": "the-new-covenant",
+        "label": "The New covenant"
+      },
+      {
+        "slug": "leadership-qualities",
+        "label": "Leadership Qualities"
+      },
+      {
+        "slug": "joseph",
+        "label": "Joseph"
+      },
+      {
+        "slug": "moses",
+        "label": "Moses"
+      },
+      {
+        "slug": "joshua",
+        "label": "Joshua"
+      },
+      {
+        "slug": "judges-deborah-gideon-samson",
+        "label": "Judges (Deborah, Gideon, Samson)"
+      },
+      {
+        "slug": "gods-care-for-the-people",
+        "label": "God's care for the people"
+      },
+      {
+        "slug": "guidance-and-protection",
+        "label": "Guidance and protection"
+      },
+      {
+        "slug": "gods-provision",
+        "label": "God's Provision"
+      },
+      {
+        "slug": "parental-responsibility",
+        "label": "Parental Responsibility"
+      },
+      {
+        "slug": "eli-and-his-sons",
+        "label": "Eli and his sons"
+      },
+      {
+        "slug": "samuel-and-his-sons",
+        "label": "Samuel and his sons"
+      },
+      {
+        "slug": "asa",
+        "label": "Asa"
+      },
+      {
+        "slug": "king-jehoshaphat",
+        "label": "King Jehoshaphat"
+      },
+      {
+        "slug": "obedience-and-disobedience",
+        "label": "Obedience and Disobedience"
+      },
+      {
+        "slug": "obedience-and-rewards-abraham-joseph-hebrew-midwives",
+        "label": "Obedience and Rewards (Abraham, Joseph, Hebrew midwives)"
+      },
+      {
+        "slug": "disobedience-and-consequences-adam-the-children-of-israel-manna-golden-calf-moses-saul",
+        "label": "Disobedience and consequences (Adam, the children of Israel-manna, golden calf; Moses, Saul)"
+      },
+      {
+        "slug": "submission-to-the-will-of-god",
+        "label": "Submission to the will of God"
+      },
+      {
+        "slug": "early-life-of-david",
+        "label": "Early life of David"
+      },
+      {
+        "slug": "submission-to-the-will-of-god-david-and-jonah",
+        "label": "Submission to the will of God (David and Jonah)"
+      },
+      {
+        "slug": "repentance-and-forgiveness",
+        "label": "Repentance and Forgiveness"
+      },
+      {
+        "slug": "davids-sin-of-adultery",
+        "label": "David's sin of Adultery"
+      },
+      {
+        "slug": "decision-making",
+        "label": "Decision Making"
+      },
+      {
+        "slug": "reliance-on-a-medium",
+        "label": "Reliance on a Medium"
+      },
+      {
+        "slug": "wisdom-of-solomon",
+        "label": "Wisdom of Solomon"
+      },
+      {
+        "slug": "unwise-decisions-of-solomon-and-rehoboam",
+        "label": "Unwise Decisions of Solomon and Rehoboam"
+      },
+      {
+        "slug": "solomons-misuse-of-gods-blessing",
+        "label": "Solomon's Misuse of God's Blessing"
+      },
+      {
+        "slug": "greed-and-its-effect",
+        "label": "Greed and its effect"
+      },
+      {
+        "slug": "ahab",
+        "label": "Ahab"
+      },
+      {
+        "slug": "gehazi",
+        "label": "Gehazi"
+      },
+      {
+        "slug": "the-supremacy-of-god",
+        "label": "The Supremacy of God"
+      },
+      {
+        "slug": "religious-tension-in-israel",
+        "label": "Religious tension in Israel"
+      },
+      {
+        "slug": "elijah-at-mount-carmel",
+        "label": "Elijah at Mount Carmel"
+      },
+      {
+        "slug": "concern-for-ones-nation",
+        "label": "Concern For One's Nation"
+      },
+      {
+        "slug": "the-fall-of-jerusalem",
+        "label": "The Fall of Jerusalem"
+      },
+      {
+        "slug": "the-condition-of-the-nation",
+        "label": "The Condition Of the Nation"
+      },
+      {
+        "slug": "response-to-the-state-of-the-nation",
+        "label": "Response to the State of the Nation"
+      },
+      {
+        "slug": "faith-in-god",
+        "label": "Faith in God"
+      },
+      {
+        "slug": "faith-and-courage-the-three-hebrew-boys",
+        "label": "Faith and Courage (the three Hebrew boys)"
+      },
+      {
+        "slug": "faith-and-power-of-god-daniel",
+        "label": "Faith and Power of God (Daniel)"
+      },
+      {
+        "slug": "gods-message-to-nineveh",
+        "label": "God's Message to Nineveh"
+      },
+      {
+        "slug": "jonah-and-his-message",
+        "label": "Jonah and his message"
+      },
+      {
+        "slug": "true-religion-and-social-justice-and-divine-love",
+        "label": "True Religion and Social Justice and Divine Love"
+      },
+      {
+        "slug": "true-religion",
+        "label": "True Religion"
+      },
+      {
+        "slug": "social-justice",
+        "label": "Social Justice"
+      },
+      {
+        "slug": "divine-love-and-mans-response",
+        "label": "Divine Love and Man's response"
+      },
+      {
+        "slug": "marriage-and-factors-ensuring-stable-marriage",
+        "label": "Marriage and factors ensuring stable marriage"
+      },
+      {
+        "slug": "holiness-and-divine-call",
+        "label": "Holiness and Divine Call"
+      },
+      {
+        "slug": "punishment-and-hope",
+        "label": "Punishment and Hope"
+      },
+      {
+        "slug": "the-birth-and-early-life-of-jesus",
+        "label": "The Birth and Early Life of Jesus"
+      },
+      {
+        "slug": "john-the-forerunner",
+        "label": "John the Forerunner"
+      },
+      {
+        "slug": "birth-and-boyhood-of-jesus",
+        "label": "Birth and Boyhood of Jesus"
+      },
+      {
+        "slug": "baptism-and-temptation-of-jesus",
+        "label": "Baptism and Temptation of Jesus"
+      },
+      {
+        "slug": "discipleship",
+        "label": "Discipleship"
+      },
+      {
+        "slug": "call-to-discipleship",
+        "label": "Call to Discipleship"
+      },
+      {
+        "slug": "demands-of-discipleship",
+        "label": "Demands of Discipleship"
+      },
+      {
+        "slug": "miracles",
+        "label": "Miracles"
+      },
+      {
+        "slug": "nature-miracles",
+        "label": "Nature Miracles"
+      },
+      {
+        "slug": "resuscitations",
+        "label": "Resuscitations"
+      },
+      {
+        "slug": "healing",
+        "label": "Healing"
+      },
+      {
+        "slug": "exorcism",
+        "label": "Exorcism"
+      },
+      {
+        "slug": "sermon-on-the-mount",
+        "label": "Sermon on the Mount"
+      },
+      {
+        "slug": "jesuss-teaching-about-himself",
+        "label": "Jesus's Teaching About Himself"
+      },
+      {
+        "slug": "the-parables",
+        "label": "The Parables"
+      },
+      {
+        "slug": "kingdom-parables",
+        "label": "Kingdom Parables"
+      },
+      {
+        "slug": "love-of-god",
+        "label": "Love of God"
+      },
+      {
+        "slug": "love-for-others",
+        "label": "Love for Others"
+      },
+      {
+        "slug": "wealth",
+        "label": "Wealth"
+      },
+      {
+        "slug": "prayer",
+        "label": "Prayer"
+      },
+      {
+        "slug": "mission-of-the-disciples",
+        "label": "Mission of the Disciples"
+      },
+      {
+        "slug": "mission-of-the-twelve",
+        "label": "Mission of the Twelve"
+      },
+      {
+        "slug": "mission-of-the-seventy",
+        "label": "Mission of the Seventy"
+      },
+      {
+        "slug": "jesus-as-the-lamb-of-god",
+        "label": "Jesus as the Lamb of God"
+      },
+      {
+        "slug": "jesus-as-the-door-and-the-good-shepherd",
+        "label": "Jesus as the Door and the Good Shepherd"
+      },
+      {
+        "slug": "jesus-as-the-light-of-the-world",
+        "label": "Jesus as the Light of the World"
+      },
+      {
+        "slug": "jesus-as-the-true-vine",
+        "label": "Jesus as the True Vine"
+      },
+      {
+        "slug": "jesus-as-the-living-water",
+        "label": "Jesus as the Living Water"
+      },
+      {
+        "slug": "jesus-as-the-living-bread",
+        "label": "Jesus as the Living Bread"
+      },
+      {
+        "slug": "the-great-confession",
+        "label": "The Great Confession"
+      },
+      {
+        "slug": "matthews-account",
+        "label": "Matthew's Account"
+      },
+      {
+        "slug": "marks-account",
+        "label": "Mark's Account"
+      },
+      {
+        "slug": "lukes-account",
+        "label": "Luke's Account"
+      },
+      {
+        "slug": "the-transfiguration",
+        "label": "The Transfiguration"
+      },
+      {
+        "slug": "matthews-account-1",
+        "label": "Matthew's Account"
+      },
+      {
+        "slug": "marks-account-1",
+        "label": "Mark's Account"
+      },
+      {
+        "slug": "lukes-account-1",
+        "label": "Luke's Account"
+      },
+      {
+        "slug": "forgiveness",
+        "label": "Forgiveness"
+      },
+      {
+        "slug": "jesus-teachings-on-forgiveness",
+        "label": "Jesus' Teachings on Forgiveness"
+      },
+      {
+        "slug": "st-pauls-teachings-on-forgiveness",
+        "label": "St. Paul's teachings on Forgiveness"
+      },
+      {
+        "slug": "triumphant-entry",
+        "label": "Triumphant Entry"
+      },
+      {
+        "slug": "matthews-account-2",
+        "label": "Matthew's Account"
+      },
+      {
+        "slug": "marks-account-2",
+        "label": "Mark's Account"
+      },
+      {
+        "slug": "lukes-account-2",
+        "label": "Luke's Account"
+      },
+      {
+        "slug": "the-last-supper",
+        "label": "The Last Supper"
+      },
+      {
+        "slug": "preparation-for-the-passover",
+        "label": "Preparation for the Passover"
+      },
+      {
+        "slug": "judas-iscariot-betrays-jesus",
+        "label": "Judas Iscariot betrays Jesus"
+      },
+      {
+        "slug": "washing-of-the-disciples-feet",
+        "label": "Washing of the Disciple's feet"
+      },
+      {
+        "slug": "trials-and-death-of-jesus",
+        "label": "Trials and Death of Jesus"
+      },
+      {
+        "slug": "jesus-at-gethsemane",
+        "label": "Jesus at Gethsemane"
+      },
+      {
+        "slug": "peters-denial",
+        "label": "Peter's Denial"
+      },
+      {
+        "slug": "trials-before-the-high-priest-pilate-and-herod",
+        "label": "Trials before the High Priest, Pilate and Herod"
+      },
+      {
+        "slug": "condemnation-and-crucifixion-of-jesus",
+        "label": "Condemnation and Crucifixion of Jesus"
+      },
+      {
+        "slug": "death-and-burial",
+        "label": "Death and Burial"
+      },
+      {
+        "slug": "resurrection-appearances-and-ascension",
+        "label": "Resurrection, Appearances and Ascension"
+      },
+      {
+        "slug": "the-account-of-the-resurrection-from-the-synoptic-gospels",
+        "label": "The Account of the Resurrection from the Synoptic Gospels"
+      },
+      {
+        "slug": "jesus-reveals-himself-to-his-disciples",
+        "label": "Jesus reveals Himself to his Disciples"
+      },
+      {
+        "slug": "fellowship-in-the-early-church",
+        "label": "Fellowship in the Early Church"
+      },
+      {
+        "slug": "communal-living-in-the-early-church",
+        "label": "Communal Living in the Early Church"
+      },
+      {
+        "slug": "the-early-christian-community-problems-and-solution",
+        "label": "The Early Christian Community (Problems and Solution)"
+      },
+      {
+        "slug": "the-present-day-church-problems-and-solutions",
+        "label": "The Present Day Church (Problems and Solutions)"
+      },
+      {
+        "slug": "the-holy-spirit-and-the-mission-to-the-gentiles",
+        "label": "The Holy Spirit and the Mission to the Gentiles"
+      },
+      {
+        "slug": "the-holy-spirit-at-pentecost",
+        "label": "The Holy Spirit at Pentecost"
+      },
+      {
+        "slug": "mission-to-the-gentiles",
+        "label": "Mission to the Gentiles"
+      },
+      {
+        "slug": "opposition-to-the-gospel-message",
+        "label": "Opposition to the Gospel Message"
+      },
+      {
+        "slug": "the-trial-and-arrest-of-the-apostles",
+        "label": "The Trial and Arrest of the Apostles"
+      },
+      {
+        "slug": "the-death-of-stephen",
+        "label": "The Death of Stephen"
+      },
+      {
+        "slug": "sauls-opposition-to-the-gospel",
+        "label": "Saul's Opposition to the Gospel"
+      },
+      {
+        "slug": "herods-persecution-of-the-christian",
+        "label": "Herod's Persecution of the Christian"
+      },
+      {
+        "slug": "the-epistle-of-james",
+        "label": "The Epistle of James"
+      },
+      {
+        "slug": "faith-and-works",
+        "label": "Faith and Works"
+      },
+      {
+        "slug": "impartiality",
+        "label": "Impartiality"
+      },
+      {
+        "slug": "effective-prayer",
+        "label": "Effective Prayer"
+      },
+      {
+        "slug": "the-epistles-of-peter-1ii",
+        "label": "The Epistles of Peter (1&II)"
+      },
+      {
+        "slug": "good-citizenship",
+        "label": "Good Citizenship"
+      },
+      {
+        "slug": "christian-living-in-the-community",
+        "label": "Christian-Living in the Community"
+      },
+      {
+        "slug": "interpersonal-relationship-among-christians",
+        "label": "Interpersonal Relationship among Christians"
+      },
+      {
+        "slug": "christians-and-persecution",
+        "label": "Christians and Persecution"
+      },
+      {
+        "slug": "justification-by-faith-and-new-life-in-christ",
+        "label": "Justification by Faith and New Life in Christ"
+      },
+      {
+        "slug": "the-fruits-of-justification",
+        "label": "The Fruits of Justification"
+      },
+      {
+        "slug": "salvation",
+        "label": "Salvation"
+      },
+      {
+        "slug": "the-new-creature",
+        "label": "The New Creature"
+      },
+      {
+        "slug": "the-fruits-and-gifts-of-the-spirit",
+        "label": "The Fruits and Gifts of the Spirit"
+      },
+      {
+        "slug": "the-fruit-of-the-flesh",
+        "label": "The Fruit of the Flesh"
+      },
+      {
+        "slug": "the-fruit-of-the-spirit",
+        "label": "The Fruit of the Spirit"
+      },
+      {
+        "slug": "types-of-gifts",
+        "label": "Types of Gifts"
+      },
+      {
+        "slug": "bearing-the-fruit-of-the-spirit",
+        "label": "Bearing the Fruit of the Spirit"
+      },
+      {
+        "slug": "humility",
+        "label": "Humility"
+      },
+      {
+        "slug": "st-pauls-teaching-on-humility",
+        "label": "St. Paul's Teaching on Humility"
+      },
+      {
+        "slug": "st-peters-teaching-on-humility",
+        "label": "St. Peter's Teaching on Humility"
+      },
+      {
+        "slug": "how-christians-express-humility",
+        "label": "How Christians Express Humility"
+      },
+      {
+        "slug": "the-family",
+        "label": "The Family"
+      },
+      {
+        "slug": "the-family-unit-as-gods-institution",
+        "label": "The Family Unit as God's Institution"
+      },
+      {
+        "slug": "st-pauls-teaching-on-the-family",
+        "label": "St. Paul's Teaching on the Family"
+      },
+      {
+        "slug": "deviation-from-the-teaching",
+        "label": "Deviation from the Teaching"
+      },
+      {
+        "slug": "friendship",
+        "label": "Friendship"
+      },
+      {
+        "slug": "friendship-between-god-and-abraham",
+        "label": "Friendship between God and Abraham"
+      },
+      {
+        "slug": "friendship-between-david-and-jonathan",
+        "label": "Friendship between David and Jonathan"
+      },
+      {
+        "slug": "friendship-between-jesus-martha-and-mary",
+        "label": "Friendship between Jesus, Martha, and Mary"
+      },
+      {
+        "slug": "friendship-between-jesus-and-lazarus",
+        "label": "Friendship between Jesus and Lazarus"
+      },
+      {
+        "slug": "second-coming-of-jesus-christ",
+        "label": "Second Coming of Jesus Christ"
+      },
+      {
+        "slug": "signs-of-the-second-coming",
+        "label": "Signs of the Second coming"
+      },
+      {
+        "slug": "preparation-for-the-second-coming",
+        "label": "Preparation for the Second Coming"
+      }
+    ]
+  },
+  "agricultural-science": {
+    "label": "Agricultural Science",
+    "topics": []
+  },
+  "islamic-religious-knowledge-irk": {
+    "label": "Islamic Religious Knowledge (IRK)",
+    "topics": []
+  },
+  "history": {
+    "label": "History",
+    "topics": []
+  },
+  "fine-arts": {
+    "label": "Fine Arts",
+    "topics": [
+      {
+        "slug": "introduction-to-the-study-of-art",
+        "label": "Introduction to the Study of Art"
+      },
+      {
+        "slug": "meaning-of-art",
+        "label": "Meaning of Art"
+      },
+      {
+        "slug": "the-origin-of-art",
+        "label": "The Origin of Art"
+      },
+      {
+        "slug": "importance-of-art",
+        "label": "Importance of Art"
+      },
+      {
+        "slug": "branches-classification-of-art",
+        "label": "Branches/Classification of Art"
+      },
+      {
+        "slug": "elements-of-art",
+        "label": "Elements of Art"
+      },
+      {
+        "slug": "meaning-of-elements-of-art",
+        "label": "Meaning of Elements of Art"
+      },
+      {
+        "slug": "line",
+        "label": "Line"
+      },
+      {
+        "slug": "shape",
+        "label": "Shape"
+      },
+      {
+        "slug": "form",
+        "label": "Form"
+      },
+      {
+        "slug": "color",
+        "label": "Color"
+      },
+      {
+        "slug": "texture",
+        "label": "Texture"
+      },
+      {
+        "slug": "value-tone",
+        "label": "Value/Tone"
+      },
+      {
+        "slug": "space",
+        "label": "Space"
+      },
+      {
+        "slug": "principles-of-art",
+        "label": "Principles of Art"
+      },
+      {
+        "slug": "proportion",
+        "label": "Proportion"
+      },
+      {
+        "slug": "balance",
+        "label": "Balance"
+      },
+      {
+        "slug": "rhythm",
+        "label": "Rhythm"
+      },
+      {
+        "slug": "dominance",
+        "label": "Dominance"
+      },
+      {
+        "slug": "repetition",
+        "label": "Repetition"
+      },
+      {
+        "slug": "variety",
+        "label": "Variety"
+      },
+      {
+        "slug": "harmony",
+        "label": "Harmony"
+      },
+      {
+        "slug": "appreciation-and-application-of-the-elements-and-principles-of-art",
+        "label": "Appreciation and Application of the Elements and Principles of Art"
+      },
+      {
+        "slug": "functions-of-the-elements-of-art",
+        "label": "Functions of the Elements of Art"
+      },
+      {
+        "slug": "functions-of-the-principles-of-art",
+        "label": "Functions of the Principles of Art"
+      },
+      {
+        "slug": "creative-application-of-design-elements-and-principles-of-art",
+        "label": "Creative Application of Design Elements and Principles of Art"
+      },
+      {
+        "slug": "art-materials-and-tools",
+        "label": "Art Materials and Tools"
+      },
+      {
+        "slug": "2-dimensional-art-materials-tools-and-equipment",
+        "label": "2-Dimensional Art Materials, Tools and Equipment"
+      },
+      {
+        "slug": "3-dimensional-art-materials-tools-and-equipment",
+        "label": "3-Dimensional Art Materials, Tools and Equipment"
+      },
+      {
+        "slug": "improvisation-of-tools-materials-and-equipment",
+        "label": "Improvisation of Tools, Materials and Equipment"
+      },
+      {
+        "slug": "maintaining-of-art-materials-and-tools",
+        "label": "Maintaining of Art Materials and Tools"
+      },
+      {
+        "slug": "perspective",
+        "label": "Perspective"
+      },
+      {
+        "slug": "meaning-of-perspective",
+        "label": "Meaning of Perspective"
+      },
+      {
+        "slug": "terminologies-in-perspective",
+        "label": "Terminologies in Perspective"
+      },
+      {
+        "slug": "types-of-perspective",
+        "label": "Types of Perspective"
+      },
+      {
+        "slug": "functions-of-perspective-in-art",
+        "label": "Functions of Perspective in Art"
+      },
+      {
+        "slug": "the-study-of-color",
+        "label": "The Study of Color"
+      },
+      {
+        "slug": "classes-of-color",
+        "label": "Classes of Color"
+      },
+      {
+        "slug": "properties-of-color",
+        "label": "Properties of Color"
+      },
+      {
+        "slug": "methods-of-mixing-colors",
+        "label": "Methods of Mixing Colors"
+      },
+      {
+        "slug": "two-dimensional-art-forms",
+        "label": "Two Dimensional Art Forms"
+      },
+      {
+        "slug": "drawing",
+        "label": "Drawing"
+      },
+      {
+        "slug": "painting",
+        "label": "Painting"
+      },
+      {
+        "slug": "graphics",
+        "label": "Graphics"
+      },
+      {
+        "slug": "textile-designs",
+        "label": "Textile Designs"
+      },
+      {
+        "slug": "mosaic-and-collage",
+        "label": "Mosaic and Collage"
+      },
+      {
+        "slug": "historical-background",
+        "label": "Historical Background"
+      },
+      {
+        "slug": "the-greek-mosaic",
+        "label": "The Greek Mosaic"
+      },
+      {
+        "slug": "roman-mosaic",
+        "label": "Roman Mosaic"
+      },
+      {
+        "slug": "the-byzantine-mosaics",
+        "label": "The Byzantine Mosaics"
+      },
+      {
+        "slug": "collage",
+        "label": "Collage"
+      },
+      {
+        "slug": "modern-methods-and-uses",
+        "label": "Modern Methods and Uses"
+      },
+      {
+        "slug": "mosaic-collage-media-and-tools",
+        "label": "Mosaic/Collage Media and Tools"
+      },
+      {
+        "slug": "difference-between-collage-and-mosaic",
+        "label": "Difference Between Collage and Mosaic"
+      },
+      {
+        "slug": "three-dimensional-work",
+        "label": "Three Dimensional Work"
+      },
+      {
+        "slug": "sculpture",
+        "label": "Sculpture"
+      },
+      {
+        "slug": "ceramics",
+        "label": "Ceramics"
+      },
+      {
+        "slug": "carving",
+        "label": "Carving"
+      },
+      {
+        "slug": "modelling",
+        "label": "Modelling"
+      },
+      {
+        "slug": "clay",
+        "label": "Clay"
+      },
+      {
+        "slug": "crafts",
+        "label": "Crafts"
+      },
+      {
+        "slug": "weaving",
+        "label": "Weaving"
+      },
+      {
+        "slug": "basketry",
+        "label": "Basketry"
+      },
+      {
+        "slug": "tie-dye",
+        "label": "Tie-Dye"
+      },
+      {
+        "slug": "batik",
+        "label": "Batik"
+      },
+      {
+        "slug": "calabash-decoration",
+        "label": "Calabash Decoration"
+      },
+      {
+        "slug": "blacksmithing",
+        "label": "Blacksmithing"
+      },
+      {
+        "slug": "leatherwork",
+        "label": "Leatherwork"
+      },
+      {
+        "slug": "embroidery",
+        "label": "Embroidery"
+      },
+      {
+        "slug": "knitting",
+        "label": "Knitting"
+      },
+      {
+        "slug": "crocheting",
+        "label": "Crocheting"
+      },
+      {
+        "slug": "soft-toy-making",
+        "label": "Soft Toy Making"
+      },
+      {
+        "slug": "paper-crafts-origami",
+        "label": "Paper Crafts/Origami"
+      },
+      {
+        "slug": "art-history",
+        "label": "Art History"
+      },
+      {
+        "slug": "prehistoric-greek-and-roman",
+        "label": "Prehistoric, Greek and Roman"
+      },
+      {
+        "slug": "medieval-arts",
+        "label": "Medieval Arts"
+      },
+      {
+        "slug": "renaissance-art-and-artists",
+        "label": "Renaissance Art and Artists"
+      },
+      {
+        "slug": "19th-and-20th-century-art-movements",
+        "label": "19th and 20th Century Art Movements"
+      },
+      {
+        "slug": "ancient-traditional-art",
+        "label": "Ancient Traditional Art"
+      },
+      {
+        "slug": "traditional-african-arts-cameroon-bamileke-dahomey-fon-gabon-fang-ghana-ashanti-guinea-kissi-etc",
+        "label": "Traditional African Arts (Cameroon-Bamileke, Dahomey-Fon; Gabon-Fang; Ghana-Ashanti; Guinea-Kissi, etc)"
+      },
+      {
+        "slug": "traditional-nigerian-art-nok-benin-ife-igbo-ukwu-esie-etc",
+        "label": "Traditional Nigerian Art (NOK; Benin; Ife; Igbo-Ukwu; Esie, etc)"
+      },
+      {
+        "slug": "lettering",
+        "label": "Lettering"
+      },
+      {
+        "slug": "meaning-and-origin",
+        "label": "Meaning and Origin"
+      },
+      {
+        "slug": "letter-classification",
+        "label": "Letter Classification"
+      },
+      {
+        "slug": "qualities-of-good-lettering",
+        "label": "Qualities of Good Lettering"
+      },
+      {
+        "slug": "calligraphy-pen-lettering",
+        "label": "Calligraphy/Pen Lettering"
+      },
+      {
+        "slug": "motif-pattern-and-design",
+        "label": "Motif, Pattern and Design"
+      },
+      {
+        "slug": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "slug": "types-of-design",
+        "label": "Types of Design"
+      },
+      {
+        "slug": "types-of-pattern",
+        "label": "Types of Pattern"
+      },
+      {
+        "slug": "graphic-design-package-design-trade-labels-book-cover-jacket-poster",
+        "label": "Graphic Design (package design, trade labels, book cover/jacket, poster)"
+      },
+      {
+        "slug": "development-in-contemporary-nigerian-arts-and-artists",
+        "label": "Development in Contemporary Nigerian Arts and Artists"
+      },
+      {
+        "slug": "art-schools-and-groups",
+        "label": "Art Schools and groups"
+      },
+      {
+        "slug": "nigerian-contemporary-arts-and-artists",
+        "label": "Nigerian Contemporary Arts and Artists"
+      },
+      {
+        "slug": "museums-gallery-and-art-centers",
+        "label": "Museums, Gallery and Art Centers"
+      },
+      {
+        "slug": "art-institution-cultural-art-centers-national-art-organization",
+        "label": "Art Institution, Cultural Art Centers, National art Organization"
+      },
+      {
+        "slug": "major-festivals-in-nigeria",
+        "label": "Major Festivals in Nigeria"
+      },
+      {
+        "slug": "reproduction-processes-in-art",
+        "label": "Reproduction Processes in Art"
+      },
+      {
+        "slug": "introduction-to-relief-process",
+        "label": "Introduction to Relief process"
+      },
+      {
+        "slug": "silk-screen-intaglio-planography-lithograph-yam-potato-prints",
+        "label": "Silk Screen Intaglio Planography/Lithograph, Yam/Potato Prints"
+      },
+      {
+        "slug": "texture-prints",
+        "label": "Texture Prints"
+      },
+      {
+        "slug": "photography",
+        "label": "Photography"
+      },
+      {
+        "slug": "understanding-drama-theatre",
+        "label": "Understanding Drama/Theatre"
+      },
+      {
+        "slug": "meaning-and-functions-of-drama-theatre",
+        "label": "Meaning and Functions of Drama/Theatre"
+      },
+      {
+        "slug": "forms-elements-of-drama",
+        "label": "Forms/Elements of Drama"
+      },
+      {
+        "slug": "costume-and-make-up",
+        "label": "Costume and Make up"
+      },
+      {
+        "slug": "school-drama",
+        "label": "School Drama"
+      },
+      {
+        "slug": "drama-acting-terminologies",
+        "label": "Drama/Acting Terminologies"
+      },
+      {
+        "slug": "stage-management",
+        "label": "Stage Management"
+      },
+      {
+        "slug": "rehearsals",
+        "label": "Rehearsals"
+      }
+    ]
+  },
+  "music": {
+    "label": "Music",
+    "topics": []
+  },
+  "french": {
+    "label": "French",
+    "topics": []
+  },
+  "animal-husbandry": {
+    "label": "Animal Husbandry",
+    "topics": []
+  },
+  "insurance": {
+    "label": "Insurance",
+    "topics": []
+  },
+  "civic-education": {
+    "label": "Civic Education",
+    "topics": []
+  },
+  "further-mathematics": {
+    "label": "Further Mathematics",
+    "topics": []
+  },
+  "yoruba": {
+    "label": "Yoruba",
+    "topics": []
+  },
+  "igbo": {
+    "label": "Igbo",
+    "topics": []
+  },
+  "arabic": {
+    "label": "Arabic",
+    "topics": []
+  },
+  "home-economics": {
+    "label": "Home Economics",
+    "topics": []
+  },
+  "hausa": {
+    "label": "Hausa",
+    "topics": []
+  },
+  "book-keeping": {
+    "label": "Book Keeping",
+    "topics": []
+  },
+  "data-processing": {
+    "label": "Data Processing",
+    "topics": []
+  },
+  "catering-craft-practice": {
+    "label": "Catering Craft Practice",
+    "topics": []
+  },
+  "computer-studies": {
+    "label": "Computer Studies",
+    "topics": []
+  },
+  "marketing": {
+    "label": "Marketing",
+    "topics": []
+  },
+  "physical-education": {
+    "label": "Physical Education",
+    "topics": []
+  },
+  "office-practice": {
+    "label": "Office Practice",
+    "topics": []
+  },
+  "technical-drawing": {
+    "label": "Technical Drawing",
+    "topics": []
+  },
+  "food-and-nutrition": {
+    "label": "Food and Nutrition",
+    "topics": []
+  },
+  "home-management": {
+    "label": "Home Management",
+    "topics": []
+  }
+}

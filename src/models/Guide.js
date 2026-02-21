@@ -1,16 +1,26 @@
 import mongoose from 'mongoose';
 
-const subTopicSchema = new mongoose.Schema({
-    id: { type: String, required: true },
-    title: { type: String, required: true },
-    keywords: [String]
-}, { _id: false });
-
 const topicSchema = new mongoose.Schema({
     id: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String },
-    subTopics: [subTopicSchema]
+    content: { type: String },
+    keywords: [String],
+    videos: [{
+        id: String,
+        title: String,
+        youtubeId: String,
+        type: { type: String, enum: ['study-hack', 'tutorial', 'explanation'] },
+        duration: String
+    }],
+    inlineQuestions: [{
+        id: String,
+        triggerHeader: String,
+        question: String,
+        options: [String],
+        answer: String,
+        explanation: String
+    }]
 }, { _id: false });
 
 const guideSchema = new mongoose.Schema({

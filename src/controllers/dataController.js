@@ -19,10 +19,37 @@ const performanceFilePath = path.join(dbPath, 'performance.json');
 const literatureFilePath = path.join(dbPath, 'literature.json');
 
 const SUBJECT_MAPPING = {
+    // Accounts
     'Accounting': 'Accounts - Principles of Accounts',
+    'Financial Accounting': 'Accounts - Principles of Accounts',
+
+    // Agric
     'Agriculture': 'Agricultural Science',
+    'Agric': 'Agricultural Science',
+
+    // English
+    'English': 'English Language',
+    'Use of English': 'English Language',
+
+    // Literature
+    'Literature': 'Literature in English',
+    'Literature-in-English': 'Literature in English',
+
+    // Religion
+    'CRS': 'Christian Religious Knowledge (CRK)',
+    'Christian Religious Studies': 'Christian Religious Knowledge (CRK)',
+    'CRK': 'Christian Religious Knowledge (CRK)',
+    'IRS': 'Islamic Religious Knowledge (IRK)',
+    'Islamic Religious Studies': 'Islamic Religious Knowledge (IRK)',
+    'IRK': 'Islamic Religious Knowledge (IRK)',
+
+    // Art
     'Fine Art': 'Fine Arts',
-    'Physical and Health Education (PHE)': 'Physical and Health Education'
+    'Fine Arts': 'Fine Arts',
+
+    // PHE
+    'Physical and Health Education (PHE)': 'Physical and Health Education',
+    'PHE': 'Physical and Health Education'
 };
 
 const readJsonFile = async (filePath) => {

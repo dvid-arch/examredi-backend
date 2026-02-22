@@ -75,10 +75,14 @@ export const getPapers = async (req, res) => {
         const filter = {};
 
         if (subject) {
+            // Case-insensitive search for subjects to handle URL-lowercase parameters
             const targetSubject = SUBJECT_MAPPING[subject] || subject;
+            const escapedSubject = subject.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const escapedTarget = targetSubject.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
             filter.$or = [
-                { subject: targetSubject },
-                { subject: subject }
+                { subject: new RegExp('^' + escapedTarget + '$', 'i') },
+                { subject: new RegExp('^' + escapedSubject + '$', 'i') }
             ];
         }
 
@@ -175,7 +179,8 @@ export const searchByKeywords = async (req, res) => {
         };
 
         if (targetSubject) {
-            filter.subject = targetSubject;
+            const escapedSubject = targetSubject.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            filter.subject = new RegExp('^' + escapedSubject + '$', 'i');
         }
 
         const papers = await Paper.find(filter).lean();

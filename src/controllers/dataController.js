@@ -152,30 +152,25 @@ export const searchPapers = async (req, res) => {
 };
 
 // @desc    Search past questions by topics
-// @route   POST /api/data/search-batch
-export const searchByKeywords = async (req, res) => {
+// @route   POST /api/data/search-by-topic
+export const searchByTopic = async (req, res) => {
     try {
-        const { subject, keywords, topic, subTopic } = req.body;
+        const { subject, topic, subTopic } = req.body;
 
-        // Legacy support + new keywords support
-        const searchTerms = keywords && keywords.length > 0
-            ? keywords.map(k => k.toLowerCase())
-            : [(subTopic || topic || '').toLowerCase()].filter(Boolean);
+        const targetTopic = topic || subTopic;
 
-        if (searchTerms.length === 0) {
-            return res.status(400).json({ message: 'Keywords, topic, or subTopic is required' });
+        if (!targetTopic) {
+            return res.status(400).json({ message: 'topic is required' });
         }
 
         const targetSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
 
-        // Find papers that have questions tagged with ANY of these search terms (case-insensitive)
-        const regexTerms = searchTerms.map(term => {
-            const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            return new RegExp('^' + escapedTerm + '$', 'i');
-        });
+        // Find papers that have questions tagged with this topic (case-insensitive)
+        const escapedTerm = targetTopic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regexTerm = new RegExp('^' + escapedTerm + '$', 'i');
 
         const filter = {
-            'questions.topics': { $in: regexTerms }
+            'questions.topics': regexTerm
         };
 
         if (targetSubject) {
@@ -190,8 +185,8 @@ export const searchByKeywords = async (req, res) => {
             paper.questions.forEach(q => {
                 const questionTopics = (q.topics || []).map(t => t.toLowerCase());
 
-                // If the question has ANY topic that matches our search terms, include it
-                const isMatch = questionTopics.some(qt => searchTerms.includes(qt));
+                // If the question has this exact topic (case-insensitive), include it
+                const isMatch = questionTopics.includes(targetTopic.toLowerCase());
 
                 if (isMatch) {
                     results.push({

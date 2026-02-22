@@ -1,5 +1,5 @@
 import express from 'express';
-import { getPapers, getGuides, getTopics, getLeaderboard, addLeaderboardScore, getPerformance, addPerformanceResult, getLiterature, searchPapers, searchByKeywords } from '../controllers/dataController.js';
+import { getPapers, getGuides, getTopics, getLeaderboard, addLeaderboardScore, getPerformance, addPerformanceResult, getLiterature, searchPapers, searchByTopic } from '../controllers/dataController.js';
 import { protect, optionalProtect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
@@ -11,7 +11,7 @@ router.get('/topics', optionalProtect, getTopics);
 router.get('/leaderboard', optionalProtect, getLeaderboard);
 router.get('/literature', optionalProtect, getLiterature);
 router.get('/search', optionalProtect, searchPapers);
-router.post('/search-batch', optionalProtect, searchByKeywords);
+router.post('/search-by-topic', optionalProtect, searchByTopic);
 
 // Protected routes
 router.post('/leaderboard', protect, addLeaderboardScore);

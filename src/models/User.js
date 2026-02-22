@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
     googleId: { type: String, unique: true, sparse: true },
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
+    preferredSubjects: { type: [String], default: [] },
 
     // AI & Subscription
     aiCredits: { type: Number, default: 0 },
@@ -52,6 +53,7 @@ const userSchema = new mongoose.Schema({
         type: Map,
         of: {
             confidence: { type: String, enum: ['lost', 'shaky', 'confident'] },
+            subject: { type: String },
             lastReviewed: { type: Date, default: Date.now }
         },
         default: {}

@@ -4,7 +4,7 @@ import User from '../models/User.js';
 // @route   PUT /api/user/profile
 export const updateProfile = async (req, res) => {
     try {
-        const { name, studyPlan } = req.body;
+        const { name, studyPlan, preferredSubjects } = req.body;
         const userId = req.user.id;
 
         const user = await User.findById(userId);
@@ -14,6 +14,7 @@ export const updateProfile = async (req, res) => {
         }
 
         if (name) user.name = name;
+        if (preferredSubjects) user.preferredSubjects = preferredSubjects;
         if (studyPlan) {
             user.studyPlan = {
                 ...user.studyPlan,

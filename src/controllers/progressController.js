@@ -167,7 +167,7 @@ export const dismissNudge = async (req, res) => {
 // @route   POST /api/user/progress/confidence
 export const updateTopicConfidence = async (req, res) => {
     try {
-        const { topicId, confidence } = req.body;
+        const { topicId, confidence, subject } = req.body;
 
         if (!['lost', 'shaky', 'confident'].includes(confidence)) {
             return res.status(400).json({ message: 'Invalid confidence level' });
@@ -184,6 +184,7 @@ export const updateTopicConfidence = async (req, res) => {
 
         user.studyProgress.set(topicId, {
             confidence,
+            subject,
             lastReviewed: new Date()
         });
 

@@ -15,6 +15,30 @@ const getAiInstance = () => {
 
 const missingApiKeyError = { message: "The AI service is not configured on the server." };
 
+const executeWithFallback = async (operation) => {
+    let ai = getAiInstance();
+    if (!ai) throw new Error(missingApiKeyError.message);
+
+    try {
+        return await operation(ai);
+    } catch (error) {
+        const isRateLimit = error.status === 429 || (error.message && error.message.includes('Quota exceeded'));
+        const secondaryKey = process.env.API_KEY_2;
+
+        if (isRateLimit && secondaryKey) {
+            console.warn("Primary API key rate limited. Falling back to API_KEY_2.");
+            try {
+                const aiFallback = new GoogleGenAI({ apiKey: secondaryKey });
+                return await operation(aiFallback);
+            } catch (fallbackError) {
+                console.error("Fallback API key also failed or rate limited:", fallbackError.message || fallbackError);
+                throw fallbackError;
+            }
+        }
+        throw error;
+    }
+};
+
 const buildHistory = (history) => {
     return history.map(msg => ({
         role: msg.role,
@@ -30,8 +54,6 @@ const FREE_TIER_MESSAGES = 5;
 export const handleAiChat = async (req, res) => {
     const { message, conversationId } = req.body;
     const userId = req.user.id;
-    const ai = getAiInstance();
-    if (!ai) return res.status(500).json(missingApiKeyError);
 
     try {
         const user = await User.findById(userId);
@@ -61,14 +83,16 @@ export const handleAiChat = async (req, res) => {
             }
         }
 
-        const chat = ai.chats.create({
-            model: 'gemini-2.5-flash',
-            history: buildHistory(history),
-            config: {
-                systemInstruction: `You are Ai-buddy, a friendly and encouraging AI tutor for ExamRedi. Your goal is to help students understand complex topics and prepare for their exams. Keep your tone positive and supportive. Format responses using markdown.`,
-            },
+        const result = await executeWithFallback(async (ai) => {
+            const chat = ai.chats.create({
+                model: 'gemini-2.5-flash',
+                history: buildHistory(history),
+                config: {
+                    systemInstruction: `You are Ai-buddy, a friendly and encouraging AI tutor for ExamRedi. Your goal is to help students understand complex topics and prepare for their exams. Keep your tone positive and supportive. Format responses using markdown.`,
+                },
+            });
+            return await chat.sendMessage({ message });
         });
-        const result = await chat.sendMessage({ message });
 
         // Save conversation to database
         if (conversation) {
@@ -113,16 +137,15 @@ export const handleGenerateGuide = async (req, res) => {
     const creditCheck = await handleCreditUsage(req.user.id, 1);
     if (!creditCheck.success) return res.status(403).json({ message: creditCheck.message });
 
-    const ai = getAiInstance();
-    if (!ai) return res.status(500).json(missingApiKeyError);
-
     try {
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: `Generate a study guide for the subject "${subject}" on the topic "${topic}".`,
-            config: {
-                systemInstruction: `You are an expert educator. Create a concise, easy-to-understand study guide. Use clear headings, bullet points, and simple language. Use markdown for formatting.`,
-            }
+        const response = await executeWithFallback(async (ai) => {
+            return await ai.models.generateContent({
+                model: 'gemini-2.5-flash',
+                contents: `Generate a study guide for the subject "${subject}" on the topic "${topic}".`,
+                config: {
+                    systemInstruction: `You are an expert educator. Create a concise, easy-to-understand study guide. Use clear headings, bullet points, and simple language. Use markdown for formatting.`,
+                }
+            });
         });
         res.json({ guide: response.text });
     } catch (error) {
@@ -142,9 +165,6 @@ export const handleResearch = async (req, res) => {
         if (!creditCheck.success) return res.status(403).json({ message: creditCheck.message });
     }
 
-    const ai = getAiInstance();
-    if (!ai) return res.status(500).json(missingApiKeyError);
-
     let prompt = '';
     if (searchType === 'university') {
         prompt = `Provide a detailed overview of the Nigerian university: "${query}". Include its history, notable alumni, faculties, admission requirements, and student life.`;
@@ -153,12 +173,14 @@ export const handleResearch = async (req, res) => {
     }
 
     try {
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: prompt,
-            config: {
-                systemInstruction: `You are a knowledgeable career and academic advisor for Nigerian students. Provide accurate, detailed, and encouraging information. Use markdown formatting.`,
-            }
+        const response = await executeWithFallback(async (ai) => {
+            return await ai.models.generateContent({
+                model: 'gemini-2.5-flash',
+                contents: prompt,
+                config: {
+                    systemInstruction: `You are a knowledgeable career and academic advisor for Nigerian students. Provide accurate, detailed, and encouraging information. Use markdown formatting.`,
+                }
+            });
         });
         res.json({ result: response.text });
     } catch (error) {
@@ -188,12 +210,10 @@ export const handleGetTopicKeywords = async (req, res) => {
         }
 
         // 2. Generate if not in cache
-        const ai = getAiInstance();
-        if (!ai) return res.status(500).json(missingApiKeyError);
-
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: `You are helping students find relevant past exam questions for the topic "${topic}" in ${subject}.
+        const response = await executeWithFallback(async (ai) => {
+            return await ai.models.generateContent({
+                model: 'gemini-2.5-flash',
+                contents: `You are helping students find relevant past exam questions for the topic "${topic}" in ${subject}.
 
 Generate a JSON array of 15-20 search terms that would appear in exam questions about this topic. Include:
 1. The topic name itself and common variations/abbreviations
@@ -212,6 +232,7 @@ Example for "Photosynthesis":
 ["photosynthesis", "photosynth", "light energy", "chlorophyll", "chloroplast", "glucose production", "carbon dioxide", "oxygen", "light reaction", "dark reaction", "calvin cycle", "process by which plants", "conversion of light", "green plants", "autotroph", "food production", "sunlight", "leaves"]
 
 Output ONLY the JSON array with NO explanation.`,
+            });
         });
 
         const text = response.text;
@@ -247,9 +268,6 @@ export const handleSuggestQuestionTopics = async (req, res) => {
         return res.status(400).json({ message: "Question text, available topics, and subject are required." });
     }
 
-    const ai = getAiInstance();
-    if (!ai) return res.status(500).json(missingApiKeyError);
-
     let optionsText = "";
     if (questionOptions) {
         optionsText = "\nOptions:\n" + Object.entries(questionOptions).map(([k, v]) => `${k}: ${v.text}`).join('\n');
@@ -260,9 +278,10 @@ export const handleSuggestQuestionTopics = async (req, res) => {
     }
 
     try {
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: `You are an expert at categorizing West African (JAMB/UTME/WASSCE) exam questions.
+        const response = await executeWithFallback(async (ai) => {
+            return await ai.models.generateContent({
+                model: 'gemini-2.5-flash',
+                contents: `You are an expert at categorizing West African (JAMB/UTME/WASSCE) exam questions.
 Subject: ${subject}
 Question: "${questionText}"${optionsText}${answerText}
 
@@ -275,6 +294,7 @@ INSTRUCTIONS:
 3. CRITICAL: Do NOT simply pick the first item in the list (e.g., "Concepts and Conventions") unless it is the perfect match. Usually, a more specific topic further down the list is better.
 4. If a question is about a specific calculation or document (like a Ledger, Trial Balance, or specific Account), pick that specific topic.
 5. Output ONLY a JSON array of the slugs for the chosen topics. Do not include any explanation or other text.`,
+            });
         });
 
         const text = response.text;

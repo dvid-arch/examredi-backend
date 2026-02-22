@@ -10,7 +10,7 @@ const getAiInstance = () => {
         console.error("GEMINI_API_KEY environment variable not set.");
         return null;
     }
-    return new GoogleGenAI({ apiKey });
+    return new GoogleGenAI({ apiKey, apiVersion: 'v1' });
 };
 
 const missingApiKeyError = { message: "The AI service is not configured on the server." };
@@ -62,7 +62,7 @@ export const handleAiChat = async (req, res) => {
         }
 
         const chat = ai.chats.create({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             history: buildHistory(history),
             config: {
                 systemInstruction: `You are Ai-buddy, a friendly and encouraging AI tutor for ExamRedi. Your goal is to help students understand complex topics and prepare for their exams. Keep your tone positive and supportive. Format responses using markdown.`,
@@ -118,7 +118,7 @@ export const handleGenerateGuide = async (req, res) => {
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: `Generate a study guide for the subject "${subject}" on the topic "${topic}".`,
             config: {
                 systemInstruction: `You are an expert educator. Create a concise, easy-to-understand study guide. Use clear headings, bullet points, and simple language. Use markdown for formatting.`,
@@ -154,7 +154,7 @@ export const handleResearch = async (req, res) => {
 
     try {
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-1.5-flash',
             contents: prompt,
             config: {
                 systemInstruction: `You are a knowledgeable career and academic advisor for Nigerian students. Provide accurate, detailed, and encouraging information. Use markdown formatting.`,

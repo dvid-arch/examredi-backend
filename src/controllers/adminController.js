@@ -308,9 +308,30 @@ export const updateQuestionTags = async (req, res) => {
         console.log(`[Admin] Updating tags for Paper: ${paperId}, Question: ${questionId}`);
         console.log(`[Admin] New Topics:`, topics);
 
-        const paper = await Paper.findOne({ $or: [{ _id: mongoose.isValidObjectId(paperId) ? paperId : null }, { id: paperId }] });
+        let paper = await Paper.findOne({ $or: [{ _id: mongoose.isValidObjectId(paperId) ? paperId : null }, { id: paperId }] });
+
+        // Fallback: Try to find by Subject and Year if id lookup fails
+        if (!paper && typeof paperId === 'string' && paperId.includes('-')) {
+            console.log(`[Admin] ID lookup failed. Attempting fallback lookup for: ${paperId}`);
+            const parts = paperId.split('-');
+            const year = parseInt(parts[parts.length - 1]);
+            const type = parts[0].toUpperCase();
+
+            if (!isNaN(year)) {
+                // Try to find any paper with this year and type, then match subject by normalized comparison
+                const candidates = await Paper.find({ year, type: { $regex: new RegExp(`^${type}$`, 'i') } });
+                paper = candidates.find(p => {
+                    const normalizedDb = p.subject.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    const normalizedReq = parts.slice(1, -1).join('').replace(/[^a-z0-9]/g, '');
+                    return normalizedDb === normalizedReq || p.id === paperId;
+                });
+
+                if (paper) console.log(`[Admin] Fallback SUCCEEDED for subject: ${paper.subject}`);
+            }
+        }
+
         if (!paper) {
-            console.warn(`[Admin] Paper NOT FOUND for ID: ${paperId}`);
+            console.warn(`[Admin] Paper NOT FOUND for ID: ${paperId} (even with fallback)`);
             return res.status(404).json({ message: 'Paper not found' });
         }
 

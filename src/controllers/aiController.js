@@ -252,11 +252,11 @@ export const handleSuggestQuestionTopics = async (req, res) => {
 
     let optionsText = "";
     if (questionOptions) {
-        optionsText = "\\nOptions:\\n" + Object.entries(questionOptions).map(([k, v]) => `${k}: ${v.text}`).join('\\n');
+        optionsText = "\nOptions:\n" + Object.entries(questionOptions).map(([k, v]) => `${k}: ${v.text}`).join('\n');
     }
     let answerText = "";
     if (correctAnswer) {
-        answerText = `\\nCorrect Answer: ${correctAnswer}`;
+        answerText = `\nCorrect Answer: ${correctAnswer}`;
     }
 
     try {
@@ -267,7 +267,7 @@ Subject: ${subject}
 Question: "${questionText}"${optionsText}${answerText}
 
 Available Topics for ${subject}:
-${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\\n')}
+${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\n')}
 
 INSTRUCTIONS:
 1. Analyze the core educational concept being tested in the question above.
@@ -283,7 +283,10 @@ INSTRUCTIONS:
 
         res.json({ suggestedTopics: suggestedSlugs });
     } catch (error) {
-        console.error("Gemini Suggest Topics Error:", error);
+        console.error("Gemini Suggest Topics Error:", error.message || error);
+        if (error.status === 429 || (error.message && error.message.includes('Quota exceeded'))) {
+            return res.status(429).json({ message: "AI rate limit exceeded. Please wait 5 seconds and try again." });
+        }
         res.status(500).json({ message: "Error suggesting topics." });
     }
 };

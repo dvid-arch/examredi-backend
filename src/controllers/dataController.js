@@ -11,19 +11,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const dbPath = path.join(__dirname, '..', 'db');
-const papersFilePath = path.join(dbPath, 'all_papers.json');
-const guidesFilePath = path.join(dbPath, 'guide.json');
 const topicsFilePath = path.join(dbPath, 'topics.json');
 const leaderboardFilePath = path.join(dbPath, 'leaderboard.json');
 const performanceFilePath = path.join(dbPath, 'performance.json');
 const literatureFilePath = path.join(dbPath, 'literature.json');
 
-// In-memory cache to avoid reading large JSON files on every request
-let papersCache = null;
-let guidesCache = null;
-let papersCacheTime = 0;
-let guidesCacheTime = 0;
-const CACHE_TTL = 10 * 60 * 1000; // 10 minutes cache
 
 const SUBJECT_MAPPING = {
     // Accounts
@@ -69,25 +61,6 @@ const readJsonFile = async (filePath) => {
     }
 };
 
-const getCachedPapers = async () => {
-    const now = Date.now();
-    if (!papersCache || (now - papersCacheTime > CACHE_TTL)) {
-        console.log('Refreshing papers cache from JSON...');
-        papersCache = await readJsonFile(papersFilePath);
-        papersCacheTime = now;
-    }
-    return papersCache;
-};
-
-const getCachedGuides = async () => {
-    const now = Date.now();
-    if (!guidesCache || (now - guidesCacheTime > CACHE_TTL)) {
-        console.log('Refreshing guides cache from JSON...');
-        guidesCache = await readJsonFile(guidesFilePath);
-        guidesCacheTime = now;
-    }
-    return guidesCache;
-};
 
 const writeJsonFile = async (filePath, data) => {
     await fs.mkdir(dbPath, { recursive: true });
@@ -99,18 +72,22 @@ const writeJsonFile = async (filePath, data) => {
 export const getPapers = async (req, res) => {
     try {
         const { subject, year } = req.query;
+        const filter = {};
 
-        // Use JSON file cache directly bypassing MongoDB as requested
-        let papers = await getCachedPapers();
-
-        // Apply filters locally
         if (subject) {
             const targetSubject = SUBJECT_MAPPING[subject] || subject;
-            papers = papers.filter(p => p.subject === targetSubject || p.subject === subject);
+            filter.$or = [
+                { subject: targetSubject },
+                { subject: subject }
+            ];
         }
+
         if (year) {
-            papers = papers.filter(p => p.year === Number(year));
+            filter.year = Number(year);
         }
+
+        // Query MongoDB with lean() for performance
+        let papers = await Paper.find(filter).lean();
 
         const isAuthenticated = !!req.user;
 
@@ -218,14 +195,8 @@ export const searchByKeywords = async (req, res) => {
 // @route   GET /api/data/guides
 export const getGuides = async (req, res) => {
     try {
-        // Use JSON file cache bypass MongoDB
-        let guides = await getCachedGuides();
-
-        // Ensure they are sorted by subject if needed (optional since JSON might already be)
-        if (Array.isArray(guides)) {
-            guides.sort((a, b) => a.subject.localeCompare(b.subject));
-        }
-
+        // Use MongoDB directly
+        const guides = await Guide.find({}).sort({ subject: 1 }).lean();
         res.json(guides);
     } catch (error) {
         console.error('Error fetching guides:', error);

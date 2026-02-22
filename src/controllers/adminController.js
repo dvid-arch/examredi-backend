@@ -308,78 +308,19 @@ export const updateQuestionTags = async (req, res) => {
         console.log(`[Admin] Updating tags for Paper: ${paperId}, Question: ${questionId}`);
         console.log(`[Admin] New Topics:`, topics);
 
-        let paper = await Paper.findOne({ $or: [{ _id: mongoose.isValidObjectId(paperId) ? paperId : null }, { id: paperId }] });
-
-        // Fallback: Try to find by Subject and Year if id lookup fails
-        if (!paper && typeof paperId === 'string' && paperId.includes('-')) {
-            console.log(`[Admin] ID lookup failed. Attempting fallback lookup for: ${paperId}`);
-            const parts = paperId.split('-');
-            const year = parseInt(parts[parts.length - 1]);
-            const type = parts[0].toUpperCase();
-
-            if (!isNaN(year)) {
-                // Try to find any paper with this year and type, then match subject by normalized comparison
-                const candidates = await Paper.find({ year, type: { $regex: new RegExp(`^${type}$`, 'i') } });
-
-                // Common subject mappings to bridge the gap between frontend slugs and DB names
-                const subjectAliases = {
-                    'accountsprinciplesofaccounts': ['accounting', 'accounts'],
-                    'accounting': ['accountsprinciplesofaccounts'],
-                    'agriculture': ['agriculturalscience'],
-                    'agriculturalscience': ['agriculture'],
-                    'fineart': ['finearts'],
-                    'finearts': ['fineart']
-                };
-
-                paper = candidates.find(p => {
-                    const normalizedDb = p.subject.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    const normalizedReq = parts.slice(1, -1).join('').replace(/[^a-z0-9]/g, '');
-
-                    if (normalizedDb === normalizedReq) return true;
-
-                    // Check aliases
-                    const aliases = subjectAliases[normalizedReq] || [];
-                    if (aliases.includes(normalizedDb)) return true;
-
-                    return p.id === paperId;
-                });
-
-                if (paper) console.log(`[Admin] Fallback SUCCEEDED for subject: ${paper.subject}`);
-            }
-        }
+        // Standard database lookup (either MongoDB _id or custom id slug)
+        const paper = await Paper.findOne({
+            $or: [
+                { _id: mongoose.isValidObjectId(paperId) ? paperId : null },
+                { id: paperId }
+            ]
+        });
 
         if (!paper) {
-            console.log(`[Admin] Still not found in DB. Searching all_papers.json as LAST RESORT for: ${paperId}`);
-            try {
-                // Check if file exists first to see if it's even bundled by Vercel
-                const exists = await fs.access(papersFilePath).then(() => true).catch(() => false);
-                if (!exists) {
-                    console.error(`[Admin] CRITICAL: all_papers.json DOES NOT EXIST at: ${papersFilePath}`);
-                } else {
-                    const data = await fs.readFile(papersFilePath, 'utf8');
-                    const allPapers = JSON.parse(data);
-                    const jsonPaper = allPapers.find(p => p.id === paperId || (parts && parts.every(part => p.id.includes(part.toLowerCase()))));
-
-                    if (jsonPaper) {
-                        console.log(`[Admin] Found paper in JSON! Auto-seeding to DB: ${jsonPaper.id}`);
-                        const newPaper = new Paper({
-                            id: jsonPaper.id,
-                            subject: jsonPaper.subject,
-                            year: jsonPaper.year,
-                            type: jsonPaper.exam || 'UTME',
-                            questions: jsonPaper.questions
-                        });
-                        paper = await newPaper.save();
-                    }
-                }
-            } catch (err) {
-                console.error(`[Admin] JSON Fallback/Auto-seed error:`, err.message);
-            }
-        }
-
-        if (!paper) {
-            console.warn(`[Admin] Paper NOT FOUND for ID: ${paperId} (even with JSON fallback)`);
-            return res.status(404).json({ message: `Paper not found (${paperId}). If this is production, please sync your MongoDB Atlas database.` });
+            console.warn(`[Admin] Paper NOT FOUND in database for ID: ${paperId}`);
+            return res.status(404).json({
+                message: `Paper not found (${paperId}). Ensure the database is seeded by redeploying to Render.`
+            });
         }
 
         const questionIndex = paper.questions.findIndex(q => q.id === questionId);
@@ -391,7 +332,7 @@ export const updateQuestionTags = async (req, res) => {
         paper.questions[questionIndex].topics = topics;
         await paper.save();
 
-        // Sync to JSON backup
+        // Sync to JSON backup for safety
         await syncBackups();
 
         res.json(paper.questions[questionIndex]);

@@ -87,21 +87,45 @@ export async function seedPapers(customPath = null) {
         };
     }).filter(Boolean);
 
-    console.log('Clearing existing papers...');
-    await Paper.deleteMany({});
+    console.log(`Upserting ${validPapers.length} papers...`);
 
-    console.log(`Inserting ${validPapers.length} papers in batches...`);
-    const batchSize = 100;
-    for (let i = 0; i < validPapers.length; i += batchSize) {
-        const batch = validPapers.slice(i, i + batchSize);
+    for (const paperData of validPapers) {
         try {
-            await Paper.insertMany(batch, { ordered: false });
+            // Use updateOne with upsert to avoid overwriting user-saved tags (topics)
+            // We only want to update structural fields, but KEEP questions' topics if they exist in DB
+
+            const existingPaper = await Paper.findOne({ id: paperData.id });
+
+            if (existingPaper) {
+                // If paper exists, merge questions to preserve topics
+                const mergedQuestions = paperData.questions.map(newQ => {
+                    const dbQ = existingPaper.questions.find(q => q.id === newQ.id);
+                    return {
+                        ...newQ,
+                        topics: (dbQ && dbQ.topics && dbQ.topics.length > 0) ? dbQ.topics : newQ.topics
+                    };
+                });
+
+                await Paper.updateOne(
+                    { id: paperData.id },
+                    {
+                        $set: {
+                            subject: paperData.subject,
+                            year: paperData.year,
+                            type: paperData.type,
+                            questions: mergedQuestions
+                        }
+                    }
+                );
+            } else {
+                // New paper, just insert
+                await new Paper(paperData).save();
+            }
         } catch (e) {
-            console.error(`\nBatch error at index ${i}:`, e.message);
+            console.error(`\nError upserting paper ${paperData.id}:`, e.message);
         }
-        process.stdout.write(`\rProgress: ${i + batch.length}/${validPapers.length}`);
     }
-    console.log('\nPapers seeded successfully.');
+    console.log('\nPapers synchronized successfully (Non-destructive).');
 }
 
 async function runSeeder() {

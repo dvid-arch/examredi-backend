@@ -42,8 +42,7 @@ const chatHistorySchema = new mongoose.Schema({
     },
     lastAccessedAt: {
         type: Date,
-        default: Date.now,
-        index: true
+        default: Date.now
     }
 }, {
     timestamps: true

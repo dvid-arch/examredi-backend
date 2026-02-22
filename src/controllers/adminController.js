@@ -351,30 +351,35 @@ export const updateQuestionTags = async (req, res) => {
         if (!paper) {
             console.log(`[Admin] Still not found in DB. Searching all_papers.json as LAST RESORT for: ${paperId}`);
             try {
-                const data = await fs.readFile(papersFilePath, 'utf8');
-                const allPapers = JSON.parse(data);
-                const jsonPaper = allPapers.find(p => p.id === paperId || parts.every(part => p.id.includes(part.toLowerCase())));
+                // Check if file exists first to see if it's even bundled by Vercel
+                const exists = await fs.access(papersFilePath).then(() => true).catch(() => false);
+                if (!exists) {
+                    console.error(`[Admin] CRITICAL: all_papers.json DOES NOT EXIST at: ${papersFilePath}`);
+                } else {
+                    const data = await fs.readFile(papersFilePath, 'utf8');
+                    const allPapers = JSON.parse(data);
+                    const jsonPaper = allPapers.find(p => p.id === paperId || (parts && parts.every(part => p.id.includes(part.toLowerCase()))));
 
-                if (jsonPaper) {
-                    console.log(`[Admin] Found paper in JSON! Auto-seeding to DB: ${jsonPaper.id}`);
-                    // Basic mapping to schema
-                    const newPaper = new Paper({
-                        id: jsonPaper.id,
-                        subject: jsonPaper.subject,
-                        year: jsonPaper.year,
-                        type: jsonPaper.exam || 'UTME',
-                        questions: jsonPaper.questions
-                    });
-                    paper = await newPaper.save();
+                    if (jsonPaper) {
+                        console.log(`[Admin] Found paper in JSON! Auto-seeding to DB: ${jsonPaper.id}`);
+                        const newPaper = new Paper({
+                            id: jsonPaper.id,
+                            subject: jsonPaper.subject,
+                            year: jsonPaper.year,
+                            type: jsonPaper.exam || 'UTME',
+                            questions: jsonPaper.questions
+                        });
+                        paper = await newPaper.save();
+                    }
                 }
             } catch (err) {
-                console.error(`[Admin] Auto-seed error:`, err.message);
+                console.error(`[Admin] JSON Fallback/Auto-seed error:`, err.message);
             }
         }
 
         if (!paper) {
             console.warn(`[Admin] Paper NOT FOUND for ID: ${paperId} (even with JSON fallback)`);
-            return res.status(404).json({ message: 'Paper not found in database or JSON' });
+            return res.status(404).json({ message: `Paper not found (${paperId}). If this is production, please sync your MongoDB Atlas database.` });
         }
 
         const questionIndex = paper.questions.findIndex(q => q.id === questionId);

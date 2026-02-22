@@ -14,6 +14,14 @@ const __dirname = path.dirname(__filename);
 // Use Atlas connection string from environment variables
 const MONGO_URI = process.env.MONGO_URI;
 
+// Mapping to normalize subjects to frontend expectations
+const SUBJECT_MAPPING = {
+    'Accounts - Principles of Accounts': 'Accounting',
+    'Agricultural Science': 'Agriculture',
+    'Fine Arts': 'Fine Art',
+    'Physical and Health Education': 'Physical and Health Education (PHE)'
+};
+
 async function connectDB() {
     if (!MONGO_URI) {
         throw new Error('MONGO_URI is not defined in environment variables');
@@ -54,6 +62,15 @@ export async function seedPapers(customPath = null) {
     const validPapers = papers.map(p => {
         if (!p.subject || !Array.isArray(p.questions)) return null;
 
+        let subject = p.subject;
+        // Normalize Subject Names to match guides.json (Frontend names)
+        for (const [backendName, frontendName] of Object.entries(SUBJECT_MAPPING)) {
+            if (p.subject === backendName) {
+                subject = frontendName;
+                break;
+            }
+        }
+
         // Filter out questions with missing required fields
         const validQuestions = p.questions.filter(q => q.question && q.answer).map(q => ({
             ...q,
@@ -64,6 +81,8 @@ export async function seedPapers(customPath = null) {
 
         return {
             ...p,
+            id: p.id,
+            subject,
             questions: validQuestions
         };
     }).filter(Boolean);

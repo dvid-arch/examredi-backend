@@ -22,6 +22,7 @@ const questionSchema = new mongoose.Schema({
 }, { _id: false }); // Disable auto-ID for subdocuments if we want to preserve original IDs or just keep it simple
 
 const paperSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true, index: true },
     subject: { type: String, required: true, index: true },
     year: { type: Number, required: true, index: true },
     type: { type: String, default: 'UTME' }, // 'UTME', 'WASSCE', etc.

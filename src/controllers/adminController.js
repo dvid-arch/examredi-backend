@@ -305,17 +305,18 @@ export const updateQuestionTags = async (req, res) => {
         const { paperId, questionId } = req.params;
         const { topics } = req.body;
 
-        if (!Array.isArray(topics)) {
-            return res.status(400).json({ message: 'Topics must be an array' });
-        }
+        console.log(`[Admin] Updating tags for Paper: ${paperId}, Question: ${questionId}`);
+        console.log(`[Admin] New Topics:`, topics);
 
         const paper = await Paper.findOne({ $or: [{ _id: mongoose.isValidObjectId(paperId) ? paperId : null }, { id: paperId }] });
         if (!paper) {
+            console.warn(`[Admin] Paper NOT FOUND for ID: ${paperId}`);
             return res.status(404).json({ message: 'Paper not found' });
         }
 
         const questionIndex = paper.questions.findIndex(q => q.id === questionId);
         if (questionIndex === -1) {
+            console.warn(`[Admin] Question NOT FOUND for ID: ${questionId} in paper: ${paperId}`);
             return res.status(404).json({ message: 'Question not found' });
         }
 

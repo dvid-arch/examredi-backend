@@ -5,9 +5,9 @@ import ChatHistory from '../models/ChatHistory.js';
 import { getNormalizedSubjectName } from '../utils/subjects.js';
 
 const getAiInstance = () => {
-    const apiKey = process.env.API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-        console.error("API_KEY environment variable not set.");
+        console.error("GEMINI_API_KEY environment variable not set.");
         return null;
     }
     return new GoogleGenAI({ apiKey });

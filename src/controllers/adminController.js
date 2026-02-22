@@ -317,7 +317,7 @@ export const updateQuestionTags = async (req, res) => {
         });
 
         if (!paper) {
-            console.warn(`[Admin] Paper NOT FOUND in database for ID: ${paperId}`);
+            console.warn(`[Admin] Paper NOT FOUND in database for ID: ${paperId}. Full params:`, req.params);
             return res.status(404).json({
                 message: `Paper not found (${paperId}). Ensure the database is seeded by redeploying to Render.`
             });

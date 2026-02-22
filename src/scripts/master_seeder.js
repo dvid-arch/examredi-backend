@@ -94,7 +94,13 @@ export async function seedPapers(customPath = null) {
             // Use updateOne with upsert to avoid overwriting user-saved tags (topics)
             // We only want to update structural fields, but KEEP questions' topics if they exist in DB
 
-            const existingPaper = await Paper.findOne({ id: paperData.id });
+            // Find existing paper by ID or by Subject+Year (for papers missing ID field)
+            const existingPaper = await Paper.findOne({
+                $or: [
+                    { id: paperData.id },
+                    { subject: paperData.subject, year: paperData.year }
+                ]
+            });
 
             if (existingPaper) {
                 // If paper exists, merge questions to preserve topics
@@ -107,9 +113,10 @@ export async function seedPapers(customPath = null) {
                 });
 
                 await Paper.updateOne(
-                    { id: paperData.id },
+                    { _id: existingPaper._id },
                     {
                         $set: {
+                            id: paperData.id, // Ensure ID field is set/updated
                             subject: paperData.subject,
                             year: paperData.year,
                             type: paperData.type,

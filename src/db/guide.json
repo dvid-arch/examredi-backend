@@ -3,25 +3,823 @@
     "id": "accounts-principles-of-accounts",
     "subject": "Accounts - Principles of Accounts",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "accounting-concepts-and-conventions",
+        "title": "Accounting Concepts and Conventions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "source-documents",
+        "title": "Source Documents",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "subsidiary-books-of-accounts",
+        "title": "Subsidiary Books of Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-ledger",
+        "title": "The Ledger",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "trial-balance",
+        "title": "Trial Balance",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "bank-reconciliation-statement",
+        "title": "Bank Reconciliation Statement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "errors-and-their-correction",
+        "title": "Errors and Their Correction",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "control-accounts",
+        "title": "Control Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "final-accounts-of-a-sole-trader",
+        "title": "Final Accounts of a Sole Trader",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "depreciation-of-fixed-assets",
+        "title": "Depreciation of Fixed Assets",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "bad-debts-and-provision-for-doubtful-debts",
+        "title": "Bad Debts and Provision for Doubtful Debts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "accounts-of-non-profit-making-organisations",
+        "title": "Accounts of Non-Profit Making Organisations",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "partnership-accounts",
+        "title": "Partnership Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "limited-liability-company-accounts",
+        "title": "Limited Liability Company Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "manufacturing-accounts",
+        "title": "Manufacturing Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "departmental-accounts",
+        "title": "Departmental Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "branch-accounts",
+        "title": "Branch Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hire-purchase-accounts",
+        "title": "Hire Purchase Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "consignment-accounts",
+        "title": "Consignment Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "joint-venture-accounts",
+        "title": "Joint Venture Accounts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "bills-of-exchange",
+        "title": "Bills of Exchange",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "single-entry-and-incomplete-records",
+        "title": "Single Entry and Incomplete Records",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "accounts-from-incomplete-records",
+        "title": "Accounts from Incomplete Records",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "receipts-and-payments-account",
+        "title": "Receipts and Payments Account",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "income-and-expenditure-account",
+        "title": "Income and Expenditure Account",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "financial-statement-analysis",
+        "title": "Financial Statement Analysis (Ratios)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "public-sector-accounting",
+        "title": "Public Sector Accounting",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ict-applications-in-accounting",
+        "title": "ICT Applications in Accounting",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "agricultural-science",
     "subject": "Agricultural Science",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "animal-husbandry",
-    "subject": "Animal Husbandry",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "meaning-and-importance-of-agriculture",
+        "title": "Meaning and Importance of Agriculture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "branches-of-agriculture",
+        "title": "Branches of Agriculture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "land-tenure-systems",
+        "title": "Land Tenure Systems",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "land-clearing-and-preparation",
+        "title": "Land Clearing and Preparation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soil-composition-and-types",
+        "title": "Soil Composition and Types",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soil-properties",
+        "title": "Soil Properties",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soil-water-and-drainage",
+        "title": "Soil Water and Drainage",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soil-fertility-and-management",
+        "title": "Soil Fertility and Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "fertilisers-and-manures",
+        "title": "Fertilisers and Manures",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soil-conservation",
+        "title": "Soil Conservation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-classification",
+        "title": "Crop Classification",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-ecology-and-climatic-factors",
+        "title": "Crop Ecology and Climatic Factors",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-production-field-crops",
+        "title": "Crop Production: Field Crops",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-production-horticultural-crops",
+        "title": "Crop Production: Horticultural Crops",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-improvement",
+        "title": "Crop Improvement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "plant-nutrition-and-deficiencies",
+        "title": "Plant Nutrition and Deficiencies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-pests-and-their-control",
+        "title": "Crop Pests and Their Control",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "crop-diseases-and-their-control",
+        "title": "Crop Diseases and Their Control",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "weeds-and-weed-control",
+        "title": "Weeds and Weed Control",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "harvesting-storage-and-processing",
+        "title": "Harvesting, Storage and Processing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "irrigation-and-drainage",
+        "title": "Irrigation and Drainage",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "farm-power-and-machinery",
+        "title": "Farm Power and Machinery",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "classification-of-farm-animals",
+        "title": "Classification of Farm Animals",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "animal-nutrition",
+        "title": "Animal Nutrition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "animal-husbandry-practices",
+        "title": "Animal Husbandry Practices",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "animal-health-and-disease-control",
+        "title": "Animal Health and Disease Control",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "livestock-production-cattle",
+        "title": "Livestock Production: Cattle",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "livestock-production-sheep-and-goat",
+        "title": "Livestock Production: Sheep and Goat",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "poultry-production",
+        "title": "Poultry Production",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pig-production",
+        "title": "Pig Production",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "fish-farming-aquaculture",
+        "title": "Fish Farming and Aquaculture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "rabbit-production",
+        "title": "Rabbit Production",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "snail-and-grass-cutter-farming",
+        "title": "Snail and Grass-Cutter Farming",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "bee-keeping-apiculture",
+        "title": "Bee Keeping (Apiculture)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "animal-improvement",
+        "title": "Animal Improvement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "agricultural-economics-and-management",
+        "title": "Agricultural Economics and Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "farm-planning-and-record-keeping",
+        "title": "Farm Planning and Record Keeping",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "agricultural-finance-and-credit",
+        "title": "Agricultural Finance and Credit",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "marketing-of-agricultural-produce",
+        "title": "Marketing of Agricultural Produce",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "cooperative-farming",
+        "title": "Cooperative Farming",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "agricultural-extension-services",
+        "title": "Agricultural Extension Services",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "forestry-and-forest-products",
+        "title": "Forestry and Forest Products",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "wildlife-management",
+        "title": "Wildlife Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "arabic",
     "subject": "Arabic",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "arabic-script-and-phonology",
+        "title": "Arabic Script and Phonology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-grammar-nahw-nouns-and-pronouns",
+        "title": "Arabic Grammar (Nahw): Nouns and Pronouns",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-grammar-nahw-verbs",
+        "title": "Arabic Grammar (Nahw): Verbs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-grammar-nahw-sentence-patterns",
+        "title": "Arabic Grammar (Nahw): Sentence Patterns",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-morphology-sarf",
+        "title": "Arabic Morphology (Sarf)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "word-derivation-in-arabic",
+        "title": "Word Derivation in Arabic",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-vocabulary-and-lexis",
+        "title": "Arabic Vocabulary and Lexis",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-comprehension-passages",
+        "title": "Arabic Comprehension Passages",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "translation-arabic-to-english-and-vice-versa",
+        "title": "Translation: Arabic\u2013English and Vice Versa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-essay-writing",
+        "title": "Arabic Essay Writing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-letter-writing",
+        "title": "Arabic Letter Writing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-oral-and-conversation",
+        "title": "Arabic Oral and Conversation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pre-islamic-poetry-al-jahiliyyah",
+        "title": "Pre-Islamic Poetry (Al-Jahiliyyah)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "early-islamic-literature",
+        "title": "Early Islamic Literature",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "abbasid-literary-era",
+        "title": "Abbasid Literary Era",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "modern-arabic-literature",
+        "title": "Modern Arabic Literature",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-quran-as-literary-text",
+        "title": "The Qur'an as Literary Text",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "arabic-culture-and-islamic-civilisation",
+        "title": "Arabic Culture and Islamic Civilisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "biology",
@@ -370,18 +1168,6 @@
     ]
   },
   {
-    "id": "book-keeping",
-    "subject": "Book Keeping",
-    "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "catering-craft-practice",
-    "subject": "Catering Craft Practice",
-    "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
     "id": "chemistry",
     "subject": "Chemistry",
     "lastUpdated": "2026-02-21",
@@ -509,8 +1295,8 @@
           "solubility",
           "saturated solution",
           "solubility curve",
-          "solubility in mol/dm³",
-          "solubility in g/dm³",
+          "solubility in mol/dm\u00b3",
+          "solubility in g/dm\u00b3",
           "factors affecting solubility"
         ],
         "videos": [],
@@ -954,7 +1740,7 @@
       },
       {
         "id": "relative-atomic-mass-based-on-12c-12",
-        "title": "Relative atomic mass based on 12C-12",
+        "title": "Relative atomic mass based on\u00a012C-12",
         "description": "",
         "content": "",
         "keywords": [],
@@ -1286,8 +2072,8 @@
           "solubility",
           "saturated solution",
           "solubility curve",
-          "solubility in mol/dm³",
-          "solubility in g/dm³",
+          "solubility in mol/dm\u00b3",
+          "solubility in g/dm\u00b3",
           "factors affecting solubility"
         ],
         "videos": [],
@@ -1311,8 +2097,8 @@
           "solubility",
           "saturated solution",
           "solubility curve",
-          "solubility in mol/dm³",
-          "solubility in g/dm³",
+          "solubility in mol/dm\u00b3",
+          "solubility in g/dm\u00b3",
           "factors affecting solubility"
         ],
         "videos": [],
@@ -1345,8 +2131,8 @@
           "solubility",
           "saturated solution",
           "solubility curve",
-          "solubility in mol/dm³",
-          "solubility in g/dm³",
+          "solubility in mol/dm\u00b3",
+          "solubility in g/dm\u00b3",
           "factors affecting solubility"
         ],
         "videos": [],
@@ -1595,7 +2381,7 @@
       },
       {
         "id": "electrolysis-of-dilute-h2so4-aqueous-cuso4-cucl2-solution-dilute-and-concentrated-nacl-solutions-and",
-        "title": "Electrolysis of dilute H2SO4, aqueous CuSO4, CuCl2 solution, dilute and concentrated NaCl solutions and fused NaCl",
+        "title": "Electrolysis of dilute H2SO4, aqueous CuSO4, CuCl2\u00a0solution, dilute and concentrated NaCl solutions and fused NaCl",
         "description": "",
         "content": "",
         "keywords": [],
@@ -1739,7 +2525,7 @@
       },
       {
         "id": "arrhenius-law-and-collision-theory",
-        "title": "Arrhenius’ law and Collision theory",
+        "title": "Arrhenius\u2019 law and Collision theory",
         "description": "",
         "content": "",
         "keywords": [],
@@ -1793,7 +2579,7 @@
       },
       {
         "id": "le-chateliers-principle",
-        "title": "Le Chatelier’s principle",
+        "title": "Le Chatelier\u2019s principle",
         "description": "",
         "content": "",
         "keywords": [],
@@ -3692,7 +4478,242 @@
     "id": "civic-education",
     "subject": "Civic Education",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "citizenship-and-civic-rights",
+        "title": "Citizenship and Civic Rights",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "types-and-modes-of-citizenship",
+        "title": "Types and Modes of Citizenship",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "rights-and-obligations-of-citizens",
+        "title": "Rights and Obligations of Citizens",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "fundamental-human-rights-in-nigeria",
+        "title": "Fundamental Human Rights in Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "democracy-and-good-governance",
+        "title": "Democracy and Good Governance",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "constitutionalism-and-the-rule-of-law",
+        "title": "Constitutionalism and the Rule of Law",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "separation-of-powers-and-checks-and-balances",
+        "title": "Separation of Powers and Checks and Balances",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-legislature",
+        "title": "The Legislature",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-executive",
+        "title": "The Executive",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-judiciary",
+        "title": "The Judiciary",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "federalism-in-nigeria",
+        "title": "Federalism in Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "local-government-civic",
+        "title": "Local Government",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "elections-and-the-electoral-process",
+        "title": "Elections and the Electoral Process",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "political-parties-and-party-system",
+        "title": "Political Parties and Party System",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "civil-society-organisations",
+        "title": "Civil Society Organisations",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "national-values-and-national-consciousness",
+        "title": "National Values and National Consciousness",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "national-symbols",
+        "title": "National Symbols",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "national-unity-and-integration",
+        "title": "National Unity and Integration",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "values-integrity-and-transparency",
+        "title": "Values: Integrity and Transparency",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "corruption-and-anticorruption-agencies",
+        "title": "Corruption and Anti-Corruption Agencies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "drug-abuse-and-trafficking",
+        "title": "Drug Abuse and Trafficking",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "human-trafficking",
+        "title": "Human Trafficking",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "traffic-laws-and-road-safety",
+        "title": "Traffic Laws and Road Safety",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "international-organisations-and-nigerias-role",
+        "title": "International Organisations and Nigeria's Role",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "globalisation-and-civic-responsibility",
+        "title": "Globalisation and Civic Responsibility",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sustainable-development-and-the-environment",
+        "title": "Sustainable Development and the Environment",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "commerce",
@@ -4041,7 +5062,7 @@
       },
       {
         "id": "employers-consumers-and-manufacturers-associations",
-        "title": "Employers’, Consumers’ and Manufacturers’ associations",
+        "title": "Employers\u2019, Consumers\u2019 and Manufacturers\u2019 associations",
         "description": "",
         "content": "",
         "keywords": [],
@@ -4122,7 +5143,7 @@
       },
       {
         "id": "export-import-and-entrepot-procedures-and-documents",
-        "title": "Export, import and entrepôt procedures and documents",
+        "title": "Export, import and entrep\u00f4t procedures and documents",
         "description": "",
         "content": "",
         "keywords": [],
@@ -4591,19 +5612,555 @@
     "id": "computer-studies",
     "subject": "Computer Studies",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "data-processing",
-    "subject": "Data Processing",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "history-and-generations-of-computers",
+        "title": "History and Generations of Computers",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "types-and-classification-of-computers",
+        "title": "Types and Classification of Computers",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-hardware-input-output-storage",
+        "title": "Computer Hardware: Input, Output and Storage Devices",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-central-processing-unit",
+        "title": "The Central Processing Unit (CPU)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-memory-ram-and-rom",
+        "title": "Computer Memory: RAM and ROM",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-software-types-and-functions",
+        "title": "Computer Software: Types and Functions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "operating-systems",
+        "title": "Operating Systems",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "application-packages",
+        "title": "Application Packages",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "word-processing-spreadsheets-databases",
+        "title": "Word Processing, Spreadsheets and Databases",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "number-systems-binary-octal-hexadecimal",
+        "title": "Number Systems (Binary, Octal, Hexadecimal)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "data-representation",
+        "title": "Data Representation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "programming-concepts-and-languages",
+        "title": "Programming Concepts and Languages",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "algorithms-flowcharts-and-pseudocode",
+        "title": "Algorithms, Flowcharts and Pseudocode",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "data-processing-and-database-management",
+        "title": "Data Processing and Database Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-networks-types-and-topologies",
+        "title": "Computer Networks: Types and Topologies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "internet-and-world-wide-web",
+        "title": "Internet and World Wide Web",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "e-commerce-e-banking-and-e-learning",
+        "title": "E-Commerce, E-Banking and E-Learning",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-security-viruses-and-cybercrime",
+        "title": "Computer Security: Viruses and Cybercrime",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "information-and-communication-technology-ict",
+        "title": "Information and Communication Technology (ICT)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ict-in-education-health-and-business",
+        "title": "ICT in Education, Health and Business",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "artificial-intelligence-and-emerging-technologies",
+        "title": "Artificial Intelligence and Emerging Technologies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "computer-maintenance-and-troubleshooting",
+        "title": "Computer Maintenance and Troubleshooting",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "economics",
     "subject": "Economics",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "basic-concepts-of-economics",
+        "title": "Basic Concepts of Economics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "scope-of-economics",
+        "title": "Scope of Economics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "fundamental-economic-problems",
+        "title": "Fundamental Economic Problems",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "economic-systems",
+        "title": "Economic Systems",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "production-possibility-curve",
+        "title": "Production Possibility Curve",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "demand",
+        "title": "Demand",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "supply",
+        "title": "Supply",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "price-determination",
+        "title": "Price Determination",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "elasticity-of-demand-and-supply",
+        "title": "Elasticity of Demand and Supply",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "theory-of-consumer-behaviour",
+        "title": "Theory of Consumer Behaviour",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "theory-of-production",
+        "title": "Theory of Production",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "costs-of-production",
+        "title": "Costs of Production",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "revenue",
+        "title": "Revenue",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "perfect-competition",
+        "title": "Perfect Competition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "monopoly",
+        "title": "Monopoly",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "monopolistic-competition-and-oligopoly",
+        "title": "Monopolistic Competition and Oligopoly",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "factor-market-labour",
+        "title": "Factor Market: Labour",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "factor-market-land-and-rent",
+        "title": "Factor Market: Land and Rent",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "factor-market-capital-and-interest",
+        "title": "Factor Market: Capital and Interest",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "factor-market-profit",
+        "title": "Factor Market: Profit",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "national-income",
+        "title": "National Income",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "money-and-banking",
+        "title": "Money and Banking",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "financial-institutions",
+        "title": "Financial Institutions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "public-finance",
+        "title": "Public Finance",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "taxation",
+        "title": "Taxation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "inflation-and-deflation",
+        "title": "Inflation and Deflation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "unemployment-economics",
+        "title": "Unemployment",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "economic-development-and-growth",
+        "title": "Economic Development and Growth",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "agriculture-in-the-economy",
+        "title": "Agriculture in the Economy",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "industrialisation",
+        "title": "Industrialisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "international-trade",
+        "title": "International Trade",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "balance-of-payments",
+        "title": "Balance of Payments",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "foreign-exchange-market",
+        "title": "Foreign Exchange Market",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "economic-planning-and-development",
+        "title": "Economic Planning and Development",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "population-economics",
+        "title": "Population",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "poverty-and-income-distribution",
+        "title": "Poverty and Income Distribution",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "roles-of-government-in-an-economy",
+        "title": "Roles of Government in an Economy",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "international-economic-organisations",
+        "title": "International Economic Organisations",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "english-language",
@@ -6059,28 +7616,648 @@
     ]
   },
   {
-    "id": "food-and-nutrition",
-    "subject": "Food and Nutrition",
-    "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
     "id": "french",
     "subject": "French",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "further-mathematics",
-    "subject": "Further Mathematics",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "french-phonetics-and-pronunciation",
+        "title": "French Phonetics and Pronunciation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nouns-and-articles-in-french",
+        "title": "Nouns and Articles",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "adjectives-in-french",
+        "title": "Adjectives",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pronouns-in-french",
+        "title": "Pronouns",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "adverbs-in-french",
+        "title": "Adverbs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "verbs-and-verb-groups",
+        "title": "Verbs and Verb Groups",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "present-tense",
+        "title": "Present Tense (Pr\u00e9sent)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "passe-compose-and-imparfait",
+        "title": "Pass\u00e9 Compos\u00e9 and Imparfait",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "futur-simple-and-conditionnel",
+        "title": "Futur Simple and Conditionnel",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "subjonctif",
+        "title": "Subjonctif (Subjunctive)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "passive-voice-in-french",
+        "title": "Passive Voice (Voix Passive)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "prepositions-and-conjunctions-in-french",
+        "title": "Prepositions and Conjunctions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sentence-structure-and-syntax",
+        "title": "Sentence Structure and Syntax",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "question-forms-in-french",
+        "title": "Question Forms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "negation-in-french",
+        "title": "Negation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "direct-and-indirect-speech",
+        "title": "Direct and Indirect Speech",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "french-comprehension-passages",
+        "title": "Comprehension Passages",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "vocabulary-and-lexis",
+        "title": "Vocabulary and Lexis",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "essay-writing-in-french",
+        "title": "Essay Writing (R\u00e9daction)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "letter-writing-in-french",
+        "title": "Letter Writing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "oral-french-and-conversation",
+        "title": "Oral French and Conversation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "culture-and-civilisation-of-francophone-countries",
+        "title": "Culture and Civilisation of Francophone Countries",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "translation-french-english",
+        "title": "Translation (French\u2013English / English\u2013French)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "geography",
     "subject": "Geography",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "scale-and-measurement",
+        "title": "Scale and Measurement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "map-reading-and-interpretation",
+        "title": "Map Reading and Interpretation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "interpretation-of-statistical-data",
+        "title": "Interpretation of Statistical Data",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "elementary-surveying",
+        "title": "Elementary Surveying",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "geographic-information-system",
+        "title": "Geographic Information System (GIS)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "structure-of-the-earth",
+        "title": "Structure of the Earth",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "rocks-and-minerals",
+        "title": "Rocks and Minerals",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "earth-movements",
+        "title": "Earth Movements",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "volcanicity",
+        "title": "Volcanicity",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "earthquakes",
+        "title": "Earthquakes",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "weathering",
+        "title": "Weathering",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "mass-movement",
+        "title": "Mass Movement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "erosion-transportation-and-deposition",
+        "title": "Erosion, Transportation and Deposition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "landforms",
+        "title": "Landforms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "river-processes-and-landforms",
+        "title": "River Processes and Landforms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "marine-processes-and-coastal-landforms",
+        "title": "Marine Processes and Coastal Landforms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "wind-action-and-desert-landforms",
+        "title": "Wind Action and Desert Landforms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "glaciation-and-glacial-landforms",
+        "title": "Glaciation and Glacial Landforms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "karst-topography",
+        "title": "Karst Topography",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "drainage-and-water-bodies",
+        "title": "Drainage and Water Bodies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "atmosphere-and-insolation",
+        "title": "Atmosphere and Insolation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "temperature",
+        "title": "Temperature",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pressure-and-winds",
+        "title": "Pressure and Winds",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "humidity-and-precipitation",
+        "title": "Humidity and Precipitation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "world-climatic-types",
+        "title": "World Climatic Types",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "weather-and-its-measurement",
+        "title": "Weather and Its Measurement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "soils",
+        "title": "Soils",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "natural-vegetation",
+        "title": "Natural Vegetation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "population",
+        "title": "Population",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "settlement",
+        "title": "Settlement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "agriculture",
+        "title": "Agriculture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "mining-and-quarrying",
+        "title": "Mining and Quarrying",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "manufacturing-industries",
+        "title": "Manufacturing Industries",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "transportation-and-communication",
+        "title": "Transportation and Communication",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "trade-and-commerce-in-geography",
+        "title": "Trade and Commerce",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "energy-resources",
+        "title": "Energy Resources",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "environmental-issues",
+        "title": "Environmental Issues",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nigeria-geographical-regions",
+        "title": "Nigeria: Geographical Regions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nigeria-economic-activities",
+        "title": "Nigeria: Economic Activities",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nigeria-human-geography",
+        "title": "Nigeria: Human Geography",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "west-africa-physical-setting",
+        "title": "West Africa: Physical Setting",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "west-africa-human-and-economic-geography",
+        "title": "West Africa: Human and Economic Geography",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ecowas",
+        "title": "ECOWAS",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "africa-physical-geography",
+        "title": "Africa: Physical Geography",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "africa-human-and-economic-geography",
+        "title": "Africa: Human and Economic Geography",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "world-major-climatic-zones",
+        "title": "World: Major Climatic Zones",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "world-natural-resources-and-economic-activities",
+        "title": "World: Natural Resources and Economic Activities",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "government",
@@ -6807,43 +8984,1170 @@
     "id": "hausa",
     "subject": "Hausa",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "hausa-phonology-vowels-consonants-tones",
+        "title": "Hausa Phonology: Vowels, Consonants and Tones",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-morphology",
+        "title": "Hausa Morphology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-syntax-and-sentence-structure",
+        "title": "Hausa Syntax and Sentence Structure",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "parts-of-speech-in-hausa",
+        "title": "Parts of Speech in Hausa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "tense-and-aspect-in-hausa",
+        "title": "Tense and Aspect in Hausa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "vocabulary-and-semantics-hausa",
+        "title": "Vocabulary and Semantics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "proverbs-in-hausa",
+        "title": "Proverbs in Hausa (Karin Magana)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "idiomatic-expressions-hausa",
+        "title": "Idiomatic Expressions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-poetry-waka",
+        "title": "Hausa Poetry (Waka)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-praise-song-kirari",
+        "title": "Hausa Praise Song (Kirari)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-folktales-tatsuniya",
+        "title": "Hausa Folktales (Tatsuniya)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-drama",
+        "title": "Hausa Drama",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-prose-fiction",
+        "title": "Hausa Prose Fiction",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-comprehension",
+        "title": "Hausa Comprehension",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-essay-composition",
+        "title": "Hausa Essay and Composition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "letter-writing-in-hausa",
+        "title": "Letter Writing in Hausa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-culture-festivals-and-traditions",
+        "title": "Hausa Culture: Festivals and Traditions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hausa-history-and-civilisation",
+        "title": "Hausa History and Civilisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "prescribed-texts-hausa",
+        "title": "Prescribed Texts in Hausa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "history",
     "subject": "History",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "meaning-and-methods-of-history",
+        "title": "Meaning and Methods of History",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sources-of-historical-knowledge",
+        "title": "Sources of Historical Knowledge",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pre-colonial-nigeria-peoples-and-cultures",
+        "title": "Pre-Colonial Nigeria: Peoples and Cultures",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-nok-culture",
+        "title": "The Nok Culture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-states-and-kingdoms",
+        "title": "Yoruba States and Kingdoms",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-benin-kingdom",
+        "title": "The Benin Kingdom",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-political-organisation",
+        "title": "Igbo Political Organisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-hausa-states",
+        "title": "The Hausa States",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-kanem-bornu-empire",
+        "title": "The Kanem-Bornu Empire",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-sokoto-caliphate",
+        "title": "The Sokoto Caliphate",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "other-nigerian-peoples",
+        "title": "Other Nigerian Peoples (Efik, Nupe, Tiv, etc.)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "trans-saharan-trade",
+        "title": "Trans-Saharan Trade",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-slave-trade",
+        "title": "The Slave Trade",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "legitimate-trade-and-european-contacts",
+        "title": "Legitimate Trade and European Contacts",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "british-colonisation-of-nigeria",
+        "title": "British Colonisation of Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "colonial-administration-and-indirect-rule",
+        "title": "Colonial Administration and Indirect Rule",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-economy-under-colonial-rule",
+        "title": "The Economy Under Colonial Rule",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "social-changes-under-colonialism",
+        "title": "Social Changes Under Colonialism",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "resistance-to-colonial-rule",
+        "title": "Resistance to Colonial Rule",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-rise-of-nigerian-nationalism",
+        "title": "The Rise of Nigerian Nationalism",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "constitutional-developments-to-independence",
+        "title": "Constitutional Developments to Independence",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-first-republic-1960-1966",
+        "title": "The First Republic (1960\u20131966)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "military-rule-in-nigeria",
+        "title": "Military Rule in Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-nigerian-civil-war",
+        "title": "The Nigerian Civil War (1967\u20131970)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "post-civil-war-nigeria",
+        "title": "Post-Civil War Nigeria and Return to Democracy",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "west-africa-before-colonialism",
+        "title": "West Africa Before Colonialism",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "colonialism-in-west-africa",
+        "title": "Colonialism in West Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nationalism-and-independence-in-west-africa",
+        "title": "Nationalism and Independence in West Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-scramble-and-partition-of-africa",
+        "title": "The Scramble and Partition of Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "decolonisation-of-africa",
+        "title": "Decolonisation of Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "world-war-i-and-its-effects-on-africa",
+        "title": "World War I and Its Effects on Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "world-war-ii-and-its-effects-on-africa",
+        "title": "World War II and Its Effects on Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-cold-war",
+        "title": "The Cold War",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-united-nations-organisation",
+        "title": "The United Nations Organisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-organisation-of-african-unity-and-african-union",
+        "title": "The OAU and African Union",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ecowas-history",
+        "title": "ECOWAS",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "home-economics",
     "subject": "Home Economics",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "home-management",
-    "subject": "Home Management",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "meaning-and-scope-of-home-economics",
+        "title": "Meaning and Scope of Home Economics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "food-nutrients-and-their-functions",
+        "title": "Food Nutrients and Their Functions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "food-groups-and-balanced-diet",
+        "title": "Food Groups and Balanced Diet",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "meal-planning-and-preparation",
+        "title": "Meal Planning and Preparation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "cookery-methods",
+        "title": "Cookery Methods",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "food-preservation-and-storage",
+        "title": "Food Preservation and Storage",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "food-hygiene-and-safety",
+        "title": "Food Hygiene and Safety",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "kitchen-management-and-equipment",
+        "title": "Kitchen Management and Equipment",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "special-diets-and-nutrition",
+        "title": "Special Diets and Nutrition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "fibres-and-fabrics",
+        "title": "Fibres and Fabrics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "clothing-construction-and-sewing",
+        "title": "Clothing Construction and Sewing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "clothing-care-and-laundry",
+        "title": "Clothing Care and Laundry",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "textile-design-and-decoration",
+        "title": "Textile Design and Decoration",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "family-and-types-of-family",
+        "title": "Family and Types of Family",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "family-relationships-and-dynamics",
+        "title": "Family Relationships and Dynamics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "child-development-growth-and-care",
+        "title": "Child Development: Growth and Care",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "family-health-and-sanitation",
+        "title": "Family Health and Sanitation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "housing-and-home-management",
+        "title": "Housing and Home Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "interior-decoration-and-furnishing",
+        "title": "Interior Decoration and Furnishing",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "consumer-education-budgeting-and-spending",
+        "title": "Consumer Education: Budgeting and Spending",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "entrepreneurship-in-home-economics",
+        "title": "Entrepreneurship in Home Economics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ict-applications-in-home-economics",
+        "title": "ICT Applications in Home Economics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "igbo",
     "subject": "Igbo",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "insurance",
-    "subject": "Insurance",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "igbo-phonology-vowels-consonants-tones",
+        "title": "Igbo Phonology: Vowels, Consonants and Tones",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-morphology",
+        "title": "Igbo Morphology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-syntax-and-sentence-structure",
+        "title": "Igbo Syntax and Sentence Structure",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "parts-of-speech-in-igbo",
+        "title": "Parts of Speech in Igbo",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "tense-and-aspect-in-igbo",
+        "title": "Tense and Aspect in Igbo",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "vocabulary-and-semantics-igbo",
+        "title": "Vocabulary and Semantics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "proverbs-in-igbo-ilu",
+        "title": "Proverbs in Igbo (Ilu)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "idiomatic-expressions-igbo",
+        "title": "Idiomatic Expressions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-oral-poetry-and-songs",
+        "title": "Igbo Oral Poetry and Songs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-folktales-ifo",
+        "title": "Igbo Folktales (Ifo)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-drama",
+        "title": "Igbo Drama",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-prose-fiction",
+        "title": "Igbo Prose Fiction",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-comprehension",
+        "title": "Igbo Comprehension",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-essay-composition",
+        "title": "Igbo Essay and Composition",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "letter-writing-in-igbo",
+        "title": "Letter Writing in Igbo",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-culture-festivals-and-traditions",
+        "title": "Igbo Culture: Festivals and Traditions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "igbo-history-and-civilisation",
+        "title": "Igbo History and Civilisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "prescribed-texts-igbo",
+        "title": "Prescribed Texts in Igbo",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "islamic-religious-knowledge-irk",
     "subject": "Islamic Religious Knowledge (IRK)",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "tawhid-islamic-monotheism",
+        "title": "Tawhid (Islamic Monotheism)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-quran-its-compilation-and-authority",
+        "title": "The Qur'an: Its Compilation and Authority",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "selected-surahs",
+        "title": "Selected Surahs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hadith-and-sunnah",
+        "title": "Hadith and Sunnah",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "pillars-of-islam",
+        "title": "Pillars of Islam",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "shahadah",
+        "title": "Shahadah (Declaration of Faith)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "salat-prayer",
+        "title": "Salat (Prayer)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "zakat-almsgiving",
+        "title": "Zakat (Almsgiving)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sawm-fasting",
+        "title": "Sawm (Fasting)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "hajj",
+        "title": "Hajj (Pilgrimage)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "articles-of-faith",
+        "title": "Articles of Faith (Arkan al-Iman)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-allah",
+        "title": "Belief in Allah",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-angels",
+        "title": "Belief in Angels",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-revealed-books",
+        "title": "Belief in Revealed Books",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-prophets-and-messengers",
+        "title": "Belief in Prophets and Messengers",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-the-last-day",
+        "title": "Belief in the Last Day",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "belief-in-al-qadar",
+        "title": "Belief in Al-Qadar (Divine Decree)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "life-of-prophet-muhammad-saw",
+        "title": "Life of Prophet Muhammad (SAW)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-rightly-guided-caliphs",
+        "title": "The Rightly Guided Caliphs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "umayyad-caliphate",
+        "title": "Umayyad Caliphate",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "abbasid-caliphate",
+        "title": "Abbasid Caliphate",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "islam-in-west-africa",
+        "title": "Islam in West Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "islam-in-nigeria",
+        "title": "Islam in Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "the-jihad-movements-in-west-africa",
+        "title": "The Jihad Movements in West Africa",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "islamic-jurisprudence-fiqh",
+        "title": "Islamic Jurisprudence (Fiqh)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "islamic-moral-values-and-social-conduct",
+        "title": "Islamic Moral Values and Social Conduct",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "family-life-in-islam",
+        "title": "Family Life in Islam",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "islamic-law-on-commercial-transactions",
+        "title": "Islamic Law on Commercial Transactions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "jihad",
+        "title": "Jihad",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "science-and-scholarship-in-islam",
+        "title": "Science and Scholarship in Islam",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "challenges-facing-islam-in-contemporary-society",
+        "title": "Challenges Facing Islam in Contemporary Society",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "literature-in-english",
@@ -7677,7 +10981,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-20-21",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 20 & 21",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 20 & 21",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7686,7 +10990,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-22-23",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 22 & 23",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 22 & 23",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7695,7 +10999,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-24-25",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 24 & 25",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 24 & 25",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7704,7 +11008,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-26-27",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 26 & 27",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 26 & 27",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7713,7 +11017,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-28-29",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 28 & 29",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 28 & 29",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7722,7 +11026,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-chapters-30-31",
-        "title": "Harper Lee’s To Kill a Mockingbird - Chapters 30 & 31",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Chapters 30 & 31",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7731,7 +11035,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-themes",
-        "title": "Harper Lee’s To Kill a Mockingbird - Themes",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Themes",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7740,7 +11044,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-characters-characterisation",
-        "title": "Harper Lee’s To Kill a Mockingbird - Characters & Characterisation",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Characters & Characterisation",
         "description": "",
         "content": "",
         "keywords": [],
@@ -7749,7 +11053,7 @@
       },
       {
         "id": "harper-lees-to-kill-a-mockingbird-language-style",
-        "title": "Harper Lee’s To Kill a Mockingbird - Language & Style",
+        "title": "Harper Lee\u2019s To Kill a Mockingbird - Language & Style",
         "description": "",
         "content": "",
         "keywords": [],
@@ -8712,12 +12016,6 @@
     ]
   },
   {
-    "id": "marketing",
-    "subject": "Marketing",
-    "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
     "id": "mathematics",
     "subject": "Mathematics",
     "lastUpdated": "2026-02-21",
@@ -9239,19 +12537,501 @@
     "id": "music",
     "subject": "Music",
     "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
-    "id": "office-practice",
-    "subject": "Office Practice",
-    "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "rudiments-of-music",
+        "title": "Rudiments of Music",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "musical-notation-and-symbols",
+        "title": "Musical Notation and Symbols",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "time-signatures-and-metre",
+        "title": "Time Signatures and Metre",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "scales-and-modes",
+        "title": "Scales and Modes",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "intervals",
+        "title": "Intervals",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "keys-and-key-signatures",
+        "title": "Keys and Key Signatures",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "chords-and-harmony",
+        "title": "Chords and Harmony",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "melody-and-melodic-construction",
+        "title": "Melody and Melodic Construction",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "rhythm-and-rhythmic-patterns",
+        "title": "Rhythm and Rhythmic Patterns",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "musical-forms-and-structures",
+        "title": "Musical Forms and Structures",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "musical-texture",
+        "title": "Musical Texture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "musical-instruments-classification",
+        "title": "Classification of Musical Instruments",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "orchestral-instruments",
+        "title": "Orchestral Instruments",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "african-musical-instruments",
+        "title": "African Musical Instruments",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nigerian-traditional-music",
+        "title": "Nigerian Traditional Music",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "african-traditional-music",
+        "title": "African Traditional Music",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "history-of-western-music-middle-ages-to-baroque",
+        "title": "History of Western Music: Middle Ages to Baroque",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "classical-and-romantic-periods",
+        "title": "Classical and Romantic Periods",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "20th-century-and-contemporary-music",
+        "title": "20th Century and Contemporary Music",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "popular-music-jazz-blues-highlife-afrobeat",
+        "title": "Popular Music: Jazz, Blues, Highlife, Afrobeat",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "church-and-choral-music",
+        "title": "Church and Choral Music",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "music-in-nigerian-society-and-culture",
+        "title": "Music in Nigerian Society and Culture",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "music-composition-and-arrangement",
+        "title": "Music Composition and Arrangement",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "music-performance-and-voice-training",
+        "title": "Music Performance and Voice Training",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "music-education-and-musicology",
+        "title": "Music Education and Musicology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "physical-education",
     "subject": "Physical Education",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "meaning-and-history-of-physical-education",
+        "title": "Meaning and History of Physical Education",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "aims-and-objectives-of-physical-education",
+        "title": "Aims and Objectives of Physical Education",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "skeletal-system",
+        "title": "Skeletal System",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "muscular-system",
+        "title": "Muscular System",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "circulatory-and-respiratory-systems",
+        "title": "Circulatory and Respiratory Systems",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nervous-system-and-sensory-organs",
+        "title": "Nervous System and Sensory Organs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "physical-fitness-components",
+        "title": "Physical Fitness: Components",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "health-related-fitness",
+        "title": "Health-Related Fitness",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "skill-related-fitness",
+        "title": "Skill-Related Fitness",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "exercise-physiology",
+        "title": "Exercise Physiology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "principles-of-training",
+        "title": "Principles of Training",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "nutrition-and-dietary-requirements-for-sport",
+        "title": "Nutrition and Dietary Requirements for Sport",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "first-aid-and-sports-safety",
+        "title": "First Aid and Sports Safety",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sports-injuries-prevention-and-treatment",
+        "title": "Sports Injuries: Prevention and Treatment",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "drug-abuse-and-doping-in-sport",
+        "title": "Drug Abuse and Doping in Sport",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "track-and-field-athletics",
+        "title": "Track and Field Athletics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "gymnastics",
+        "title": "Gymnastics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "swimming",
+        "title": "Swimming",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ball-games-football-basketball-volleyball",
+        "title": "Ball Games: Football, Basketball, Volleyball",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "racket-sports",
+        "title": "Racket Sports",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "combat-sports",
+        "title": "Combat Sports",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "indigenous-games-and-sports-in-nigeria",
+        "title": "Indigenous Games and Sports in Nigeria",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sports-psychology",
+        "title": "Sports Psychology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sports-sociology",
+        "title": "Sports Sociology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "sports-administration-and-management",
+        "title": "Sports Administration and Management",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "national-and-international-sports-bodies",
+        "title": "National and International Sports Bodies",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "physical-education-for-special-needs",
+        "title": "Physical Education for Special Needs",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "recreation-and-leisure",
+        "title": "Recreation and Leisure",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ecology-and-environmental-health",
+        "title": "Ecology and Environmental Health",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   },
   {
     "id": "physics",
@@ -9429,8 +13209,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9488,8 +13268,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9573,8 +13353,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9614,8 +13394,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9655,8 +13435,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9696,8 +13476,8 @@
           "non-uniform motion",
           "equations of motion",
           "v = u + at",
-          "s = ut + ½at²",
-          "v² = u² + 2as",
+          "s = ut + \u00bdat\u00b2",
+          "v\u00b2 = u\u00b2 + 2as",
           "distance",
           "displacement",
           "scalar",
@@ -9912,7 +13692,7 @@
           "ohm's law",
           "V = IR",
           "resistivity",
-          "ρ = RA/l",
+          "\u03c1 = RA/l",
           "conductors",
           "insulators",
           "semiconductors",
@@ -9924,8 +13704,8 @@
           "maximum power transfer",
           "electrical power",
           "P = IV",
-          "P = I²R",
-          "P = V²/R",
+          "P = I\u00b2R",
+          "P = V\u00b2/R",
           "electrical energy",
           "kWh",
           "household circuits",
@@ -10037,7 +13817,7 @@
           "frequency",
           "period",
           "wave speed",
-          "v = fλ",
+          "v = f\u03bb",
           "wave equation",
           "progressive wave",
           "stationary wave",
@@ -10126,15 +13906,199 @@
     ]
   },
   {
-    "id": "technical-drawing",
-    "subject": "Technical Drawing",
-    "lastUpdated": "2026-02-21",
-    "topics": []
-  },
-  {
     "id": "yoruba",
     "subject": "Yoruba",
     "lastUpdated": "2026-02-21",
-    "topics": []
+    "topics": [
+      {
+        "id": "yoruba-phonology-vowels-consonants-tones",
+        "title": "Yoruba Phonology: Vowels, Consonants and Tones",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-morphology",
+        "title": "Yoruba Morphology",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-syntax-and-sentence-structure",
+        "title": "Yoruba Syntax and Sentence Structure",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "parts-of-speech-in-yoruba",
+        "title": "Parts of Speech in Yoruba",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "tenses-and-aspect-in-yoruba",
+        "title": "Tenses and Aspect in Yoruba",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "vocabulary-and-semantics-yoruba",
+        "title": "Vocabulary and Semantics",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "proverbs-and-their-meanings-yoruba",
+        "title": "Proverbs and Their Meanings (Owe)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "idiomatic-expressions-yoruba",
+        "title": "Idiomatic Expressions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "oriki-praise-poetry",
+        "title": "Oriki (Praise Poetry)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "itan-narrative-prose",
+        "title": "Itan (Narrative Prose and Folktales)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "rara-funeral-songs",
+        "title": "Rara (Funeral Songs)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ijala-hunters-poetry",
+        "title": "Ijala (Hunters' Poetry)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "ewi-modern-yoruba-poetry",
+        "title": "Ewi (Modern Yoruba Poetry)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-drama",
+        "title": "Yoruba Drama",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-prose-fiction",
+        "title": "Yoruba Prose Fiction",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-comprehension",
+        "title": "Yoruba Comprehension (Agbero Oye)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-essay-composition",
+        "title": "Yoruba Essay and Composition (Akosile)",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "letter-writing-in-yoruba",
+        "title": "Letter Writing in Yoruba",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-culture-festivals-and-traditions",
+        "title": "Yoruba Culture: Festivals and Traditions",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "yoruba-history-and-civilisation",
+        "title": "Yoruba History and Civilisation",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      },
+      {
+        "id": "prescribed-texts-yoruba",
+        "title": "Prescribed Texts in Yoruba",
+        "description": "",
+        "content": "",
+        "keywords": [],
+        "videos": [],
+        "inlineQuestions": []
+      }
+    ]
   }
 ]

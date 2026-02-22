@@ -241,7 +241,7 @@ Output ONLY the JSON array with NO explanation.`,
 // @desc    Suggest topics for a question based on a list of available topics
 // @route   POST /api/ai/suggest-question-topics
 export const handleSuggestQuestionTopics = async (req, res) => {
-    const { questionText, availableTopics, subject } = req.body;
+    const { questionText, questionOptions, correctAnswer, availableTopics, subject } = req.body;
 
     if (!questionText || !availableTopics || !subject) {
         return res.status(400).json({ message: "Question text, available topics, and subject are required." });
@@ -250,15 +250,24 @@ export const handleSuggestQuestionTopics = async (req, res) => {
     const ai = getAiInstance();
     if (!ai) return res.status(500).json(missingApiKeyError);
 
+    let optionsText = "";
+    if (questionOptions) {
+        optionsText = "\\nOptions:\\n" + Object.entries(questionOptions).map(([k, v]) => `${k}: ${v.text}`).join('\\n');
+    }
+    let answerText = "";
+    if (correctAnswer) {
+        answerText = `\\nCorrect Answer: ${correctAnswer}`;
+    }
+
     try {
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: `You are an expert at categorizing West African (JAMB/UTME/WASSCE) exam questions.
 Subject: ${subject}
-Question: "${questionText}"
+Question: "${questionText}"${optionsText}${answerText}
 
 Available Topics for ${subject}:
-${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\n')}
+${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\\n')}
 
 INSTRUCTIONS:
 1. Analyze the core educational concept being tested in the question above.

@@ -151,18 +151,29 @@ export const searchPapers = async (req, res) => {
 // @route   POST /api/data/search-batch
 export const searchByKeywords = async (req, res) => {
     try {
-        const { subject, topic, subTopic } = req.body;
+        const { subject, keywords, topic, subTopic } = req.body;
 
-        if (!topic && !subTopic) {
-            return res.status(400).json({ message: 'Topic or subTopic is required' });
+        // Legacy support + new keywords support
+        const searchTerms = keywords && keywords.length > 0
+            ? keywords.map(k => k.toLowerCase())
+            : [(subTopic || topic || '').toLowerCase()].filter(Boolean);
+
+        if (searchTerms.length === 0) {
+            return res.status(400).json({ message: 'Keywords, topic, or subTopic is required' });
         }
 
         const targetSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
-        const targetQuery = subTopic || topic;
+
+        // Find papers that have questions tagged with ANY of these search terms (case-insensitive)
+        const regexTerms = searchTerms.map(term => {
+            const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return new RegExp('^' + escapedTerm + '$', 'i');
+        });
 
         const filter = {
-            'questions.topics': { $in: [targetQuery.toLowerCase()] }
+            'questions.topics': { $in: regexTerms }
         };
+
         if (targetSubject) {
             filter.subject = targetSubject;
         }
@@ -173,7 +184,11 @@ export const searchByKeywords = async (req, res) => {
         papers.forEach(paper => {
             paper.questions.forEach(q => {
                 const questionTopics = (q.topics || []).map(t => t.toLowerCase());
-                if (questionTopics.includes(targetQuery.toLowerCase())) {
+
+                // If the question has ANY topic that matches our search terms, include it
+                const isMatch = questionTopics.some(qt => searchTerms.includes(qt));
+
+                if (isMatch) {
                     results.push({
                         ...q,
                         subject: paper.subject,

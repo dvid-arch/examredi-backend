@@ -285,11 +285,16 @@ export const deleteGuide = async (req, res) => {
 // @route   GET /api/admin/topics
 export const getTopics = async (req, res) => {
     try {
+        console.log(`[Admin] Reading topics from: ${topicsFilePath}`);
         const data = await fs.readFile(topicsFilePath, 'utf-8');
         res.json(JSON.parse(data));
     } catch (error) {
-        console.error('Error reading topics:', error);
-        res.status(500).json({ message: 'Error reading topics' });
+        console.error('[Admin] Error reading topics:', error);
+        res.status(500).json({
+            message: 'Error reading topics [CODE_V4]',
+            error: error.message,
+            path: topicsFilePath
+        });
     }
 };
 

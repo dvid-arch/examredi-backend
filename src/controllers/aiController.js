@@ -135,8 +135,12 @@ export const handleGenerateGuide = async (req, res) => {
 // @route   POST /api/ai/research
 export const handleResearch = async (req, res) => {
     const { searchType, query } = req.body;
-    const creditCheck = await handleCreditUsage(req.user.id, 1);
-    if (!creditCheck.success) return res.status(403).json({ message: creditCheck.message });
+
+    // Admins don't use credits for research
+    if (req.user.role !== 'admin') {
+        const creditCheck = await handleCreditUsage(req.user.id, 1);
+        if (!creditCheck.success) return res.status(403).json({ message: creditCheck.message });
+    }
 
     const ai = getAiInstance();
     if (!ai) return res.status(500).json(missingApiKeyError);

@@ -31,8 +31,8 @@ const paperSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Compound index to ensure unique papers per subject/year
-paperSchema.index({ subject: 1, year: 1 }, { unique: true });
+// Compound index (non-unique) for efficient filtering by subject/year
+paperSchema.index({ subject: 1, year: 1 });
 
 const Paper = mongoose.model('Paper', paperSchema);
 

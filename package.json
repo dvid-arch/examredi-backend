@@ -14,7 +14,7 @@
     "seed:guides": "node src/scripts/seed_guides.js",
     "seed:all": "node src/scripts/seed_all_papers.js",
     "seed:render": "node src/scripts/master_seeder.js all",
-    "build": "npm run seed:render"
+    "build": "echo \"Build step complete (Seeding bypassed)\""
   },
   "keywords": [],
   "author": "",

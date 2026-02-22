@@ -253,15 +253,19 @@ export const handleSuggestQuestionTopics = async (req, res) => {
     try {
         const response = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
-            contents: `You are an expert at categorizing exam questions.
+            contents: `You are an expert at categorizing West African (JAMB/UTME/WASSCE) exam questions.
 Subject: ${subject}
 Question: "${questionText}"
 
 Available Topics for ${subject}:
 ${availableTopics.map(t => `- ${t.label} (slug: ${t.slug})`).join('\n')}
 
-Select the most relevant topics (minimum 1, maximum 3) from the list above that best describe this question.
-Output ONLY a JSON array of the slugs for the chosen topics. Do not include any explanation or other text.`,
+INSTRUCTIONS:
+1. Analyze the core educational concept being tested in the question above.
+2. Select the most SPECIFIC relevant topic(s) (minimum 1, maximum 2) from the list above.
+3. CRITICAL: Do NOT simply pick the first item in the list (e.g., "Concepts and Conventions") unless it is the perfect match. Usually, a more specific topic further down the list is better.
+4. If a question is about a specific calculation or document (like a Ledger, Trial Balance, or specific Account), pick that specific topic.
+5. Output ONLY a JSON array of the slugs for the chosen topics. Do not include any explanation or other text.`,
         });
 
         const text = response.text;

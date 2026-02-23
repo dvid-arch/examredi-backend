@@ -303,16 +303,20 @@ export const getTopics = async (req, res) => {
 export const exportQuestionsByTopic = async (req, res) => {
     try {
         const { topicSlug } = req.params;
-        console.log(`\n[EXPORT START] Aggregating Surgically for: ${topicSlug}`);
+        const timestamp = new Date().toISOString();
+        console.log(`\n[${timestamp}] ========== EXPORT START ==========`);
+        console.log(`Target Topic Slug: "${topicSlug}"`);
 
-        /**
-         * Best Practice: MongoDB Aggregation Pipeline
-         * This performs the heavy lifting on the DB engine rather than in memory.
-         */
+        // Use regex for case-insensitivity and flexibility (mirrors searchByTopic logic)
+        const escapedSlug = topicSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regexSlug = new RegExp('^' + escapedSlug + '$', 'i');
+
+        console.log(`Running surgical aggregation pipeline...`);
+
         const questions = await Paper.aggregate([
-            { $match: { "questions.topics": topicSlug } },
+            { $match: { "questions.topics": { $regex: regexSlug } } },
             { $unwind: "$questions" },
-            { $match: { "questions.topics": topicSlug } },
+            { $match: { "questions.topics": { $regex: regexSlug } } },
             {
                 $project: {
                     _id: 0,
@@ -325,17 +329,20 @@ export const exportQuestionsByTopic = async (req, res) => {
                     topics: "$questions.topics",
                     subject: 1,
                     year: 1,
+                    exam: 1,
                     paperId: "$id"
                 }
             }
         ]);
 
-        console.log(`[EXPORT SUCCESS] Sending ${questions.length} questions for "${topicSlug}"`);
+        console.log(`[EXPORT SUCCESS] Found ${questions.length} questions.`);
+        console.log(`[${timestamp}] ========== EXPORT END ========== \n`);
+
         res.json(questions);
     } catch (error) {
-        console.error('[EXPORT CRITICAL ERROR]:', error);
+        console.error(`[EXPORT CRITICAL ERROR]:`, error);
         res.status(500).json({
-            message: 'Aggregation failed. Database may be under heavy load.',
+            message: 'Export failed at the database level.',
             error: error.message
         });
     }

@@ -298,6 +298,46 @@ export const getTopics = async (req, res) => {
     }
 };
 
+// @desc    Export questions by topic
+// @route   GET /api/admin/export-questions/:topicSlug
+export const exportQuestionsByTopic = async (req, res) => {
+    try {
+        const { topicSlug } = req.params;
+        console.log(`\n[EXPORT START] Topic: ${topicSlug}`);
+
+        // Optimize: Use MongoDB to find only papers that actually have this topic
+        // This is much faster than fetching all papers and filtering in JS
+        const papers = await Paper.find({ "questions.topics": topicSlug }).lean();
+
+        console.log(`[EXPORT] Found ${papers.length} relevant papers in DB`);
+        const questions = [];
+
+        papers.forEach(paper => {
+            if (paper.questions && Array.isArray(paper.questions)) {
+                paper.questions.forEach(question => {
+                    if (question.topics && question.topics.includes(topicSlug)) {
+                        questions.push({
+                            ...question,
+                            subject: paper.subject,
+                            year: paper.year,
+                            paperId: paper.id || paper._id
+                        });
+                    }
+                });
+            }
+        });
+
+        console.log(`[EXPORT END] Sending ${questions.length} questions to client`);
+        res.json(questions);
+    } catch (error) {
+        console.error('[EXPORT ERROR]:', error);
+        res.status(500).json({
+            message: error.message || 'Error exporting questions',
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+        });
+    }
+};
+
 // @desc    Update question tags (topics)
 // @route   PUT /api/admin/papers/:paperId/questions/:questionId/tags
 export const updateQuestionTags = async (req, res) => {

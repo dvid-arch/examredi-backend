@@ -303,20 +303,28 @@ export const getTopics = async (req, res) => {
 export const exportQuestionsByTopic = async (req, res) => {
     try {
         const { topicSlug } = req.params;
+        const { label } = req.query;
         const timestamp = new Date().toISOString();
+
         console.log(`\n[${timestamp}] ========== EXPORT START ==========`);
-        console.log(`Target Topic Slug: "${topicSlug}"`);
+        console.log(`Target Slug: "${topicSlug}"`);
+        if (label) console.log(`Target Label: "${label}"`);
 
-        // Use regex for case-insensitivity and flexibility (mirrors searchByTopic logic)
-        const escapedSlug = topicSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const regexSlug = new RegExp('^' + escapedSlug + '$', 'i');
+        // Create regexes for both slug and label (mirrors searchByTopic logic)
+        const terms = [topicSlug];
+        if (label) terms.push(label);
 
-        console.log(`Running surgical aggregation pipeline...`);
+        const filterRegexes = terms.map(term => {
+            const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return new RegExp('^' + escaped + '$', 'i');
+        });
+
+        console.log(`Running dual-match aggregation pipeline...`);
 
         const questions = await Paper.aggregate([
-            { $match: { "questions.topics": { $regex: regexSlug } } },
+            { $match: { "questions.topics": { $in: filterRegexes } } },
             { $unwind: "$questions" },
-            { $match: { "questions.topics": { $regex: regexSlug } } },
+            { $match: { "questions.topics": { $in: filterRegexes } } },
             {
                 $project: {
                     _id: 0,

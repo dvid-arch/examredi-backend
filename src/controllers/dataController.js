@@ -21,34 +21,43 @@ const SUBJECT_MAPPING = {
     // Accounts
     'Accounting': 'Accounts - Principles of Accounts',
     'Financial Accounting': 'Accounts - Principles of Accounts',
+    'accounts-principles-of-accounts': 'Accounts - Principles of Accounts',
 
     // Agric
     'Agriculture': 'Agricultural Science',
     'Agric': 'Agricultural Science',
+    'agricultural-science': 'Agricultural Science',
 
     // English
     'English': 'English Language',
     'Use of English': 'English Language',
+    'english-language': 'English Language',
 
     // Literature
     'Literature': 'Literature in English',
     'Literature-in-English': 'Literature in English',
+    'literature-in-english': 'Literature in English',
 
     // Religion
     'CRS': 'Christian Religious Knowledge (CRK)',
     'Christian Religious Studies': 'Christian Religious Knowledge (CRK)',
     'CRK': 'Christian Religious Knowledge (CRK)',
+    'christian-religious-knowledge-crk': 'Christian Religious Knowledge (CRK)',
+
     'IRS': 'Islamic Religious Knowledge (IRK)',
     'Islamic Religious Studies': 'Islamic Religious Knowledge (IRK)',
     'IRK': 'Islamic Religious Knowledge (IRK)',
+    'islamic-religious-knowledge-irk': 'Islamic Religious Knowledge (IRK)',
 
     // Art
     'Fine Art': 'Fine Arts',
     'Fine Arts': 'Fine Arts',
+    'fine-arts': 'Fine Arts',
 
     // PHE
     'Physical and Health Education (PHE)': 'Physical and Health Education',
-    'PHE': 'Physical and Health Education'
+    'PHE': 'Physical and Health Education',
+    'physical-and-health-education': 'Physical and Health Education'
 };
 
 const readJsonFile = async (filePath) => {
@@ -163,7 +172,18 @@ export const searchByTopic = async (req, res) => {
             return res.status(400).json({ message: 'topic is required' });
         }
 
-        const targetSubject = subject ? (SUBJECT_MAPPING[subject] || subject) : null;
+        let targetSubject = subject;
+        if (subject) {
+            const normalizedSubject = subject.toLowerCase().trim();
+            // Case-insensitive lookup in SUBJECT_MAPPING
+            const matchedKey = Object.keys(SUBJECT_MAPPING).find(k => k.toLowerCase() === normalizedSubject);
+            if (matchedKey) {
+                targetSubject = SUBJECT_MAPPING[matchedKey];
+            } else if (normalizedSubject.includes('-')) {
+                // Fallback for slugs lacking explicit mapping (e.g. 'civic-education' -> 'Civic Education')
+                targetSubject = normalizedSubject.replace(/-/g, ' ');
+            }
+        }
 
         // Find papers that have questions tagged with this topic (case-insensitive)
         const escapedTerm = targetTopic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

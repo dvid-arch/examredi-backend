@@ -8,6 +8,10 @@ const sendEmail = async (options) => {
     if (!gmailUser || !gmailAppPassword) {
         console.error('❌ Gmail credentials not set in environment variables!');
         console.error('   Missing:', !gmailUser ? 'GMAIL_USER' : 'GMAIL_APP_PASSWORD');
+        console.error('   Note: Ensure GMAIL_APP_PASSWORD is a 16-digit code from Google account settings.');
+        console.error('   Example .env entries:');
+        console.error('   GMAIL_USER=your_email@gmail.com');
+        console.error('   GMAIL_APP_PASSWORD=your_16_digit_app_password');
         throw new Error('Email service not configured. Please contact support.');
     }
 

@@ -189,8 +189,15 @@ export const searchByTopic = async (req, res) => {
         const escapedTerm = targetTopic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         const regexTerm = new RegExp('^' + escapedTerm + '$', 'i');
 
+        const slugifiedTerm = targetTopic.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        const escapedSlugTerm = slugifiedTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regexSlugTerm = new RegExp('^' + escapedSlugTerm + '$', 'i');
+
         const filter = {
-            'questions.topics': regexTerm
+            $or: [
+                { 'questions.topics': regexTerm },
+                { 'questions.topics': regexSlugTerm }
+            ]
         };
 
         if (targetSubject) {
@@ -205,8 +212,9 @@ export const searchByTopic = async (req, res) => {
             paper.questions.forEach(q => {
                 const questionTopics = (q.topics || []).map(t => t.toLowerCase());
 
-                // If the question has this exact topic (case-insensitive), include it
-                const isMatch = questionTopics.includes(targetTopic.toLowerCase());
+                // If the question has this exact topic or the slug version (case-insensitive), include it
+                const isMatch = questionTopics.includes(targetTopic.toLowerCase()) ||
+                    questionTopics.includes(slugifiedTerm);
 
                 if (isMatch) {
                     results.push({

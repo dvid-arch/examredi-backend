@@ -19,9 +19,9 @@ const literatureFilePath = path.join(dbPath, 'literature.json');
 
 const SUBJECT_MAPPING = {
     // Accounts
-    'Accounting': 'Accounts - Principles of Accounts',
-    'Financial Accounting': 'Accounts - Principles of Accounts',
-    'accounts-principles-of-accounts': 'Accounts - Principles of Accounts',
+    'Accounting': 'Accounting',
+    'Financial Accounting': 'Accounting',
+    'accounts-principles-of-accounts': 'Accounting',
 
     // Agric
     'Agriculture': 'Agricultural Science',
@@ -57,7 +57,20 @@ const SUBJECT_MAPPING = {
     // PHE
     'Physical and Health Education (PHE)': 'Physical and Health Education',
     'PHE': 'Physical and Health Education',
-    'physical-and-health-education': 'Physical and Health Education'
+    'physical-and-health-education': 'Physical and Health Education',
+
+    // Exact name matches to handle single word frontend slugs specifically
+    'mathematics': 'Mathematics',
+    'maths': 'Mathematics',
+    'biology': 'Biology',
+    'chemistry': 'Chemistry',
+    'physics': 'Physics',
+    'economics': 'Economics',
+    'government': 'Government',
+    'geography': 'Geography',
+    'commerce': 'Commerce',
+    'history': 'History',
+    'civic-education': 'Civic Education'
 };
 
 const readJsonFile = async (filePath) => {

@@ -303,37 +303,40 @@ export const getTopics = async (req, res) => {
 export const exportQuestionsByTopic = async (req, res) => {
     try {
         const { topicSlug } = req.params;
-        console.log(`\n[EXPORT START] Topic: ${topicSlug}`);
+        console.log(`\n[EXPORT START] Aggregating Surgically for: ${topicSlug}`);
 
-        // Optimize: Use MongoDB to find only papers that actually have this topic
-        // This is much faster than fetching all papers and filtering in JS
-        const papers = await Paper.find({ "questions.topics": topicSlug }).lean();
-
-        console.log(`[EXPORT] Found ${papers.length} relevant papers in DB`);
-        const questions = [];
-
-        papers.forEach(paper => {
-            if (paper.questions && Array.isArray(paper.questions)) {
-                paper.questions.forEach(question => {
-                    if (question.topics && question.topics.includes(topicSlug)) {
-                        questions.push({
-                            ...question,
-                            subject: paper.subject,
-                            year: paper.year,
-                            paperId: paper.id || paper._id
-                        });
-                    }
-                });
+        /**
+         * Best Practice: MongoDB Aggregation Pipeline
+         * This performs the heavy lifting on the DB engine rather than in memory.
+         */
+        const questions = await Paper.aggregate([
+            { $match: { "questions.topics": topicSlug } },
+            { $unwind: "$questions" },
+            { $match: { "questions.topics": topicSlug } },
+            {
+                $project: {
+                    _id: 0,
+                    id: "$questions.id",
+                    question: "$questions.question",
+                    options: "$questions.options",
+                    answer: "$questions.answer",
+                    explanation: "$questions.explanation",
+                    image: "$questions.image",
+                    topics: "$questions.topics",
+                    subject: 1,
+                    year: 1,
+                    paperId: "$id"
+                }
             }
-        });
+        ]);
 
-        console.log(`[EXPORT END] Sending ${questions.length} questions to client`);
+        console.log(`[EXPORT SUCCESS] Sending ${questions.length} questions for "${topicSlug}"`);
         res.json(questions);
     } catch (error) {
-        console.error('[EXPORT ERROR]:', error);
+        console.error('[EXPORT CRITICAL ERROR]:', error);
         res.status(500).json({
-            message: error.message || 'Error exporting questions',
-            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+            message: 'Aggregation failed. Database may be under heavy load.',
+            error: error.message
         });
     }
 };

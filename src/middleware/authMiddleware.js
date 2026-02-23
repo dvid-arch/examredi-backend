@@ -11,9 +11,16 @@ export const protect = async (req, res, next) => {
 
             // Fetch user from MongoDB, exclude password
             req.user = await User.findById(decoded.id).select('-password');
+            req.sessionId = decoded.sessionId;
 
             if (!req.user) {
                 return res.status(401).json({ message: 'User not found' });
+            }
+
+            // Verify sessionId is still active
+            const isSessionActive = req.user.activeSessions.some(s => s.sessionId === req.sessionId);
+            if (!isSessionActive) {
+                return res.status(401).json({ message: 'Session expired or logged in elsewhere' });
             }
 
             next();

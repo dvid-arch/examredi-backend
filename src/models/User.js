@@ -63,7 +63,13 @@ const userSchema = new mongoose.Schema({
         },
         default: {}
     },
-    estimatedScore: { type: Number, default: 150 }
+    estimatedScore: { type: Number, default: 150 },
+    activeSessions: [{
+        sessionId: { type: String, required: true },
+        device: { type: String },
+        ip: { type: String },
+        lastActive: { type: Date, default: Date.now }
+    }]
 }, {
     timestamps: true
 });

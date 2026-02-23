@@ -1,16 +1,38 @@
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
+import { v4 as uuidv4 } from 'uuid';
 import User from '../models/User.js';
 import sendEmail from '../utils/sendEmail.js';
 
 // Helper: Generate Access Token (Short-lived)
-export const generateAccessToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '15m' });
+export const generateAccessToken = (id, sessionId) => {
+    return jwt.sign({ id, sessionId }, process.env.JWT_SECRET, { expiresIn: '15m' });
 };
 
 // Helper: Generate Refresh Token (Long-lived)
-export const generateRefreshToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+export const generateRefreshToken = (id, sessionId) => {
+    return jwt.sign({ id, sessionId }, process.env.JWT_SECRET, { expiresIn: '30d' });
+};
+
+// Helper: Create and store a new session, enforcing limit of 2
+export const createSession = async (user, req) => {
+    const sessionId = uuidv4();
+    user.activeSessions = user.activeSessions || [];
+
+    user.activeSessions.push({
+        sessionId,
+        device: req.headers['user-agent'],
+        ip: req.ip,
+        lastActive: new Date()
+    });
+
+    // Enforce 2 concurrent sessions (FIFO)
+    if (user.activeSessions.length > 2) {
+        user.activeSessions.shift();
+    }
+
+    await user.save();
+    return sessionId;
 };
 
 
@@ -93,8 +115,10 @@ export const registerUser = async (req, res) => {
                 await user.save({ validateBeforeSave: false });
             }
 
-            const accessToken = generateAccessToken(user.id);
-            const refreshToken = generateRefreshToken(user.id);
+            const sessionId = await createSession(user, req);
+
+            const accessToken = generateAccessToken(user.id, sessionId);
+            const refreshToken = generateRefreshToken(user.id, sessionId);
 
             res.status(201).json({
                 _id: user.id,
@@ -137,8 +161,10 @@ export const loginUser = async (req, res) => {
 
         // Verify password
         if (await user.matchPassword(password)) {
-            const accessToken = generateAccessToken(user.id);
-            const refreshToken = generateRefreshToken(user.id);
+            const sessionId = await createSession(user, req);
+
+            const accessToken = generateAccessToken(user.id, sessionId);
+            const refreshToken = generateRefreshToken(user.id, sessionId);
 
             res.json({
                 _id: user.id,
@@ -177,8 +203,14 @@ export const refreshAccessToken = async (req, res) => {
             return res.status(403).json({ message: 'Invalid token: User not found' });
         }
 
-        const accessToken = generateAccessToken(user.id);
-        const refreshToken = generateRefreshToken(user.id); // Rotate refresh token for security
+        // Verify sessionId still exists in activeSessions
+        const sessionExists = user.activeSessions.some(s => s.sessionId === decoded.sessionId);
+        if (!sessionExists) {
+            return res.status(403).json({ message: 'Session revoked or expired' });
+        }
+
+        const accessToken = generateAccessToken(user.id, decoded.sessionId);
+        const refreshToken = generateRefreshToken(user.id, decoded.sessionId); // Keep same sessionId for this session flow
 
         res.json({
             accessToken,
@@ -194,10 +226,20 @@ export const refreshAccessToken = async (req, res) => {
 // @desc    Logout user
 // @route   POST /api/auth/logout
 export const logoutUser = async (req, res) => {
-    // Stateless JWTs typically handled on client side by forgetting token.
-    // Ideally, add token to a blacklist or DB of revoked tokens.
-    // For now, simply return success.
-    res.status(204).send();
+    try {
+        // req.user and sessionId should be populated by protect middleware
+        if (req.user && req.sessionId) {
+            const user = await User.findById(req.user.id);
+            if (user) {
+                user.activeSessions = user.activeSessions.filter(s => s.sessionId !== req.sessionId);
+                await user.save();
+            }
+        }
+        res.status(204).send();
+    } catch (error) {
+        console.error("Logout error:", error);
+        res.status(500).json({ message: "Error during logout" });
+    }
 };
 
 

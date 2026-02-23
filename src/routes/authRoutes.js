@@ -11,7 +11,8 @@ import {
     resendVerification,
     handlePaymentWebhook,
     generateAccessToken,
-    generateRefreshToken
+    generateRefreshToken,
+    createSession
 } from '../controllers/authController.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { loginLimiter, registerLimiter } from '../middleware/rateLimiter.js';
@@ -21,15 +22,17 @@ const router = express.Router();
 
 // Google OAuth Routes
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
-router.get('/google/callback', passport.authenticate('google', { session: false }), (req, res) => {
+router.get('/google/callback', passport.authenticate('google', { session: false }), async (req, res) => {
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
 
     if (!req.user) {
         return res.redirect(`${frontendUrl}/#/login?error=auth_failed`);
     }
 
-    const accessToken = generateAccessToken(req.user.id);
-    const refreshToken = generateRefreshToken(req.user.id);
+    const sessionId = await createSession(req.user, req);
+
+    const accessToken = generateAccessToken(req.user.id, sessionId);
+    const refreshToken = generateRefreshToken(req.user.id, sessionId);
 
     res.redirect(`${frontendUrl}/#/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`);
 });

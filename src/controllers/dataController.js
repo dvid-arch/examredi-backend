@@ -153,9 +153,23 @@ export const searchPapers = async (req, res) => {
         }).limit(20).lean();
 
         const results = [];
+        const lowerQuery = query.toLowerCase();
+
         papers.forEach(paper => {
             paper.questions.forEach(q => {
-                if (q.question.toLowerCase().includes(query.toLowerCase())) {
+                const qText = q.question ? String(q.question).toLowerCase() : '';
+                const optA = q.options?.A?.text ? String(q.options.A.text).toLowerCase() : '';
+                const optB = q.options?.B?.text ? String(q.options.B.text).toLowerCase() : '';
+                const optC = q.options?.C?.text ? String(q.options.C.text).toLowerCase() : '';
+                const optD = q.options?.D?.text ? String(q.options.D.text).toLowerCase() : '';
+
+                if (
+                    qText.includes(lowerQuery) ||
+                    optA.includes(lowerQuery) ||
+                    optB.includes(lowerQuery) ||
+                    optC.includes(lowerQuery) ||
+                    optD.includes(lowerQuery)
+                ) {
                     results.push({
                         ...q,
                         subject: paper.subject,

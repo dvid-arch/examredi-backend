@@ -43,7 +43,12 @@ const userSchema = new mongoose.Schema({
     }],
     engagement: {
         dismissedNudges: { type: [String], default: [] },
-        unlockedNudges: { type: [String], default: [] }
+        unlockedNudges: { type: [String], default: [] },
+        nudgeDismissalTimes: {
+            type: Map,
+            of: Date,
+            default: {}
+        }
     },
     isVerified: { type: Boolean, default: false },
     verificationToken: String,

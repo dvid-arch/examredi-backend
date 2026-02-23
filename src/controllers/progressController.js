@@ -12,7 +12,10 @@ export const getProgress = async (req, res) => {
         res.json({
             streak: user.streak?.current || 0,
             recentActivity: user.recentActivity || [],
-            engagement: user.engagement || { dismissedNudges: [], unlockedNudges: [] },
+            engagement: {
+                ...(user.engagement || { dismissedNudges: [], unlockedNudges: [] }),
+                nudgeDismissalTimes: Object.fromEntries(user.engagement?.nudgeDismissalTimes || [])
+            },
             estimatedScore: user.estimatedScore || 150
         });
     } catch (error) {
@@ -149,15 +152,32 @@ export const dismissNudge = async (req, res) => {
         }
 
         if (!user.engagement) {
-            user.engagement = { dismissedNudges: [], unlockedNudges: [] };
+            user.engagement = { dismissedNudges: [], unlockedNudges: [], nudgeDismissalTimes: {} };
+        }
+        if (!user.engagement.nudgeDismissalTimes) {
+            user.engagement.nudgeDismissalTimes = new Map();
         }
 
-        if (!user.engagement.dismissedNudges.includes(nudgeId)) {
+        // Always record the dismissal time (for recurring cooldown support)
+        user.engagement.nudgeDismissalTimes.set(nudgeId, new Date());
+
+        // Only add to permanent dismissedNudges list if not a recurring nudge
+        // (Recurring nudges are managed by their dismissal timestamps alone)
+        const RECURRING_NUDGES = ['pro-success-stat'];
+        if (!RECURRING_NUDGES.includes(nudgeId) && !user.engagement.dismissedNudges.includes(nudgeId)) {
             user.engagement.dismissedNudges.push(nudgeId);
-            await user.save();
         }
 
-        res.json({ success: true, engagement: user.engagement });
+        user.markModified('engagement.nudgeDismissalTimes');
+        await user.save();
+
+        res.json({
+            success: true,
+            engagement: {
+                ...user.engagement.toObject(),
+                nudgeDismissalTimes: Object.fromEntries(user.engagement.nudgeDismissalTimes)
+            }
+        });
     } catch (error) {
         res.status(500).json({ message: 'Error dismissing nudge' });
     }

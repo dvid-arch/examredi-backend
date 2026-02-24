@@ -19,8 +19,14 @@ const syncBackups = async () => {
     try {
         const papers = await Paper.find({}).lean();
         const guides = await Guide.find({}).lean();
-        await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
-        await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+
+        if (papers.length > 0) {
+            await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
+        }
+        if (guides.length > 0) {
+            await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
+        }
+        console.log(`[Backup Sync] Synced ${papers.length} papers and ${guides.length} guides.`);
     } catch (error) {
         console.error('[Backup Sync Error]:', error.message);
     }
@@ -206,9 +212,15 @@ export const addGuide = async (req, res) => {
 export const editGuide = async (req, res) => {
     try {
         const { id } = req.params;
-        const guide = await Guide.findOneAndUpdate({ id }, req.body, { new: true, upsert: true });
+        // Case-insensitive lookup for the ID slug
+        const guide = await Guide.findOneAndUpdate(
+            { id: { $regex: new RegExp('^' + id + '$', 'i') } },
+            req.body,
+            { new: true }
+        );
+
         if (!guide) {
-            return res.status(404).json({ message: 'Guide not found' });
+            return res.status(404).json({ message: `Guide not found (${id})` });
         }
         await syncBackups();
         res.json(guide);
@@ -269,10 +281,10 @@ export const deletePaper = async (req, res) => {
 export const deleteGuide = async (req, res) => {
     try {
         const { id } = req.params;
-        const guide = await Guide.findOneAndDelete({ id });
+        const guide = await Guide.findOneAndDelete({ id: { $regex: new RegExp('^' + id + '$', 'i') } });
 
         if (!guide) {
-            return res.status(404).json({ message: 'Guide not found' });
+            return res.status(404).json({ message: `Guide not found (${id})` });
         }
 
         await syncBackups();

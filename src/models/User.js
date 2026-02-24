@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     preferredSubjects: { type: [String], default: [] },
+    examType: { type: String, enum: ['JAMB', 'WAEC', 'University'], default: 'JAMB' },
 
     // AI & Subscription
     aiCredits: { type: Number, default: 0 },

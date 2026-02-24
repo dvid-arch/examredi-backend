@@ -206,7 +206,7 @@ export const addGuide = async (req, res) => {
 export const editGuide = async (req, res) => {
     try {
         const { id } = req.params;
-        const guide = await Guide.findOneAndUpdate({ id }, req.body, { new: true });
+        const guide = await Guide.findOneAndUpdate({ id }, req.body, { new: true, upsert: true });
         if (!guide) {
             return res.status(404).json({ message: 'Guide not found' });
         }

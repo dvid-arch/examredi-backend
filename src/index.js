@@ -27,7 +27,7 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 
 // Request logging middleware
 app.use((req, res, next) => {

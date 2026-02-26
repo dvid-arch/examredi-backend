@@ -20,9 +20,11 @@ const sendEmail = async (options) => {
     console.log('   Subject:', options.subject);
     console.log('   From:', gmailUser);
 
-    // Create transporter with timeout settings
+    // Create transporter with explicit host and port settings to avoid connection timeouts
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false, // true for 465, false for other ports (will use STARTTLS)
         auth: {
             user: gmailUser,
             pass: gmailAppPassword

@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import dns from 'dns';
 
 const sendEmail = async (options) => {
     // Validate Gmail credentials
@@ -21,20 +22,25 @@ const sendEmail = async (options) => {
     console.log('   From:', gmailUser);
 
     // Create transporter with explicit host and port settings to avoid connection timeouts
-    // Added family: 4 to force IPv4, as Render's IPv6 to Google's port 587 seems blocked
+    // Forcing IPv4 through custom DNS lookup as Render's IPv6 configuration seems to drop Google SMTP traffic
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 587,
-        secure: false, // true for 465, false for other ports (will use STARTTLS)
-        family: 4, // force IPv4 connection (avoids ENETUNREACH for IPv6 addresses)
+        port: 465,
+        secure: true, // Use port 465 / SSL again, standard setup
         auth: {
             user: gmailUser,
             pass: gmailAppPassword
         },
+        // Force IPv4 lookup for smtp.gmail.com
+        lookup: (hostname, options, callback) => {
+            dns.lookup(hostname, { family: 4, all: false }, (err, address, family) => {
+                callback(err, address, family);
+            });
+        },
         // Add timeout and connection settings
-        connectionTimeout: 10000, // 10 seconds
-        greetingTimeout: 10000,
-        socketTimeout: 10000,
+        connectionTimeout: 15000, // 15 seconds
+        greetingTimeout: 15000,
+        socketTimeout: 15000,
         pool: true, // Use connection pooling
         maxConnections: 5,
         maxMessages: 100

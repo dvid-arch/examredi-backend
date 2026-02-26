@@ -21,10 +21,12 @@ const sendEmail = async (options) => {
     console.log('   From:', gmailUser);
 
     // Create transporter with explicit host and port settings to avoid connection timeouts
+    // Added family: 4 to force IPv4, as Render's IPv6 to Google's port 587 seems blocked
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
         secure: false, // true for 465, false for other ports (will use STARTTLS)
+        family: 4, // force IPv4 connection (avoids ENETUNREACH for IPv6 addresses)
         auth: {
             user: gmailUser,
             pass: gmailAppPassword

@@ -411,3 +411,50 @@ export const updateQuestionTags = async (req, res) => {
         res.status(500).json({ message: error.message || 'Error updating tags' });
     }
 };
+
+// @desc    Edit a single question within a paper
+// @route   PUT /api/admin/papers/:paperId/questions/:questionId
+export const editQuestion = async (req, res) => {
+    try {
+        const { paperId, questionId } = req.params;
+        const { question, options, answer, explanation, image } = req.body;
+
+        console.log(`[Admin] Editing Question: ${questionId} in Paper: ${paperId}`);
+
+        // Find the paper
+        const paper = await Paper.findOne({
+            $or: [
+                { _id: mongoose.isValidObjectId(paperId) ? paperId : null },
+                { id: paperId }
+            ]
+        });
+
+        if (!paper) {
+            return res.status(404).json({ message: 'Paper not found' });
+        }
+
+        // Find the question index
+        const questionIndex = paper.questions.findIndex(q => q.id === questionId);
+        if (questionIndex === -1) {
+            return res.status(404).json({ message: 'Question not found' });
+        }
+
+        // Update the question fields
+        if (question !== undefined) paper.questions[questionIndex].question = question;
+        if (options !== undefined) paper.questions[questionIndex].options = options;
+        if (answer !== undefined) paper.questions[questionIndex].answer = answer;
+        if (explanation !== undefined) paper.questions[questionIndex].explanation = explanation;
+        if (image !== undefined) paper.questions[questionIndex].image = image;
+
+        // Save the paper
+        await paper.save();
+
+        // Sync backups
+        await syncBackups();
+
+        res.json(paper.questions[questionIndex]);
+    } catch (error) {
+        console.error('Error editing question:', error);
+        res.status(500).json({ message: error.message || 'Error editing question' });
+    }
+};

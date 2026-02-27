@@ -1,5 +1,5 @@
 import express from 'express';
-import { getUsers, updateUserSubscription, getAdminStats, deletePaper, deleteGuide, addUser, editUser, deleteUser, addPaper, editPaper, addGuide, editGuide, getTopics, updateQuestionTags, exportQuestionsByTopic } from '../controllers/adminController.js';
+import { getUsers, updateUserSubscription, getAdminStats, deletePaper, deleteGuide, addUser, editUser, deleteUser, addPaper, editPaper, addGuide, editGuide, getTopics, updateQuestionTags, exportQuestionsByTopic, editQuestion } from '../controllers/adminController.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { admin } from '../middleware/adminMiddleware.js';
 
@@ -30,5 +30,6 @@ router.delete('/guides/:id', deleteGuide);
 
 router.get('/topics', getTopics);
 router.put('/papers/:paperId/questions/:questionId/tags', updateQuestionTags);
+router.put('/papers/:paperId/questions/:questionId', editQuestion);
 
 export default router;

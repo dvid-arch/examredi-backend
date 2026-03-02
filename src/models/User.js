@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: false }, // Optional for OAuth users
     email: { type: String, unique: true, sparse: true }, // Optional for now
     googleId: { type: String, unique: true, sparse: true },
+    clerkId: { type: String, unique: true, sparse: true },
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     preferredSubjects: { type: [String], default: [] },

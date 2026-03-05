@@ -14,22 +14,9 @@ const papersFilePath = path.join(dbPath, 'all_papers.json');
 const guidesFilePath = path.join(dbPath, 'guide.json');
 const topicsFilePath = path.join(dbPath, 'topics.json');
 
-// Helper to sync JSON backups (keeping user's request for parity)
 const syncBackups = async () => {
-    try {
-        const papers = await Paper.find({}).lean();
-        const guides = await Guide.find({}).lean();
-
-        if (papers.length > 0) {
-            await fs.writeFile(papersFilePath, JSON.stringify(papers, null, 2));
-        }
-        if (guides.length > 0) {
-            await fs.writeFile(guidesFilePath, JSON.stringify(guides, null, 2));
-        }
-        console.log(`[Backup Sync] Synced ${papers.length} papers and ${guides.length} guides.`);
-    } catch (error) {
-        console.error('[Backup Sync Error]:', error.message);
-    }
+    // Disabled per user request - data is safely in MongoDB,
+    // and writing to these JSON files triggers nodemon restarts.
 };
 
 const readJsonFile = async (filePath) => {

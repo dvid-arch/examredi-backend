@@ -112,6 +112,11 @@ export const getPapers = async (req, res) => {
             filter.year = Number(year);
         }
 
+        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        if (req.user?.role !== 'admin') {
+            filter.year = filter.year ? { $eq: filter.year, $lte: 2000 } : { $lte: 2000 };
+        }
+
         // Query MongoDB with lean() for performance
         let papers = await Paper.find(filter).lean();
 
@@ -141,8 +146,7 @@ export const searchPapers = async (req, res) => {
             return res.status(400).json({ message: 'Search query is required' });
         }
 
-        // Database search using regex (case-insensitive)
-        const papers = await Paper.find({
+        const filter = {
             $or: [
                 { 'questions.question': { $regex: query, $options: 'i' } },
                 { 'questions.options.A.text': { $regex: query, $options: 'i' } },
@@ -150,7 +154,15 @@ export const searchPapers = async (req, res) => {
                 { 'questions.options.C.text': { $regex: query, $options: 'i' } },
                 { 'questions.options.D.text': { $regex: query, $options: 'i' } }
             ]
-        }).limit(20).lean();
+        };
+
+        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        if (req.user?.role !== 'admin') {
+            filter.year = { $lte: 2000 };
+        }
+
+        // Database search using regex (case-insensitive)
+        const papers = await Paper.find(filter).limit(20).lean();
 
         const results = [];
         const lowerQuery = query.toLowerCase();
@@ -230,6 +242,11 @@ export const searchByTopic = async (req, res) => {
         if (targetSubject) {
             const escapedSubject = targetSubject.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             filter.subject = new RegExp('^' + escapedSubject + '$', 'i');
+        }
+
+        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        if (req.user?.role !== 'admin') {
+            filter.year = { $lte: 2000 };
         }
 
         const papers = await Paper.find(filter).lean();

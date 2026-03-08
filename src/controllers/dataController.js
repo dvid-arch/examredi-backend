@@ -112,9 +112,9 @@ export const getPapers = async (req, res) => {
             filter.year = Number(year);
         }
 
-        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        // Apply access restriction: Non-admins can only access papers from 2000 and later
         if (req.user?.role !== 'admin') {
-            filter.year = filter.year ? { $eq: filter.year, $lte: 2000 } : { $lte: 2000 };
+            filter.year = filter.year ? { $eq: filter.year, $gte: 2000 } : { $gte: 2000 };
             console.log(`[DataDebug] Restriction applied for role: ${req.user?.role || 'anonymous'}`);
         } else {
             console.log(`[DataDebug] Admin bypass - No restriction applied.`);
@@ -162,9 +162,9 @@ export const searchPapers = async (req, res) => {
             ]
         };
 
-        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        // Apply access restriction: Non-admins can only access papers from 2000 and later
         if (req.user?.role !== 'admin') {
-            filter.year = { $lte: 2000 };
+            filter.year = { $gte: 2000 };
         }
 
         // Database search using regex (case-insensitive)
@@ -250,9 +250,9 @@ export const searchByTopic = async (req, res) => {
             filter.subject = new RegExp('^' + escapedSubject + '$', 'i');
         }
 
-        // Apply access restriction: Non-admins can only access papers from 2000 and earlier
+        // Apply access restriction: Non-admins can only access papers from 2000 and later
         if (req.user?.role !== 'admin') {
-            filter.year = { $lte: 2000 };
+            filter.year = { $gte: 2000 };
         }
 
         const papers = await Paper.find(filter).lean();

@@ -26,7 +26,7 @@ router.get('/google/callback', passport.authenticate('google', { session: false 
     const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
 
     if (!req.user) {
-        return res.redirect(`${frontendUrl}/#/login?error=auth_failed`);
+        return res.redirect(`${frontendUrl}/login?error=auth_failed`);
     }
 
     const sessionId = await createSession(req.user, req);
@@ -34,7 +34,7 @@ router.get('/google/callback', passport.authenticate('google', { session: false 
     const accessToken = generateAccessToken(req.user.id, sessionId);
     const refreshToken = generateRefreshToken(req.user.id, sessionId);
 
-    res.redirect(`${frontendUrl}/#/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`);
+    res.redirect(`${frontendUrl}/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`);
 });
 
 

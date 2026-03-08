@@ -91,7 +91,7 @@ export const registerUser = async (req, res) => {
 
             // Create Verification URL
             const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
-            const verifyUrl = `${frontendUrl}/#/verify-email/${verificationToken}`;
+            const verifyUrl = `${frontendUrl}/verify-email/${verificationToken}`;
 
             const message = `
                 <h1>Email Verification</h1>
@@ -292,7 +292,7 @@ export const resendVerification = async (req, res) => {
 
         // Create Verification URL
         const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
-        const verifyUrl = `${frontendUrl}/#/verify-email/${verificationToken}`;
+        const verifyUrl = `${frontendUrl}/verify-email/${verificationToken}`;
 
         const message = `
             <h1>Email Verification</h1>
@@ -333,7 +333,7 @@ export const forgotPassword = async (req, res) => {
         // Create reset url
         // Frontend route: /reset-password/:token
         const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
-        const resetUrl = `${frontendUrl}/#/reset-password/${resetToken}`;
+        const resetUrl = `${frontendUrl}/reset-password/${resetToken}`;
 
         const message = `
             You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request to: \n\n <a href="${resetUrl}">${resetUrl}</a>

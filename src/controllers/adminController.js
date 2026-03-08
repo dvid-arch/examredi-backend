@@ -445,3 +445,31 @@ export const editQuestion = async (req, res) => {
         res.status(500).json({ message: error.message || 'Error editing question' });
     }
 };
+
+// @desc    Export papers by subject, year range, and type
+// @route   GET /api/admin/export-papers
+export const exportPapers = async (req, res) => {
+    try {
+        const { subject, startYear, endYear, type } = req.query;
+        const filter = {};
+
+        if (subject) filter.subject = { $regex: new RegExp('^' + subject + '$', 'i') };
+        if (type) filter.type = { $regex: new RegExp('^' + type + '$', 'i') };
+
+        if (startYear || endYear) {
+            filter.year = {};
+            if (startYear) filter.year.$gte = Number(startYear);
+            if (endYear) filter.year.$lte = Number(endYear);
+        }
+
+        console.log(`[Admin] Exporting papers with filter:`, filter);
+
+        const papers = await Paper.find(filter).lean();
+
+        console.log(`[Admin] Export found ${papers.length} papers`);
+        res.json(papers);
+    } catch (error) {
+        console.error('Error exporting papers:', error);
+        res.status(500).json({ message: error.message || 'Error exporting papers' });
+    }
+};

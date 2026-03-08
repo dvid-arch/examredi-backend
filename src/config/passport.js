@@ -17,14 +17,23 @@ const configurePassport = (passport) => {
             async (accessToken, refreshToken, profile, done) => {
                 try {
                     const email = profile.emails[0].value;
+                    const photoURL = profile.photos && profile.photos.length > 0 ? profile.photos[0].value : null;
+
                     let user = await User.findOne({ email });
 
                     if (user) {
                         // Link Google ID if match found by email
+                        let modified = false;
                         if (!user.googleId) {
                             user.googleId = profile.id;
-                            await user.save();
+                            modified = true;
                         }
+                        // Update photoURL if available and not set
+                        if (photoURL && !user.photoURL) {
+                            user.photoURL = photoURL;
+                            modified = true;
+                        }
+                        if (modified) await user.save();
                         return done(null, user);
                     }
 
@@ -33,6 +42,7 @@ const configurePassport = (passport) => {
                         name: profile.displayName,
                         email: email,
                         googleId: profile.id,
+                        photoURL: photoURL,
                         isVerified: true, // Google accounts are pre-verified
                         subscription: 'free',
                         role: 'user',

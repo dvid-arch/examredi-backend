@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     preferredSubjects: { type: [String], default: [] },
+    photoURL: { type: String },
 
     // AI & Subscription
     aiCredits: { type: Number, default: 0 },

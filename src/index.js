@@ -1,4 +1,6 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
@@ -11,6 +13,9 @@ import flashcardRoutes from './routes/flashcardRoutes.js';
 import connectDB from './db/connect.js';
 import passport from 'passport';
 import configurePassport from './config/passport.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
@@ -52,9 +57,14 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/', (req, res) => {
-    res.send('ExamRedi Backend is running!');
+// Basic health check for API
+app.get('/api/health', (req, res) => {
+    res.send('ExamRedi API is running!');
 });
+
+// Serve frontend static assets from build directory
+const feBuildPath = path.join(__dirname, '../../fe/examredife/dist');
+app.use(express.static(feBuildPath));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/data', dataRoutes);
@@ -62,6 +72,16 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/flashcards', flashcardRoutes);
+
+// Catch-all route for React Browser Routing
+app.get('*', (req, res) => {
+    // If we're not handling an API route, serve the frontend
+    if (!req.path.startsWith('/api')) {
+        res.sendFile(path.join(feBuildPath, 'index.html'));
+    } else {
+        res.status(404).json({ message: 'API route not found' });
+    }
+});
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

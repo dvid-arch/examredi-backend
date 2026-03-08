@@ -115,10 +115,16 @@ export const getPapers = async (req, res) => {
         // Apply access restriction: Non-admins can only access papers from 2000 and earlier
         if (req.user?.role !== 'admin') {
             filter.year = filter.year ? { $eq: filter.year, $lte: 2000 } : { $lte: 2000 };
+            console.log(`[DataDebug] Restriction applied for role: ${req.user?.role || 'anonymous'}`);
+        } else {
+            console.log(`[DataDebug] Admin bypass - No restriction applied.`);
         }
+
+        console.log(`[DataDebug] Final DB Filter:`, JSON.stringify(filter));
 
         // Query MongoDB with lean() for performance
         let papers = await Paper.find(filter).lean();
+        console.log(`[DataDebug] DB returned ${papers.length} papers.`);
 
         const isAuthenticated = !!req.user;
 

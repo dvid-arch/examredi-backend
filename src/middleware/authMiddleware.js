@@ -44,6 +44,7 @@ export const optionalProtect = async (req, res, next) => {
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
             req.user = await User.findById(decoded.id).select('-password');
+            console.log(`[AuthDebug] User ${decoded.id} loaded. Role: ${req.user?.role}, Sub: ${req.user?.subscription}`);
             next();
         } catch (error) {
             // Even if token fails, allowed as optional
@@ -51,6 +52,7 @@ export const optionalProtect = async (req, res, next) => {
             next();
         }
     } else {
+        console.log(`[AuthDebug] No auth header found. User is anonymous.`);
         next();
     }
 };

@@ -8,6 +8,9 @@ const userSchema = new mongoose.Schema({
     email: { type: String, unique: true, sparse: true }, // Optional for now
     googleId: { type: String, unique: true, sparse: true },
     subscription: { type: String, enum: ['free', 'pro'], default: 'free' },
+    subscriptionExpiry: { type: Date }, // For Day Pass and expiring Pro plans
+    referralCode: { type: String, unique: true, sparse: true },
+    referredBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
     preferredSubjects: { type: [String], default: [] },
     photoURL: { type: String },

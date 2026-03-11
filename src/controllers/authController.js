@@ -42,7 +42,7 @@ const getTodayDateString = () => new Date().toISOString().split('T')[0];
 // @route   POST /api/auth/register
 export const registerUser = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password, referralCode: incomingReferralCode } = req.body;
 
         if (!name || !email || !password) {
             return res.status(400).json({ message: 'Please add all fields' });
@@ -70,12 +70,26 @@ export const registerUser = async (req, res) => {
             return res.status(400).json({ message: 'User already exists' });
         }
 
+        // Handle referral
+        let referredBy = null;
+        if (incomingReferralCode) {
+            const referrer = await User.findOne({ referralCode: incomingReferralCode });
+            if (referrer) {
+                referredBy = referrer._id;
+            }
+        }
+
+        // Generate a unique referral code for the new user
+        const newReferralCode = `EXAM-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+
         // Create user (password hashing handled by pre-save hook in model)
         const user = await User.create({
             name,
             email,
             password,
             subscription: 'free',
+            referralCode: newReferralCode,
+            referredBy,
             role: 'user',
             studyPlan: { // Initialize with defaults
                 targetScore: 250,
@@ -125,6 +139,8 @@ export const registerUser = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 subscription: user.subscription,
+                subscriptionExpiry: user.subscriptionExpiry,
+                referralCode: user.referralCode,
                 role: user.role,
                 isVerified: user.isVerified,
                 accessToken,
@@ -171,6 +187,8 @@ export const loginUser = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 subscription: user.subscription,
+                subscriptionExpiry: user.subscriptionExpiry,
+                referralCode: user.referralCode,
                 role: user.role,
                 isVerified: user.isVerified,
                 accessToken,

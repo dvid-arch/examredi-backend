@@ -205,6 +205,34 @@ export const searchPapers = async (req, res) => {
     }
 };
 
+// @desc    Get a single question by ID
+// @route   GET /api/data/question/:id
+export const getQuestionById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const paper = await Paper.findOne({ 'questions.id': id }).lean();
+
+        if (!paper) {
+            return res.status(404).json({ message: 'Question not found' });
+        }
+
+        const question = paper.questions.find(q => q.id === id);
+
+        // Add paper metadata for context
+        const result = {
+            ...question,
+            subject: paper.subject,
+            year: paper.year,
+            exam: paper.exam
+        };
+
+        res.json(result);
+    } catch (error) {
+        console.error('Error fetching question:', error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
 // @desc    Search past questions by topics
 // @route   POST /api/data/search-by-topic
 export const searchByTopic = async (req, res) => {

@@ -59,6 +59,14 @@ export const handleAiChat = async (req, res) => {
         const user = await User.findById(userId);
         if (!user) return res.status(404).json({ message: 'User not found' });
 
+        // Check subscription expiry
+        const now = new Date();
+        if (user.subscription === 'pro' && user.subscriptionExpiry && user.subscriptionExpiry < now) {
+            console.log(`User ${user.id} subscription expired. Downgrading to free.`);
+            user.subscription = 'free';
+            await user.save();
+        }
+
         if (user.subscription === 'free') {
             const today = getTodayDateString();
             if (user.lastMessageDate !== today) {
@@ -112,6 +120,14 @@ const handleCreditUsage = async (userId, cost) => {
     try {
         const user = await User.findById(userId);
         if (!user) return { success: false, message: "User not found" };
+
+        // Check subscription expiry
+        const now = new Date();
+        if (user.subscription === 'pro' && user.subscriptionExpiry && user.subscriptionExpiry < now) {
+            console.log(`User ${user.id} subscription expired during credit check. Downgrading to free.`);
+            user.subscription = 'free';
+            await user.save();
+        }
 
         if (user.subscription === 'free') {
             return { success: false, message: "This feature is for Pro users only." };

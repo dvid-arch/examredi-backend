@@ -465,3 +465,47 @@ export const getTopics = async (req, res) => {
         res.status(500).json({ message: 'Server Error' });
     }
 };
+
+// @desc    Generate a sitemap.xml
+// @route   GET /api/data/sitemap.xml
+export const getSitemap = async (req, res) => {
+    try {
+        const frontendUrl = process.env.FRONTEND_URL || 'https://examredi.vercel.app';
+
+        // Fetch all papers with their question IDs
+        const papers = await Paper.find({}, 'questions.id updatedAt').lean();
+
+        // Static pages
+        const staticPages = [
+            '',
+            '/practice',
+            '/study-guides',
+            '/leaderboard',
+            '/challenge',
+            '/literature'
+        ];
+
+        let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+        // Add static pages
+        staticPages.forEach(page => {
+            sitemap += `  <url>\n    <loc>${frontendUrl}${page}</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+        });
+
+        // Add dynamic question pages
+        papers.forEach(paper => {
+            (paper.questions || []).forEach(q => {
+                sitemap += `  <url>\n    <loc>${frontendUrl}/question/${q.id}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n`;
+            });
+        });
+
+        sitemap += '</urlset>';
+
+        res.set('Content-Type', 'text/xml');
+        res.send(sitemap);
+    } catch (error) {
+        console.error('Error generating sitemap:', error);
+        res.status(500).send('Error generating sitemap');
+    }
+};

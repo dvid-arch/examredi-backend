@@ -13,6 +13,7 @@ router.get('/literature', optionalProtect, getLiterature);
 router.get('/search', optionalProtect, searchPapers);
 router.post('/search-by-topic', optionalProtect, searchByTopic);
 router.get('/question/:id', optionalProtect, getQuestionById);
+router.get('/sitemap.xml', getSitemap);
 
 // Protected routes
 router.post('/leaderboard', protect, addLeaderboardScore);
